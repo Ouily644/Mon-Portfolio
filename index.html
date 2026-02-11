@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio UX/UI Designer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="#work" class="nav-link">Projets</a>
+                    <div class="nav-dropdown">
+                        <a href="#projets-graphiques">Projets graphiques</a>
+                        <a href="#projets-codage">Projets codage</a>
+                        <a href="#projets-audiovisuels">Projets audiovisuels</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#competences">Compétences</a>
+                        <a href="about.html#experience">Expérience</a>
+                        <a href="about.html#formation">Formations</a>
+                        <a href="about.html#interets">Intérêts</a>
+                        <a href="about.html#langues">Langues</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">UX/UI Designer</h1>
+            <p class="hero-subtitle fade-in-delay">Je crée des expériences digitales intuitives et élégantes qui placent l'utilisateur au centre.</p>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work" id="work">
+        <div class="container">
+            <h2 class="section-title">Projets sélectionnés</h2>
+
+            <div class="projects-category" id="projets-graphiques">
+                <div class="category-header">
+                    <h3 class="category-title">Projets graphiques</h3>
+                    <p class="category-subtitle">Identité visuelle, UI, branding et direction artistique.</p>
+                </div>
+                <div class="projects-grid">
+                    <a href="projet_graphique_1.html" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/mockup-web.svg" alt="Mockup projet graphique 1" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-kicker">Identité visuelle</p>
+                            <h3 class="project-title">Projet graphique 1</h3>
+                            <p class="project-description">Direction artistique · UI Kit</p>
+                        </div>
+                    </a>
+
+                    <a href="projet_graphique_2.html" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/mockup-dashboard.svg" alt="Mockup projet graphique 2" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-kicker">Design interface</p>
+                            <h3 class="project-title">Projet graphique 2</h3>
+                            <p class="project-description">Dashboard · Data visualization</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-category" id="projets-codage">
+                <div class="category-header">
+                    <h3 class="category-title">Projets codage</h3>
+                    <p class="category-subtitle">Expériences web et mobile conçues et prototypées de bout en bout.</p>
+                </div>
+                <div class="projects-featured">
+                    <a href="projet_codage_1.html" class="project-card featured">
+                        <div class="project-image">
+                            <img src="assets/mockup-mobile.svg" alt="Mockup projet codage 1" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-kicker">Application mobile</p>
+                            <h3 class="project-title">Projet codage 1</h3>
+                            <p class="project-description">Design System · Onboarding · 2024</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-category" id="projets-audiovisuels">
+                <div class="category-header">
+                    <h3 class="category-title">Projets audiovisuels</h3>
+                    <p class="category-subtitle">Sound design, montage et narration audio pour podcasts et vidéos.</p>
+                </div>
+                <div class="projects-grid">
+                    <a href="projet_audiovisuel_1.html" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/mockup-audio.svg" alt="Mockup projet audiovisuel 1" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-kicker">Audio</p>
+                            <h3 class="project-title">Projet audiovisuel 1</h3>
+                            <p class="project-description">Podcast · Sound design</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-list">
+                <div class="projects-list-header">Autres projets</div>
+                <div class="project-line">
+                    <span>Projet graphique 03</span>
+                    <span class="project-meta-mini">Print · 2023</span>
+                </div>
+                <div class="project-line">
+                    <span>Projet codage 02</span>
+                    <span class="project-meta-mini">Web app · 2022</span>
+                </div>
+                <a href="#contact" class="text-link">Demander le portfolio complet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Travaillons ensemble</h2>
+            <p class="contact-text">Vous avez un projet en tête ? Discutons-en.</p>
+            <div class="contact-links">
+                <a href="mailto:williamtran.far@gmail.com" class="contact-btn">Me contacter</a>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Dribbble</a>
+                    <a href="#" class="social-link">Behance</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

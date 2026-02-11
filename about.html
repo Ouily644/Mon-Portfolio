@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Portfolio UX/UI Designer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html#work" class="nav-link">Projets</a>
+                    <div class="nav-dropdown">
+                        <a href="index.html#projets-graphiques">Projets graphiques</a>
+                        <a href="index.html#projets-codage">Projets codage</a>
+                        <a href="index.html#projets-audiovisuels">Projets audiovisuels</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <div class="nav-dropdown">
+                        <a href="#competences">Compétences</a>
+                        <a href="#experience">Expérience</a>
+                        <a href="#formation">Formations</a>
+                        <a href="#interets">Intérêts</a>
+                        <a href="#langues">Langues</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">À propos</h1>
+            <p class="hero-subtitle fade-in-delay">Designer UX/UI et ingénieur du son, attentif aux détails et à la clarté.</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <div class="about-content">
+        <!-- Intro Section -->
+        <div class="about-section">
+            <h2>Bonjour 👋</h2>
+            <p>
+                Designer UX/UI et ingénieur du son, je crée des expériences digitales claires, élégantes 
+                et faciles à utiliser. Mon parcours combine design et audio, ce qui me pousse à penser 
+                l'interface comme une expérience complète.
+            </p>
+            <p>
+                Je code aussi quand c'est utile, et j'aime comprendre ce que je conçois jusque dans les détails. 
+                Le souci du détail et la recherche d'un rendu propre font partie de ma façon de travailler, 
+                et ce portfolio est volontairement exigeant sur les finitions.
+            </p>
+        </div>
+
+        <!-- Philosophy Section -->
+        <div class="about-section">
+            <h2>Ma philosophie</h2>
+            <p>
+                Je privilégie la clarté : hiérarchie lisible, typographie maîtrisée, espaces bien gérés. 
+                Chaque élément doit avoir une raison d'être.
+            </p>
+            <p>
+                Je cherche un équilibre entre esthétique et efficacité. Que ce soit pour un produit digital 
+                ou un projet audio, je vise un résultat précis, cohérent et agréable à vivre.
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="about-section" id="competences">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>UX Research</h3>
+                    <p>Interviews utilisateurs, personas, tests d'utilisabilité</p>
+                </div>
+                <div class="skill-item">
+                    <h3>UI Design</h3>
+                    <p>Prototypage, design systems, interfaces web & mobile</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Design Thinking</h3>
+                    <p>Ateliers, idéation, wireframing, prototypage rapide</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Outils</h3>
+                    <p>Figma, Sketch, Adobe XD, Principle, Framer</p>
+                </div>
+            </div>
+
+            <div class="skills-panels">
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-dot panel-design" aria-hidden="true"></span>
+                        <h3>Design graphique</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="assets/icons/photoshop.webp" srcset="assets/icons/photoshop@2x.webp 2x" alt=""></span><span class="skill-name">Photoshop</span></li>
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="assets/icons/illustrator.webp" srcset="assets/icons/illustrator@2x.webp 2x" alt=""></span><span class="skill-name">Illustrator</span></li>
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="assets/icons/indesign.webp" srcset="assets/icons/indesign@2x.webp 2x" alt=""></span><span class="skill-name">InDesign</span></li>
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="assets/icons/figma.webp" srcset="assets/icons/figma@2x.webp 2x" alt=""></span><span class="skill-name">Figma</span></li>
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="assets/icons/aseprite.webp" srcset="assets/icons/aseprite@2x.webp 2x" alt=""></span><span class="skill-name">Aseprite</span></li>
+                    </ul>
+                </div>
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-dot panel-audio" aria-hidden="true"></span>
+                        <h3>Montage et mixage son</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="assets/icons/pro-tools.webp" srcset="assets/icons/pro-tools@2x.webp 2x" alt=""></span><span class="skill-name">Pro Tools</span></li>
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="assets/icons/logic-pro.webp" srcset="assets/icons/logic-pro@2x.webp 2x" alt=""></span><span class="skill-name">Logic Pro</span></li>
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="assets/icons/ableton-live.webp" srcset="assets/icons/ableton-live@2x.webp 2x" alt=""></span><span class="skill-name">Ableton Live</span></li>
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="assets/icons/wwise.webp" srcset="assets/icons/wwise@2x.webp 2x" alt=""></span><span class="skill-name">Wwise</span></li>
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="assets/icons/fmod.webp" srcset="assets/icons/fmod@2x.webp 2x" alt=""></span><span class="skill-name">FMOD</span></li>
+                    </ul>
+                </div>
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-dot panel-video" aria-hidden="true"></span>
+                        <h3>Montage vidéo</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-video has-image" aria-hidden="true"><img src="assets/icons/after-effects.webp" srcset="assets/icons/after-effects@2x.webp 2x" alt=""></span><span class="skill-name">After Effects</span></li>
+                        <li><span class="skill-icon icon-video has-image" aria-hidden="true"><img src="assets/icons/final-cut-pro.webp" srcset="assets/icons/final-cut-pro@2x.webp 2x" alt=""></span><span class="skill-name">Final Cut Pro</span></li>
+                        <li><span class="skill-icon icon-video has-image" aria-hidden="true"><img src="assets/icons/davinci-resolve.webp" srcset="assets/icons/davinci-resolve@2x.webp 2x" alt=""></span><span class="skill-name">DaVinci Resolve</span></li>
+                        <li><span class="skill-icon icon-video has-image" aria-hidden="true"><img src="assets/icons/obs.webp" srcset="assets/icons/obs@2x.webp 2x" alt=""></span><span class="skill-name">OBS</span></li>
+                        <li class="skills-spacer" aria-hidden="true"><span class="skill-icon"></span><span class="skill-name">Spacer</span></li>
+                    </ul>
+                </div>
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-dot panel-general" aria-hidden="true"></span>
+                        <h3>Outils complémentaires</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-general has-image" aria-hidden="true"><img src="assets/icons/microsoft-office.webp" srcset="assets/icons/microsoft-office@2x.webp 2x" alt=""></span><span class="skill-name">Microsoft Office</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skills-panels skills-panels-secondary">
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-dot panel-code" aria-hidden="true"></span>
+                        <h3>Langages de codage</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-code has-image" aria-hidden="true"><img src="assets/icons/html5.svg" alt=""></span><span class="skill-name">HTML</span></li>
+                        <li><span class="skill-icon icon-code has-image" aria-hidden="true"><img src="assets/icons/css.svg" alt=""></span><span class="skill-name">CSS</span></li>
+                        <li><span class="skill-icon icon-code has-image" aria-hidden="true"><img src="assets/icons/javascript.svg" alt=""></span><span class="skill-name">JavaScript</span></li>
+                        <li><span class="skill-icon icon-code has-image" aria-hidden="true"><img src="assets/icons/python.svg" alt=""></span><span class="skill-name">Python</span></li>
+                    </ul>
+                </div>
+                <div class="skills-panel" id="langues">
+                    <div class="panel-header">
+                        <span class="panel-dot panel-lang" aria-hidden="true"></span>
+                        <h3>Langues</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon flag-icon has-image" aria-hidden="true"><img src="assets/icons/flag-fr.svg" alt=""></span><span class="skill-name">Français — Courant</span></li>
+                        <li><span class="skill-icon flag-icon has-image" aria-hidden="true"><img src="assets/icons/flag-gb.svg" alt=""></span><span class="skill-name">Anglais — C1</span></li>
+                        <li><span class="skill-icon flag-icon has-image" aria-hidden="true"><img src="assets/icons/flag-es.svg" alt=""></span><span class="skill-name">Espagnol — B1</span></li>
+                        <li class="skills-spacer" aria-hidden="true"><span class="skill-icon"></span><span class="skill-name">Spacer</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="about-section" id="experience">
+            <h2>Expérience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="experience-role">INGÉNIEUR DU SON — Freelance</div>
+                    <div class="experience-meta">Novembre 2023 - Aujourd’hui</div>
+                    <p class="experience-desc">Une trentaine de projets de montage son et de mixage sur des podcasts, de l’animation et sur des films de tout genre.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">PROFESSEUR DE PIANO — ACADOMIA (CDI)</div>
+                    <div class="experience-meta">Octobre 2024 - Aujourd’hui</div>
+                    <p class="experience-desc">Cours particuliers à domicile pour débutant à intermédiaire.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">INGÉNIEUR DU SON — CEBIJE (Stage)</div>
+                    <div class="experience-meta">Octobre 2025 - Décembre 2025</div>
+                    <p class="experience-desc">Accueil des artistes : accompagnement, enregistrement et mixage.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">SERVICE CIVIQUE — ZUPDECO</div>
+                    <div class="experience-meta">Février 2025 - Juillet 2025</div>
+                    <p class="experience-desc">Aide au Collège Les Ormeaux pour les devoirs aux adolescents en difficulté, gestion d’un groupe de classe pour l’ASSR et les ateliers, assistance aux professeurs.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">MONTEUR PODCAST — COCO & CO PROD (Stages)</div>
+                    <div class="experience-meta">Mars 2024 - Mai 2024 et Mars 2023 - Mai 2023</div>
+                    <p class="experience-desc">Montage et mixage du podcast d’un épisode d’un des rescapés de la fusillade de Columbine.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">GESTIONNAIRE EN ASSURANCE MALADIE — CHORUM (CDD)</div>
+                    <div class="experience-meta">Septembre 2021 - Mai 2022</div>
+                    <p class="experience-desc">Traitement et suivi des demandes de remboursement, vérification des documents conformes, identification des litiges et trouver une correction.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">GRAPHISTE UI/UX — DOCAPOSTE (Stage)</div>
+                    <div class="experience-meta">Mai 2021 - Juillet 2021</div>
+                    <p class="experience-desc">Création de maquette pour le site de Docaposte, de l’interface pour l’application mobile et du logo Suivea.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formation Section -->
+        <div class="about-section" id="formation">
+            <h2>Formations</h2>
+            <ul class="timeline-list">
+                <li class="timeline-item">
+                    <span class="timeline-year">2024-2025</span>
+                    <span class="timeline-text">Bachelor Chef Opérateur son à l’EICAR Paris</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2024</span>
+                    <span class="timeline-text">Diplôme de Sound Design à Studio M Paris</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2021</span>
+                    <span class="timeline-text">Diplôme MMI à l’IUT de Vélizy obtenu</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2019</span>
+                    <span class="timeline-text">Baccalauréat S au lycée Lakanal à Sceaux</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2019</span>
+                    <span class="timeline-text">CEM, 3ème cycle de piano et de solfège au Conservatoire de Boulogne-Billancourt avec mention bien</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2011-2013</span>
+                    <span class="timeline-text">Diplôme 1er et 2ème cycle de piano au Conservatoire de Fontenay aux Roses avec mention très bien à l’unanimité avec félicitations du jury</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="about-section" id="interets">
+            <h2>Intérêts</h2>
+            <ul class="interests-list">
+                <li>La musique (la pratique du piano et la création musicale avec une préférence pour le classique et l’orchestral)</li>
+                <li>La modélisation 3D et les nouvelles technologies</li>
+                <li>Les jeux vidéos</li>
+                <li>Le sport (VTT, natation, escalade)</li>
+            </ul>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="about-section" style="text-align: center; margin-top: 100px;">
+            <h2>Discutons de votre projet</h2>
+            <p>Je suis toujours ouvert à de nouvelles opportunités et collaborations.</p>
+            <a href="index.html#contact" class="contact-btn" style="margin-top: 24px;">Me contacter</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

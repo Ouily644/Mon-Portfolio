@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 4 - Portfolio UX/UI Designer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html#work" class="nav-link">Projets</a>
+                    <div class="nav-dropdown">
+                        <a href="index.html#projets-graphiques">Projets graphiques</a>
+                        <a href="index.html#projets-codage">Projets codage</a>
+                        <a href="index.html#projets-audiovisuels">Projets audiovisuels</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#competences">Compétences</a>
+                        <a href="about.html#experience">Expérience</a>
+                        <a href="about.html#formation">Formations</a>
+                        <a href="about.html#interets">Intérêts</a>
+                        <a href="about.html#langues">Langues</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Projet audiovisuel 1</h1>
+            <p class="hero-subtitle fade-in-delay">Description courte du projet en une phrase accrocheuse</p>
+            
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Rôle</div>
+                    <div class="meta-value">UX/UI Designer</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Durée</div>
+                    <div class="meta-value">2 mois</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Année</div>
+                    <div class="meta-value">2023</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Sound design</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Project Image -->
+    <div class="image-full">
+        <img src="assets/mockup-audio.svg" alt="Mockup principal du projet" loading="lazy">
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <!-- Overview -->
+        <div class="content-section">
+            <h2>Vue d'ensemble</h2>
+            <p>
+                Description générale du projet. Quel était le contexte ? Pour qui était-ce conçu ? 
+                Quel était l'objectif principal ?
+            </p>
+            <p>
+                Exemple : "Ce projet visait à améliorer l'expérience d'achat et la confiance utilisateur."
+            </p>
+        </div>
+
+        <!-- Problem -->
+        <div class="content-section">
+            <h2>Le problème</h2>
+            <p>
+                Quelle était la problématique principale à résoudre ? Quels étaient les points de friction 
+                identifiés ? Données chiffrées si disponibles.
+            </p>
+            <p>
+                Exemple : "Les utilisateurs abandonnaient leur panier à cause d'un tunnel trop long."
+            </p>
+        </div>
+
+        <!-- Process -->
+        <div class="content-section">
+            <h2>Mon processus</h2>
+            <p>
+                Comment avez-vous abordé le problème ? Quelles méthodologies avez-vous utilisées ?
+            </p>
+            <ul>
+                <li>Research & Discovery : Interviews utilisateurs, analyse concurrentielle</li>
+                <li>Définition : Création de personas, user journeys, définition des fonctionnalités clés</li>
+                <li>Idéation : Wireframes, exploration de concepts, tests utilisateurs préliminaires</li>
+                <li>Design : Mockups haute fidélité, prototypes interactifs, design system</li>
+                <li>Tests & Itérations : Tests d'utilisabilité, ajustements basés sur les retours</li>
+            </ul>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-full">
+            <img src="assets/mockup-web.svg" alt="Wireframes ou croquis initiaux" loading="lazy">
+        </div>
+
+        <!-- Solution -->
+        <div class="content-section">
+            <h2>La solution</h2>
+            <p>
+                Quelle solution avez-vous conçue ? Quelles ont été les décisions de design majeures ?
+            </p>
+            <p>
+                Exemple : "J'ai simplifié le checkout et introduit des points de réassurance clairs."
+            </p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-full">
+            <img src="assets/mockup-dashboard.svg" alt="Design final - Écrans principaux" loading="lazy">
+        </div>
+
+        <!-- Design Decisions -->
+        <div class="content-section">
+            <h2>Décisions de design clés</h2>
+            <p>
+                <strong>Checkout optimisé</strong><br>
+                Réduction du nombre d'étapes et mise en avant des moyens de paiement.
+            </p>
+            <p>
+                <strong>Réassurance</strong><br>
+                Mise en avant des délais, retours et sécurité dès le panier.
+            </p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-full">
+            <img src="assets/mockup-mobile.svg" alt="Components du Design System" loading="lazy">
+        </div>
+
+        <!-- Results -->
+        <div class="content-section">
+            <h2>Résultats & Impact</h2>
+            <p>
+                Quel a été l'impact du projet ? Métriques, retours utilisateurs, apprentissages.
+            </p>
+            <ul>
+                <li>Amélioration du taux de conversion</li>
+                <li>Réduction de l'abandon panier</li>
+                <li>Meilleure satisfaction client</li>
+            </ul>
+        </div>
+
+        <!-- Learnings -->
+        <div class="content-section">
+            <h2>Apprentissages</h2>
+            <p>
+                Qu'avez-vous appris de ce projet ? Qu'auriez-vous fait différemment ?
+            </p>
+            <p>
+                Ce projet a montré qu'un checkout simple et rassurant change drastiquement la perception de la marque.
+            </p>
+        </div>
+
+        <!-- Next Project -->
+        <div class="next-project">
+            <p style="color: var(--color-text-secondary); margin-bottom: 16px;">Retour aux projets</p>
+            <a href="index.html#work" class="next-project-link">Voir tous les projets →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
