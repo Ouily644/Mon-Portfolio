@@ -589,6 +589,12 @@ a {
     font-weight: 400;
 }
 
+.project-impact {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-top: 8px;
+}
+
 .projects-list {
     margin-top: 64px;
     padding-top: 32px;
@@ -698,6 +704,18 @@ a {
 .footer p {
     font-size: 14px;
     color: var(--color-text-secondary);
+}
+
+.footer-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--color-accent);
+    transition: var(--transition);
+}
+
+.footer-link:hover {
+    opacity: 0.8;
 }
 
 /* ==================== ABOUT PAGE ==================== */
