@@ -8,8 +8,10 @@ const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 if (savedTheme) {
     htmlElement.setAttribute('data-theme', savedTheme);
+    htmlElement.style.colorScheme = savedTheme;
 } else if (prefersDark) {
     htmlElement.setAttribute('data-theme', 'dark');
+    htmlElement.style.colorScheme = 'dark';
 }
 
 // Toggle du thème
@@ -19,6 +21,7 @@ if (themeToggle) {
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
         htmlElement.setAttribute('data-theme', newTheme);
+        htmlElement.style.colorScheme = newTheme;
         localStorage.setItem('theme', newTheme);
     });
 }
