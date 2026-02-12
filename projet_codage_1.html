@@ -75,7 +75,7 @@
             <div class="project-meta fade-in-delay">
                 <div class="meta-item">
                     <div class="meta-label">Rôle</div>
-                    <div class="meta-value">UX/UI & Développement</div>
+                    <div class="meta-value">Assistant son & Développement web</div>
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Contexte</div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Année</div>
-                    <div class="meta-value">2024</div>
+                    <div class="meta-value">2026</div>
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Type</div>
@@ -166,17 +166,20 @@
             <p>Cette étape a permis de déplacer le contrôle qualité en amont du processus.</p>
         </div>
 
-        <div class="content-section">
+                <div class="content-section">
             <h2>Solution développée</h2>
             <p>La plateforme permet :</p>
             <ul>
                 <li>Accès via mot de passe selon le groupe (artiste / production)</li>
+                <li>Validation obligatoire de la charte avant d’accéder à l’upload</li>
                 <li>Attribution automatique à un dossier Dropbox spécifique</li>
                 <li>Upload structuré avec champs obligatoires</li>
                 <li>Intégration via l’API Dropbox (token sécurisé)</li>
+                <li>Token d’accès régénéré régulièrement pour éviter la perte d’accès</li>
                 <li>Classement automatique des fichiers</li>
             </ul>
         </div>
+
 
         <div class="image-full">
             <img src="assets/mockup-web.svg" alt="Formulaire d’upload structuré" loading="lazy">
@@ -197,11 +200,11 @@
             </ul>
         </div>
 
-        <div class="content-section">
+                <div class="content-section">
             <h2>Root Dropbox vs dossiers partagés</h2>
             <p>
-                Un problème majeur est apparu : le root Dropbox n’est pas identique lorsqu’on travaille avec
-                des dossiers partagés. Résultat initial : les fichiers étaient envoyés dans un mauvais emplacement.
+                Un point critique : le root Dropbox diffère selon qu’on cible un dossier partagé.
+                Les premiers tests envoyaient les fichiers au mauvais endroit.
             </p>
             <p>J’ai dû :</p>
             <ul>
@@ -209,36 +212,38 @@
                 <li>Adapter la gestion des chemins</li>
                 <li>Corriger le mapping entre groupes et dossiers partagés</li>
             </ul>
-            <p>
-                Cette partie m’a permis d’approfondir ma compréhension des API et des systèmes de stockage distants.
-            </p>
+            <p>Cette étape a renforcé ma maîtrise des API et du stockage distant.</p>
         </div>
+
 
         <div class="image-full">
             <img src="assets/mockup-dashboard.svg" alt="Schéma de l’arborescence Dropbox" loading="lazy">
         </div>
 
-        <div class="content-section">
+                <div class="content-section">
             <h2>Résultats</h2>
             <ul>
+                <li>Temps de traitement divisé par 4</li>
                 <li>Suppression du tri manuel</li>
-                <li>Réduction significative du temps de traitement</li>
                 <li>Diminution des erreurs</li>
                 <li>Processus plus professionnel et structuré</li>
                 <li>Meilleure responsabilisation des artistes</li>
             </ul>
         </div>
 
-        <div class="content-section">
+
+                <div class="content-section">
             <h2>Technologies & approche</h2>
             <ul>
-                <li>Développement web front-end / back-end</li>
+                <li>Stack web : HTML / CSS / JavaScript</li>
                 <li>API Dropbox</li>
-                <li>Gestion d’authentification par token</li>
-                <li>Logique conditionnelle d’accès</li>
+                <li>Gestion d’authentification par token (régénéré régulièrement)</li>
+                <li>Validation de la charte et logique conditionnelle d’accès</li>
+                <li>Gestion d’uploads volumineux</li>
                 <li>Utilisation de l’IA comme assistant de développement (exploration, génération de base de code, debugging), avec adaptation et validation manuelle</li>
             </ul>
         </div>
+
 
         <div class="content-section">
             <h2>Ce que ce projet démontre</h2>
