@@ -10,18 +10,16 @@
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = savedTheme || (prefersDark ? 'dark' : 'light');
             document.documentElement.setAttribute('data-theme', theme);
-            document.documentElement.style.colorScheme = theme;
         })();
     </script>
     <style>
         html[data-theme="dark"] { background-color: #0b0d12; }
         html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
     </style>
-    <title>Projet 4 - Portfolio UX/UI Designer</title>
+    <title>Fiction sonore - Les JO : le chaos dans Paris - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">William Tran</a>
@@ -41,7 +39,6 @@
                         <a href="about.html#experience">Expérience</a>
                         <a href="about.html#formation">Formations</a>
                         <a href="about.html#interets">Intérêts</a>
-                        <a href="about.html#langues">Langues</a>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -67,150 +64,141 @@
         </div>
     </nav>
 
-    <!-- Project Hero -->
     <section class="project-hero">
         <div class="container">
-            <h1 class="hero-title fade-in">Projet audiovisuel 1</h1>
-            <p class="hero-subtitle fade-in-delay">Description courte du projet en une phrase accrocheuse</p>
-            
+            <h1 class="hero-title fade-in">Fiction sonore - Les JO : le chaos dans Paris</h1>
+            <p class="hero-subtitle fade-in-delay">Podcast narratif d'environ 3 minutes, réalisé à Studio M en 2024 dans l'esprit d'Arte Radio.</p>
+
             <div class="project-meta fade-in-delay">
                 <div class="meta-item">
                     <div class="meta-label">Rôle</div>
-                    <div class="meta-value">UX/UI Designer</div>
+                    <div class="meta-value">Auteur, enregistrement voix, montage, mixage, sound design</div>
                 </div>
                 <div class="meta-item">
-                    <div class="meta-label">Durée</div>
-                    <div class="meta-value">2 mois</div>
+                    <div class="meta-label">Contexte</div>
+                    <div class="meta-value">Formation Studio M - SD2</div>
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Année</div>
-                    <div class="meta-value">2023</div>
+                    <div class="meta-value">2024</div>
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Type</div>
-                    <div class="meta-value">Sound design</div>
+                    <div class="meta-value">Podcast / fiction sonore</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Project Image -->
     <div class="image-full">
-        <img src="assets/mockup-audio.svg" alt="Mockup principal du projet" loading="lazy">
+        <img src="assets/mockup-audio.svg" alt="Aperçu du projet fiction sonore" loading="lazy">
     </div>
 
-    <!-- Project Content -->
     <div class="project-content">
-        <!-- Overview -->
         <div class="content-section">
-            <h2>Vue d'ensemble</h2>
+            <h2>Résumé du projet</h2>
             <p>
-                Description générale du projet. Quel était le contexte ? Pour qui était-ce conçu ? 
-                Quel était l'objectif principal ?
+                Projet de fiction sonore réalisé dans le cadre de la formation Studio M.
+                Le sujet traite de l'ambiance des Jeux Olympiques 2024 à Paris à travers un point de vue narratif :
+                une journaliste se déplace dans la ville et capte les tensions du quotidien.
             </p>
             <p>
-                Exemple : "Ce projet visait à améliorer l'expérience d'achat et la confiance utilisateur."
+                Le rendu final a été accompagné d'un oral de présentation, avec justification des choix narratifs,
+                techniques et esthétiques.
             </p>
         </div>
 
-        <!-- Problem -->
         <div class="content-section">
-            <h2>Le problème</h2>
-            <p>
-                Quelle était la problématique principale à résoudre ? Quels étaient les points de friction 
-                identifiés ? Données chiffrées si disponibles.
-            </p>
-            <p>
-                Exemple : "Les utilisateurs abandonnaient leur panier à cause d'un tunnel trop long."
-            </p>
-        </div>
-
-        <!-- Process -->
-        <div class="content-section">
-            <h2>Mon processus</h2>
-            <p>
-                Comment avez-vous abordé le problème ? Quelles méthodologies avez-vous utilisées ?
-            </p>
+            <h2>Brief pédagogique</h2>
+            <p>Le brief imposait de produire un podcast dans l'esprit de la ligne éditoriale d'Arte Radio, avec les contraintes suivantes :</p>
             <ul>
-                <li>Research & Discovery : Interviews utilisateurs, analyse concurrentielle</li>
-                <li>Définition : Création de personas, user journeys, définition des fonctionnalités clés</li>
-                <li>Idéation : Wireframes, exploration de concepts, tests utilisateurs préliminaires</li>
-                <li>Design : Mockups haute fidélité, prototypes interactifs, design system</li>
-                <li>Tests & Itérations : Tests d'utilisabilité, ajustements basés sur les retours</li>
+                <li>Durée entre 2 et 5 minutes</li>
+                <li>Présence de voix obligatoire (interview, voix off ou dialogues)</li>
+                <li>Équilibre entre voix, musique et sound design</li>
+                <li>Projet ne reposant pas uniquement sur la musique</li>
+                <li>Traçabilité des sons d'archives dans un document dédié</li>
+                <li>Format final libre (mono, stéréo, binaural, etc.)</li>
             </ul>
         </div>
 
-        <!-- Image Section -->
         <div class="image-full">
-            <img src="assets/mockup-web.svg" alt="Wireframes ou croquis initiaux" loading="lazy">
+            <img src="assets/mockup-dashboard.svg" alt="Structure narrative de la fiction sonore" loading="lazy">
         </div>
 
-        <!-- Solution -->
         <div class="content-section">
-            <h2>La solution</h2>
+            <h2>Intentions & écriture</h2>
             <p>
-                Quelle solution avez-vous conçue ? Quelles ont été les décisions de design majeures ?
+                Le pitch s'appuie sur une fiction ancrée dans une réalité urbaine : foule, transports, tension sociale,
+                saturation de l'espace public. La narration suit une journaliste en déplacement dans Paris,
+                avec un enchaînement de scènes courtes pour garder un rythme clair et immersif.
             </p>
             <p>
-                Exemple : "J'ai simplifié le checkout et introduit des points de réassurance clairs."
+                L'objectif était de faire ressentir le chaos par la mise en scène sonore,
+                sans surcharger le texte et en gardant une narration compréhensible.
             </p>
         </div>
 
-        <!-- Image Section -->
-        <div class="image-full">
-            <img src="assets/mockup-dashboard.svg" alt="Design final - Écrans principaux" loading="lazy">
-        </div>
-
-        <!-- Design Decisions -->
         <div class="content-section">
-            <h2>Décisions de design clés</h2>
+            <h2>Production voix</h2>
             <p>
-                <strong>Checkout optimisé</strong><br>
-                Réduction du nombre d'étapes et mise en avant des moyens de paiement.
-            </p>
-            <p>
-                <strong>Réassurance</strong><br>
-                Mise en avant des délais, retours et sécurité dès le panier.
-            </p>
-        </div>
-
-        <!-- Image Section -->
-        <div class="image-full">
-            <img src="assets/mockup-mobile.svg" alt="Components du Design System" loading="lazy">
-        </div>
-
-        <!-- Results -->
-        <div class="content-section">
-            <h2>Résultats & Impact</h2>
-            <p>
-                Quel a été l'impact du projet ? Métriques, retours utilisateurs, apprentissages.
+                J'ai assuré l'enregistrement de toutes les personnes impliquées dans le projet (doubleurs),
+                puis l'édition des prises pour conserver une diction naturelle, un niveau homogène
+                et une bonne intelligibilité dans le mix final.
             </p>
             <ul>
-                <li>Amélioration du taux de conversion</li>
-                <li>Réduction de l'abandon panier</li>
-                <li>Meilleure satisfaction client</li>
+                <li>Organisation des sessions d'enregistrement</li>
+                <li>Direction des intentions de jeu selon les scènes</li>
+                <li>Sélection et nettoyage des meilleures prises</li>
             </ul>
         </div>
 
-        <!-- Learnings -->
-        <div class="content-section">
-            <h2>Apprentissages</h2>
-            <p>
-                Qu'avez-vous appris de ce projet ? Qu'auriez-vous fait différemment ?
-            </p>
-            <p>
-                Ce projet a montré qu'un checkout simple et rassurant change drastiquement la perception de la marque.
-            </p>
+        <div class="image-full">
+            <img src="assets/mockup-mobile.svg" alt="Workflow enregistrement et montage des voix" loading="lazy">
         </div>
 
-        <!-- Next Project -->
+        <div class="content-section">
+            <h2>Montage, mixage & sound design</h2>
+            <p>
+                Le montage a été construit pour articuler clairement la narration, les ambiances de foule,
+                les éléments sonores de transport et les respirations entre séquences.
+                Le mixage a priorisé la lisibilité des voix tout en gardant une atmosphère réaliste.
+            </p>
+            <ul>
+                <li>Structuration de la timeline par scènes</li>
+                <li>Traitement voix (niveaux, équilibre, clarté)</li>
+                <li>Intégration des ambiances et effets de transition</li>
+                <li>Mastering final pour une écoute web propre</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Sources d'archives & conformité</h2>
+            <p>
+                Conformément aux consignes, les sons d'archives utilisés ont été documentés dans un fichier de provenance.
+            </p>
+            <ul>
+                <li>Jingle RATP</li>
+                <li>Tensions voyageurs / agents : <a href="https://www.youtube.com/watch?v=wchxazxtgQ" target="_blank" rel="noopener noreferrer">source</a></li>
+                <li>Signal sonore et fermeture des portes : <a href="https://www.youtube.com/watch?v=6vK_oVKVJUg" target="_blank" rel="noopener noreferrer">source</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Résultat & acquis</h2>
+            <ul>
+                <li>Fiction sonore finalisée dans la durée cible (environ 3 minutes)</li>
+                <li>Narration compréhensible avec une présence voix continue</li>
+                <li>Montée en compétence en direction de voix et en montage narratif</li>
+                <li>Méthode de travail complète : pitch, production, documentation et oral</li>
+            </ul>
+        </div>
+
         <div class="next-project">
             <p style="color: var(--color-text-secondary); margin-bottom: 16px;">Retour aux projets</p>
-            <a href="index.html#work" class="next-project-link">Voir tous les projets →</a>
+            <a href="index.html#work" class="next-project-link">Voir tous les projets -></a>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 William Tran. Tous droits réservés.</p>

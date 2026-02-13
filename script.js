@@ -1,28 +1,35 @@
 // ==================== DARK MODE ==================== 
 const themeToggle = document.querySelector('.theme-toggle');
 const htmlElement = document.documentElement;
+const THEME_KEY = 'theme';
 
-// Charger le thème sauvegardé ou utiliser la préférence système
-const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const getSystemTheme = () =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-if (savedTheme) {
-    htmlElement.setAttribute('data-theme', savedTheme);
-    htmlElement.style.colorScheme = savedTheme;
-} else if (prefersDark) {
-    htmlElement.setAttribute('data-theme', 'dark');
-    htmlElement.style.colorScheme = 'dark';
-}
+// Charger le thème sauvegardé, sinon conserver celui injecté dans le <head>, sinon fallback système.
+const savedTheme = localStorage.getItem(THEME_KEY);
+const initialTheme = htmlElement.getAttribute('data-theme') || savedTheme || getSystemTheme();
+htmlElement.setAttribute('data-theme', initialTheme);
+
+const setTheme = (theme, shouldPersist = true) => {
+    if (htmlElement.getAttribute('data-theme') === theme) {
+        return;
+    }
+
+    htmlElement.setAttribute('data-theme', theme);
+
+    if (shouldPersist) {
+        localStorage.setItem(THEME_KEY, theme);
+    }
+};
 
 // Toggle du thème
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
         const currentTheme = htmlElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        htmlElement.setAttribute('data-theme', newTheme);
-        htmlElement.style.colorScheme = newTheme;
-        localStorage.setItem('theme', newTheme);
+
+        setTheme(newTheme, true);
     });
 }
 

@@ -10,7 +10,6 @@
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = savedTheme || (prefersDark ? 'dark' : 'light');
             document.documentElement.setAttribute('data-theme', theme);
-            document.documentElement.style.colorScheme = theme;
         })();
     </script>
     <style>
@@ -41,7 +40,6 @@
                         <a href="#experience">Expérience</a>
                         <a href="#formation">Formations</a>
                         <a href="#interets">Intérêts</a>
-                        <a href="#langues">Langues</a>
                     </div>
                 </div>
                 <div class="nav-item">
