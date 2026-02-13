@@ -18,7 +18,15 @@
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --nav-blur: 22px;
     --nav-inset: 10px;
-    --media-radius: 24px;
+    --radius-xxs: 4px;
+    --radius-xs: 8px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --radius-xl: 28px;
+    --radius-icon: 13px;
+    --radius-pill: 999px;
+    --media-radius: var(--radius-xl);
     --color-nav-bg: rgba(255, 255, 255, 0.8);
     --color-nav-panel-bg: rgba(255, 255, 255, 0.72);
     --color-nav-panel-fallback: rgba(255, 255, 255, 0.94);
@@ -121,7 +129,7 @@ a {
     right: var(--nav-inset);
     background: transparent;
     border: 1px solid var(--glass-stroke);
-    border-radius: 18px;
+    border-radius: var(--radius-lg);
     box-shadow: var(--panel-shadow);
     z-index: 1000;
     transition: var(--transition);
@@ -229,7 +237,7 @@ a {
     background: var(--color-nav-dropdown-bg);
     backdrop-filter: saturate(170%) blur(var(--nav-blur));
     -webkit-backdrop-filter: saturate(170%) blur(var(--nav-blur));
-    border-radius: 12px;
+    border-radius: var(--radius-sm);
     overflow: hidden;
     padding: 8px;
     margin-top: 0;
@@ -256,7 +264,7 @@ a {
     padding: 10px 16px;
     color: var(--color-text);
     font-size: 14px;
-    border-radius: 6px;
+    border-radius: var(--radius-xs);
     transition: background 0.2s ease;
     text-align: center;
     position: relative;
@@ -285,7 +293,7 @@ a {
     height: 2px;
     background: var(--color-text);
     transition: all 0.3s ease;
-    border-radius: 2px;
+    border-radius: var(--radius-xxs);
 }
 
 .menu-toggle.active span:nth-child(1) {
@@ -668,7 +676,7 @@ a {
     background: var(--color-accent);
     color: white;
     padding: 16px 48px;
-    border-radius: 980px;
+    border-radius: var(--radius-pill);
     font-size: 18px;
     font-weight: 500;
     transition: var(--transition);
@@ -758,7 +766,7 @@ a {
 .skill-item {
     padding: 24px;
     background: var(--color-card-bg);
-    border-radius: 12px;
+    border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
 }
 
@@ -787,7 +795,7 @@ a {
 
 .skills-panel {
     padding: 20px 22px;
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     background: var(--color-card-bg);
     border: 1px solid var(--color-border);
     display: grid;
@@ -803,7 +811,7 @@ a {
 .panel-dot {
     width: 10px;
     height: 10px;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     background: var(--color-accent);
 }
 
@@ -849,7 +857,7 @@ a {
 .flag {
     width: 36px;
     height: 36px;
-    border-radius: 11px;
+    border-radius: var(--radius-icon);
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
@@ -874,7 +882,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: var(--radius-xs);
     display: block;
 }
 
@@ -969,7 +977,7 @@ a {
 
 .experience-item {
     padding: 20px 22px;
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     background: var(--color-card-bg);
     border: 1px solid var(--color-border);
     display: grid;
@@ -1002,7 +1010,7 @@ a {
 
 .timeline-item {
     padding: 18px 22px;
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     background: var(--color-card-bg);
     border: 1px solid var(--color-border);
     display: grid;
@@ -1233,7 +1241,7 @@ a {
 
     .nav {
         top: var(--nav-inset);
-        border-radius: 16px;
+        border-radius: var(--radius-md);
         box-shadow: var(--panel-shadow-strong);
     }
 
@@ -1253,7 +1261,7 @@ a {
         gap: 12px;
         padding: 12px;
         border: 1px solid var(--glass-stroke);
-        border-radius: 16px;
+        border-radius: var(--radius-md);
         overflow: hidden;
         transform: translateY(-8px);
         opacity: 0;
@@ -1296,7 +1304,7 @@ a {
         font-size: 16px;
         display: block;
         margin: 0;
-        border-radius: 10px;
+        border-radius: var(--radius-sm);
         position: relative;
         z-index: 1;
         text-align: center;
@@ -1319,7 +1327,7 @@ a {
         background: var(--color-nav-mobile-dropdown-bg);
         backdrop-filter: saturate(170%) blur(var(--nav-blur));
         -webkit-backdrop-filter: saturate(170%) blur(var(--nav-blur));
-        border-radius: 14px;
+        border-radius: var(--radius-md);
         padding: 0;
         margin: 0;
         box-shadow: none;
@@ -1348,7 +1356,7 @@ a {
         font-size: 15px;
         border-bottom: none;
         margin: 0;
-        border-radius: 8px;
+        border-radius: var(--radius-xs);
         position: relative;
         z-index: 1;
         text-align: center;
@@ -1443,7 +1451,7 @@ a {
         top: 64px;
         left: var(--nav-inset);
         right: var(--nav-inset);
-        border-radius: 14px;
+        border-radius: var(--radius-md);
     }
 
     .social-links {
