@@ -127,23 +127,20 @@ a {
     top: var(--nav-inset);
     left: var(--nav-inset);
     right: var(--nav-inset);
-    background: transparent;
-    border: 1px solid var(--glass-stroke);
     border-radius: var(--radius-lg);
-    overflow: hidden;
     box-shadow: var(--panel-shadow);
+    isolation: isolate;
     z-index: 1000;
     transition: var(--transition);
 }
 
 [data-theme="dark"] .nav {
-    border-color: rgba(255, 255, 255, 0.08);
-    border-width: 1px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.36), 0 12px 24px rgba(0, 0, 0, 0.46);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.48);
 }
 
 [data-theme="dark"] .nav::before {
-    background: rgba(12, 12, 14, 0.84);
+    display: block;
+    background: rgba(26, 26, 32, 0.68);
 }
 
 .nav::before {
@@ -154,6 +151,7 @@ a {
     backdrop-filter: saturate(170%) blur(var(--nav-blur));
     -webkit-backdrop-filter: saturate(170%) blur(var(--nav-blur));
     border-radius: inherit;
+    pointer-events: none;
     z-index: 0;
 }
 
@@ -1226,11 +1224,16 @@ a {
 @supports (corner-shape: squircle) {
     .nav,
     .nav::before,
+    .nav-links,
+    .nav-link,
+    .nav-dropdown,
+    .nav-dropdown a,
     .project-card,
     .project-image,
     .image-full,
     .skills-panel,
     .experience-item,
+    .timeline-item,
     .contact-btn,
     .next-project-link,
     .next-project-secondary {
@@ -1256,7 +1259,7 @@ a {
 
     .nav-links {
         position: fixed;
-        top: 76px;
+        top: calc(var(--nav-inset) + var(--nav-inset) + 64px);
         left: var(--nav-inset);
         right: var(--nav-inset);
         background: var(--color-nav-panel-bg);
@@ -1453,7 +1456,7 @@ a {
     }
 
     .nav-links {
-        top: 64px;
+        top: calc(var(--nav-inset) + var(--nav-inset) + 56px);
         left: var(--nav-inset);
         right: var(--nav-inset);
         border-radius: var(--radius-md);
