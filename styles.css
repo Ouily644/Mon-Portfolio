@@ -1102,7 +1102,7 @@ a {
     padding-left: 0;
 }
 
-.content-section li {
+.content-section ul li {
     font-size: 18px;
     line-height: 1.8;
     color: var(--color-text-secondary);
@@ -1111,12 +1111,36 @@ a {
     position: relative;
 }
 
-.content-section li::before {
+.content-section ul li::before {
     content: '•';
     position: absolute;
     left: 0;
     color: var(--color-accent);
     font-weight: bold;
+}
+
+.content-section ol {
+    list-style: none;
+    counter-reset: step;
+    padding-left: 0;
+}
+
+.content-section ol li {
+    counter-increment: step;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.content-section ol li::before {
+    content: counter(step) ".";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
 }
 
 .image-full {
@@ -1153,6 +1177,12 @@ a {
     text-align: center;
 }
 
+.next-project-actions {
+    display: grid;
+    justify-items: center;
+    gap: 14px;
+}
+
 .next-project-link {
     display: inline-block;
     font-size: 24px;
@@ -1163,6 +1193,36 @@ a {
 
 .next-project-link:hover {
     transform: translateX(8px);
+}
+
+.next-project-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.next-project-secondary:hover {
+    color: var(--color-accent);
+    transform: translateX(6px);
+}
+
+/* Apple-like smooth corners where browser support exists */
+@supports (corner-shape: superellipse(0.6)) {
+    .nav,
+    .nav::before,
+    .project-card,
+    .project-image,
+    .image-full,
+    .skills-panel,
+    .experience-item,
+    .contact-btn,
+    .next-project-link,
+    .next-project-secondary {
+        corner-shape: superellipse(0.6);
+    }
 }
 
 /* ==================== RESPONSIVE ==================== */
