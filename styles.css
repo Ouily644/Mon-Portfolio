@@ -1209,8 +1209,8 @@ a {
     transform: translateX(6px);
 }
 
-/* Apple-like smooth corners where browser support exists */
-@supports (corner-shape: superellipse(0.6)) {
+/* Smooth squircle corners where browser support exists */
+@supports (corner-shape: squircle) {
     .nav,
     .nav::before,
     .project-card,
@@ -1221,7 +1221,7 @@ a {
     .contact-btn,
     .next-project-link,
     .next-project-secondary {
-        corner-shape: superellipse(0.6);
+        corner-shape: squircle;
     }
 }
 
