@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.style.colorScheme = theme;
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Guide studio mobile - Portfolio UX/UI Designer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html#work" class="nav-link">Projets</a>
+                    <div class="nav-dropdown">
+                        <a href="index.html#projets-graphiques">Projets graphiques</a>
+                        <a href="index.html#projets-codage">Projets codage</a>
+                        <a href="index.html#projets-audiovisuels">Projets audiovisuels</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#competences">Compétences</a>
+                        <a href="about.html#experience">Expérience</a>
+                        <a href="about.html#formation">Formations</a>
+                        <a href="about.html#interets">Intérêts</a>
+                        <a href="about.html#langues">Langues</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Guide studio mobile first pour artistes invités</h1>
+            <p class="hero-subtitle fade-in-delay">1 scan, toutes les infos essentielles, zéro question à l'équipe</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Rôle</div>
+                    <div class="meta-value">Assistant son & Développement web</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Contexte</div>
+                    <div class="meta-value">Stage · Playback Solutions</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Année</div>
+                    <div class="meta-value">2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Web app mobile first</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Project Image -->
+    <div class="image-full">
+        <img src="assets/mockup-mobile.svg" alt="Aperçu mobile de la page d'information studio" loading="lazy">
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Résumé du projet</h2>
+            <p>
+                Pendant le même stage, j'ai conçu une page studio mobile first destinée aux artistes et invités
+                présents sur place. L'objectif était de centraliser les informations pratiques les plus demandées
+                en limitant au maximum les échanges répétitifs avec l'équipe.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Objectif produit</h2>
+            <p><strong>1 scan → toutes les infos évidentes → zéro question à l'équipe.</strong></p>
+            <p>
+                La page devait être rapide à charger, ultra lisible et utile immédiatement, sans design décoratif
+                ni texte long.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Contraintes de conception</h2>
+            <ul>
+                <li>Mobile first</li>
+                <li>Chargement rapide</li>
+                <li>Ton sobre, lisible et fiable</li>
+                <li>Chaque bloc doit répondre à une question réelle d'un artiste ou d'un invité</li>
+            </ul>
+        </div>
+
+        <div class="image-full">
+            <img src="assets/mockup-web.svg" alt="Structure globale de la page studio" loading="lazy">
+        </div>
+
+        <div class="content-section">
+            <h2>Wi-Fi Guest en priorité absolue</h2>
+            <p>
+                Le premier écran affiche directement le réseau invité, le mot de passe et une mention explicite
+                "réseau invité uniquement".
+            </p>
+            <ul>
+                <li>Nom du réseau : Guest</li>
+                <li>Mot de passe : bienvenue</li>
+                <li>Bouton d'ouverture des réglages Wi-Fi (mobile)</li>
+                <li>Bouton de copie du mot de passe</li>
+            </ul>
+        </div>
+
+        <div class="image-full">
+            <img src="assets/mockup-commerce.svg" alt="Bloc Wi-Fi prioritaire avec actions rapides" loading="lazy">
+        </div>
+
+        <div class="content-section">
+            <h2>Contenu utile et hiérarchisé</h2>
+            <p>
+                Le contenu est structuré dans l'ordre d'usage réel sur place : Wi-Fi, présentation courte du studio,
+                restaurants, livraison, infos pratiques, puis message d'équipe.
+            </p>
+            <ul>
+                <li>Présentation du lieu en 3 lignes</li>
+                <li>Adresse de livraison complète et consignes</li>
+                <li>Horaires, toilettes, règles, contact interne</li>
+                <li>Message court signé "L'équipe du studio"</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Restaurants triés selon l'heure</h2>
+            <p>
+                La liste (8 adresses maximum) est triée automatiquement côté client pour proposer les options les
+                plus pertinentes selon le moment.
+            </p>
+            <ul>
+                <li>11h-15h : priorité aux options rapides</li>
+                <li>18h-22h : priorité aux options livraison</li>
+                <li>Lien Google Maps direct pour chaque restaurant</li>
+            </ul>
+            <p>
+                Ce tri temporel réduit le temps de décision et évite les allers-retours inutiles avec l'équipe.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="assets/mockup-dashboard.svg" alt="Tri dynamique de la liste restaurants" loading="lazy">
+        </div>
+
+        <div class="content-section">
+            <h2>Choix techniques</h2>
+            <ul>
+                <li>HTML / CSS / JavaScript vanilla</li>
+                <li>Navigation par sections avec ancre active</li>
+                <li>Masquage des sections non actives pour un affichage focalisé</li>
+                <li>Logique de tri des restaurants basée sur l'heure locale</li>
+                <li>Actions utilitaires : copie presse-papiers, ouverture réglages Wi-Fi selon appareil</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Résultats</h2>
+            <ul>
+                <li>Accès immédiat aux infos critiques dès l'arrivée au studio</li>
+                <li>Moins d'interruptions de l'équipe sur des questions répétitives</li>
+                <li>Parcours invité plus autonome et plus fluide</li>
+                <li>Format simple à maintenir et à mettre à jour</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Ce que ce projet démontre</h2>
+            <ul>
+                <li>Capacité à transformer une consigne métier en interface opérationnelle</li>
+                <li>Priorisation stricte de l'information utile</li>
+                <li>Implémentation front-end orientée performance et lisibilité</li>
+                <li>Conception pragmatique : moins d'effets, plus d'efficacité</li>
+            </ul>
+        </div>
+
+        <div class="next-project">
+            <p style="color: var(--color-text-secondary); margin-bottom: 16px;">Projet suivant</p>
+            <a href="projet_audiovisuel_1.html" class="next-project-link">Projet audiovisuel 1 →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. Tous droits réservés.</p>
+            <a href="https://www.linkedin.com/in/william-tran1/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
