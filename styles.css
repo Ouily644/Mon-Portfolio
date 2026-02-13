@@ -136,9 +136,9 @@ a {
 }
 
 [data-theme="dark"] .nav {
-    border-color: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.1);
     border-width: 1px;
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6);
 }
 
 .nav::before {
@@ -164,9 +164,7 @@ a {
 }
 
 [data-theme="dark"] .nav::after {
-    display: block;
-    border-color: rgba(255, 255, 255, 0.14);
-    opacity: 0.65;
+    display: none;
 }
 
 .nav-container {
