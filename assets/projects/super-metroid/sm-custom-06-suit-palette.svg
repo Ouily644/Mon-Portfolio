@@ -1,0 +1,16 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="24" fill="#F5F5F7"/>
+  <rect x="160" y="140" width="1280" height="720" rx="36" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="2"/>
+  <rect x="220" y="200" width="360" height="220" rx="24" fill="#F2F2F7"/>
+  <rect x="620" y="200" width="760" height="360" rx="24" fill="#F2F2F7"/>
+  <rect x="220" y="460" width="360" height="180" rx="24" fill="#F2F2F7"/>
+  <rect x="220" y="680" width="1160" height="120" rx="24" fill="#F6F6F8"/>
+  <path d="M700 500 L760 450 L840 470 L920 400 L1000 440 L1080 360 L1160 390" stroke="#0071E3" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="500" r="8" fill="#0071E3"/>
+  <circle cx="760" cy="450" r="8" fill="#0071E3"/>
+  <circle cx="840" cy="470" r="8" fill="#0071E3"/>
+  <circle cx="920" cy="400" r="8" fill="#0071E3"/>
+  <circle cx="1000" cy="440" r="8" fill="#0071E3"/>
+  <circle cx="1080" cy="360" r="8" fill="#0071E3"/>
+  <circle cx="1160" cy="390" r="8" fill="#0071E3"/>
+</svg>

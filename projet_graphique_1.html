@@ -16,7 +16,7 @@
         html[data-theme="dark"] { background-color: #0b0d12; }
         html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
     </style>
-    <title>Projet 1 - Portfolio UX/UI Designer</title>
+    <title>Custom sprites Super Metroid - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,6 +28,7 @@
                 <div class="nav-item">
                     <a href="index.html#work" class="nav-link">Projets</a>
                     <div class="nav-dropdown">
+                        <a href="index.html#work">Tous les projets</a>
                         <a href="index.html#projets-graphiques">Projets graphiques</a>
                         <a href="index.html#projets-codage">Projets codage</a>
                         <a href="index.html#projets-audiovisuels">Projets audiovisuels</a>
@@ -36,6 +37,7 @@
                 <div class="nav-item">
                     <a href="about.html" class="nav-link">À propos</a>
                     <div class="nav-dropdown">
+                        <a href="about.html#top-about">Présentation</a>
                         <a href="about.html#competences">Compétences</a>
                         <a href="about.html#experience">Expérience</a>
                         <a href="about.html#formation">Formations</a>
@@ -68,17 +70,17 @@
     <!-- Project Hero -->
     <section class="project-hero">
         <div class="container">
-            <h1 class="hero-title fade-in">Projet graphique 1</h1>
-            <p class="hero-subtitle fade-in-delay">Description courte du projet en une phrase accrocheuse</p>
+            <h1 class="hero-title fade-in">Custom sprites sur Super Metroid</h1>
+            <p class="hero-subtitle fade-in-delay">Character modding SNES : réinterprétation de Samus en Sans, Inkling Girl et Samus Maid.</p>
             
             <div class="project-meta fade-in-delay">
                 <div class="meta-item">
                     <div class="meta-label">Rôle</div>
-                    <div class="meta-value">UX/UI Designer</div>
+                    <div class="meta-value">Pixel artist & moddeur</div>
                 </div>
                 <div class="meta-item">
-                    <div class="meta-label">Durée</div>
-                    <div class="meta-value">3 mois</div>
+                    <div class="meta-label">Contexte</div>
+                    <div class="meta-value">Projet personnel</div>
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Année</div>
@@ -86,7 +88,7 @@
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Type</div>
-                    <div class="meta-value">Identité visuelle</div>
+                    <div class="meta-value">Pixel art & game modding</div>
                 </div>
             </div>
         </div>
@@ -94,121 +96,152 @@
 
     <!-- Main Project Image -->
     <div class="image-full">
-        <img src="assets/mockup-web.svg" alt="Mockup principal du projet" loading="lazy">
+        <img src="assets/projects/super-metroid/sm-custom-01-overview.svg" alt="Placeholder - vue globale des sprites custom dans Super Metroid" loading="lazy">
     </div>
 
     <!-- Project Content -->
     <div class="project-content">
-        <!-- Overview -->
         <div class="content-section">
-            <h2>Vue d'ensemble</h2>
+            <h2>Présentation du jeu</h2>
             <p>
-                Description générale du projet. Quel était le contexte ? Pour qui était-ce conçu ? 
-                Quel était l'objectif principal ?
+                <strong>Super Metroid</strong> (SNES, 1994) est une référence du jeu d’exploration 2D.
+                Le jeu repose sur des animations lisibles, des déplacements précis et une direction artistique
+                forte malgré les contraintes techniques de l’époque.
             </p>
             <p>
-                Exemple : "Ce projet visait à repenser l'expérience mobile d'une application de 
-                gestion de tâches pour la rendre plus intuitive et agréable à utiliser au quotidien."
+                C’est précisément ce cadre rétro qui m’intéressait : conserver la lisibilité d’origine,
+                tout en remplaçant entièrement l’identité visuelle du personnage principal.
             </p>
         </div>
 
-        <!-- Problem -->
-        <div class="content-section">
-            <h2>Le problème</h2>
-            <p>
-                Quelle était la problématique principale à résoudre ? Quels étaient les points de friction 
-                identifiés ? Données chiffrées si disponibles.
-            </p>
-            <p>
-                Exemple : "Les utilisateurs abandonnaient l'application après 3 jours d'utilisation. 
-                Les tests ont révélé que la création de tâches était trop complexe et nécessitait 
-                trop d'étapes."
-            </p>
+        <div class="image-full">
+            <img src="assets/projects/super-metroid/sm-custom-02-gameplay.svg" alt="Placeholder - capture gameplay de Super Metroid" loading="lazy">
         </div>
 
-        <!-- Process -->
         <div class="content-section">
-            <h2>Mon processus</h2>
+            <h2>Contexte modding</h2>
             <p>
-                Comment avez-vous abordé le problème ? Quelles méthodologies avez-vous utilisées ?
+                Le projet s’inscrit dans l’écosystème des mods de Super Metroid :
+                <strong>ROM hacks</strong>, <strong>VARIA Randomizer</strong> et <strong>Map Rando</strong>.
             </p>
             <ul>
-                <li>Research & Discovery : Interviews utilisateurs, analyse concurrentielle</li>
-                <li>Définition : Création de personas, user journeys, définition des fonctionnalités clés</li>
-                <li>Idéation : Wireframes, exploration de concepts, tests utilisateurs préliminaires</li>
-                <li>Design : Mockups haute fidélité, prototypes interactifs, design system</li>
-                <li>Tests & Itérations : Tests d'utilisabilité, ajustements basés sur les retours</li>
+                <li><strong>ROM hacks</strong> : modification de contenu ou de gameplay</li>
+                <li><strong>VARIA Randomizer</strong> : randomisation des objets et de la progression</li>
+                <li><strong>Map Rando</strong> : randomisation de la structure des zones</li>
+            </ul>
+            <p>Dans ce contexte, un sprite custom doit rester lisible dans des parcours imprévisibles et rapides.</p>
+        </div>
+
+        <div class="image-full">
+            <img src="assets/projects/super-metroid/sm-custom-03-modding-context.svg" alt="Placeholder - interface ROM hack, VARIA et Map Rando" loading="lazy">
+        </div>
+
+        <div class="content-section">
+            <h2>Ce que j’ai réalisé</h2>
+            <p>
+                J’ai recréé l’ensemble des sprites du personnage de base (Samus) pour plusieurs variantes :
+            </p>
+            <ul>
+                <li>Sans (Undertale)</li>
+                <li>Inkling Girl (Splatoon)</li>
+                <li>Samus Maid (variante stylisée)</li>
+            </ul>
+            <p>
+                Le travail couvre les poses principales (idle, course, saut, visée, tirs, morphball, shinespark, etc.)
+                avec adaptation des animations pour conserver le rythme du jeu original.
+            </p>
+            <p>
+                L’objectif n’était pas de modifier une partie du personnage : j’ai remplacé
+                <strong>l’intégralité des animations de Samus</strong> pour chaque variante.
+            </p>
+            <p>
+                Au total, le projet représente <strong>582 sprites</strong> remplacés et ajustés.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="assets/projects/super-metroid/sm-custom-04-spritesheets.svg" alt="Placeholder - sprite sheets des trois variantes de personnage" loading="lazy">
+        </div>
+
+        <div class="content-section">
+            <h2>Contraintes techniques SNES</h2>
+            <p>Le design devait respecter des limites strictes liées à la console :</p>
+            <ul>
+                <li>Taille des sprites et découpage en tiles</li>
+                <li>Palette limitée à 16 couleurs dont 1 transparente (donc 15 couleurs visibles)</li>
+                <li>Aucune animation ajoutable : il faut respecter strictement les slots vanilla (ex : 4 frames idle, 8 frames course, 1 frame shinespark)</li>
+                <li>Lisibilité immédiate sur des animations courtes</li>
+                <li>Cohérence visuelle entre toutes les frames d’action</li>
+            </ul>
+            <p>
+                Ce cadre impose des choix de simplification précis : silhouette, contraste et timing priment
+                sur le détail décoratif.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Palettes des suits</h2>
+            <p>
+                Super Metroid applique des variations de couleurs selon les suits.
+                Pour rester cohérent avec le jeu, j’ai travaillé avec des palettes dédiées
+                <strong>Power</strong>, <strong>Varia</strong> et <strong>Gravity</strong>.
+            </p>
+            <p>
+                La palette ci-dessous montre les couleurs utilisées pour les 3 suits (hors pixel transparent),
+                suivie de la référence visuelle des 3 versions originales de Samus.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="assets/projects/super-metroid/sm-custom-06-suit-palette.png" alt="Palette des trois suits de Samus sans pixel transparent" loading="lazy">
+        </div>
+
+        <div class="image-full">
+            <img src="assets/projects/super-metroid/sm-custom-07-vanilla-suits.png" alt="Comparaison visuelle des suits Power Varia Gravity originaux" loading="lazy">
+        </div>
+
+        <div class="content-section">
+            <h2>Pipeline de création (Aseprite)</h2>
+            <p>
+                J’ai utilisé <strong>Aseprite</strong> pour produire les sprites frame par frame,
+                en m’appuyant sur des références de chaque univers afin de garder l’identité du personnage
+                tout en respectant la grammaire visuelle de Super Metroid.
+            </p>
+            <ul>
+                <li>Construction des key poses puis in-between</li>
+                <li>Vérification en boucle dans le rythme réel du jeu</li>
+                <li>Palette et teintes custom selon chaque suit : <strong>Power Suit</strong>, <strong>Varia Suit</strong>, <strong>Gravity Suit</strong></li>
+                <li>Ajustements d’échelle pour coller au gabarit de Samus dans Super Metroid (ex : Sans est petit dans son jeu d’origine, mais son sprite de combat est trop grand pour être repris tel quel)</li>
+                <li>Ajustements palette pour garder la lisibilité en mouvement</li>
             </ul>
         </div>
 
-        <!-- Image Section -->
         <div class="image-full">
-            <img src="assets/mockup-web.svg" alt="Wireframes du projet" loading="lazy">
+            <img src="assets/projects/super-metroid/sm-custom-05-animations.svg" alt="Placeholder - comparatif animations Samus d'origine vs variantes custom" loading="lazy">
         </div>
 
-        <!-- Solution -->
         <div class="content-section">
-            <h2>La solution</h2>
-            <p>
-                Quelle solution avez-vous conçue ? Quelles ont été les décisions de design majeures ?
-            </p>
-            <p>
-                Exemple : "J'ai simplifié le processus de création de tâches en un seul écran avec 
-                saisie rapide, ajout d'options par glissement, et suggestions intelligentes basées 
-                sur l'historique de l'utilisateur."
-            </p>
-        </div>
-
-        <!-- Image Section -->
-        <div class="image-full">
-            <img src="assets/mockup-dashboard.svg" alt="Écrans finaux du projet" loading="lazy">
-        </div>
-
-        <!-- Design Decisions -->
-        <div class="content-section">
-            <h2>Décisions de design clés</h2>
-            <p>
-                <strong>Navigation simplifiée</strong><br>
-                Réduction du menu principal de 7 à 4 options essentielles, basée sur l'analyse 
-                des parcours utilisateurs les plus fréquents.
-            </p>
-            <p>
-                <strong>Système de couleurs</strong><br>
-                Palette minimaliste utilisant des couleurs douces pour réduire la fatigue visuelle 
-                et améliorer la lisibilité lors d'utilisations prolongées.
-            </p>
-        </div>
-
-        <!-- Image Section -->
-        <div class="image-full">
-            <img src="assets/mockup-commerce.svg" alt="Design system et composants" loading="lazy">
-        </div>
-
-        <!-- Results -->
-        <div class="content-section">
-            <h2>Résultats & Impact</h2>
-            <p>
-                Quel a été l'impact du projet ? Métriques, retours utilisateurs, apprentissages.
-            </p>
+            <h2>Exemples d’adaptation créative</h2>
             <ul>
-                <li>Augmentation de 45% du taux de rétention à 7 jours</li>
-                <li>Réduction de 60% du temps moyen de création d'une tâche</li>
-                <li>Score de satisfaction utilisateur passé de 3.2 à 4.6/5</li>
-                <li>Featured in Product Hunt avec plus de 500 upvotes</li>
+                <li>Pour <strong>Inkling Girl</strong>, j’ai utilisé l’idée de transformation humanoïde / calamar pour la <strong>morphball</strong></li>
+                <li>Pour certaines séquences rapides, j’ai réinterprété le <strong>shinespark</strong> avec une forme inspirée du <strong>Kraken</strong></li>
+                <li>Sur <strong>Sans</strong>, le canon de Samus est remplacé par un <strong>Gaster Blaster</strong> et certaines attaques de shinespark sont adaptées avec des visuels d’os</li>
+                <li>J’ai retravaillé les poses pour conserver lisibilité et personnalité en pixel art</li>
             </ul>
         </div>
 
-        <!-- Learnings -->
         <div class="content-section">
-            <h2>Apprentissages</h2>
+            <h2>Ce que ce projet m’a apporté</h2>
             <p>
-                Qu'avez-vous appris de ce projet ? Qu'auriez-vous fait différemment ?
+                Ce travail m’a appris à designer dans un cadre très contraint sans perdre la créativité.
+                Modder un jeu existant m’a fait progresser sur :
             </p>
-            <p>
-                Ce projet m'a appris l'importance de tester tôt et souvent. Les premières versions 
-                de l'interface étaient trop complexes, et ce n'est qu'après plusieurs sessions de 
-                tests utilisateurs que j'ai compris qu'il fallait simplifier radicalement l'expérience.
-            </p>
+            <ul>
+                <li>L’analyse d’animations existantes et leur reconstruction</li>
+                <li>La maîtrise des contraintes techniques rétro (palette, taille, lisibilité)</li>
+                <li>La cohérence artistique entre univers différents</li>
+                <li>La précision d’exécution frame par frame</li>
+            </ul>
         </div>
 
         <!-- Next Project -->
