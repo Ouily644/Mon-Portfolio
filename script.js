@@ -52,16 +52,19 @@ if (menuToggle) {
             const parentItem = link.parentElement;
             const hasDropdown = parentItem && parentItem.classList.contains('nav-item') && parentItem.querySelector('.nav-dropdown');
 
-            // Sur mobile, si le lien possède un dropdown, on toggle le dropdown au lieu de naviguer
+            // Sur mobile, premier tap ouvre le dropdown, second tap navigue normalement.
             if (window.innerWidth <= 768 && hasDropdown) {
-                e.preventDefault();
-                navItems.forEach(item => {
-                    if (item !== parentItem) {
-                        item.classList.remove('active');
-                    }
-                });
-                parentItem.classList.toggle('active');
-                return;
+                const isOpen = parentItem.classList.contains('active');
+                if (!isOpen) {
+                    e.preventDefault();
+                    navItems.forEach(item => {
+                        if (item !== parentItem) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    parentItem.classList.add('active');
+                    return;
+                }
             }
 
             // Sinon, on ferme le menu et on laisse le lien naviguer
@@ -156,8 +159,130 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// ==================== PROJECT TAG FILTERS ==================== 
+function setupProjectFilters() {
+    const filterBar = document.querySelector('.project-filter-bar');
+    if (!filterBar) {
+        return;
+    }
+
+    const projectGrid = document.querySelector('[data-project-grid]');
+    if (!projectGrid) {
+        return;
+    }
+
+    const filterButtons = Array.from(filterBar.querySelectorAll('.project-filter-btn'));
+    const allButton = filterBar.querySelector('.project-filter-btn-all');
+    const projectCards = Array.from(projectGrid.querySelectorAll('.project-card'));
+    const emptyState = document.querySelector('#work .project-filter-empty');
+    const activeFilters = new Set();
+
+    const buttonByFilter = new Map(
+        filterButtons.map((button) => [(button.dataset.filter || '').toLowerCase(), button])
+    );
+
+    projectCards.forEach((card, index) => {
+        card.dataset.defaultOrder = String(index);
+    });
+
+    const readTags = (value) =>
+        value
+            .split(',')
+            .map((tag) => tag.trim().toLowerCase())
+            .filter(Boolean);
+
+    const countMatches = (tags) =>
+        tags.reduce((count, tag) => (activeFilters.has(tag) ? count + 1 : count), 0);
+
+    const syncButtons = () => {
+        filterButtons.forEach((button) => {
+            const key = (button.dataset.filter || '').toLowerCase();
+            const isActive = key === 'all' ? activeFilters.size === 0 : activeFilters.has(key);
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+        });
+    };
+
+    const applyFilter = () => {
+        const visibleCards = [];
+        const noFilter = activeFilters.size === 0;
+
+        projectCards.forEach((card) => {
+            const primaryTags = readTags(card.dataset.primary || '');
+            const secondaryTags = readTags(card.dataset.secondary || '');
+            const primaryMatches = countMatches(primaryTags);
+            const secondaryMatches = countMatches(secondaryTags);
+            const isVisible = noFilter || primaryMatches > 0 || secondaryMatches > 0;
+
+            card.classList.toggle('is-filtered-out', !isVisible);
+            if (isVisible) {
+                visibleCards.push({
+                    card,
+                    primaryMatches,
+                    secondaryMatches,
+                    order: Number(card.dataset.defaultOrder || 0),
+                });
+            }
+        });
+
+        visibleCards.sort((a, b) => {
+            if (a.primaryMatches !== b.primaryMatches) {
+                return b.primaryMatches - a.primaryMatches;
+            }
+            if (a.secondaryMatches !== b.secondaryMatches) {
+                return b.secondaryMatches - a.secondaryMatches;
+            }
+            return a.order - b.order;
+        });
+
+        visibleCards.forEach(({ card }) => projectGrid.appendChild(card));
+
+        if (emptyState) {
+            emptyState.hidden = visibleCards.length > 0;
+        }
+
+        syncButtons();
+    };
+
+    filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const key = (button.dataset.filter || '').toLowerCase();
+            if (!key || key === 'all') {
+                activeFilters.clear();
+                applyFilter();
+                return;
+            }
+
+            if (activeFilters.has(key)) {
+                activeFilters.delete(key);
+            } else {
+                activeFilters.add(key);
+            }
+
+            applyFilter();
+        });
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const initial = params.get('tags') || params.get('tag') || '';
+    readTags(initial).forEach((tag) => {
+        if (buttonByFilter.has(tag) && tag !== 'all') {
+            activeFilters.add(tag);
+        }
+    });
+
+    if (allButton && activeFilters.size === 0) {
+        allButton.classList.add('active');
+        allButton.setAttribute('aria-pressed', 'true');
+    }
+
+    applyFilter();
+}
+
 // Observer les éléments à animer
 document.addEventListener('DOMContentLoaded', () => {
+    setupProjectFilters();
+
     const animatedElements = document.querySelectorAll('.project-card, .content-section, .about-section');
     animatedElements.forEach(el => {
         el.classList.add('reveal');

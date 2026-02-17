@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Tous les projets - William Tran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projets</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">Tous les projets</a>
+                        <a href="projets.html?tag=graphisme">Projets graphiques</a>
+                        <a href="projets.html?tag=codage">Projets codage</a>
+                        <a href="projets.html?tag=audiovisuel">Projets audiovisuels</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Présentation</a>
+                        <a href="about.html#competences">Compétences</a>
+                        <a href="about.html#experience">Expérience</a>
+                        <a href="about.html#formation">Formations</a>
+                        <a href="about.html#interets">Intérêts</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="work project-hub" id="work">
+        <div class="container">
+            <h1 class="section-title">Tous les projets</h1>
+            <p class="category-subtitle projects-hub-intro">Filtre rapidement par discipline. Un tag actif correspond en OR. Les correspondances en tag principal remontent en priorité.</p>
+
+            <div class="project-filter-bar" role="toolbar" aria-label="Filtrer les projets par tags">
+                <button type="button" class="project-filter-btn project-filter-btn-all active" data-filter="all" aria-pressed="true">
+                    <span>Tous</span>
+                </button>
+                <button type="button" class="project-filter-btn" data-filter="graphisme" aria-pressed="false">
+                    <span>Graphisme</span><span class="filter-mark" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="project-filter-btn" data-filter="codage" aria-pressed="false">
+                    <span>Codage</span><span class="filter-mark" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="project-filter-btn" data-filter="audiovisuel" aria-pressed="false">
+                    <span>Audiovisuel</span><span class="filter-mark" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="project-filter-btn" data-filter="ux" aria-pressed="false">
+                    <span>UX</span><span class="filter-mark" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="project-filter-btn" data-filter="audio" aria-pressed="false">
+                    <span>Audio</span><span class="filter-mark" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="project-filter-btn" data-filter="jeu" aria-pressed="false">
+                    <span>Jeu</span><span class="filter-mark" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="project-filter-btn" data-filter="ecriture" aria-pressed="false">
+                    <span>Écriture</span><span class="filter-mark" aria-hidden="true"></span>
+                </button>
+            </div>
+            <p class="project-filter-empty" hidden>Aucun projet ne correspond aux tags sélectionnés.</p>
+
+            <div class="projects-hub-grid" data-project-grid>
+                <a href="projet_codage_1.html" class="project-card" data-primary="codage" data-secondary="audio">
+                    <div class="project-image">
+                        <img src="assets/mockup-web.svg" alt="Aperçu de la plateforme de dépôt audio" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-kicker">Plateforme web</p>
+                        <h3 class="project-title">Plateforme de dépôt audio</h3>
+                        <p class="project-description">Automatisation des livrables · Dropbox</p>
+                        <div class="project-tags">
+                            <span class="project-tag project-tag-primary">Principal : Codage</span>
+                            <span class="project-tag">Secondaire : Audio</span>
+                        </div>
+                        <p class="project-impact">Temps de traitement divisé par 4.</p>
+                    </div>
+                </a>
+
+                <a href="projet_audiovisuel_1.html" class="project-card" data-primary="audiovisuel" data-secondary="audio,ecriture">
+                    <div class="project-image">
+                        <img src="assets/mockup-audio.svg" alt="Mockup projet audiovisuel 1" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-kicker">Audio narratif</p>
+                        <h3 class="project-title">Fiction sonore - Les JO : le chaos dans Paris</h3>
+                        <p class="project-description">Podcast narratif · 3 min</p>
+                        <div class="project-tags">
+                            <span class="project-tag project-tag-primary">Principal : Audiovisuel</span>
+                            <span class="project-tag">Secondaire : Audio</span>
+                            <span class="project-tag">Secondaire : Écriture</span>
+                        </div>
+                        <p class="project-impact">Enregistrement des doubleurs, montage, mixage et sound design.</p>
+                    </div>
+                </a>
+
+                <a href="projet_graphique_1.html" class="project-card" data-primary="graphisme" data-secondary="jeu">
+                    <div class="project-image">
+                        <img src="assets/projects/super-metroid/sm-custom-01-overview.svg" alt="Custom sprites Super Metroid" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-kicker">Pixel art</p>
+                        <h3 class="project-title">Custom sprites - Super Metroid</h3>
+                        <p class="project-description">ROM modding · Aseprite · SNES</p>
+                        <div class="project-tags">
+                            <span class="project-tag project-tag-primary">Principal : Graphisme</span>
+                            <span class="project-tag">Secondaire : Jeu</span>
+                        </div>
+                        <p class="project-impact">582 sprites remplacés sur l’intégralité des animations de Samus.</p>
+                    </div>
+                </a>
+
+                <a href="projet_codage_2.html" class="project-card" data-primary="codage" data-secondary="ux">
+                    <div class="project-image">
+                        <img src="assets/mockup-dashboard.svg" alt="Guide studio mobile first" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-kicker">Web app</p>
+                        <h3 class="project-title">Guide studio mobile first</h3>
+                        <p class="project-description">Page d’accueil studio orientée usage sur place</p>
+                        <div class="project-tags">
+                            <span class="project-tag project-tag-primary">Principal : Codage</span>
+                            <span class="project-tag">Secondaire : UX</span>
+                        </div>
+                        <p class="project-impact">Accès direct aux infos pratiques sans solliciter l’équipe.</p>
+                    </div>
+                </a>
+
+                <a href="projet_graphique_2.html" class="project-card" data-primary="graphisme" data-secondary="ux">
+                    <div class="project-image">
+                        <img src="assets/mockup-dashboard.svg" alt="Mockup projet graphique 2" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-kicker">Design interface</p>
+                        <h3 class="project-title">Projet graphique 2</h3>
+                        <p class="project-description">Dashboard · Data visualization</p>
+                        <div class="project-tags">
+                            <span class="project-tag project-tag-primary">Principal : Graphisme</span>
+                            <span class="project-tag">Secondaire : UX</span>
+                        </div>
+                        <p class="project-impact">Impact · Résultat à compléter</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
