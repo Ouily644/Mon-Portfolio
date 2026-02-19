@@ -69,7 +69,7 @@
     <section class="work project-hub" id="work">
         <div class="container">
             <h1 class="section-title">Tous les projets</h1>
-            <p class="category-subtitle projects-hub-intro">Filtre rapidement par discipline. Un tag actif correspond en OR. Les correspondances en tag principal remontent en priorité.</p>
+            <p class="projects-hub-intro">Cette page regroupe l’ensemble de mes projets en design, développement et audiovisuel.</p>
 
             <div class="project-filter-bar" role="toolbar" aria-label="Filtrer les projets par tags">
                 <button type="button" class="project-filter-btn project-filter-btn-all active" data-filter="all" aria-pressed="true">
@@ -85,13 +85,16 @@
                     <span>Audiovisuel</span><span class="filter-mark" aria-hidden="true"></span>
                 </button>
                 <button type="button" class="project-filter-btn" data-filter="ux" aria-pressed="false">
-                    <span>UX</span><span class="filter-mark" aria-hidden="true"></span>
+                    <span>UI/UX</span><span class="filter-mark" aria-hidden="true"></span>
                 </button>
                 <button type="button" class="project-filter-btn" data-filter="audio" aria-pressed="false">
                     <span>Audio</span><span class="filter-mark" aria-hidden="true"></span>
                 </button>
+                <button type="button" class="project-filter-btn" data-filter="video" aria-pressed="false">
+                    <span>Vidéo</span><span class="filter-mark" aria-hidden="true"></span>
+                </button>
                 <button type="button" class="project-filter-btn" data-filter="jeu" aria-pressed="false">
-                    <span>Jeu</span><span class="filter-mark" aria-hidden="true"></span>
+                    <span>Jeu vidéo</span><span class="filter-mark" aria-hidden="true"></span>
                 </button>
                 <button type="button" class="project-filter-btn" data-filter="ecriture" aria-pressed="false">
                     <span>Écriture</span><span class="filter-mark" aria-hidden="true"></span>
@@ -105,14 +108,27 @@
                         <img src="assets/mockup-web.svg" alt="Aperçu de la plateforme de dépôt audio" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-kicker">Plateforme web</p>
                         <h3 class="project-title">Plateforme de dépôt audio</h3>
-                        <p class="project-description">Automatisation des livrables · Dropbox</p>
+                        <p class="project-description">Playback Solutions · Plateforme web · 2026</p>
                         <div class="project-tags">
-                            <span class="project-tag project-tag-primary">Principal : Codage</span>
-                            <span class="project-tag">Secondaire : Audio</span>
+                            <span class="project-tag project-tag-primary">Codage</span>
+                            <span class="project-tag">Audio</span>
                         </div>
-                        <p class="project-impact">Temps de traitement divisé par 4.</p>
+                    </div>
+                </a>
+
+
+                <a href="projet_codage_4.html" class="project-card" data-primary="codage" data-secondary="ux">
+                    <div class="project-image">
+                        <img src="assets/mockup-dashboard.svg" alt="Création du portfolio personnel" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Conception & développement du portfolio</h3>
+                        <p class="project-description">Projet personnel · Site portfolio · 2026</p>
+                        <div class="project-tags">
+                            <span class="project-tag project-tag-primary">Codage</span>
+                            <span class="project-tag">UI/UX</span>
+                        </div>
                     </div>
                 </a>
 
@@ -121,15 +137,42 @@
                         <img src="assets/mockup-audio.svg" alt="Mockup projet audiovisuel 1" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-kicker">Audio narratif</p>
                         <h3 class="project-title">Fiction sonore - Les JO : le chaos dans Paris</h3>
-                        <p class="project-description">Podcast narratif · 3 min</p>
+                        <p class="project-description">Studio M · Fiction sonore · 2024</p>
                         <div class="project-tags">
-                            <span class="project-tag project-tag-primary">Principal : Audiovisuel</span>
-                            <span class="project-tag">Secondaire : Audio</span>
-                            <span class="project-tag">Secondaire : Écriture</span>
+                            <span class="project-tag project-tag-primary">Audiovisuel</span>
+                            <span class="project-tag">Audio</span>
+                            <span class="project-tag">Écriture</span>
                         </div>
-                        <p class="project-impact">Enregistrement des doubleurs, montage, mixage et sound design.</p>
+                    </div>
+                </a>
+
+                <a href="projet_audiovisuel_2.html" class="project-card" data-primary="audiovisuel" data-secondary="graphisme,video">
+                    <div class="project-image">
+                        <img src="assets/mockup-commerce.svg" alt="Mockup projet audiovisuel 2" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Test montage vidéo - Feuille Blanche</h3>
+                        <p class="project-description">Feuille Blanche · Test alternance · 2025</p>
+                        <div class="project-tags">
+                            <span class="project-tag project-tag-primary">Audiovisuel</span>
+                            <span class="project-tag">Graphisme</span>
+                            <span class="project-tag">Vidéo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="projet_audiovisuel_3.html" class="project-card" data-primary="audiovisuel" data-secondary="audio">
+                    <div class="project-image">
+                        <img src="assets/mockup-audio.svg" alt="Mockup projet audiovisuel 3" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Montage d'un épisode de podcast (anglais)</h3>
+                        <p class="project-description">Coco & Co Prod · Montage son · 2024</p>
+                        <div class="project-tags">
+                            <span class="project-tag project-tag-primary">Audiovisuel</span>
+                            <span class="project-tag">Audio</span>
+                        </div>
                     </div>
                 </a>
 
@@ -138,14 +181,12 @@
                         <img src="assets/projects/super-metroid/sm-custom-01-overview.svg" alt="Custom sprites Super Metroid" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-kicker">Pixel art</p>
-                        <h3 class="project-title">Custom sprites - Super Metroid</h3>
-                        <p class="project-description">ROM modding · Aseprite · SNES</p>
+                        <h3 class="project-title">Création de custom sprites - Super Metroid</h3>
+                        <p class="project-description">Projet personnel · ROM modding SNES · Aseprite</p>
                         <div class="project-tags">
-                            <span class="project-tag project-tag-primary">Principal : Graphisme</span>
-                            <span class="project-tag">Secondaire : Jeu</span>
+                            <span class="project-tag project-tag-primary">Graphisme</span>
+                            <span class="project-tag">Jeu vidéo</span>
                         </div>
-                        <p class="project-impact">582 sprites remplacés sur l’intégralité des animations de Samus.</p>
                     </div>
                 </a>
 
@@ -154,30 +195,41 @@
                         <img src="assets/mockup-dashboard.svg" alt="Guide studio mobile first" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-kicker">Web app</p>
                         <h3 class="project-title">Guide studio mobile first</h3>
-                        <p class="project-description">Page d’accueil studio orientée usage sur place</p>
+                        <p class="project-description">Playback Solutions · Guide mobile first · 2026</p>
                         <div class="project-tags">
-                            <span class="project-tag project-tag-primary">Principal : Codage</span>
-                            <span class="project-tag">Secondaire : UX</span>
+                            <span class="project-tag project-tag-primary">Codage</span>
+                            <span class="project-tag">UI/UX</span>
                         </div>
-                        <p class="project-impact">Accès direct aux infos pratiques sans solliciter l’équipe.</p>
+                    </div>
+                </a>
+
+                <a href="projet_codage_3.html" class="project-card" data-primary="codage" data-secondary="ux,graphisme">
+                    <div class="project-image">
+                        <img src="assets/mockup-web.svg" alt="Développement Suivea v3" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Développement Suivea v3</h3>
+                        <p class="project-description">Docaposte · Stage MMI2 · 2021</p>
+                        <div class="project-tags">
+                            <span class="project-tag project-tag-primary">Codage</span>
+                            <span class="project-tag">UI/UX</span>
+                            <span class="project-tag">Graphisme</span>
+                        </div>
                     </div>
                 </a>
 
                 <a href="projet_graphique_2.html" class="project-card" data-primary="graphisme" data-secondary="ux">
                     <div class="project-image">
-                        <img src="assets/mockup-dashboard.svg" alt="Mockup projet graphique 2" loading="lazy">
+                        <img src="assets/mockup-dashboard.svg" alt="Refonte Suivea logo et interface mobile" loading="lazy">
                     </div>
                     <div class="project-info">
-                        <p class="project-kicker">Design interface</p>
-                        <h3 class="project-title">Projet graphique 2</h3>
-                        <p class="project-description">Dashboard · Data visualization</p>
+                        <h3 class="project-title">Refonte Suivea - Logo & interface mobile</h3>
+                        <p class="project-description">Docaposte · Stage MMI2 · 2021</p>
                         <div class="project-tags">
-                            <span class="project-tag project-tag-primary">Principal : Graphisme</span>
-                            <span class="project-tag">Secondaire : UX</span>
+                            <span class="project-tag project-tag-primary">Graphisme</span>
+                            <span class="project-tag">UI/UX</span>
                         </div>
-                        <p class="project-impact">Impact · Résultat à compléter</p>
                     </div>
                 </a>
             </div>

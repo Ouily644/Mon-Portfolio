@@ -16,7 +16,7 @@
         html[data-theme="dark"] { background-color: #0b0d12; }
         html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
     </style>
-    <title>Refonte Suivea - Logo & interface mobile - Portfolio</title>
+    <title>Développement Suivea v3 - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -68,13 +68,13 @@
 
     <section class="project-hero">
         <div class="container">
-            <h1 class="hero-title fade-in">Refonte Suivea - logo & interface mobile</h1>
-            <p class="hero-subtitle fade-in-delay">Stage MMI2 chez Docaposte : redesign de l'identité visuelle et des maquettes mobiles Android.</p>
+            <h1 class="hero-title fade-in">Développement Suivea v3</h1>
+            <p class="hero-subtitle fade-in-delay">Intégration front-end d'une page Suivea v3 et mise en place d'une base composants pendant le stage MMI2 chez Docaposte.</p>
 
             <div class="project-meta fade-in-delay">
                 <div class="meta-item">
                     <div class="meta-label">Rôle</div>
-                    <div class="meta-value">Graphisme, UI/UX mobile, prototypage</div>
+                    <div class="meta-value">Développement front-end en binôme</div>
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Contexte</div>
@@ -86,130 +86,109 @@
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Type</div>
-                    <div class="meta-value">Identité visuelle & interface mobile</div>
+                    <div class="meta-value">Développement web</div>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="image-full">
-        <div class="image-placeholder"><span>Vue globale Suivea (écran principal / maquettes)</span></div>
-        <p class="image-slot-label">Slot visuel 01 : <code>graphique2-01-overview-suivea.webp</code></p>
+        <div class="image-placeholder"><span>Vue globale Suivea v3 (page intégrée)</span></div>
+        <p class="image-slot-label">Slot visuel 01 : <code>codage3-01-overview-suivea-v3.webp</code></p>
     </div>
 
     <div class="project-content">
         <div class="content-section">
             <h2>Résumé du projet</h2>
             <p>
-                Pendant mon stage de 2e année MMI chez Docaposte, j'ai travaillé sur Suivea,
-                un outil de traçabilité des flux courrier/colis. La mission couvrait deux volets
-                complémentaires : refondre l'identité visuelle (logo) et moderniser l'interface mobile.
+                Dans le prolongement de la refonte graphique, j'ai participé au développement web de Suivea v3.
+                L'objectif était de transformer des maquettes validées en écrans fonctionnels, tout en posant une base
+                de composants réutilisables pour accélérer les évolutions du produit.
             </p>
             <p>
-                L'objectif était d'améliorer la lisibilité et la cohérence globale du produit,
-                sans rompre avec les codes visuels déjà connus par les utilisateurs internes.
+                Le périmètre couvrait à la fois la fidélité visuelle (typographie, espacements, hiérarchie)
+                et la maintenabilité du code pour les futures pages.
             </p>
         </div>
 
         <div class="content-section">
-            <h2>Contexte produit</h2>
-            <p>
-                Suivea est utilisé dans un environnement métier avec des usages terrain (courrier, navettes,
-                suivi d'objets) sur plusieurs terminaux : PC, mobile, tablette et smartphone Android.
-                Le redesign devait rester clair, robuste et conforme à la charte interne de l'entreprise.
-            </p>
+            <h2>Objectif technique</h2>
             <ul>
-                <li>Conserver la lisibilité dans des contextes d'usage rapides</li>
-                <li>Renforcer la cohérence entre identité visuelle et interface produit</li>
-                <li>Proposer des maquettes exploitables directement pour l'intégration front-end</li>
+                <li>Structurer une page de référence des composants (couleurs, typo, tailles, règles UI)</li>
+                <li>Intégrer une page Suivea v3 fidèle aux maquettes validées</li>
+                <li>Maintenir une cohérence avec le design system interne de l'équipe</li>
+                <li>Préparer une base front-end réutilisable pour réduire le temps d'intégration des écrans suivants</li>
             </ul>
         </div>
 
         <div class="content-section">
-            <h2>Mission 1 - Refonte du logo</h2>
+            <h2>Ce que j'ai développé</h2>
             <p>
-                J'ai repris le logo existant avec une direction plus nette et plus lisible,
-                en conservant les codes de la marque (formes simples, tons de bleu, lecture immédiate).
-                Le concept a été itéré en plusieurs variantes puis consolidé avec les retours de l'équipe.
+                J'ai d'abord développé une page socle regroupant les composants et styles de référence,
+                puis nous avons réalisé l'intégration des écrans en binôme sur cette base commune.
             </p>
             <ul>
-                <li>Exploration de pistes visuelles (formes, équilibre, lisibilité à petite taille)</li>
-                <li>Vérification de compatibilité avec la charte interne</li>
-                <li>Sélection d'une version finale après itérations et validation collective</li>
+                <li>Structuration HTML des blocs métier avec hiérarchie claire</li>
+                <li>Mise en place de classes CSS réutilisables (grille, boutons, champs, cartes)</li>
+                <li>Ajustements fins de spacing, tailles de texte et alignements pour coller aux maquettes</li>
+                <li>Vérification de cohérence visuelle entre les écrans et les états d'interface</li>
             </ul>
         </div>
 
         <div class="image-full">
-        <div class="image-placeholder"><span>Itérations du logo Suivea</span></div>
-            <p class="image-slot-label">Slot visuel 02 : <code>graphique2-02-logo-iterations.webp</code></p>
+        <div class="image-placeholder"><span>Composants + page intégrée Suivea v3</span></div>
+            <p class="image-slot-label">Slot visuel 02 : <code>codage3-02-components-and-page.webp</code></p>
         </div>
 
         <div class="content-section">
-            <h2>Mission 2 - Refonte de l'interface mobile</h2>
+            <h2>Organisation en binôme</h2>
             <p>
-                J'ai ensuite refondu les maquettes de l'application mobile Android,
-                en travaillant la hiérarchie visuelle, l'espacement des blocs et la cohérence entre écrans.
-                La page de saisie a servi de base pour harmoniser le reste du parcours utilisateur.
-            </p>
-            <ul>
-                <li>Refonte de la navigation (navbar / footbar) pour clarifier les actions prioritaires</li>
-                <li>Amélioration des écrans de saisie et de distribution pour réduire la charge visuelle</li>
-                <li>Uniformisation des composants, des icônes et des libellés</li>
-            </ul>
-        </div>
-
-        <div class="image-full">
-        <div class="image-placeholder"><span>Écrans mobiles Suivea (final / avant-après)</span></div>
-            <p class="image-slot-label">Slot visuel 03 : <code>graphique2-03-mobile-ui.webp</code></p>
-        </div>
-
-        <div class="content-section">
-            <h2>Méthode de travail</h2>
-            <p>
-                Le projet avançait en itérations courtes avec des retours réguliers du maître de stage
-                et de l'équipe produit. Cette boucle de feedback a permis d'ajuster rapidement les choix graphiques,
-                de renforcer la cohérence entre écrans et d'aligner le design avec les besoins métier.
+                Le travail était découpé par lots (structure, composants, intégration, retours), avec des points réguliers
+                pour aligner le rendu final. Cette organisation a permis d'éviter les divergences de style et de garder
+                une progression continue malgré les itérations.
             </p>
         </div>
 
         <div class="content-section">
-            <h2>Difficultés & arbitrages</h2>
+            <h2>Difficultés & ajustements</h2>
             <ul>
-                <li>Trouver le bon équilibre entre modernisation et continuité visuelle</li>
-                <li>Maintenir une lisibilité forte sur des écrans mobiles parfois très denses</li>
-                <li>Faire converger les préférences de plusieurs interlocuteurs sans perdre la cohérence globale</li>
+                <li>Traduction précise maquette → code : ajustements progressifs des marges, tailles et alignements</li>
+                <li>Homogénéité entre écrans : normalisation des composants pour éviter les variations visuelles</li>
+                <li>Contraintes de planning : priorisation des éléments critiques avant les raffinements</li>
             </ul>
         </div>
 
         <div class="content-section">
             <h2>Résultats</h2>
             <ul>
-                <li>Logo final retenu comme base d'identité du projet Suivea</li>
-                <li>Maquettes mobiles validées et exploitables pour l'intégration</li>
-                <li>Système visuel plus homogène pour les prochaines évolutions produit</li>
+                <li>Base composants opérationnelle pour accélérer les futurs développements</li>
+                <li>Écran Suivea v3 intégré de manière fidèle et validé en interne</li>
+                <li>Méthode de travail plus robuste sur l'intégration UI en contexte professionnel</li>
             </ul>
         </div>
 
+        <div class="image-full">
+        <div class="image-placeholder"><span>Détail UI d’un écran Suivea v3</span></div>
+            <p class="image-slot-label">Slot visuel 03 : <code>codage3-03-ui-detail.webp</code></p>
+        </div>
+
         <div class="content-section">
-            <h2>Projet lié (développement)</h2>
-            <p>
-                Pour la partie intégration front-end réalisée en binôme pendant ce même stage :
-            </p>
-            <a href="projet_codage_3.html" class="text-link">Voir le projet développement Suivea v3</a>
+            <h2>Projet lié (graphisme)</h2>
+            <a href="projet_graphique_2.html" class="text-link">Voir la partie logo et interface mobile Suivea</a>
         </div>
 
         <div class="next-project">
             <div class="project-nav">
                 <div class="project-nav-side project-nav-prev">
                     <p class="project-nav-label">Projet précédent</p>
-                    <a href="projet_graphique_1.html" class="next-project-link prev">Création de custom sprites - Super Metroid</a>
+                    <a href="projet_graphique_2.html" class="next-project-link prev">Refonte Suivea - logo & interface mobile</a>
                 </div>
                 <div class="project-nav-center">
                     <a href="projets.html" class="next-project-secondary">Voir les autres projets</a>
                 </div>
                 <div class="project-nav-side project-nav-next">
                     <p class="project-nav-label">Projet suivant</p>
-                    <a href="projet_codage_3.html" class="next-project-link next">Développement Suivea v3</a>
+                    <a href="projet_codage_1.html" class="next-project-link next">Plateforme de dépôt audio</a>
                 </div>
             </div>
         </div>

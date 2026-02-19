@@ -16,7 +16,7 @@
         html[data-theme="dark"] { background-color: #0b0d12; }
         html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
     </style>
-    <title>Custom sprites Super Metroid - Portfolio</title>
+    <title>Création de custom sprites sur Super Metroid - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -70,7 +70,7 @@
     <!-- Project Hero -->
     <section class="project-hero">
         <div class="container">
-            <h1 class="hero-title fade-in">Custom sprites sur Super Metroid</h1>
+            <h1 class="hero-title fade-in">Création de custom sprites sur Super Metroid</h1>
             <p class="hero-subtitle fade-in-delay">Character modding SNES : réinterprétation de Samus en Sans, Inkling Girl et Samus Maid.</p>
             
             <div class="project-meta fade-in-delay">
@@ -96,7 +96,8 @@
 
     <!-- Main Project Image -->
     <div class="image-full">
-        <img src="assets/projects/super-metroid/sm-custom-01-overview.svg" alt="Placeholder - vue globale des sprites custom dans Super Metroid" loading="lazy">
+        <div class="image-placeholder"><span>Vue globale des custom sprites dans Super Metroid</span></div>
+        <p class="image-slot-label">Slot visuel 01 : <code>projet_graphique_1-01-placeholder.webp</code></p>
     </div>
 
     <!-- Project Content -->
@@ -115,7 +116,8 @@
         </div>
 
         <div class="image-full">
-            <img src="assets/projects/super-metroid/sm-custom-02-gameplay.svg" alt="Placeholder - capture gameplay de Super Metroid" loading="lazy">
+        <div class="image-placeholder"><span>Capture gameplay de Super Metroid</span></div>
+            <p class="image-slot-label">Slot visuel 02 : <code>projet_graphique_1-02-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -133,7 +135,8 @@
         </div>
 
         <div class="image-full">
-            <img src="assets/projects/super-metroid/sm-custom-03-modding-context.svg" alt="Placeholder - interface ROM hack, VARIA et Map Rando" loading="lazy">
+        <div class="image-placeholder"><span>Contexte modding (ROM hacks / VARIA / Map Rando)</span></div>
+            <p class="image-slot-label">Slot visuel 03 : <code>projet_graphique_1-03-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -160,7 +163,8 @@
         </div>
 
         <div class="image-full">
-            <img src="assets/projects/super-metroid/sm-custom-04-spritesheets.svg" alt="Placeholder - sprite sheets des trois variantes de personnage" loading="lazy">
+        <div class="image-placeholder"><span>Sprite sheets des variantes créées</span></div>
+            <p class="image-slot-label">Slot visuel 04 : <code>projet_graphique_1-04-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -213,11 +217,13 @@
                 <li>Palette et teintes custom selon chaque suit : <strong>Power Suit</strong>, <strong>Varia Suit</strong>, <strong>Gravity Suit</strong></li>
                 <li>Ajustements d’échelle pour coller au gabarit de Samus dans Super Metroid (ex : Sans est petit dans son jeu d’origine, mais son sprite de combat est trop grand pour être repris tel quel)</li>
                 <li>Ajustements palette pour garder la lisibilité en mouvement</li>
+                <li>Intégration et tests in-game avec <a href="https://github.com/Artheau/SpriteSomething" target="_blank" rel="noopener noreferrer">SpriteSomething</a> pour injecter les sprites dans Super Metroid</li>
             </ul>
         </div>
 
         <div class="image-full">
-            <img src="assets/projects/super-metroid/sm-custom-05-animations.svg" alt="Placeholder - comparatif animations Samus d'origine vs variantes custom" loading="lazy">
+        <div class="image-placeholder"><span>Comparatif animations vanilla vs custom</span></div>
+            <p class="image-slot-label">Slot visuel 05 : <code>projet_graphique_1-05-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -246,10 +252,17 @@
 
         <!-- Next Project -->
         <div class="next-project">
-            <p style="color: var(--color-text-secondary); margin-bottom: 16px;">Projet suivant</p>
-            <a href="projet_graphique_2.html" class="next-project-link">Projet graphique 2 →</a>
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev is-empty" aria-hidden="true"></div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">Voir les autres projets</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Projet suivant</p>
+                    <a href="projet_graphique_2.html" class="next-project-link next">Projet graphique 2</a>
+                </div>
+            </div>
         </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">

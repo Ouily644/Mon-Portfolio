@@ -96,7 +96,8 @@
 
     <!-- Main Project Image -->
     <div class="image-full">
-        <img src="assets/mockup-mobile.svg" alt="Aperçu mobile de la page d'information studio" loading="lazy">
+        <div class="image-placeholder"><span>Vue mobile du guide studio</span></div>
+        <p class="image-slot-label">Slot visuel 01 : <code>projet_codage_2-01-placeholder.webp</code></p>
     </div>
 
     <!-- Project Content -->
@@ -108,6 +109,10 @@
                 présents sur place. L'objectif était de centraliser les informations pratiques les plus demandées
                 en limitant au maximum les échanges répétitifs avec l'équipe.
             </p>
+            <p>
+                Le choix de ce format répondait à un besoin concret : en situation réelle, les utilisateurs cherchent
+                des réponses immédiates, pas une page vitrine longue à parcourir.
+            </p>
         </div>
 
         <div class="content-section">
@@ -117,6 +122,11 @@
                 La page devait être rapide à charger, ultra lisible et utile immédiatement, sans design décoratif
                 ni texte long.
             </p>
+            <ul>
+                <li>Réduire le temps de recherche d'information sur place</li>
+                <li>Rendre l'expérience autonome pour les invités</li>
+                <li>Standardiser les réponses aux demandes les plus fréquentes</li>
+            </ul>
         </div>
 
         <div class="content-section">
@@ -126,11 +136,13 @@
                 <li>Chargement rapide</li>
                 <li>Ton sobre, lisible et fiable</li>
                 <li>Chaque bloc doit répondre à une question réelle d'un artiste ou d'un invité</li>
+                <li>Aucune fonctionnalité gadget : uniquement des actions utiles sur place</li>
             </ul>
         </div>
 
         <div class="image-full">
-            <img src="assets/mockup-web.svg" alt="Structure globale de la page studio" loading="lazy">
+        <div class="image-placeholder"><span>Structure globale de la page studio</span></div>
+            <p class="image-slot-label">Slot visuel 02 : <code>projet_codage_2-02-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -148,7 +160,8 @@
         </div>
 
         <div class="image-full">
-            <img src="assets/mockup-commerce.svg" alt="Bloc Wi-Fi prioritaire avec actions rapides" loading="lazy">
+        <div class="image-placeholder"><span>Bloc Wi-Fi Guest prioritaire</span></div>
+            <p class="image-slot-label">Slot visuel 03 : <code>projet_codage_2-03-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -182,17 +195,28 @@
         </div>
 
         <div class="image-full">
-            <img src="assets/mockup-dashboard.svg" alt="Tri dynamique de la liste restaurants" loading="lazy">
+        <div class="image-placeholder"><span>Tri dynamique des restaurants selon l’heure</span></div>
+            <p class="image-slot-label">Slot visuel 04 : <code>projet_codage_2-04-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
             <h2>Choix techniques</h2>
             <ul>
-                <li>HTML / CSS / JavaScript vanilla</li>
-                <li>Navigation par sections avec ancre active</li>
+                <li>HTML / CSS / JavaScript vanilla pour une maintenance simple et rapide</li>
+                <li>Navigation par sections avec ancre active pour se repérer immédiatement</li>
                 <li>Masquage des sections non actives pour un affichage focalisé</li>
                 <li>Logique de tri des restaurants basée sur l'heure locale</li>
                 <li>Actions utilitaires : copie presse-papiers, ouverture réglages Wi-Fi selon appareil</li>
+                <li>Structure modulaire pour mettre à jour facilement horaires, adresses et contacts</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Difficultés & ajustements</h2>
+            <ul>
+                <li>Hiérarchiser fortement l'information pour éviter la surcharge sur petit écran</li>
+                <li>Conserver une lecture immédiate en dark et light mode</li>
+                <li>Garder un équilibre entre simplicité visuelle et actions réellement utiles</li>
             </ul>
         </div>
 
@@ -217,8 +241,19 @@
         </div>
 
         <div class="next-project">
-            <p style="color: var(--color-text-secondary); margin-bottom: 16px;">Projet suivant</p>
-            <a href="projet_audiovisuel_1.html" class="next-project-link">Projet audiovisuel 1 →</a>
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Projet précédent</p>
+                    <a href="projet_codage_1.html" class="next-project-link prev">Plateforme de dépôt audio</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">Voir les autres projets</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Projet suivant</p>
+                    <a href="projet_codage_4.html" class="next-project-link next">Conception & développement du portfolio</a>
+                </div>
+            </div>
         </div>
     </div>
 

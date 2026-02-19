@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Montage son d'interview longue - Coco & Co Prod - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projets</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">Tous les projets</a>
+                        <a href="projets.html?tag=graphisme">Projets graphiques</a>
+                        <a href="projets.html?tag=codage">Projets codage</a>
+                        <a href="projets.html?tag=audiovisuel">Projets audiovisuels</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Présentation</a>
+                        <a href="about.html#competences">Compétences</a>
+                        <a href="about.html#experience">Expérience</a>
+                        <a href="about.html#formation">Formations</a>
+                        <a href="about.html#interets">Intérêts</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Montage son d'interview longue - Coco & Co Prod</h1>
+            <p class="hero-subtitle fade-in-delay">Condensation et structuration d'une interview en anglais de près de 4h en un épisode final d'environ 40 minutes.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Rôle</div>
+                    <div class="meta-value">Montage son, condensation éditoriale, nettoyage et équilibrage</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Contexte</div>
+                    <div class="meta-value">Stage Coco & Co Prod</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Année</div>
+                    <div class="meta-value">2024</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Format</div>
+                    <div class="meta-value">Podcast interview (anglais)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <div class="image-placeholder"><span>Cover de l’épisode podcast</span></div>
+        <p class="image-slot-label">Slot visuel 01 : <code>audiovisuel3-01-cover-episode.webp</code></p>
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Résumé du projet</h2>
+            <p>
+                Pendant mon stage chez Coco & Co Prod, j'ai pris en charge le montage son d'une interview longue en anglais.
+                Le travail principal consistait à passer d'un matériau brut d'environ 4 heures à une version publiée de 40 minutes,
+                sans perdre les informations clés ni la cohérence du récit.
+            </p>
+            <p>
+                Le projet combinait donc deux exigences fortes : une condensation éditoriale rigoureuse et une qualité
+                de rendu audio suffisamment propre pour la diffusion publique.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Contexte & défi</h2>
+            <ul>
+                <li>Durée source très importante (environ 4h)</li>
+                <li>Contenu en anglais avec un volume élevé d'informations</li>
+                <li>Nécessité de conserver le sens et l'intention de l'intervenant</li>
+                <li>Délai de livraison court, avec nécessité d'avancer vite sans perdre en qualité</li>
+                <li>Retours réguliers du maître de stage à chaque étape clé du montage</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Approche de montage</h2>
+            <ol>
+                <li>Dérush complet et repérage des séquences fortes</li>
+                <li>Sélection thématique et suppression des redondances</li>
+                <li>Restructuration narrative pour fluidifier l'écoute</li>
+                <li>Pré-mix pour valider la lisibilité avant finalisation</li>
+            </ol>
+            <p>
+                La logique de coupe a été guidée par l'information utile : garder les passages qui apportent
+                une valeur narrative claire, et retirer ce qui ralentit l'écoute sans enrichir le fond.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Suivi & organisation</h2>
+            <p>
+                Le projet avançait par itérations courtes avec des points de validation réguliers avec le maître de stage.
+                Pour tenir le délai, j'ai travaillé avec un planning de montage précis (sélection, assemblage, nettoyage, mix, export)
+                et des exports intermédiaires pour sécuriser les choix éditoriaux.
+            </p>
+            <ul>
+                <li>Découpage du travail en blocs quotidiens pour éviter l'effet tunnel</li>
+                <li>Points de contrôle réguliers avant les étapes de mix et de finalisation</li>
+                <li>Exports de vérification pour valider le fond éditorial avant la finition sonore</li>
+            </ul>
+        </div>
+
+        <div class="image-full">
+        <div class="image-placeholder"><span>Comparatif avant/après (4h → 40 min)</span></div>
+            <p class="image-slot-label">Slot visuel 02 : <code>audiovisuel3-02-avant-apres-4h-40min.webp</code></p>
+        </div>
+
+        <div class="content-section">
+            <h2>Difficultés & décisions éditoriales</h2>
+            <ul>
+                <li>Condenser fortement sans appauvrir le message principal</li>
+                <li>Éliminer les répétitions tout en conservant la progression du récit</li>
+                <li>Maintenir une écoute naturelle malgré le volume de coupes</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Mixage & mastering</h2>
+            <p>
+                La phase de post-production audio a visé un rendu propre, naturel et homogène sur toute la durée de l'épisode.
+            </p>
+            <ul>
+                <li>Nettoyage des voix : suppression des bruits de bouche, clics et respirations trop marquées</li>
+                <li>Équilibrage tonal : correction des fréquences gênantes pour améliorer l'intelligibilité</li>
+                <li>Contrôle de dynamique : compression légère pour stabiliser les niveaux de parole</li>
+                <li>Niveau final cohérent pour une écoute confortable sur casque, enceintes et mobile</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Résultats</h2>
+            <ul>
+                <li>Durée réduite de ~4h à ~40 min</li>
+                <li>Épisode final plus lisible, rythmé et exploitable en diffusion</li>
+                <li>Message principal conservé malgré la forte condensation</li>
+                <li>Publication sur les plateformes du podcast</li>
+                <li>Renforcement de ma capacité à livrer sous contrainte de délai</li>
+            </ul>
+        </div>
+
+        <div class="image-full">
+        <div class="image-placeholder"><span>Détail timeline audio (ou extrait audio)</span></div>
+            <p class="image-slot-label">Slot visuel 03 : <code>audiovisuel3-03-timeline-detail.webp</code> ou <code>audiovisuel3-03-extrait-audio.mp3</code></p>
+        </div>
+
+        <div class="content-section diffusion-links">
+            <h2>Liens de diffusion (cliquables)</h2>
+            <ul>
+                <li><a href="https://podcasts.apple.com/fr/podcast/columbine-them-you-me-everybody/id1710272998" target="_blank" rel="noopener noreferrer">Apple Podcasts</a></li>
+                <li><a href="https://open.spotify.com/show/3wjEPYht9yicpBhrr184aN" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+                <li><a href="https://www.youtube.com/@ColumbineThemYouMeEverybody" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Projet précédent</p>
+                    <a href="projet_audiovisuel_2.html" class="next-project-link prev">Test montage vidéo - Feuille Blanche</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">Voir les autres projets</a>
+                </div>
+                <div class="project-nav-side project-nav-next is-empty" aria-hidden="true"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -94,7 +94,8 @@
     </section>
     <!-- Main Project Image -->
     <div class="image-full">
-        <img src="assets/mockup-web.svg" alt="Aperçu de la plateforme de dépôt audio" loading="lazy">
+        <div class="image-placeholder"><span>Vue globale de la plateforme de dépôt audio</span></div>
+        <p class="image-slot-label">Slot visuel 01 : <code>projet_codage_1-01-placeholder.webp</code></p>
     </div>
 
     <!-- Project Content -->
@@ -109,11 +110,14 @@
             <p>
                 <strong>Objectif :</strong> remplacer un processus manuel long, risqué et peu structuré
                 par un système fiable, sécurisé et conforme à une charte technique stricte.
+                Le projet visait aussi à rendre le parcours plus simple pour les artistes,
+                tout en sécurisant le traitement côté équipe production.
             </p>
         </div>
 
         <div class="image-full">
-            <img src="assets/mockup-dashboard.svg" alt="Capture globale de la plateforme" loading="lazy">
+        <div class="image-placeholder"><span>Interface principale de la plateforme</span></div>
+            <p class="image-slot-label">Slot visuel 02 : <code>projet_codage_1-02-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -155,11 +159,13 @@
         </div>
 
         <div class="image-full">
-            <img src="assets/mockup-commerce.svg" alt="Charte technique intégrée" loading="lazy">
+        <div class="image-placeholder"><span>Charte technique intégrée dans la plateforme</span></div>
+            <p class="image-slot-label">Slot visuel 03 : <code>projet_codage_1-03-placeholder.webp</code></p>
         </div>
 
         <div class="image-full">
-            <img src="assets/mockup-mobile.svg" alt="Validation obligatoire avant upload" loading="lazy">
+        <div class="image-placeholder"><span>Validation obligatoire avant accès à l’upload</span></div>
+            <p class="image-slot-label">Slot visuel 04 : <code>projet_codage_1-04-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -180,13 +186,25 @@
             </ul>
         </div>
 
+        <div class="content-section">
+            <h2>Organisation du flux</h2>
+            <ol>
+                <li>L'utilisateur valide la charte et accède au formulaire</li>
+                <li>Le système applique les contrôles et les champs obligatoires</li>
+                <li>Les fichiers sont envoyés dans le bon espace Dropbox selon le groupe</li>
+                <li>Le classement final est automatisé pour éviter le tri manuel</li>
+            </ol>
+        </div>
+
 
         <div class="image-full">
-            <img src="assets/mockup-web.svg" alt="Formulaire d’upload structuré" loading="lazy">
+        <div class="image-placeholder"><span>Formulaire d’upload structuré</span></div>
+            <p class="image-slot-label">Slot visuel 05 : <code>projet_codage_1-05-placeholder.webp</code></p>
         </div>
 
         <div class="image-full">
-            <img src="assets/mockup-audio.svg" alt="Schéma du flux de traitement" loading="lazy">
+        <div class="image-placeholder"><span>Schéma du flux (validation → upload → Dropbox)</span></div>
+            <p class="image-slot-label">Slot visuel 06 : <code>projet_codage_1-06-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -216,18 +234,30 @@
         </div>
 
 
+        <div class="content-section">
+            <h2>Fiabilité & sécurité</h2>
+            <ul>
+                <li>Token d'accès API régénéré régulièrement pour éviter les coupures d'accès</li>
+                <li>Validation en amont pour limiter les fichiers non conformes</li>
+                <li>Routage par groupe pour réduire les erreurs de destination</li>
+                <li>Processus d'upload structuré pour améliorer la traçabilité</li>
+            </ul>
+        </div>
+
+
         <div class="image-full">
-            <img src="assets/mockup-dashboard.svg" alt="Schéma de l’arborescence Dropbox" loading="lazy">
+        <div class="image-placeholder"><span>Arborescence Dropbox / namespaces partagés</span></div>
+            <p class="image-slot-label">Slot visuel 07 : <code>projet_codage_1-07-placeholder.webp</code></p>
         </div>
 
         <div class="content-section">
             <h2>Résultats</h2>
             <ul>
                 <li>Temps de traitement divisé par 4</li>
-                <li>Suppression du tri manuel</li>
-                <li>Diminution des erreurs</li>
-                <li>Processus plus professionnel et structuré</li>
-                <li>Meilleure responsabilisation des artistes</li>
+                <li>Suppression du tri manuel sur la majorité des envois</li>
+                <li>Diminution des erreurs de nommage et de classement</li>
+                <li>Processus plus professionnel, documenté et structuré</li>
+                <li>Meilleure responsabilisation des artistes avant l'upload</li>
             </ul>
         </div>
 
@@ -254,13 +284,25 @@
                 <li>Gestion de gros volumes de données</li>
                 <li>Résolution de problèmes concrets en environnement réel</li>
             </ul>
+            <p>
+                Ce projet illustre ma capacité à relier exigence technique, fiabilité opérationnelle
+                et simplicité d'usage dans un contexte professionnel.
+            </p>
         </div>
 
         <div class="next-project">
-            <p style="color: var(--color-text-secondary); margin-bottom: 16px;">Projet suivant</p>
-            <div class="next-project-actions">
-                <a href="projet_codage_2.html" class="next-project-link">Guide studio mobile first →</a>
-                <a href="projets.html" class="next-project-secondary">Voir les autres projets</a>
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Projet précédent</p>
+                    <a href="projet_codage_3.html" class="next-project-link prev">Développement Suivea v3</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">Voir les autres projets</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Projet suivant</p>
+                    <a href="projet_codage_2.html" class="next-project-link next">Guide studio mobile first</a>
+                </div>
             </div>
         </div>
     </div>
