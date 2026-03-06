@@ -688,7 +688,7 @@ a {
 
 .project-image {
     width: 100%;
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
     border-radius: var(--media-radius);
     overflow: hidden;
     margin-bottom: 20px;
@@ -716,11 +716,6 @@ a {
 
 .project-image img[src*="audiovisuel1-chaos-paris.webp"] {
     transform: scale(1.16);
-    transform-origin: center center;
-}
-
-.project-image img[src*="audiovisuel2-feuille-blanche.webp"] {
-    transform: scale(1.34);
     transform-origin: center center;
 }
 
@@ -1348,6 +1343,10 @@ a {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.image-full--contain img {
+    object-fit: contain;
 }
 
 .image-slot-label {
