@@ -11,8 +11,18 @@ const savedTheme = localStorage.getItem(THEME_KEY);
 const initialTheme = htmlElement.getAttribute('data-theme') || savedTheme || getSystemTheme();
 htmlElement.setAttribute('data-theme', initialTheme);
 
+const syncThemeToggleA11y = () => {
+    if (!themeToggle) {
+        return;
+    }
+    const isDark = htmlElement.getAttribute('data-theme') === 'dark';
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute('aria-label', isDark ? 'Activer le thème clair' : 'Activer le thème sombre');
+};
+
 const setTheme = (theme, shouldPersist = true) => {
     if (htmlElement.getAttribute('data-theme') === theme) {
+        syncThemeToggleA11y();
         return;
     }
 
@@ -21,7 +31,11 @@ const setTheme = (theme, shouldPersist = true) => {
     if (shouldPersist) {
         localStorage.setItem(THEME_KEY, theme);
     }
+
+    syncThemeToggleA11y();
 };
+
+syncThemeToggleA11y();
 
 // Toggle du thème
 if (themeToggle) {
@@ -39,10 +53,27 @@ const navLinks = document.querySelector('.nav-links');
 const navLinksItems = document.querySelectorAll('.nav-link');
 const navItems = document.querySelectorAll('.nav-item');
 
-if (menuToggle) {
+if (menuToggle && navLinks) {
+    if (!navLinks.id) {
+        navLinks.id = 'primary-navigation';
+    }
+    menuToggle.setAttribute('aria-controls', navLinks.id);
+    menuToggle.setAttribute('aria-expanded', 'false');
+}
+
+const setMenuState = (isOpen) => {
+    if (!menuToggle || !navLinks) {
+        return;
+    }
+    menuToggle.classList.toggle('active', isOpen);
+    navLinks.classList.toggle('active', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+};
+
+if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
+        const isOpen = !navLinks.classList.contains('active');
+        setMenuState(isOpen);
         navItems.forEach(item => item.classList.remove('active'));
     });
 
@@ -68,8 +99,7 @@ if (menuToggle) {
             }
 
             // Sinon, on ferme le menu et on laisse le lien naviguer
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+            setMenuState(false);
             navItems.forEach(item => item.classList.remove('active'));
         });
     });
@@ -77,8 +107,7 @@ if (menuToggle) {
     // Les liens dans les dropdowns ferment toujours le menu
     document.querySelectorAll('.nav-dropdown a').forEach(link => {
         link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+            setMenuState(false);
             // Fermer tous les dropdowns actifs
             navItems.forEach(item => item.classList.remove('active'));
         });
@@ -87,8 +116,14 @@ if (menuToggle) {
     // Fermer le menu si on clique en dehors
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.nav-container')) {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+            setMenuState(false);
+            navItems.forEach(item => item.classList.remove('active'));
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            setMenuState(false);
             navItems.forEach(item => item.classList.remove('active'));
         }
     });
@@ -112,12 +147,7 @@ const disableNavTransitions = () => {
 };
 
 const resetNavState = () => {
-    if (menuToggle) {
-        menuToggle.classList.remove('active');
-    }
-    if (navLinks) {
-        navLinks.classList.remove('active');
-    }
+    setMenuState(false);
     navItems.forEach(item => item.classList.remove('active'));
 };
 
@@ -292,34 +322,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ==================== NAVIGATION BAR ON SCROLL ==================== 
 // Shadow is handled purely in CSS to keep it consistent.
-
-// ==================== CURSOR EFFECT (OPTIONAL) ==================== 
-// Effet de hover subtil sur les cards
-const projectCards = document.querySelectorAll('.project-card');
-
-projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-    });
-});
-
-// ==================== PRELOAD IMAGES ==================== 
-// Fonction pour précharger les images quand elles sont ajoutées
-function preloadImages() {
-    const images = document.querySelectorAll('img[data-src]');
-    
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
-}
-
-document.addEventListener('DOMContentLoaded', preloadImages);

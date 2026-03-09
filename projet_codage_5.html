@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>VeloTrack - Application iOS de suivi cycliste - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Application iOS SwiftUI de suivi cycliste avec tracking intelligent, statistiques et maintenance vélo.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_5.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_5.html">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="VeloTrack - Application iOS de suivi cycliste">
+    <meta property="og:description" content="Application iOS SwiftUI de suivi cycliste avec tracking intelligent, statistiques et maintenance vélo.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/projet_codage_5.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/velotrack/velotrack-01-overview-light.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VeloTrack - Application iOS de suivi cycliste">
+    <meta name="twitter:description" content="Application iOS SwiftUI de suivi cycliste avec tracking intelligent, statistiques et maintenance vélo.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/velotrack/velotrack-01-overview-light.webp">
+    <!-- /SEO META -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projets</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">Tous les projets</a>
+                        <a href="projets.html?tag=graphisme">Projets graphiques</a>
+                        <a href="projets.html?tag=codage">Projets codage</a>
+                        <a href="projets.html?tag=audiovisuel">Projets audiovisuels</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Présentation</a>
+                        <a href="about.html#competences">Compétences</a>
+                        <a href="about.html#experience">Expérience</a>
+                        <a href="about.html#formation">Formations</a>
+                        <a href="about.html#interets">Intérêts</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">VeloTrack - Application iOS de suivi cycliste</h1>
+            <p class="hero-subtitle fade-in-delay">Application iOS native conçue pour lancer automatiquement le tracking vélo, centraliser les données de sortie et intégrer certains eBikes en Bluetooth Low Energy.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Rôle</div>
+                    <div class="meta-value">Conception produit, architecture iOS et développement full app</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Contexte</div>
+                    <div class="meta-value">Projet personnel</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Année</div>
+                    <div class="meta-value">2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Application mobile iOS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <div class="theme-media-stack" aria-label="Vue d'ensemble du projet VeloTrack avec l'application et ses points forts">
+            <img class="theme-media theme-media-light" src="assets/projects/velotrack/velotrack-01-overview-light.webp" alt="Vue d'ensemble du projet VeloTrack avec l'application et ses points forts" loading="eager" decoding="async">
+            <img class="theme-media theme-media-dark" src="assets/projects/velotrack/velotrack-01-overview-dark.webp" alt="" loading="eager" decoding="async" aria-hidden="true">
+        </div>
+        <p class="image-slot-label">Slot visuel 01 : <code>velotrack-01-overview-light.webp</code> / <code>velotrack-01-overview-dark.webp</code></p>
+    </div>
+
+        <div class="project-content">
+        <div class="content-section">
+            <h2>Genèse du projet</h2>
+            <p>
+                VeloTrack est né d'un besoin personnel concret : démarrer une sortie vélo sans friction.
+                Les applications du marché imposent souvent une action manuelle avant chaque trajet
+                (sortir le téléphone, déverrouiller, lancer l'enregistrement), ce qui casse l'expérience.
+            </p>
+            <p>
+                L'objectif était donc clair: enfourcher le vélo et laisser l'application gérer automatiquement
+                le démarrage et l'arrêt du tracking.
+            </p>
+            <p>
+                Le projet a commencé avec une base minimale (carte plein écran + boutons démarrer/arrêter),
+                puis a évolué par itérations successives: persistance des données, détection automatique,
+                statistiques, maintenance et intégration eBike.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Vue d'ensemble</h2>
+            <p>
+                VeloTrack est une application iOS native développée en Swift/SwiftUI, pensée pour suivre les performances,
+                gérer l'entretien des vélos et piloter certains vélos à assistance électrique directement depuis l'iPhone.
+            </p>
+            <p>
+                À ce stade, l'application doit être comprise comme un prototype avancé : l'ensemble est déjà largement
+                fonctionnel, mais le projet n'est pas encore finalisé comme produit prêt à être diffusé.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Problèmes principaux à résoudre</h2>
+            <ul>
+                <li>Déclencher automatiquement un trajet sans faux positifs ni action manuelle</li>
+                <li>Maintenir un tracking fiable malgré les limites du GPS, du background et de la batterie</li>
+                <li>Intégrer des moteurs eBike en BLE sans documentation constructeur exploitable</li>
+                <li>Garder une expérience simple alors que la logique interne devient rapidement complexe</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Stack technique</h2>
+            <ul>
+                <li><strong>Swift / SwiftUI</strong> : interface déclarative, support portrait/paysage</li>
+                <li><strong>SwiftData</strong> : persistance locale des trajets, vélos et données de maintenance</li>
+                <li><strong>CoreLocation</strong> : tracking GPS haute précision et gestion batterie</li>
+                <li><strong>CoreMotion</strong> : détection automatique d'activité (vélo, marche, voiture)</li>
+                <li><strong>CoreBluetooth</strong> : intégration BLE avec moteurs électriques</li>
+                <li><strong>MapKit</strong> : cartographie et tracé en temps réel</li>
+                <li><strong>HealthKit</strong> : export automatique vers Apple Santé</li>
+                <li><strong>Combine</strong> : synchronisation réactive des données en temps réel</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Fonctionnalité 1 - Tracking intelligent</h2>
+            <p>
+                Le coeur de l'application repose sur un tracking GPS avec démarrage/arrêt automatiques,
+                basé sur la fusion CoreLocation + CoreMotion.
+            </p>
+            <ul>
+                <li>Détection automatique du début de trajet vélo sans action utilisateur</li>
+                <li>Distinction vélo / marche / voiture pour éviter les faux positifs</li>
+                <li>Arrêt automatique à l'immobilisation</li>
+                <li>Pipeline de filtrage/lissage pour supprimer les sauts GPS</li>
+                <li>Continuité du tracking en background/foreground</li>
+            </ul>
+            <p>
+                La difficulté n'était pas seulement de détecter un mouvement, mais de détecter le bon contexte :
+                démarrer au bon moment, ne pas lancer un trajet en voiture ou à pied, et conserver un suivi exploitable
+                même quand les données capteurs deviennent bruitées.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <div class="image-placeholder"><span>Pipeline de tracking (CoreLocation + CoreMotion + filtrage GPS)</span></div>
+            <p class="image-slot-label">Slot visuel 02 : <code>velotrack-02-tracking-pipeline.webp</code></p>
+        </div>
+
+        <div class="content-section">
+            <h2>Fonctionnalité 2 - Intégration eBike (BLE)</h2>
+            <p>
+                VeloTrack intègre les moteurs électriques via Bluetooth Low Energy avec une architecture orientée protocole,
+                pour connecter plusieurs constructeurs sans réécrire l'interface.
+            </p>
+            <ul>
+                <li>Architecture extensible par constructeur (Mahle, Bafang, Shimano, Bosch...)</li>
+                <li>Reverse engineering du protocole Mahle ebikemotion</li>
+                <li>Lecture en temps réel: batterie, moteur, odomètre, autonomie</li>
+                <li>Contrôle du niveau d'assistance directement dans l'app</li>
+            </ul>
+            <p>
+                Le point le plus complexe a été le reverse engineering du protocole Mahle : identifier les services,
+                comprendre la structure des trames et transformer des données brutes en informations utiles pour l'interface,
+                sans documentation officielle exploitable.
+            </p>
+            <p>
+                L'architecture inclut aussi une implémentation pour Bafang et Shimano Steps. En revanche, je n'ai pas encore
+                pu les valider sur vélo réel faute d'accès à des modèles de ces marques. Ces intégrations sont donc présentes
+                dans le prototype, mais leur test matériel reste à compléter.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <div class="image-placeholder"><span>Tableau de bord eBike connecté en BLE</span></div>
+            <p class="image-slot-label">Slot visuel 03 : <code>velotrack-03-ebike-dashboard.webp</code></p>
+        </div>
+
+        <div class="content-section">
+            <h2>Fonctionnalité 3 - Statistiques, cartographie et maintenance</h2>
+            <ul>
+                <li>Historique trajets: distance, durée, vitesses, dénivelé, calories, météo</li>
+                <li>Tracé temps réel et visualisation complète post-trajet</li>
+                <li>Génération de miniatures de carte avec départ/arrivée</li>
+                <li>Suivi d'usure composants (chaîne, freins, pneus) selon kilométrage</li>
+                <li>Attribution automatique du vélo au trajet et alertes de maintenance</li>
+            </ul>
+            <p>
+                Ces briques prolongent la promesse de départ : ne pas se limiter à enregistrer un trajet,
+                mais transformer les données collectées en suivi utile au quotidien.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <div class="image-placeholder"><span>Vue statistiques agrégées des trajets</span></div>
+            <p class="image-slot-label">Slot visuel 04 : <code>velotrack-04-stats-overview.webp</code></p>
+        </div>
+
+        <div class="image-full">
+            <div class="image-placeholder"><span>Vue maintenance vélo et usure des composants</span></div>
+            <p class="image-slot-label">Slot visuel 05 : <code>velotrack-05-maintenance.webp</code></p>
+        </div>
+
+        <div class="content-section">
+            <h2>Points d'architecture notables</h2>
+            <ul>
+                <li><strong>Protocole MotorProvider</strong> : abstraction BLE avec interface unique pour tous les constructeurs</li>
+                <li><strong>Reverse engineering BLE</strong> : décodage des trames binaires Mahle sans documentation officielle</li>
+                <li><strong>Architecture tracking</strong> : filtrage précision, détection de sauts, lissage vitesse, gestion énergie</li>
+                <li><strong>Mock système</strong> : simulation complète pour développer/tester l'UI sans matériel physique</li>
+            </ul>
+            <p>
+                Cette architecture m'a permis de faire évoluer l'application sans la réécrire à chaque nouvelle brique :
+                même interface pour plusieurs moteurs, logique de tracking isolée, et outils de simulation pour avancer
+                sans dépendre en permanence du matériel ou des conditions réelles de sortie.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <div class="image-placeholder"><span>Schéma architecture (providers BLE + manager central + vues SwiftUI)</span></div>
+            <p class="image-slot-label">Slot visuel 06 : <code>velotrack-06-architecture-ble.webp</code></p>
+        </div>
+
+        <div class="content-section">
+            <h2>Ce que ce projet démontre</h2>
+            <ul>
+                <li>Capacité à concevoir un produit mobile à partir d'un besoin utilisateur précis</li>
+                <li>Capacité à traiter des sujets techniques avancés en iOS natif (tracking, capteurs, BLE, background)</li>
+                <li>Réflexe d'architecture pour faire évoluer l'application sans accumulation de code fragile</li>
+                <li>Équilibre entre complexité technique réelle et expérience utilisateur simple</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Suite envisagée du projet</h2>
+            <p>
+                La prochaine étape logique est une phase de test en conditions réelles avec de vrais utilisateurs,
+                probablement via TestFlight, pour valider la stabilité du tracking, le comportement en arrière-plan,
+                la lisibilité des données et la valeur réelle des fonctionnalités eBike au quotidien.
+            </p>
+            <p>
+                Si ces tests confirment la solidité du prototype, l'objectif serait d'aller vers une publication
+                App Store avec le travail associé : finition produit, corrections de fiabilité, préparation de la fiche,
+                visuels, positionnement clair et communication de lancement sur les réseaux pour toucher les premiers
+                utilisateurs intéressés par le suivi vélo et les eBikes.
+            </p>
+            <p>
+                À plus long terme, un portage Android aurait du sens si l'application trouve son public et si l'usage
+                valide l'intérêt d'élargir la base utilisateur au-delà de l'écosystème iPhone.
+            </p>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Projet précédent</p>
+                    <a href="projet_codage_4.html" class="next-project-link prev">Conception & développement du portfolio</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">Voir les autres projets</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Projet suivant</p>
+                    <a href="projet_audiovisuel_1.html" class="next-project-link next">Fiction sonore - Les JO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

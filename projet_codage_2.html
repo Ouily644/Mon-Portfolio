@@ -17,6 +17,22 @@
         html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
     </style>
     <title>Guide studio mobile - Portfolio UX/UI Designer</title>
+    <!-- SEO META -->
+    <meta name="description" content="Guide web mobile first pour artistes invités : accès rapide aux infos studio, Wi-Fi et logistique.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_2.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_2.html">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Guide studio mobile first">
+    <meta property="og:description" content="Guide web mobile first pour artistes invités : accès rapide aux infos studio, Wi-Fi et logistique.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/projet_codage_2.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage2/codage2-00-miniature.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Guide studio mobile first">
+    <meta name="twitter:description" content="Guide web mobile first pour artistes invités : accès rapide aux infos studio, Wi-Fi et logistique.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage2/codage2-00-miniature.webp">
+    <!-- /SEO META -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -71,7 +87,7 @@
     <section class="project-hero">
         <div class="container">
             <h1 class="hero-title fade-in">Guide studio mobile first pour artistes invités</h1>
-            <p class="hero-subtitle fade-in-delay">1 scan, toutes les infos essentielles, zéro question à l'équipe</p>
+            <p class="hero-subtitle fade-in-delay">Un guide mobile pensé pour répondre en quelques secondes aux besoins concrets des artistes et invités sur place.</p>
 
             <div class="project-meta fade-in-delay">
                 <div class="meta-item">
@@ -101,7 +117,7 @@
     </div>
 
     <!-- Project Content -->
-    <div class="project-content">
+        <div class="project-content">
         <div class="content-section">
             <h2>Résumé du projet</h2>
             <p>
@@ -110,8 +126,9 @@
                 en limitant au maximum les échanges répétitifs avec l'équipe.
             </p>
             <p>
-                Le choix de ce format répondait à un besoin concret : en situation réelle, les utilisateurs cherchent
-                des réponses immédiates, pas une page vitrine longue à parcourir.
+                Le choix de ce format répondait à une réalité simple : sur place, personne ne veut chercher longtemps.
+                Il faut une réponse immédiate, visible au bon moment, sur téléphone, sans passer par une page vitrine
+                trop longue ou par une succession de questions à l'équipe.
             </p>
         </div>
 
@@ -119,14 +136,27 @@
             <h2>Objectif produit</h2>
             <p><strong>1 scan → toutes les infos évidentes → zéro question à l'équipe.</strong></p>
             <p>
-                La page devait être rapide à charger, ultra lisible et utile immédiatement, sans design décoratif
-                ni texte long.
+                La page devait être rapide à charger, immédiatement lisible et utile dès le premier écran,
+                sans design décoratif ni texte inutile.
             </p>
             <ul>
                 <li>Réduire le temps de recherche d'information sur place</li>
                 <li>Rendre l'expérience autonome pour les invités</li>
                 <li>Standardiser les réponses aux demandes les plus fréquentes</li>
             </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Problème à résoudre</h2>
+            <p>
+                Dans un studio, les mêmes questions reviennent vite : comment se connecter au Wi-Fi, où commander,
+                à quelle adresse faire livrer, quelles sont les infos pratiques utiles sur place. Répondre à chaque fois
+                mobilise l'équipe sur des sujets répétitifs alors que l'information peut être rendue autonome.
+            </p>
+            <p>
+                Le projet consistait donc à condenser ces besoins en une interface très courte, pensée pour l'usage réel,
+                pas pour une présentation institutionnelle.
+            </p>
         </div>
 
         <div class="content-section">
@@ -149,14 +179,18 @@
             <h2>Wi-Fi Guest en priorité absolue</h2>
             <p>
                 Le premier écran affiche directement le réseau invité, le mot de passe et une mention explicite
-                "réseau invité uniquement".
+                "réseau invité uniquement". Ce choix vient d'un constat simple : c'est souvent l'information la plus
+                demandée dès l'arrivée.
             </p>
             <ul>
                 <li>Nom du réseau : Guest</li>
                 <li>Mot de passe : bienvenue</li>
-                <li>Bouton d'ouverture des réglages Wi-Fi (mobile)</li>
                 <li>Bouton de copie du mot de passe</li>
             </ul>
+            <p>
+                L'idée n'était pas seulement d'afficher une donnée, mais de réduire l'effort jusqu'au bout :
+                voir, copier, agir immédiatement.
+            </p>
         </div>
 
         <div class="image-full">
@@ -176,6 +210,10 @@
                 <li>Horaires, toilettes, règles, contact interne</li>
                 <li>Message court signé "L'équipe du studio"</li>
             </ul>
+            <p>
+                Cette hiérarchie est volontairement stricte : chaque bloc doit justifier sa place et sa position.
+                Si une information n'aide pas concrètement une personne sur place, elle n'a pas à occuper l'écran.
+            </p>
         </div>
 
         <div class="content-section">
@@ -206,9 +244,13 @@
                 <li>Navigation par sections avec ancre active pour se repérer immédiatement</li>
                 <li>Masquage des sections non actives pour un affichage focalisé</li>
                 <li>Logique de tri des restaurants basée sur l'heure locale</li>
-                <li>Actions utilitaires : copie presse-papiers, ouverture réglages Wi-Fi selon appareil</li>
+                <li>Action utilitaire : copie du mot de passe dans le presse-papiers</li>
                 <li>Structure modulaire pour mettre à jour facilement horaires, adresses et contacts</li>
             </ul>
+            <p>
+                La stack volontairement légère est cohérente avec le besoin : peu de complexité, peu de dépendances,
+                mise à jour rapide et chargement efficace sur mobile.
+            </p>
         </div>
 
         <div class="content-section">
@@ -218,6 +260,10 @@
                 <li>Conserver une lecture immédiate en dark et light mode</li>
                 <li>Garder un équilibre entre simplicité visuelle et actions réellement utiles</li>
             </ul>
+            <p>
+                Le principal arbitrage a été de retirer plutôt que d'ajouter. Sur ce type d'outil, la qualité du design
+                repose surtout sur ce qu'on choisit de ne pas montrer, pour garder un parcours clair et rapide.
+            </p>
         </div>
 
         <div class="content-section">
@@ -233,10 +279,10 @@
         <div class="content-section">
             <h2>Ce que ce projet démontre</h2>
             <ul>
-                <li>Capacité à transformer une consigne métier en interface opérationnelle</li>
-                <li>Priorisation stricte de l'information utile</li>
-                <li>Implémentation front-end orientée performance et lisibilité</li>
-                <li>Conception pragmatique : moins d'effets, plus d'efficacité</li>
+                <li>Capacité à transformer un besoin terrain en interface réellement utile</li>
+                <li>Priorisation stricte de l'information selon l'usage réel, pas selon l'envie d'en montrer plus</li>
+                <li>Implémentation front-end légère, lisible et facile à maintenir</li>
+                <li>Conception pragmatique : moins d'effets, plus d'autonomie pour l'utilisateur</li>
             </ul>
         </div>
 

@@ -17,6 +17,22 @@
         html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
     </style>
     <title>Plateforme de dépôt audio - Portfolio UX/UI Designer</title>
+    <!-- SEO META -->
+    <meta name="description" content="Conception et développement d'une plateforme web sécurisée de dépôt de livrables audio.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_1.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_1.html">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Plateforme de dépôt audio">
+    <meta property="og:description" content="Conception et développement d'une plateforme web sécurisée de dépôt de livrables audio.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/projet_codage_1.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage1/codage1-00-miniature.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Plateforme de dépôt audio">
+    <meta name="twitter:description" content="Conception et développement d'une plateforme web sécurisée de dépôt de livrables audio.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage1/codage1-00-miniature.webp">
+    <!-- /SEO META -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -70,7 +86,7 @@
     <section class="project-hero">
         <div class="container">
             <h1 class="hero-title fade-in">Plateforme sécurisée de dépôt de livrables audio</h1>
-            <p class="hero-subtitle fade-in-delay">Automatisation du traitement de stems pour productions musicales</p>
+            <p class="hero-subtitle fade-in-delay">Conception d'une plateforme web pour fiabiliser la réception, la validation et le classement de stems audio volumineux.</p>
             
             <div class="project-meta fade-in-delay">
                 <div class="meta-item">
@@ -99,7 +115,7 @@
     </div>
 
     <!-- Project Content -->
-    <div class="project-content">
+        <div class="project-content">
         <div class="content-section">
             <h2>Résumé du projet</h2>
             <p>
@@ -110,8 +126,8 @@
             <p>
                 <strong>Objectif :</strong> remplacer un processus manuel long, risqué et peu structuré
                 par un système fiable, sécurisé et conforme à une charte technique stricte.
-                Le projet visait aussi à rendre le parcours plus simple pour les artistes,
-                tout en sécurisant le traitement côté équipe production.
+                Le projet devait à la fois simplifier le parcours côté artistes et réduire les manipulations
+                manuelles côté production.
             </p>
         </div>
 
@@ -132,10 +148,10 @@
             <p>Chaque envoi représentait en moyenne 2 à 3 Go de données.</p>
             <p>Ce fonctionnement posait plusieurs problèmes :</p>
             <ul>
-                <li>Perte de temps</li>
-                <li>Erreurs humaines</li>
-                <li>Fichiers mal nommés</li>
-                <li>Non-respect des exigences techniques</li>
+                <li>Perte de temps sur des tâches répétitives</li>
+                <li>Erreurs humaines au moment du tri et du classement</li>
+                <li>Fichiers mal nommés ou incomplets</li>
+                <li>Non-respect des exigences techniques de livraison</li>
             </ul>
         </div>
 
@@ -149,7 +165,7 @@
                 <li>Nomenclature stricte</li>
                 <li>Informations obligatoires</li>
             </ul>
-            <p>J’ai intégré cette charte directement dans la plateforme. L’utilisateur doit :</p>
+            <p>J’ai intégré cette charte directement dans la plateforme pour déplacer une partie du contrôle qualité avant même l’upload. L’utilisateur doit :</p>
             <ol>
                 <li>Ouvrir toutes les sections</li>
                 <li>Les consulter</li>
@@ -169,20 +185,16 @@
         </div>
 
         <div class="content-section">
-            <p>Cette étape a permis de déplacer le contrôle qualité en amont du processus.</p>
-        </div>
-
-        <div class="content-section">
             <h2>Solution développée</h2>
-            <p>La plateforme permet :</p>
+            <p>J’ai conçu la plateforme autour d’un flux simple mais strict, avec contrôles dès l’entrée et routage automatisé vers Dropbox.</p>
             <ul>
                 <li>Accès via mot de passe selon le groupe (artiste / production)</li>
                 <li>Validation obligatoire de la charte avant d’accéder à l’upload</li>
-                <li>Attribution automatique à un dossier Dropbox spécifique</li>
-                <li>Upload structuré avec champs obligatoires</li>
-                <li>Intégration via l’API Dropbox (token sécurisé)</li>
+                <li>Upload structuré avec champs obligatoires pour limiter les erreurs de livraison</li>
+                <li>Attribution automatique à un dossier Dropbox spécifique selon le groupe</li>
+                <li>Intégration via l’API Dropbox avec gestion sécurisée du token</li>
                 <li>Token d’accès régénéré régulièrement pour éviter la perte d’accès</li>
-                <li>Classement automatique des fichiers</li>
+                <li>Classement automatique des fichiers pour supprimer la majorité du tri manuel</li>
             </ul>
         </div>
 
@@ -210,11 +222,11 @@
         <div class="content-section">
             <h2>Défis techniques</h2>
             <p><strong>Gestion de fichiers volumineux (~3 Go)</strong></p>
-            <p>Les stems dépassaient souvent 300 Mo par fichier. J’ai dû adapter la logique d’upload pour assurer :</p>
+            <p>Les stems dépassaient souvent 300 Mo par fichier, avec plusieurs fichiers par envoi. J’ai dû adapter la logique d’upload pour assurer :</p>
             <ul>
-                <li>Stabilité des transferts</li>
-                <li>Bonne gestion des requêtes vers l’API Dropbox</li>
-                <li>Fiabilité sur des envois volumineux</li>
+                <li>La stabilité des transferts sur de gros volumes</li>
+                <li>Une gestion fiable des requêtes vers l’API Dropbox</li>
+                <li>Un comportement suffisamment robuste pour éviter les échecs sur des envois lourds</li>
             </ul>
         </div>
 
@@ -224,13 +236,16 @@
                 Un point critique : le root Dropbox diffère selon qu’on cible un dossier partagé.
                 Les premiers tests envoyaient les fichiers au mauvais endroit.
             </p>
-            <p>J’ai dû :</p>
+            <p>Pour corriger cela, j’ai dû :</p>
             <ul>
                 <li>Comprendre la logique des namespaces Dropbox</li>
                 <li>Adapter la gestion des chemins</li>
                 <li>Corriger le mapping entre groupes et dossiers partagés</li>
             </ul>
-            <p>Cette étape a renforcé ma maîtrise des API et du stockage distant.</p>
+            <p>
+                Ce point était décisif : sans cette correction, l’automatisation fonctionnait en apparence
+                mais rangeait les fichiers dans le mauvais espace. C’est le problème technique le plus formateur du projet.
+            </p>
         </div>
 
 

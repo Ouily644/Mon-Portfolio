@@ -17,6 +17,22 @@
         html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
     </style>
     <title>Développement Suivea v3 - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Développement front-end de Suivea v3 : intégration UI et composants métier pour une web app SIRH.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_3.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_3.html">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Développement Suivea v3">
+    <meta property="og:description" content="Développement front-end de Suivea v3 : intégration UI et composants métier pour une web app SIRH.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/projet_codage_3.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/suivea/suivea-dev-00-miniature-light.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Développement Suivea v3">
+    <meta name="twitter:description" content="Développement front-end de Suivea v3 : intégration UI et composants métier pour une web app SIRH.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/suivea/suivea-dev-00-miniature-light.webp">
+    <!-- /SEO META -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -69,12 +85,12 @@
     <section class="project-hero">
         <div class="container">
             <h1 class="hero-title fade-in">Développement Suivea v3</h1>
-            <p class="hero-subtitle fade-in-delay">Intégration front-end d'une page Suivea v3 et mise en place d'une base composants pendant le stage MMI2 chez Docaposte.</p>
+            <p class="hero-subtitle fade-in-delay">Transformation de maquettes Suivea v3 en écrans web intégrés, avec une base de composants réutilisables pour fiabiliser les évolutions du produit.</p>
 
             <div class="project-meta fade-in-delay">
                 <div class="meta-item">
                     <div class="meta-label">Rôle</div>
-                    <div class="meta-value">Développement front-end en binôme</div>
+                    <div class="meta-value">Intégration front-end en binôme</div>
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Contexte</div>
@@ -93,44 +109,61 @@
     </section>
 
     <div class="image-full">
-        <img src="assets/projects/covers/suivea-site.webp" alt="Vue globale de Suivea v3" loading="eager" decoding="async">
+        <div class="theme-media-stack" aria-label="Vue globale de Suivea v3">
+            <img class="theme-media theme-media-light" src="assets/projects/suivea/suivea-dev-00-miniature-light.webp" alt="Vue globale de Suivea v3" loading="eager" decoding="async">
+            <img class="theme-media theme-media-dark" src="assets/projects/suivea/suivea-dev-00-miniature-dark.webp" alt="" loading="eager" decoding="async" aria-hidden="true">
+        </div>
     </div>
 
-    <div class="project-content">
+        <div class="project-content">
         <div class="content-section">
             <h2>Résumé du projet</h2>
             <p>
-                Dans le prolongement de la refonte graphique, j'ai participé au développement web de Suivea v3.
-                L'objectif était de transformer des maquettes validées en écrans fonctionnels, tout en posant une base
-                de composants réutilisables pour accélérer les évolutions du produit.
+                Dans le prolongement de la refonte graphique de Suivea, j'ai participé à l'intégration front-end
+                d'une nouvelle version du produit pendant mon stage chez Docaposte. Le travail ne consistait pas
+                seulement à "reproduire une maquette", mais à transformer une direction UI validée en écrans web
+                cohérents, exploitables et maintenables.
             </p>
             <p>
-                Le périmètre couvrait à la fois la fidélité visuelle (typographie, espacements, hiérarchie)
-                et la maintenabilité du code pour les futures pages.
+                L'enjeu était double : obtenir un rendu fidèle aux maquettes sur les écrans livrés,
+                tout en posant une base de composants et de règles UI réutilisables pour les développements suivants.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Problème à résoudre</h2>
+            <p>
+                L'équipe disposait de maquettes plus abouties visuellement, mais il fallait encore les traduire en une
+                intégration solide, homogène et compatible avec les contraintes du produit. Sans base commune, chaque
+                nouvel écran risquait d'introduire des écarts de spacing, de hiérarchie ou de comportement.
+            </p>
+            <p>
+                Le projet devait donc répondre à une question simple : comment intégrer vite, proprement et de manière
+                cohérente, sans repartir de zéro à chaque page.
             </p>
         </div>
 
         <div class="content-section">
             <h2>Objectif technique</h2>
             <ul>
-                <li>Structurer une page de référence des composants (couleurs, typo, tailles, règles UI)</li>
-                <li>Intégrer une page Suivea v3 fidèle aux maquettes validées</li>
-                <li>Maintenir une cohérence avec le design system interne de l'équipe</li>
-                <li>Préparer une base front-end réutilisable pour réduire le temps d'intégration des écrans suivants</li>
+                <li>Créer une base de référence pour les composants et styles récurrents</li>
+                <li>Intégrer un écran Suivea v3 fidèle aux maquettes validées</li>
+                <li>Limiter les écarts visuels entre les écrans et les états d'interface</li>
+                <li>Préparer une structure plus réutilisable pour les futures intégrations</li>
             </ul>
         </div>
 
         <div class="content-section">
             <h2>Ce que j'ai développé</h2>
             <p>
-                J'ai d'abord développé une page socle regroupant les composants et styles de référence,
-                puis nous avons réalisé l'intégration des écrans en binôme sur cette base commune.
+                J'ai d'abord contribué à la mise en place d'une page socle regroupant les styles et composants utiles
+                au projet, puis nous avons intégré les écrans Suivea v3 en binôme à partir de cette base.
             </p>
             <ul>
-                <li>Structuration HTML des blocs métier avec hiérarchie claire</li>
-                <li>Mise en place de classes CSS réutilisables (grille, boutons, champs, cartes)</li>
-                <li>Ajustements fins de spacing, tailles de texte et alignements pour coller aux maquettes</li>
-                <li>Vérification de cohérence visuelle entre les écrans et les états d'interface</li>
+                <li>Structuration HTML des blocs métier avec une hiérarchie claire pour la lecture et la maintenance</li>
+                <li>Mise en place de styles réutilisables pour les boutons, champs, cartes, espacements et grilles</li>
+                <li>Ajustements fins de typographie, marges, alignements et densité visuelle pour coller aux maquettes</li>
+                <li>Vérification de cohérence entre écrans, variantes et états d'interface avant validation</li>
             </ul>
         </div>
 
@@ -142,27 +175,43 @@
         <div class="content-section">
             <h2>Organisation en binôme</h2>
             <p>
-                Le travail était découpé par lots (structure, composants, intégration, retours), avec des points réguliers
-                pour aligner le rendu final. Cette organisation a permis d'éviter les divergences de style et de garder
-                une progression continue malgré les itérations.
+                Le travail était découpé par lots clairs (structure, composants, intégration, retours),
+                avec des points réguliers pour aligner le rendu final. Cette organisation a permis d'éviter les
+                divergences de style, de répartir proprement l'avancement et de corriger vite les écarts repérés.
             </p>
         </div>
 
         <div class="content-section">
-            <h2>Difficultés & ajustements</h2>
+            <h2>Difficultés d'intégration</h2>
             <ul>
-                <li>Traduction précise maquette → code : ajustements progressifs des marges, tailles et alignements</li>
-                <li>Homogénéité entre écrans : normalisation des composants pour éviter les variations visuelles</li>
-                <li>Contraintes de planning : priorisation des éléments critiques avant les raffinements</li>
+                <li>Traduire précisément la maquette en code sans perdre la hiérarchie visuelle prévue</li>
+                <li>Éviter les variations d'un écran à l'autre sur les composants récurrents</li>
+                <li>Arbitrer entre fidélité visuelle, contraintes de temps et niveau de finition atteignable</li>
             </ul>
+            <p>
+                Une partie importante du travail a consisté à corriger les écarts qui paraissent mineurs isolément
+                mais qui dégradent vite la perception globale d'une interface : marges incohérentes, alignements
+                imparfaits, tailles de texte trop proches ou composants visuellement "presque" identiques.
+            </p>
         </div>
 
         <div class="content-section">
             <h2>Résultats</h2>
             <ul>
-                <li>Base composants opérationnelle pour accélérer les futurs développements</li>
+                <li>Base composants suffisamment structurée pour servir de point d'appui aux écrans suivants</li>
                 <li>Écran Suivea v3 intégré de manière fidèle et validé en interne</li>
-                <li>Méthode de travail plus robuste sur l'intégration UI en contexte professionnel</li>
+                <li>Meilleure cohérence visuelle entre les blocs et les états d'interface</li>
+                <li>Montée en rigueur sur l'intégration UI en contexte professionnel et collaboratif</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Ce que ce projet démontre</h2>
+            <ul>
+                <li>Capacité à transformer une intention graphique en interface web exploitable</li>
+                <li>Attention réelle aux détails d'intégration qui font la qualité perçue d'un produit</li>
+                <li>Travail en binôme avec alignement continu sur un rendu commun</li>
+                <li>Réflexe de structuration pour éviter de produire du code jetable écran par écran</li>
             </ul>
         </div>
 
