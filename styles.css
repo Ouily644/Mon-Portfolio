@@ -828,7 +828,7 @@ a {
     position: relative;
     margin: 16px 0 0;
     padding: 18px 18px 16px;
-    border-radius: calc(var(--radius-lg) - 2px);
+    border-radius: calc(var(--media-radius) - 4px);
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.58);
     box-shadow:
@@ -1739,6 +1739,7 @@ a {
     .nav-dropdown a,
     .project-card,
     .project-image,
+    .project-info,
     .image-full,
     .skills-panel,
     .experience-item,
