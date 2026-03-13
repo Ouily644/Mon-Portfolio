@@ -1,0 +1,123 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Architecture VeloTrack</title>
+  <desc id="desc">Schema d'architecture VeloTrack avec vues SwiftUI, logique centrale, providers BLE, tracking et couche de simulation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3E3D2"/>
+      <stop offset="1" stop-color="#EAD8C4"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="210" y1="180" x2="1390" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8F1"/>
+      <stop offset="1" stop-color="#FFF2E7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFB15C"/>
+      <stop offset="1" stop-color="#FF8C2A"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="22"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.164706 0 0 0 0 0.117647 0 0 0 0 0.0862745 0 0 0 0.16 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <filter id="softShadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="8"/>
+      <feGaussianBlur stdDeviation="12"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.164706 0 0 0 0 0.117647 0 0 0 0 0.0862745 0 0 0 0.10 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <style>
+      .label { font: 600 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.14em; text-transform: uppercase; fill: #8A6244; }
+      .title { font: 700 64px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1B1107; }
+      .section { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1F160C; }
+      .card { font: 600 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #2B1B0E; }
+      .small { font: 600 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #846A55; }
+      .pill { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #8A6244; letter-spacing: 0.08em; text-transform: uppercase; }
+      .caption { font: 500 20px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #5A4535; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="48" fill="url(#bg)"/>
+  <circle cx="1380" cy="130" r="170" fill="#FFFFFF" fill-opacity="0.22"/>
+  <circle cx="180" cy="740" r="220" fill="#FFFFFF" fill-opacity="0.16"/>
+  <path d="M136 144H304" stroke="#B89172" stroke-width="3" stroke-linecap="round"/>
+  <text x="136" y="212" class="label">Schema architecture</text>
+  <text x="136" y="292" class="title">Abstraction BLE, tracking et vues SwiftUI</text>
+
+  <g filter="url(#shadow)">
+    <rect x="128" y="340" width="1344" height="440" rx="42" fill="url(#panel)"/>
+  </g>
+
+  <rect x="180" y="384" width="1240" height="96" rx="30" fill="#FFFDF9" filter="url(#softShadow)"/>
+  <rect x="180" y="528" width="1240" height="114" rx="34" fill="#FFFDF9" filter="url(#softShadow)"/>
+  <rect x="180" y="690" width="360" height="56" rx="28" fill="#F8E7D7"/>
+  <rect x="620" y="690" width="360" height="56" rx="28" fill="#F8E7D7"/>
+  <rect x="1060" y="690" width="360" height="56" rx="28" fill="#F8E7D7"/>
+
+  <text x="212" y="364" class="small">Couche presentation</text>
+  <text x="212" y="512" class="small">Logique centrale</text>
+  <text x="212" y="674" class="small">Sources et extensions</text>
+
+  <g>
+    <rect x="220" y="404" width="212" height="56" rx="24" fill="#FFF4EA"/>
+    <rect x="456" y="404" width="212" height="56" rx="24" fill="#FFF4EA"/>
+    <rect x="692" y="404" width="212" height="56" rx="24" fill="#FFF4EA"/>
+    <rect x="928" y="404" width="212" height="56" rx="24" fill="#FFF4EA"/>
+    <rect x="1164" y="404" width="212" height="56" rx="24" fill="#FFF4EA"/>
+    <text x="281" y="440" class="card">AccueilView</text>
+    <text x="531" y="440" class="card">TrajetsView</text>
+    <text x="776" y="440" class="card">StatsView</text>
+    <text x="974" y="440" class="card">EntretienView</text>
+    <text x="1191" y="440" class="card">SettingsView</text>
+  </g>
+
+  <g>
+    <rect x="220" y="552" width="250" height="66" rx="28" fill="#FFF4EA"/>
+    <rect x="500" y="552" width="250" height="66" rx="28" fill="#FFF4EA"/>
+    <rect x="780" y="552" width="250" height="66" rx="28" fill="#FFF4EA"/>
+    <rect x="1060" y="552" width="316" height="66" rx="28" fill="#FFF4EA"/>
+    <text x="278" y="594" class="card">AppState</text>
+    <text x="549" y="594" class="card">TripRecorder</text>
+    <text x="824" y="594" class="card">MotorManager</text>
+    <text x="1122" y="594" class="card">MaintenanceStore</text>
+  </g>
+
+  <text x="252" y="726" class="pill">Providers BLE</text>
+  <text x="702" y="726" class="pill">Tracking stack</text>
+  <text x="1141" y="726" class="pill">Simulation &amp; persistence</text>
+
+  <g>
+    <rect x="180" y="766" width="360" height="0" rx="0" fill="none"/>
+    <text x="214" y="794" class="caption">Mahle  ·  Bafang  ·  Shimano  ·  Bosch</text>
+    <text x="654" y="794" class="caption">CoreLocation  ·  CoreMotion  ·  GPS filtering</text>
+    <text x="1092" y="794" class="caption">MockMotorProvider  ·  SwiftData  ·  Test data</text>
+  </g>
+
+  <path d="M327 480V528" stroke="#D6B79A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M327 512L327 528L311 512" stroke="#D6B79A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M607 480V528" stroke="#D6B79A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M607 512L607 528L591 512" stroke="#D6B79A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M887 480V528" stroke="#D6B79A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M887 512L887 528L871 512" stroke="#D6B79A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1217 480V528" stroke="#D6B79A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1217 512L1217 528L1201 512" stroke="#D6B79A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M327 642V690" stroke="#D6B79A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M327 674L327 690L311 674" stroke="#D6B79A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M807 642V690" stroke="#D6B79A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M807 674L807 690L791 674" stroke="#D6B79A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1217 642V690" stroke="#D6B79A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1217 674L1217 690L1201 674" stroke="#D6B79A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <circle cx="1410" cy="178" r="8" fill="#FF8C2A"/>
+    <circle cx="1378" cy="178" r="8" fill="#38C959"/>
+    <circle cx="1346" cy="178" r="8" fill="#2090FF"/>
+  </g>
+</svg>

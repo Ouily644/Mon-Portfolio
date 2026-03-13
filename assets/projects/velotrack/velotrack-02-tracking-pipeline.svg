@@ -1,0 +1,121 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Pipeline de tracking VeloTrack</title>
+  <desc id="desc">Schema du pipeline de tracking de VeloTrack avec CoreLocation, CoreMotion, filtrage GPS et trajet enregistre.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3E3D2"/>
+      <stop offset="1" stop-color="#EAD8C4"/>
+    </linearGradient>
+    <linearGradient id="cardFill" x1="240" y1="180" x2="1360" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8F1"/>
+      <stop offset="1" stop-color="#FFF2E7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFB15C"/>
+      <stop offset="1" stop-color="#FF8C2A"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="22"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.164706 0 0 0 0 0.117647 0 0 0 0 0.0862745 0 0 0 0.16 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <filter id="softShadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="8"/>
+      <feGaussianBlur stdDeviation="12"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.164706 0 0 0 0 0.117647 0 0 0 0 0.0862745 0 0 0 0.10 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <style>
+      .title { font: 700 68px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1B1107; }
+      .label { font: 600 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.14em; text-transform: uppercase; fill: #8A6244; }
+      .card-title { font: 700 32px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1F160C; }
+      .body { font: 500 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #463327; }
+      .small { font: 600 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #7E6654; }
+      .metric { font: 700 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1F160C; }
+      .metric-label { font: 500 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #8A7463; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="48" fill="url(#bg)"/>
+  <circle cx="1420" cy="130" r="180" fill="#FFFFFF" fill-opacity="0.22"/>
+  <circle cx="180" cy="760" r="220" fill="#FFFFFF" fill-opacity="0.16"/>
+  <path d="M136 144H284" stroke="#B89172" stroke-width="3" stroke-linecap="round"/>
+  <text x="136" y="212" class="label">Pipeline de tracking</text>
+  <text x="136" y="296" class="title">Du signal brut au trajet fiable</text>
+
+  <g filter="url(#shadow)">
+    <rect x="132" y="356" width="1336" height="398" rx="42" fill="url(#cardFill)"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="190" y="416" width="320" height="278" rx="32" fill="#FFFDF9"/>
+    <rect x="640" y="416" width="320" height="278" rx="32" fill="#FFFDF9"/>
+    <rect x="1090" y="416" width="320" height="278" rx="32" fill="#FFFDF9"/>
+  </g>
+
+  <rect x="214" y="440" width="112" height="36" rx="18" fill="#F8E7D7"/>
+  <text x="248" y="464" class="small">Entrées</text>
+  <text x="214" y="522" class="card-title">Capteurs iPhone</text>
+  <g>
+    <circle cx="244" cy="576" r="18" fill="#FFF0E2"/>
+    <path d="M244 564C236.9 564 231 569.9 231 577C231 586.5 244 598 244 598C244 598 257 586.5 257 577C257 569.9 251.1 564 244 564Z" fill="url(#accent)"/>
+    <circle cx="244" cy="577" r="4.8" fill="#FFF6EF"/>
+    <text x="276" y="584" class="body">CoreLocation</text>
+  </g>
+  <g>
+    <circle cx="244" cy="632" r="18" fill="#FFF0E2"/>
+    <path d="M235 632C235 627 239 623 244 623C249 623 253 627 253 632C253 637 249 641 244 641C239 641 235 637 235 632Z" fill="#38C959"/>
+    <path d="M227 632C227 622.6 234.6 615 244 615" stroke="#38C959" stroke-width="4" stroke-linecap="round"/>
+    <path d="M261 632C261 641.4 253.4 649 244 649" stroke="#38C959" stroke-width="4" stroke-linecap="round"/>
+    <text x="276" y="640" class="body">CoreMotion</text>
+  </g>
+
+  <path d="M530 554H617" stroke="#D6B79A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M603 537L633 554L603 571" stroke="#D6B79A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="672" y="440" width="172" height="36" rx="18" fill="#F8E7D7"/>
+  <text x="701" y="464" class="small">Traitement</text>
+  <text x="664" y="522" class="card-title">Filtrage &amp; validation</text>
+  <g>
+    <rect x="686" y="558" width="228" height="42" rx="21" fill="#FFF4EA"/>
+    <text x="716" y="585" class="body">Détection de contexte</text>
+  </g>
+  <g>
+    <rect x="686" y="612" width="228" height="42" rx="21" fill="#FFF4EA"/>
+    <text x="734" y="639" class="body">Lissage GPS</text>
+  </g>
+  <g>
+    <rect x="686" y="666" width="228" height="42" rx="21" fill="#FFF4EA"/>
+    <text x="715" y="693" class="body">Pause auto &amp; reprise</text>
+  </g>
+
+  <path d="M980 554H1067" stroke="#D6B79A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M1053 537L1083 554L1053 571" stroke="#D6B79A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1120" y="440" width="148" height="36" rx="18" fill="#F8E7D7"/>
+  <text x="1156" y="464" class="small">Sortie</text>
+  <text x="1114" y="522" class="card-title">Trajet enregistré</text>
+
+  <g>
+    <rect x="1128" y="554" width="244" height="124" rx="24" fill="#FFF7F0"/>
+    <rect x="1148" y="574" width="92" height="72" rx="16" fill="#F3F1ED"/>
+    <path d="M1164 628C1178 601 1194 617 1207 595C1216 580 1224 583 1230 589" stroke="#2090FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1264" y="590" class="metric">5.87 km</text>
+    <text x="1264" y="620" class="metric-label">distance</text>
+    <text x="1264" y="646" class="metric">17:11</text>
+    <text x="1264" y="668" class="metric-label">duree</text>
+  </g>
+
+  <g>
+    <circle cx="1330" cy="182" r="8" fill="#FF8C2A"/>
+    <circle cx="1362" cy="182" r="8" fill="#38C959"/>
+    <circle cx="1394" cy="182" r="8" fill="#2090FF"/>
+  </g>
+
+  <text x="136" y="815" class="body">CoreLocation + CoreMotion -> filtrage GPS -> trajet exploitable et stable</text>
+</svg>
