@@ -87,7 +87,7 @@
     <section class="project-hero">
         <div class="container">
             <h1 class="hero-title fade-in">Création de custom sprites sur Super Metroid</h1>
-            <p class="hero-subtitle fade-in-delay">Recréation complète des sprites de Samus sur SNES pour plusieurs variantes custom, en respectant les contraintes visuelles et techniques de Super Metroid.</p>
+            <p class="hero-subtitle fade-in-delay">Recréation complète des animations de Samus pour Sans, Inkling Girl et Samus Maid, en respectant les contraintes visuelles et techniques de Super Metroid sur SNES.</p>
             
             <div class="project-meta fade-in-delay">
                 <div class="meta-item">
@@ -121,33 +121,35 @@
         <div class="content-section">
             <h2>Point de départ</h2>
             <p>
-                <strong>Super Metroid</strong> (SNES, 1994) est une référence du jeu d’exploration 2D.
-                Le jeu repose sur des animations lisibles, des déplacements précis et une direction artistique
-                forte malgré les contraintes techniques de l’époque.
+                <strong>Super Metroid</strong> (SNES, 1994) est une référence du jeu d’exploration 2D, connue pour
+                la lisibilité de ses animations, la précision de ses déplacements et la force de sa direction artistique
+                malgré les limites techniques de l’époque.
             </p>
             <p>
-                C’est précisément ce cadre rétro qui m’intéressait : conserver la lisibilité d’origine,
-                tout en remplaçant entièrement l’identité visuelle du personnage principal.
+                C’est précisément ce cadre qui m’intéressait : remplacer entièrement l’identité visuelle du personnage
+                principal tout en conservant la lisibilité et le rythme du jeu d’origine.
             </p>
         </div>
 
         <div class="image-full">
-        <div class="image-placeholder"><span>Capture gameplay de Super Metroid</span></div>
-            <p class="image-slot-label">Slot visuel 02 : <code>projet_graphique_1-02-placeholder.webp</code></p>
+            <video controls playsinline preload="metadata" muted aria-label="Capture gameplay de Super Metroid avec sprite custom en jeu">
+                <source src="assets/projects/super-metroid/sm-custom-02-gameplay.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture vidéo.
+            </video>
+            <p class="image-slot-label">Slot visuel 02 : <code>sm-custom-02-gameplay.mp4</code></p>
         </div>
 
         <div class="content-section">
             <h2>Contexte modding</h2>
             <p>
-                Le projet s’inscrit dans l’écosystème des mods de Super Metroid :
-                <strong>ROM hacks</strong>, <strong>VARIA Randomizer</strong> et <strong>Map Rando</strong>.
+                Le projet s’inscrit dans la communauté de modding de Super Metroid, notamment autour des
+                <strong>ROM hacks</strong>, de <strong>VARIA Randomizer</strong> et de <strong>Map Rando</strong>,
+                où les parcours sont rapides, imprévisibles et rejoués à haut niveau.
             </p>
-            <ul>
-                <li><strong>ROM hacks</strong> : modification de contenu ou de gameplay</li>
-                <li><strong>VARIA Randomizer</strong> : randomisation des objets et de la progression</li>
-                <li><strong>Map Rando</strong> : randomisation de la structure des zones</li>
-            </ul>
-            <p>Dans ce contexte, un sprite custom doit rester lisible dans des parcours imprévisibles et rapides.</p>
+            <p>
+                Dans ce contexte, un sprite custom doit rester immédiatement lisible en mouvement,
+                y compris pendant des séquences très rapides ou des changements de direction fréquents.
+            </p>
             <p>
                 Le projet n'est pas resté au stade d'exercice personnel : certains de mes sprites ont aussi été
                 réutilisés par des joueurs de la communauté dans des parties et des runs de <strong>Map Rando</strong>,
@@ -157,14 +159,14 @@
         </div>
 
         <div class="image-full">
-        <div class="image-placeholder"><span>Contexte modding (ROM hacks / VARIA / Map Rando)</span></div>
-            <p class="image-slot-label">Slot visuel 03 : <code>projet_graphique_1-03-placeholder.webp</code></p>
+            <img src="assets/projects/super-metroid/sm-custom-03-modding-context-layout.svg" alt="Maquette du visuel contexte modding avec zones prevues pour VARIA Randomizer, Map Rando et OatsnGoats" loading="lazy" decoding="async">
+            <p class="image-slot-label">Slot visuel 03 : <code>sm-custom-03-modding-context-layout.svg</code></p>
         </div>
 
         <div class="content-section">
             <h2>Ce que j’ai réalisé</h2>
             <p>
-                J’ai recréé l’ensemble des sprites du personnage de base (Samus) pour plusieurs variantes :
+                J’ai recréé l’ensemble des sprites du personnage de base (Samus) pour trois variantes finalisées :
             </p>
             <ul>
                 <li>Sans (Undertale)</li>
@@ -187,15 +189,15 @@
         <div class="content-section">
             <h2>Enjeu du projet</h2>
             <p>
-                Le défi n'était pas seulement graphique. Il fallait faire entrer des personnages issus d'univers très
-                différents dans un système d'animation déjà défini, sans perdre la lisibilité immédiate qui fait
-                la qualité de Super Metroid en jeu.
+                Le défi n'était pas seulement graphique. Il fallait faire entrer des personnages aux proportions,
+                silhouettes et codes visuels très différents dans un système d'animation déjà défini, sans perdre
+                la lisibilité immédiate qui fait la qualité de Super Metroid en jeu.
             </p>
         </div>
 
         <div class="image-full">
-        <div class="image-placeholder"><span>Sprite sheets des variantes créées</span></div>
-            <p class="image-slot-label">Slot visuel 04 : <code>projet_graphique_1-04-placeholder.webp</code></p>
+            <img src="assets/projects/super-metroid/sm-custom-04-spritesheet-view.webp" alt="Vue comparee des animations principales pour les trois variantes de sprites custom de Super Metroid" loading="lazy" decoding="async">
+            <p class="image-slot-label">Slot visuel 04 : <code>sm-custom-04-spritesheet-view.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -258,8 +260,11 @@
         </div>
 
         <div class="image-full">
-        <div class="image-placeholder"><span>Comparatif animations vanilla vs custom</span></div>
-            <p class="image-slot-label">Slot visuel 05 : <code>projet_graphique_1-05-placeholder.webp</code></p>
+            <video controls playsinline preload="metadata" muted aria-label="Capture gameplay focalisee sur les animations custom avec morph, run aim up et shinespark">
+                <source src="assets/projects/super-metroid/sm-custom-05-shinespark.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture vidéo.
+            </video>
+            <p class="image-slot-label">Slot visuel 05 : <code>sm-custom-05-shinespark.mp4</code></p>
         </div>
 
         <div class="content-section">
@@ -268,20 +273,20 @@
                 <li>Pour <strong>Inkling Girl</strong>, j’ai utilisé l’idée de transformation humanoïde / calamar pour la <strong>morphball</strong></li>
                 <li>Pour certaines séquences rapides, j’ai réinterprété le <strong>shinespark</strong> avec une forme inspirée du <strong>Kraken</strong></li>
                 <li>Sur <strong>Sans</strong>, le canon de Samus est remplacé par un <strong>Gaster Blaster</strong> et certaines attaques de shinespark sont adaptées avec des visuels d’os</li>
-                <li>J’ai retravaillé les poses pour conserver lisibilité et personnalité en pixel art</li>
+                <li>Sur les poses de course, de saut et de visée, j’ai simplifié certains volumes pour garder une lecture immédiate malgré la petite taille d’affichage</li>
             </ul>
         </div>
 
         <div class="content-section">
             <h2>Ce que ce projet m’a permis de développer</h2>
             <p>
-                Ce travail m’a appris à designer dans un cadre très contraint sans perdre la créativité.
-                Modder un jeu existant m’a fait progresser sur :
+                Ce travail m’a appris à créer dans un cadre très contraint, en validant chaque choix directement
+                en jeu plutôt qu’à partir d’une feuille de sprites statique. Il m’a fait progresser sur :
             </p>
             <ul>
-                <li>L’analyse d’animations existantes et leur reconstruction</li>
-                <li>La maîtrise des contraintes techniques rétro (palette, taille, lisibilité)</li>
-                <li>La cohérence artistique entre univers différents</li>
+                <li>L’analyse puis la reconstruction d’animations existantes sans casser leur rythme</li>
+                <li>La maîtrise des contraintes techniques rétro : palette, taille, contraste et lisibilité</li>
+                <li>La cohérence visuelle entre des univers très différents intégrés dans un même jeu</li>
                 <li>La précision d’exécution frame par frame</li>
             </ul>
         </div>
