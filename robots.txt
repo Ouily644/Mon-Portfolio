@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ouily644.github.io/Mon-Portfolio/sitemap.xml

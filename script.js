@@ -11,6 +11,123 @@ const savedTheme = localStorage.getItem(THEME_KEY);
 const initialTheme = htmlElement.getAttribute('data-theme') || savedTheme || getSystemTheme();
 htmlElement.setAttribute('data-theme', initialTheme);
 
+const themeMediaStacks = Array.from(document.querySelectorAll('.theme-media-stack[data-theme-light-src]'));
+const themeMediaCache = new Set();
+const getThemeMediaCacheKey = (src) => {
+    if (!src) {
+        return '';
+    }
+
+    try {
+        return new URL(src, document.baseURI).href;
+    } catch (error) {
+        return src;
+    }
+};
+
+const queueIdleTask = (callback) => {
+    if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(callback, { timeout: 1200 });
+        return;
+    }
+    window.setTimeout(callback, 120);
+};
+
+const preloadThemeMedia = (src) => {
+    const cacheKey = getThemeMediaCacheKey(src);
+    if (!src || themeMediaCache.has(cacheKey)) {
+        return Promise.resolve();
+    }
+
+    return new Promise((resolve) => {
+        const preloadImage = new Image();
+        preloadImage.decoding = 'async';
+
+        const markDone = () => {
+            themeMediaCache.add(cacheKey);
+            resolve();
+        };
+
+        preloadImage.onload = markDone;
+        preloadImage.onerror = resolve;
+        preloadImage.src = src;
+
+        if (preloadImage.complete) {
+            markDone();
+        }
+    });
+};
+
+const getThemeMediaSources = (stack, theme) => {
+    const lightSrc = stack.dataset.themeLightSrc || '';
+    const darkSrc = stack.dataset.themeDarkSrc || lightSrc;
+    const activeSrc = theme === 'dark' ? (darkSrc || lightSrc) : (lightSrc || darkSrc);
+    const inactiveSrc = theme === 'dark' ? (lightSrc || activeSrc) : (darkSrc || activeSrc);
+
+    return { activeSrc, inactiveSrc };
+};
+
+const syncThemeMedia = (theme, { initial = false } = {}) => {
+    themeMediaStacks.forEach((stack) => {
+        const img = stack.querySelector('.theme-media');
+        if (!img) {
+            return;
+        }
+
+        const { activeSrc, inactiveSrc } = getThemeMediaSources(stack, theme);
+        if (!activeSrc) {
+            return;
+        }
+        stack.dataset.pendingThemeSrc = activeSrc;
+
+        const commitSrc = () => {
+            if (stack.dataset.pendingThemeSrc !== activeSrc) {
+                return;
+            }
+
+            if (img.dataset.currentSrc === activeSrc) {
+                themeMediaCache.add(getThemeMediaCacheKey(activeSrc));
+                return;
+            }
+
+            if (!initial) {
+                stack.classList.add('is-switching');
+                img.addEventListener('load', () => {
+                    stack.classList.remove('is-switching');
+                }, { once: true });
+                img.addEventListener('error', () => {
+                    stack.classList.remove('is-switching');
+                }, { once: true });
+            }
+
+            img.src = activeSrc;
+            img.dataset.currentSrc = activeSrc;
+        };
+
+        if (img.complete && img.currentSrc) {
+            themeMediaCache.add(img.currentSrc);
+        }
+
+        if (!img.getAttribute('src')) {
+            commitSrc();
+        } else if (img.dataset.currentSrc !== activeSrc) {
+            if (themeMediaCache.has(getThemeMediaCacheKey(activeSrc))) {
+                commitSrc();
+            } else {
+                preloadThemeMedia(activeSrc).then(commitSrc);
+            }
+        } else {
+            themeMediaCache.add(getThemeMediaCacheKey(activeSrc));
+        }
+
+        if (inactiveSrc && inactiveSrc !== activeSrc) {
+            queueIdleTask(() => {
+                void preloadThemeMedia(inactiveSrc);
+            });
+        }
+    });
+};
+
 const syncThemeToggleA11y = () => {
     if (!themeToggle) {
         return;
@@ -23,6 +140,7 @@ const syncThemeToggleA11y = () => {
 const setTheme = (theme, shouldPersist = true) => {
     if (htmlElement.getAttribute('data-theme') === theme) {
         syncThemeToggleA11y();
+        syncThemeMedia(theme);
         return;
     }
 
@@ -33,8 +151,10 @@ const setTheme = (theme, shouldPersist = true) => {
     }
 
     syncThemeToggleA11y();
+    syncThemeMedia(theme);
 };
 
+syncThemeMedia(initialTheme, { initial: true });
 syncThemeToggleA11y();
 
 // Toggle du thème
@@ -58,8 +178,17 @@ if (menuToggle && navLinks) {
         navLinks.id = 'primary-navigation';
     }
     menuToggle.setAttribute('aria-controls', navLinks.id);
-    menuToggle.setAttribute('aria-expanded', 'false');
 }
+
+const syncMenuToggleA11y = (isOpen) => {
+    if (!menuToggle) {
+        return;
+    }
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+};
+
+syncMenuToggleA11y(false);
 
 const setMenuState = (isOpen) => {
     if (!menuToggle || !navLinks) {
@@ -67,7 +196,7 @@ const setMenuState = (isOpen) => {
     }
     menuToggle.classList.toggle('active', isOpen);
     navLinks.classList.toggle('active', isOpen);
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    syncMenuToggleA11y(isOpen);
 };
 
 if (menuToggle && navLinks) {

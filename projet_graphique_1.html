@@ -33,9 +33,11 @@
     <meta name="twitter:description" content="Projet graphique personnel de création de sprites custom pour Super Metroid avec un pipeline ROM modding.">
     <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/graphique1-super-metroid.webp">
     <!-- /SEO META -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
@@ -65,7 +67,7 @@
                 </div>
             </div>
             <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode">
+                <button class="theme-toggle" aria-label="Activer le thème sombre">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="4" fill="currentColor"/>
                         <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -74,7 +76,7 @@
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
                     </svg>
                 </button>
-                <button class="menu-toggle" aria-label="Toggle menu">
+                <button class="menu-toggle" aria-label="Ouvrir le menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -83,6 +85,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Project Hero -->
     <section class="project-hero">
         <div class="container">
@@ -112,8 +115,7 @@
 
     <!-- Main Project Image -->
     <div class="image-full">
-        <img src="assets/projects/super-metroid/sm-custom-01-overview.webp" alt="Vue globale des custom sprites dans Super Metroid" loading="eager" decoding="async">
-        <p class="image-slot-label">Slot visuel 01 : <code>sm-custom-01-overview.webp</code></p>
+        <img src="assets/projects/super-metroid/sm-custom-01-overview.webp" alt="Vue globale des custom sprites dans Super Metroid" loading="eager" decoding="async" fetchpriority="high" width="1800" height="1377">
     </div>
 
     <!-- Project Content -->
@@ -136,7 +138,6 @@
                 <source src="assets/projects/super-metroid/sm-custom-02-gameplay.mp4" type="video/mp4">
                 Votre navigateur ne prend pas en charge la lecture vidéo.
             </video>
-            <p class="image-slot-label">Slot visuel 02 : <code>sm-custom-02-gameplay.mp4</code></p>
         </div>
 
         <div class="content-section">
@@ -145,6 +146,12 @@
                 Le projet s’inscrit dans la communauté de modding de Super Metroid, notamment autour des
                 <strong>ROM hacks</strong>, de <strong>VARIA Randomizer</strong> et de <strong>Map Rando</strong>,
                 où les parcours sont rapides, imprévisibles et rejoués à haut niveau.
+            </p>
+            <p>
+                <strong>VARIA Randomizer</strong> modifie surtout la répartition des objets et l'organisation des
+                grandes zones de la carte, tandis que <strong>Map Rando</strong> recompose la carte salle par salle.
+                Dans les deux cas, les trajets deviennent moins prévisibles et la lisibilité du sprite encore plus
+                importante.
             </p>
             <p>
                 Dans ce contexte, un sprite custom doit rester immédiatement lisible en mouvement,
@@ -159,8 +166,8 @@
         </div>
 
         <div class="image-full">
-            <img src="assets/projects/super-metroid/sm-custom-03-modding-context-layout.svg" alt="Maquette du visuel contexte modding avec zones prevues pour VARIA Randomizer, Map Rando et OatsnGoats" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel 03 : <code>sm-custom-03-modding-context-layout.svg</code></p>
+            <img src="assets/projects/super-metroid/sm-custom-03-modding-context.webp" alt="Visuel de contexte modding montrant VARIA Randomizer, Map Rando, une romhack et l'utilisation communautaire des sprites" loading="lazy" decoding="async">
+            <p class="image-caption">Sprites pensés pour l’écosystème Super Metroid modding, jusque dans des runs de Map Rando.</p>
         </div>
 
         <div class="content-section">
@@ -197,7 +204,7 @@
 
         <div class="image-full">
             <img src="assets/projects/super-metroid/sm-custom-04-spritesheet-view.webp" alt="Vue comparee des animations principales pour les trois variantes de sprites custom de Super Metroid" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel 04 : <code>sm-custom-04-spritesheet-view.webp</code></p>
+            <p class="image-caption">Même jeu d’animations, trois personnages : adaptation des poses, silhouettes et actions spéciales.</p>
         </div>
 
         <div class="content-section">
@@ -250,7 +257,7 @@
                 <li>Palette et teintes custom selon chaque suit : <strong>Power Suit</strong>, <strong>Varia Suit</strong>, <strong>Gravity Suit</strong></li>
                 <li>Ajustements d’échelle pour coller au gabarit de Samus dans Super Metroid (ex : Sans est petit dans son jeu d’origine, mais son sprite de combat est trop grand pour être repris tel quel)</li>
                 <li>Ajustements palette pour garder la lisibilité en mouvement</li>
-                <li>Intégration et tests in-game avec <a href="https://github.com/Artheau/SpriteSomething" target="_blank" rel="noopener noreferrer">SpriteSomething</a> pour injecter les sprites dans Super Metroid</li>
+                <li>Intégration et tests in-game avec SpriteSomething pour injecter les sprites dans Super Metroid</li>
             </ul>
             <p>
                 Le test en jeu était indispensable : un sprite réussi sur feuille ou dans Aseprite peut devenir illisible
@@ -264,15 +271,20 @@
                 <source src="assets/projects/super-metroid/sm-custom-05-shinespark.mp4" type="video/mp4">
                 Votre navigateur ne prend pas en charge la lecture vidéo.
             </video>
-            <p class="image-slot-label">Slot visuel 05 : <code>sm-custom-05-shinespark.mp4</code></p>
+            <p class="image-caption">Exemple d’action spéciale adaptée en jeu : course, visée, morph et Shinespark.</p>
         </div>
 
         <div class="content-section">
             <h2>Exemples d’adaptation créative</h2>
+            <p>
+                Certaines animations m'ont obligé à adapter des mouvements ou signes visuels emblématiques de chaque
+                univers dans les slots existants de Super Metroid, un peu comme <strong>Super Smash Bros</strong>
+                réinterprète des gestes iconiques d'une série dans son propre système d'attaque.
+            </p>
             <ul>
                 <li>Pour <strong>Inkling Girl</strong>, j’ai utilisé l’idée de transformation humanoïde / calamar pour la <strong>morphball</strong></li>
-                <li>Pour certaines séquences rapides, j’ai réinterprété le <strong>shinespark</strong> avec une forme inspirée du <strong>Kraken</strong></li>
-                <li>Sur <strong>Sans</strong>, le canon de Samus est remplacé par un <strong>Gaster Blaster</strong> et certaines attaques de shinespark sont adaptées avec des visuels d’os</li>
+                <li>Sur l’animation du <strong>shinespark</strong> d’<strong>Inkling Girl</strong>, j’ai repris l’attaque spéciale du <strong>Kraken</strong>, adaptée au cadre imposé par Super Metroid</li>
+                <li>Sur <strong>Sans</strong>, le canon de Samus est remplacé par un <strong>Gaster Blaster</strong> et le <strong>shinespark</strong> est réinterprété avec des visuels d’os inspirés de sa manière d’attaquer dans Undertale</li>
                 <li>Sur les poses de course, de saut et de visée, j’ai simplifié certains volumes pour garder une lecture immédiate malgré la petite taille d’affichage</li>
             </ul>
         </div>
@@ -291,6 +303,15 @@
             </ul>
         </div>
 
+        <div class="content-section diffusion-links">
+            <h2>Références</h2>
+            <ul>
+                <li><a href="https://varia.run/" target="_blank" rel="noopener noreferrer">VARIA Randomizer</a></li>
+                <li><a href="https://maprando.com/" target="_blank" rel="noopener noreferrer">Map Rando</a></li>
+                <li><a href="https://github.com/Artheau/SpriteSomething" target="_blank" rel="noopener noreferrer">SpriteSomething</a></li>
+            </ul>
+        </div>
+
         <!-- Next Project -->
         <div class="next-project">
             <div class="project-nav">
@@ -306,6 +327,8 @@
         </div>
 
     <!-- Footer -->
+    </main>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 William Tran. Tous droits réservés.</p>

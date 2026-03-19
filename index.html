@@ -10,32 +10,50 @@
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = savedTheme || (prefersDark ? 'dark' : 'light');
             document.documentElement.setAttribute('data-theme', theme);
+            window.__initThemeMedia = function (stack) {
+                if (!stack) {
+                    return;
+                }
+                const img = stack.querySelector('.theme-media');
+                if (!img) {
+                    return;
+                }
+                const lightSrc = stack.dataset.themeLightSrc || '';
+                const darkSrc = stack.dataset.themeDarkSrc || lightSrc;
+                const activeSrc = theme === 'dark' ? (darkSrc || lightSrc) : (lightSrc || darkSrc);
+                if (activeSrc) {
+                    img.src = activeSrc;
+                    img.dataset.currentSrc = activeSrc;
+                }
+            };
         })();
     </script>
     <style>
         html[data-theme="dark"] { background-color: #0b0d12; }
         html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
     </style>
-    <title>Portfolio UX/UI Designer</title>
+    <title>William Tran - Designer UI/UX hybride</title>
     <!-- SEO META -->
-    <meta name="description" content="Portfolio de William Tran, designer multimédia : UX/UI, développement web, graphisme et sound design.">
+    <meta name="description" content="Portfolio de William Tran, designer UI/UX hybride : interfaces claires, front-end soigné et projets digitaux à forte exigence de finition.">
     <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/index.html">
     <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/index.html">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="William Tran - Portfolio">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="William Tran - Portfolio multimédia">
-    <meta property="og:description" content="Portfolio de William Tran, designer multimédia : UX/UI, développement web, graphisme et sound design.">
+    <meta property="og:title" content="William Tran - Designer UI/UX hybride">
+    <meta property="og:description" content="Portfolio de William Tran, designer UI/UX hybride : interfaces claires, front-end soigné et projets digitaux à forte exigence de finition.">
     <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/index.html">
     <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/portfolio-home-social.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="William Tran - Portfolio multimédia">
-    <meta name="twitter:description" content="Portfolio de William Tran, designer multimédia : UX/UI, développement web, graphisme et sound design.">
+    <meta name="twitter:title" content="William Tran - Designer UI/UX hybride">
+    <meta name="twitter:description" content="Portfolio de William Tran, designer UI/UX hybride : interfaces claires, front-end soigné et projets digitaux à forte exigence de finition.">
     <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/portfolio-home-social.webp">
     <!-- /SEO META -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
@@ -65,7 +83,7 @@
                 </div>
             </div>
             <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode">
+                <button class="theme-toggle" aria-label="Activer le thème sombre">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="4" fill="currentColor"/>
                         <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -74,7 +92,7 @@
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
                     </svg>
                 </button>
-                <button class="menu-toggle" aria-label="Toggle menu">
+                <button class="menu-toggle" aria-label="Ouvrir le menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -83,11 +101,12 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title fade-in">Designer multimédia — développement web, graphisme & son</h1>
-            <p class="hero-subtitle fade-in-delay">Interfaces claires, finitions soignées, et expérience globale maîtrisée.</p>
+            <h1 class="hero-title fade-in">Designer UI/UX hybride</h1>
+            <p class="hero-subtitle fade-in-delay">Je conçois des interfaces claires et des expériences soignées, du design à la réalisation front-end, avec une attention particulière portée aux détails.</p>
         </div>
     </section>
 
@@ -96,61 +115,55 @@
         <div class="container">
             <h2 class="section-title">Projets sélectionnés</h2>
 
-            <div class="projects-category" id="projets-graphiques">
+            <div class="projects-category" id="projets-produits">
                 <div class="category-header">
-                    <h3 class="category-title">Projets graphiques</h3>
-                    <p class="category-subtitle">Identité visuelle, UI, branding et direction artistique.</p>
+                    <h3 class="category-title">Produits & interfaces</h3>
+                    <p class="category-subtitle">Conception UI/UX, logique produit et réalisation front-end.</p>
                 </div>
                 <div class="projects-grid">
-                    <a href="projet_graphique_1.html" class="project-card" style="--project-accent-rgb: 98, 191, 117;">
+                    <a href="projet_codage_2.html" class="project-card" style="--project-accent-rgb: 18, 18, 18;">
                         <div class="project-image">
-                            <img src="assets/projects/covers/graphique1-super-metroid.webp" alt="Capture custom sprites Super Metroid" loading="lazy">
+                            <div class="theme-media-stack" data-theme-light-src="assets/projects/codage2/codage2-00-miniature.webp" data-theme-dark-src="assets/projects/codage2/codage2-00-miniature-dark.webp" aria-label="Miniature du projet Guide studio mobile first">
+                                <img class="theme-media" alt="Miniature du projet Guide studio mobile first" loading="lazy">
+                            </div>
+                            <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Création de custom sprites - Super Metroid</h3>
-                            <p class="project-description">Projet personnel · ROM modding SNES · Aseprite</p>
+                            <h3 class="project-title">Guide studio - Web app mobile first</h3>
+                            <p class="project-description">Playback Solutions · Web app mobile first · 2026</p>
                             <div class="project-tags">
-                                <span class="project-tag project-tag-primary">Graphisme</span>
-                                <span class="project-tag">Jeu vidéo</span>
+                                <span class="project-tag project-tag-primary">Codage</span>
+                                <span class="project-tag">UI/UX</span>
                             </div>
                         </div>
                     </a>
 
-                    <a href="projet_graphique_2.html" class="project-card" style="--project-accent-rgb: 47, 71, 255;">
+                    <a href="projet_codage_4.html" class="project-card" style="--project-accent-rgb: 121, 141, 255;">
                         <div class="project-image">
-                            <div class="theme-media-stack" aria-label="Miniature du projet Refonte Suivea">
-                                <img class="theme-media theme-media-light" src="assets/projects/suivea/suivea-refonte-00-miniature-light.webp" alt="Miniature du projet Refonte Suivea" loading="lazy">
-                                <img class="theme-media theme-media-dark" src="assets/projects/suivea/suivea-refonte-00-miniature-dark.webp" alt="" loading="lazy" aria-hidden="true">
-                            </div>
+                            <img src="assets/projects/codage4/codage4-00-miniature.webp" alt="Miniature du projet portfolio" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Refonte Suivea - Logo & interface mobile</h3>
-                            <p class="project-description">Docaposte · Stage MMI2 · 2021</p>
+                            <h3 class="project-title">Portfolio - Conception & développement</h3>
+                            <p class="project-description">Projet personnel · Web design & développement · 2026</p>
                             <div class="project-tags">
-                                <span class="project-tag project-tag-primary">Graphisme</span>
+                                <span class="project-tag project-tag-primary">Codage</span>
                                 <span class="project-tag">UI/UX</span>
                             </div>
                         </div>
                     </a>
                 </div>
-            </div>
 
-            <div class="projects-category" id="projets-codage">
-                <div class="category-header">
-                    <h3 class="category-title">Projets codage</h3>
-                    <p class="category-subtitle">Expériences web et mobile conçues et prototypées de bout en bout.</p>
-                </div>
                 <div class="projects-featured">
                     <a href="projet_codage_5.html" class="project-card featured" style="--project-accent-rgb: 252, 229, 205;">
                         <div class="project-image">
-                            <div class="theme-media-stack" aria-label="Miniature du projet VeloTrack">
-                                <img class="theme-media theme-media-light" src="assets/projects/velotrack/velotrack-00-miniature-light.webp" alt="Miniature du projet VeloTrack" loading="lazy">
-                                <img class="theme-media theme-media-dark" src="assets/projects/velotrack/velotrack-00-miniature-dark.webp" alt="" loading="lazy" aria-hidden="true">
+                            <div class="theme-media-stack" data-theme-light-src="assets/projects/velotrack/velotrack-00-miniature-light.webp" data-theme-dark-src="assets/projects/velotrack/velotrack-00-miniature-dark.webp" aria-label="Miniature du projet VeloTrack">
+                                <img class="theme-media" alt="Miniature du projet VeloTrack" loading="lazy">
                             </div>
+                            <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
                         </div>
                         <div class="project-info">
                             <h3 class="project-title">VeloTrack - Application iOS de suivi cycliste</h3>
-                            <p class="project-description">Projet personnel · SwiftUI · 2026</p>
+                            <p class="project-description">Projet personnel · Application mobile iOS · 2026</p>
                             <div class="project-tags">
                                 <span class="project-tag project-tag-primary">Codage</span>
                                 <span class="project-tag">UI/UX</span>
@@ -160,33 +173,62 @@
                 </div>
             </div>
 
-            <div class="projects-category" id="projets-audiovisuels">
+            <div class="projects-category" id="projets-identite">
                 <div class="category-header">
-                    <h3 class="category-title">Projets audiovisuels</h3>
-                    <p class="category-subtitle">Sound design, montage et narration audio pour podcasts et vidéos.</p>
+                    <h3 class="category-title">Identité visuelle & UI</h3>
+                    <p class="category-subtitle">Refonte visuelle, cohérence de marque et interfaces lisibles.</p>
                 </div>
                 <div class="projects-grid">
-                    <a href="projet_audiovisuel_1.html" class="project-card" style="--project-accent-rgb: 255, 125, 64;">
+                    <a href="projet_graphique_2.html" class="project-card" style="--project-accent-rgb: 47, 71, 255;">
                         <div class="project-image">
-                            <img src="assets/projects/covers/audiovisuel1-chaos-paris-card.webp" alt="Podcast fiction sonore : Les JO, le chaos dans Paris" loading="lazy">
+                            <div class="theme-media-stack" data-theme-light-src="assets/projects/suivea/suivea-refonte-00-miniature-light.webp" data-theme-dark-src="assets/projects/suivea/suivea-refonte-00-miniature-dark.webp" aria-label="Miniature du projet Refonte Suivea">
+                                <img class="theme-media" alt="Miniature du projet Refonte Suivea" loading="lazy">
+                            </div>
+                            <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Fiction sonore - Les JO : le chaos dans Paris</h3>
-                            <p class="project-description">Studio M · Fiction sonore · 2024</p>
+                            <h3 class="project-title">Refonte Suivea - Logo & interface mobile</h3>
+                            <p class="project-description">Docaposte · Identité visuelle & interface mobile · 2021</p>
                             <div class="project-tags">
-                                <span class="project-tag project-tag-primary">Audiovisuel</span>
-                                <span class="project-tag">Écriture</span>
+                                <span class="project-tag project-tag-primary">Graphisme</span>
+                                <span class="project-tag">UI/UX</span>
                             </div>
                         </div>
                     </a>
 
+                    <a href="projet_codage_3.html" class="project-card" style="--project-accent-rgb: 47, 71, 255;">
+                        <div class="project-image">
+                            <div class="theme-media-stack" data-theme-light-src="assets/projects/suivea/suivea-dev-00-miniature-light.webp" data-theme-dark-src="assets/projects/suivea/suivea-dev-00-miniature-dark.webp" aria-label="Miniature du projet Développement Suivea v3">
+                                <img class="theme-media" alt="Miniature du projet Développement Suivea v3" loading="lazy">
+                            </div>
+                            <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Suivea v3 - Développement front-end</h3>
+                            <p class="project-description">Docaposte · Développement web · 2021</p>
+                            <div class="project-tags">
+                                <span class="project-tag project-tag-primary">Codage</span>
+                                <span class="project-tag">UI/UX</span>
+                                <span class="project-tag">Graphisme</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-category" id="projets-audiovisuels">
+                <div class="category-header">
+                    <h3 class="category-title">Audiovisuel</h3>
+                    <p class="category-subtitle">Montage, rythme, narration et qualité de finition.</p>
+                </div>
+                <div class="projects-grid">
                     <a href="projet_audiovisuel_2.html" class="project-card" style="--project-accent-rgb: 255, 0, 128;">
                         <div class="project-image">
                             <img src="assets/projects/covers/audiovisuel2-feuille-blanche.webp" alt="Montage vidéo Feuille Blanche" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Test montage vidéo - Feuille Blanche</h3>
-                            <p class="project-description">Feuille Blanche · Test alternance · 2025</p>
+                            <h3 class="project-title">Feuille Blanche - Montage vidéo</h3>
+                            <p class="project-description">Feuille Blanche · Montage vidéo · 2025</p>
                             <div class="project-tags">
                                 <span class="project-tag project-tag-primary">Audiovisuel</span>
                                 <span class="project-tag">Graphisme</span>
@@ -208,28 +250,34 @@
                             </div>
                         </div>
                     </a>
+
+                    <a href="projet_audiovisuel_1.html" class="project-card" style="--project-accent-rgb: 255, 125, 64;">
+                        <div class="project-image">
+                            <img src="assets/projects/covers/audiovisuel1-chaos-paris-card.webp" alt="Podcast fiction sonore : Les JO, le chaos dans Paris" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Fiction sonore - Les JO : le chaos dans Paris</h3>
+                            <p class="project-description">Studio M · Fiction sonore · 2024</p>
+                            <div class="project-tags">
+                                <span class="project-tag project-tag-primary">Audiovisuel</span>
+                                <span class="project-tag">Écriture</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
             <div class="projects-list">
                 <div class="projects-list-header">Autres projets</div>
                 <div class="project-line">
-                    <a href="projet_codage_3.html">Développement Suivea v3</a>
-                    <span class="project-meta-mini">Web app · 2021</span>
-                </div>
-                <div class="project-line">
                     <a href="projet_codage_1.html">Plateforme de dépôt audio</a>
                     <span class="project-meta-mini">Plateforme web · 2026</span>
                 </div>
                 <div class="project-line">
-                    <a href="projet_codage_4.html">Conception & développement du portfolio</a>
-                    <span class="project-meta-mini">Site web · 2026</span>
+                    <a href="projet_graphique_1.html">Création de custom sprites - Super Metroid</a>
+                    <span class="project-meta-mini">Pixel art · 2024</span>
                 </div>
-                <div class="project-line">
-                    <a href="projet_codage_2.html">Guide studio mobile first</a>
-                    <span class="project-meta-mini">Web app · 2026</span>
-                </div>
-                <a href="#contact" class="text-link">Demander le portfolio complet</a>
+                <a href="projets.html" class="text-link">Voir tous les projets</a>
             </div>
         </div>
     </section>
@@ -238,7 +286,7 @@
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Travaillons ensemble</h2>
-            <p class="contact-text">Vous avez un projet en tête ? Discutons-en.</p>
+            <p class="contact-text">Je suis disponible pour des missions et opportunités en design UI/UX, front-end et projets digitaux à forte exigence de finition.</p>
             <div class="contact-links">
                 <a href="mailto:williamtran.far@gmail.com" class="contact-btn">Me contacter</a>
                 <div class="social-links">
@@ -249,6 +297,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 William Tran. Tous droits réservés.</p>

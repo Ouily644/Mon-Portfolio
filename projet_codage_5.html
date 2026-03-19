@@ -10,6 +10,22 @@
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = savedTheme || (prefersDark ? 'dark' : 'light');
             document.documentElement.setAttribute('data-theme', theme);
+            window.__initThemeMedia = function (stack) {
+                if (!stack) {
+                    return;
+                }
+                const img = stack.querySelector('.theme-media');
+                if (!img) {
+                    return;
+                }
+                const lightSrc = stack.dataset.themeLightSrc || '';
+                const darkSrc = stack.dataset.themeDarkSrc || lightSrc;
+                const activeSrc = theme === 'dark' ? (darkSrc || lightSrc) : (lightSrc || darkSrc);
+                if (activeSrc) {
+                    img.src = activeSrc;
+                    img.dataset.currentSrc = activeSrc;
+                }
+            };
         })();
     </script>
     <style>
@@ -33,9 +49,11 @@
     <meta name="twitter:description" content="Application iOS SwiftUI de suivi cycliste avec tracking intelligent, statistiques et maintenance vélo.">
     <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/velotrack/velotrack-01-overview-light.webp">
     <!-- /SEO META -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
     <nav class="nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">William Tran</a>
@@ -64,7 +82,7 @@
                 </div>
             </div>
             <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode">
+                <button class="theme-toggle" aria-label="Activer le thème sombre">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="4" fill="currentColor"/>
                         <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -73,7 +91,7 @@
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
                     </svg>
                 </button>
-                <button class="menu-toggle" aria-label="Toggle menu">
+                <button class="menu-toggle" aria-label="Ouvrir le menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -82,6 +100,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <section class="project-hero">
         <div class="container">
             <h1 class="hero-title fade-in">VeloTrack - Application iOS de suivi cycliste</h1>
@@ -109,11 +128,10 @@
     </section>
 
     <div class="image-full">
-        <div class="theme-media-stack" aria-label="Vue d'ensemble du projet VeloTrack avec l'application et ses points forts">
-            <img class="theme-media theme-media-light" src="assets/projects/velotrack/velotrack-01-overview-light.webp" alt="Vue d'ensemble du projet VeloTrack avec l'application et ses points forts" loading="eager" decoding="async">
-            <img class="theme-media theme-media-dark" src="assets/projects/velotrack/velotrack-01-overview-dark.webp" alt="" loading="eager" decoding="async" aria-hidden="true">
+        <div class="theme-media-stack" data-theme-light-src="assets/projects/velotrack/velotrack-01-overview-light.webp" data-theme-dark-src="assets/projects/velotrack/velotrack-01-overview-dark.webp" aria-label="Vue d'ensemble du projet VeloTrack avec l'application et ses points forts">
+            <img class="theme-media" alt="Vue d'ensemble du projet VeloTrack avec l'application et ses points forts" loading="eager" decoding="async" fetchpriority="high" width="2880" height="1800">
         </div>
-        <p class="image-slot-label">Slot visuel 01 : <code>velotrack-01-overview-light.webp</code> / <code>velotrack-01-overview-dark.webp</code></p>
+        <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
     </div>
 
         <div class="project-content">
@@ -142,8 +160,9 @@
                 gérer l'entretien des vélos et piloter certains vélos à assistance électrique directement depuis l'iPhone.
             </p>
             <p>
-                À ce stade, l'application doit être comprise comme un prototype avancé : l'ensemble est déjà largement
-                fonctionnel, mais le projet n'est pas encore finalisé comme produit prêt à être diffusé.
+                L'application réunit déjà les briques majeures du produit : tracking intelligent, statistiques,
+                maintenance et intégration eBike. Elle reste en évolution sur les phases de validation terrain
+                et de finition nécessaires avant une diffusion plus large.
             </p>
         </div>
 
@@ -192,11 +211,8 @@
         </div>
 
         <div class="image-full">
-            <div class="theme-media-stack" aria-label="Schéma du pipeline de tracking VeloTrack avec CoreLocation, CoreMotion, filtrage GPS et trajet enregistré">
-                <img class="theme-media theme-media-light" src="assets/projects/velotrack/velotrack-02-tracking-pipeline.svg" alt="Schéma du pipeline de tracking VeloTrack avec CoreLocation, CoreMotion, filtrage GPS et trajet enregistré" loading="lazy" decoding="async">
-                <img class="theme-media theme-media-dark" src="assets/projects/velotrack/velotrack-02-tracking-pipeline.svg" alt="" loading="lazy" decoding="async" aria-hidden="true">
-            </div>
-            <p class="image-slot-label">Slot visuel 02 : <code>velotrack-02-tracking-pipeline.svg</code></p>
+            <img src="assets/projects/velotrack/velotrack-02-tracking-pipeline.webp" alt="Schéma du pipeline de tracking VeloTrack avec CoreLocation, CoreMotion, filtrage GPS et trajet enregistré" loading="lazy" decoding="async">
+            <p class="image-caption">Pipeline de tracking iOS : des capteurs CoreLocation et CoreMotion jusqu’au trajet enregistré.</p>
         </div>
 
         <div class="content-section">
@@ -217,18 +233,14 @@
                 sans documentation officielle exploitable.
             </p>
             <p>
-                L'architecture inclut aussi une implémentation pour Bafang et Shimano Steps. En revanche, je n'ai pas encore
-                pu les valider sur vélo réel faute d'accès à des modèles de ces marques. Ces intégrations sont donc présentes
-                dans le prototype, mais leur test matériel reste à compléter.
+                L'architecture inclut aussi des intégrations pour Bafang et Shimano Steps. Elles sont déjà présentes
+                dans la base technique, mais leur validation sur vélo réel reste à finaliser faute d'accès à des modèles
+                de ces marques.
             </p>
         </div>
 
         <div class="image-full">
-            <div class="theme-media-stack" aria-label="Vue VeloTrack avec accueil du vélo électrique connecté et tableau de bord eBike en BLE">
-                <img class="theme-media theme-media-light" src="assets/projects/velotrack/velotrack-03-ebike-dashboard.webp" alt="Vue VeloTrack avec accueil du vélo électrique connecté et tableau de bord eBike en BLE" loading="lazy" decoding="async">
-                <img class="theme-media theme-media-dark" src="assets/projects/velotrack/velotrack-03-ebike-dashboard.webp" alt="" loading="lazy" decoding="async" aria-hidden="true">
-            </div>
-            <p class="image-slot-label">Slot visuel 03 : <code>velotrack-03-ebike-dashboard.webp</code></p>
+            <img src="assets/projects/velotrack/velotrack-03-ebike-dashboard.webp" alt="Vue VeloTrack avec accueil du vélo électrique connecté et tableau de bord eBike en BLE" loading="lazy" decoding="async">
         </div>
 
         <div class="content-section">
@@ -247,19 +259,11 @@
         </div>
 
         <div class="image-full">
-            <div class="theme-media-stack" aria-label="Vue VeloTrack avec trajets en grille, trajets en liste, détail de trajet et statistiques globales">
-                <img class="theme-media theme-media-light" src="assets/projects/velotrack/velotrack-04-stats-overview.webp" alt="Vue VeloTrack avec trajets en grille, trajets en liste, détail de trajet et statistiques globales" loading="lazy" decoding="async">
-                <img class="theme-media theme-media-dark" src="assets/projects/velotrack/velotrack-04-stats-overview.webp" alt="" loading="lazy" decoding="async" aria-hidden="true">
-            </div>
-            <p class="image-slot-label">Slot visuel 04 : <code>velotrack-04-stats-overview.webp</code></p>
+            <img src="assets/projects/velotrack/velotrack-04-stats-overview.webp" alt="Vue VeloTrack avec trajets en grille, trajets en liste, détail de trajet et statistiques globales" loading="lazy" decoding="async">
         </div>
 
         <div class="image-full">
-            <div class="theme-media-stack" aria-label="Vue VeloTrack avec page entretien par vélo et détail de chaque élément de maintenance">
-                <img class="theme-media theme-media-light" src="assets/projects/velotrack/velotrack-05-maintenance.webp" alt="Vue VeloTrack avec page entretien par vélo et détail de chaque élément de maintenance" loading="lazy" decoding="async">
-                <img class="theme-media theme-media-dark" src="assets/projects/velotrack/velotrack-05-maintenance.webp" alt="" loading="lazy" decoding="async" aria-hidden="true">
-            </div>
-            <p class="image-slot-label">Slot visuel 05 : <code>velotrack-05-maintenance.webp</code></p>
+            <img src="assets/projects/velotrack/velotrack-05-maintenance.webp" alt="Vue VeloTrack avec page entretien par vélo et détail de chaque élément de maintenance" loading="lazy" decoding="async">
         </div>
 
         <div class="content-section">
@@ -268,7 +272,7 @@
                 <li><strong>Protocole MotorProvider</strong> : abstraction BLE avec interface unique pour tous les constructeurs</li>
                 <li><strong>Reverse engineering BLE</strong> : décodage des trames binaires Mahle sans documentation officielle</li>
                 <li><strong>Architecture tracking</strong> : filtrage précision, détection de sauts, lissage vitesse, gestion énergie</li>
-                <li><strong>Mock système</strong> : simulation complète pour développer/tester l'UI sans matériel physique</li>
+                <li><strong>Mock système</strong> : simulation complète pour faire évoluer l'UI et la logique sans matériel physique</li>
             </ul>
             <p>
                 Cette architecture m'a permis de faire évoluer l'application sans la réécrire à chaque nouvelle brique :
@@ -278,11 +282,8 @@
         </div>
 
         <div class="image-full">
-            <div class="theme-media-stack" aria-label="Schema d architecture VeloTrack avec vues SwiftUI, logique centrale, providers BLE et couche de simulation">
-                <img class="theme-media theme-media-light" src="assets/projects/velotrack/velotrack-06-architecture-ble.svg" alt="Schema d architecture VeloTrack avec vues SwiftUI, logique centrale, providers BLE et couche de simulation" loading="lazy" decoding="async">
-                <img class="theme-media theme-media-dark" src="assets/projects/velotrack/velotrack-06-architecture-ble.svg" alt="" loading="lazy" decoding="async" aria-hidden="true">
-            </div>
-            <p class="image-slot-label">Slot visuel 06 : <code>velotrack-06-architecture-ble.svg</code></p>
+            <img src="assets/projects/velotrack/velotrack-06-architecture-ble.webp" alt="Schema d architecture VeloTrack avec vues SwiftUI, logique centrale, providers BLE et couche de simulation" loading="lazy" decoding="async">
+            <p class="image-caption">Architecture SwiftUI en couches : vues, logique centrale, providers BLE et persistance.</p>
         </div>
 
         <div class="content-section">
@@ -298,15 +299,15 @@
         <div class="content-section">
             <h2>Suite envisagée du projet</h2>
             <p>
-                La prochaine étape logique est une phase de test en conditions réelles avec de vrais utilisateurs,
-                probablement via TestFlight, pour valider la stabilité du tracking, le comportement en arrière-plan,
-                la lisibilité des données et la valeur réelle des fonctionnalités eBike au quotidien.
+                La prochaine étape est une phase de validation en conditions réelles, probablement via TestFlight,
+                pour mesurer la stabilité du tracking, le comportement en arrière-plan, la lisibilité des données
+                et la valeur réelle des fonctionnalités eBike au quotidien.
             </p>
             <p>
-                Si ces tests confirment la solidité du prototype, l'objectif serait d'aller vers une publication
+                Si cette phase confirme la solidité de l'application, l'objectif est d'aller vers une publication
                 App Store avec le travail associé : finition produit, corrections de fiabilité, préparation de la fiche,
-                visuels, positionnement clair et communication de lancement sur les réseaux pour toucher les premiers
-                utilisateurs intéressés par le suivi vélo et les eBikes.
+                visuels, positionnement clair et communication de lancement pour toucher les premiers utilisateurs
+                intéressés par le suivi vélo et les eBikes.
             </p>
             <p>
                 À plus long terme, un portage Android aurait du sens si l'application trouve son public et si l'usage
@@ -330,6 +331,7 @@
             </div>
         </div>
     </div>
+    </main>
 
     <footer class="footer">
         <div class="container">

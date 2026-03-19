@@ -10,6 +10,22 @@
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = savedTheme || (prefersDark ? 'dark' : 'light');
             document.documentElement.setAttribute('data-theme', theme);
+            window.__initThemeMedia = function (stack) {
+                if (!stack) {
+                    return;
+                }
+                const img = stack.querySelector('.theme-media');
+                if (!img) {
+                    return;
+                }
+                const lightSrc = stack.dataset.themeLightSrc || '';
+                const darkSrc = stack.dataset.themeDarkSrc || lightSrc;
+                const activeSrc = theme === 'dark' ? (darkSrc || lightSrc) : (lightSrc || darkSrc);
+                if (activeSrc) {
+                    img.src = activeSrc;
+                    img.dataset.currentSrc = activeSrc;
+                }
+            };
         })();
     </script>
     <style>
@@ -33,9 +49,11 @@
     <meta name="twitter:description" content="Refonte de l'identité visuelle Suivea : logo, directions graphiques et UI mobile.">
     <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/suivea/suivea-refonte-00-miniature-light.webp">
     <!-- /SEO META -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
     <nav class="nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">William Tran</a>
@@ -64,7 +82,7 @@
                 </div>
             </div>
             <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode">
+                <button class="theme-toggle" aria-label="Activer le thème sombre">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="4" fill="currentColor"/>
                         <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -73,7 +91,7 @@
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
                     </svg>
                 </button>
-                <button class="menu-toggle" aria-label="Toggle menu">
+                <button class="menu-toggle" aria-label="Ouvrir le menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -82,6 +100,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <section class="project-hero">
         <div class="container">
             <h1 class="hero-title fade-in">Refonte Suivea - logo & interface mobile</h1>
@@ -109,10 +128,10 @@
     </section>
 
     <div class="image-full">
-        <div class="theme-media-stack" aria-label="Vue globale de l'interface Suivea">
-            <img class="theme-media theme-media-light" src="assets/projects/suivea/suivea-refonte-00-miniature-light.webp" alt="Vue globale de l'interface Suivea" loading="eager" decoding="async">
-            <img class="theme-media theme-media-dark" src="assets/projects/suivea/suivea-refonte-00-miniature-dark.webp" alt="" loading="eager" decoding="async" aria-hidden="true">
+        <div class="theme-media-stack" data-theme-light-src="assets/projects/suivea/suivea-refonte-00-miniature-light.webp" data-theme-dark-src="assets/projects/suivea/suivea-refonte-00-miniature-dark.webp" aria-label="Vue globale de l'interface Suivea">
+            <img class="theme-media" alt="Vue globale de l'interface Suivea" loading="eager" decoding="async" fetchpriority="high" width="1920" height="1080">
         </div>
+        <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
     </div>
 
         <div class="project-content">
@@ -159,7 +178,6 @@
 
         <div class="image-full image-full--contain">
             <img src="assets/projects/suivea/suivea-05-interface-ancienne.webp" alt="Interface Suivea avant la refonte" loading="lazy" decoding="async">
-            <p class="image-slot-label">Référence contexte : <code>suivea-05-interface-ancienne.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -179,12 +197,10 @@
 
         <div class="image-full image-full--contain">
             <img src="assets/projects/suivea/suivea-02-logo-iterations.webp" alt="Pistes et itérations du logo Suivea" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel logo : <code>suivea-02-logo-iterations.webp</code></p>
         </div>
 
         <div class="image-full image-full--contain">
         <img src="assets/projects/suivea/suivea-01-logo-ancien.svg" alt="Ancienne version du logo Suivea" loading="lazy" decoding="async">
-            <p class="image-slot-label">Comparatif : <code>suivea-01-logo-ancien.svg</code></p>
         </div>
 
         <div class="content-section">
@@ -214,7 +230,6 @@
 
         <div class="image-full image-full--contain">
             <img src="assets/projects/suivea/suivea-03-mobile-refonte.webp" alt="Comparatif des écrans mobiles Suivea avant et après refonte" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel mobile : <code>suivea-03-mobile-refonte.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -284,6 +299,7 @@
             </div>
         </div>
     </div>
+    </main>
 
     <footer class="footer">
         <div class="container">

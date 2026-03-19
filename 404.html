@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="robots" content="noindex">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Page introuvable - William Tran</title>
+    <meta name="description" content="La page demandée est introuvable.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projets</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">À propos</a>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Activer le thème sombre">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="project-hero">
+            <div class="container">
+                <h1 class="hero-title fade-in">Page introuvable</h1>
+                <p class="hero-subtitle fade-in-delay">Le lien que vous avez suivi n'existe plus ou l'adresse est incorrecte.</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2 class="section-title">Revenir au bon endroit</h2>
+                <p class="contact-text">Vous pouvez retourner à l’accueil ou parcourir les projets depuis la page dédiée.</p>
+                <div class="contact-links">
+                    <a href="index.html" class="contact-btn">Retour à l'accueil</a>
+                    <div class="social-links">
+                        <a href="projets.html" class="social-link">Voir les projets</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

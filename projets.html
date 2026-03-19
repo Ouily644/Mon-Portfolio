@@ -10,6 +10,22 @@
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = savedTheme || (prefersDark ? 'dark' : 'light');
             document.documentElement.setAttribute('data-theme', theme);
+            window.__initThemeMedia = function (stack) {
+                if (!stack) {
+                    return;
+                }
+                const img = stack.querySelector('.theme-media');
+                if (!img) {
+                    return;
+                }
+                const lightSrc = stack.dataset.themeLightSrc || '';
+                const darkSrc = stack.dataset.themeDarkSrc || lightSrc;
+                const activeSrc = theme === 'dark' ? (darkSrc || lightSrc) : (lightSrc || darkSrc);
+                if (activeSrc) {
+                    img.src = activeSrc;
+                    img.dataset.currentSrc = activeSrc;
+                }
+            };
         })();
     </script>
     <style>
@@ -18,24 +34,26 @@
     </style>
     <title>Tous les projets - William Tran</title>
     <!-- SEO META -->
-    <meta name="description" content="Découvrez l'ensemble des projets de William Tran en design graphique, développement web/mobile et audiovisuel.">
+    <meta name="description" content="Découvrez une sélection de projets de William Tran en design graphique, développement web/mobile et audiovisuel.">
     <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/projets.html">
     <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projets.html">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="William Tran - Portfolio">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tous les projets - William Tran">
-    <meta property="og:description" content="Découvrez l'ensemble des projets de William Tran en design graphique, développement web/mobile et audiovisuel.">
+    <meta property="og:description" content="Découvrez une sélection de projets de William Tran en design graphique, développement web/mobile et audiovisuel.">
     <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/projets.html">
     <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/suivea/suivea-refonte-00-miniature-light.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tous les projets - William Tran">
-    <meta name="twitter:description" content="Découvrez l'ensemble des projets de William Tran en design graphique, développement web/mobile et audiovisuel.">
+    <meta name="twitter:description" content="Découvrez une sélection de projets de William Tran en design graphique, développement web/mobile et audiovisuel.">
     <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/suivea/suivea-refonte-00-miniature-light.webp">
     <!-- /SEO META -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
     <nav class="nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">William Tran</a>
@@ -64,7 +82,7 @@
                 </div>
             </div>
             <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode">
+                <button class="theme-toggle" aria-label="Activer le thème sombre">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="4" fill="currentColor"/>
                         <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -73,7 +91,7 @@
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
                     </svg>
                 </button>
-                <button class="menu-toggle" aria-label="Toggle menu">
+                <button class="menu-toggle" aria-label="Ouvrir le menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -82,10 +100,11 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <section class="work project-hub" id="work">
         <div class="container">
             <h1 class="section-title">Tous les projets</h1>
-            <p class="projects-hub-intro">Cette page regroupe l’ensemble de mes projets en design, développement et audiovisuel.</p>
+            <p class="projects-hub-intro">Cette page présente une sélection de projets en design, développement et audiovisuel.</p>
 
             <div class="project-filter-bar" role="toolbar" aria-label="Filtrer les projets par tags">
                 <button type="button" class="project-filter-btn project-filter-btn-all active" data-filter="all" aria-pressed="true">
@@ -121,10 +140,10 @@
             <div class="projects-hub-grid" data-project-grid>
                 <a href="projet_codage_5.html" class="project-card" data-primary="codage" data-secondary="ux" style="--project-accent-rgb: 252, 229, 205;">
                     <div class="project-image">
-                        <div class="theme-media-stack" aria-label="Miniature du projet VeloTrack">
-                            <img class="theme-media theme-media-light" src="assets/projects/velotrack/velotrack-00-miniature-light.webp" alt="Miniature du projet VeloTrack" loading="lazy">
-                            <img class="theme-media theme-media-dark" src="assets/projects/velotrack/velotrack-00-miniature-dark.webp" alt="" loading="lazy" aria-hidden="true">
+                        <div class="theme-media-stack" data-theme-light-src="assets/projects/velotrack/velotrack-00-miniature-light.webp" data-theme-dark-src="assets/projects/velotrack/velotrack-00-miniature-dark.webp" aria-label="Miniature du projet VeloTrack">
+                            <img class="theme-media" alt="Miniature du projet VeloTrack" loading="lazy">
                         </div>
+                        <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">VeloTrack - Application iOS de suivi cycliste</h3>
@@ -152,10 +171,10 @@
 
                 <a href="projet_codage_2.html" class="project-card" data-primary="codage" data-secondary="ux" style="--project-accent-rgb: 18, 18, 18;">
                     <div class="project-image">
-                        <div class="theme-media-stack" aria-label="Miniature du projet Guide studio mobile first">
-                            <img class="theme-media theme-media-light" src="assets/projects/codage2/codage2-00-miniature.webp" alt="Miniature du projet Guide studio mobile first" loading="lazy">
-                            <img class="theme-media theme-media-dark" src="assets/projects/codage2/codage2-00-miniature-dark.webp" alt="" loading="lazy" aria-hidden="true">
+                        <div class="theme-media-stack" data-theme-light-src="assets/projects/codage2/codage2-00-miniature.webp" data-theme-dark-src="assets/projects/codage2/codage2-00-miniature-dark.webp" aria-label="Miniature du projet Guide studio mobile first">
+                            <img class="theme-media" alt="Miniature du projet Guide studio mobile first" loading="lazy">
                         </div>
+                        <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Guide studio - Web app mobile first</h3>
@@ -241,10 +260,10 @@
 
                 <a href="projet_graphique_2.html" class="project-card" data-primary="graphisme" data-secondary="ux" style="--project-accent-rgb: 47, 71, 255;">
                     <div class="project-image">
-                        <div class="theme-media-stack" aria-label="Miniature du projet Refonte Suivea">
-                            <img class="theme-media theme-media-light" src="assets/projects/suivea/suivea-refonte-00-miniature-light.webp" alt="Miniature du projet Refonte Suivea" loading="lazy">
-                            <img class="theme-media theme-media-dark" src="assets/projects/suivea/suivea-refonte-00-miniature-dark.webp" alt="" loading="lazy" aria-hidden="true">
+                        <div class="theme-media-stack" data-theme-light-src="assets/projects/suivea/suivea-refonte-00-miniature-light.webp" data-theme-dark-src="assets/projects/suivea/suivea-refonte-00-miniature-dark.webp" aria-label="Miniature du projet Refonte Suivea">
+                            <img class="theme-media" alt="Miniature du projet Refonte Suivea" loading="lazy">
                         </div>
+                        <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Suivea - Refonte logo & interface mobile</h3>
@@ -258,10 +277,10 @@
 
                 <a href="projet_codage_3.html" class="project-card" data-primary="codage" data-secondary="ux,graphisme" style="--project-accent-rgb: 47, 71, 255;">
                     <div class="project-image">
-                        <div class="theme-media-stack" aria-label="Miniature du projet Développement Suivea v3">
-                            <img class="theme-media theme-media-light" src="assets/projects/suivea/suivea-dev-00-miniature-light.webp" alt="Miniature du projet Développement Suivea v3" loading="lazy">
-                            <img class="theme-media theme-media-dark" src="assets/projects/suivea/suivea-dev-00-miniature-dark.webp" alt="" loading="lazy" aria-hidden="true">
+                        <div class="theme-media-stack" data-theme-light-src="assets/projects/suivea/suivea-dev-00-miniature-light.webp" data-theme-dark-src="assets/projects/suivea/suivea-dev-00-miniature-dark.webp" aria-label="Miniature du projet Développement Suivea v3">
+                            <img class="theme-media" alt="Miniature du projet Développement Suivea v3" loading="lazy">
                         </div>
+                        <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Suivea v3 - Développement front-end</h3>
@@ -276,6 +295,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <footer class="footer">
         <div class="container">

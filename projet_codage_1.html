@@ -33,9 +33,11 @@
     <meta name="twitter:description" content="Conception et développement d'une plateforme web sécurisée de dépôt de livrables audio.">
     <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage1/codage1-00-miniature.webp">
     <!-- /SEO META -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
@@ -65,7 +67,7 @@
                 </div>
             </div>
             <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode">
+                <button class="theme-toggle" aria-label="Activer le thème sombre">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="4" fill="currentColor"/>
                         <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -74,7 +76,7 @@
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
                     </svg>
                 </button>
-                <button class="menu-toggle" aria-label="Toggle menu">
+                <button class="menu-toggle" aria-label="Ouvrir le menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -82,6 +84,8 @@
             </div>
         </div>
     </nav>
+
+    <main id="main-content">
     <!-- Project Hero -->
     <section class="project-hero">
         <div class="container">
@@ -110,8 +114,7 @@
     </section>
     <!-- Main Project Image -->
     <div class="image-full">
-        <img src="assets/projects/codage1/codage1-01-page-principale.webp" alt="Vue globale de la plateforme de dépôt audio" loading="eager" decoding="async">
-        <p class="image-slot-label">Slot visuel 01 : <code>codage1-01-page-principale.webp</code></p>
+        <img src="assets/projects/codage1/codage1-01-page-principale.webp" alt="Vue globale de la plateforme de dépôt audio" loading="eager" decoding="async" fetchpriority="high" width="1800" height="1132">
     </div>
 
     <!-- Project Content -->
@@ -133,7 +136,6 @@
 
         <div class="image-full">
         <img src="assets/projects/codage1/codage1-02-auth-password.webp" alt="Écran de connexion sécurisé de la plateforme" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel 02 : <code>codage1-02-auth-password.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -176,12 +178,10 @@
 
         <div class="image-full">
         <img src="assets/projects/codage1/codage1-03-charte-details.webp" alt="Charte de livrables audio intégrée à la plateforme" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel 03 : <code>codage1-03-charte-details.webp</code></p>
         </div>
 
         <div class="image-full">
         <img src="assets/projects/codage1/codage1-04-charte-validation.webp" alt="Blocage de l'upload tant que la charte n'est pas validée" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel 04 : <code>codage1-04-charte-validation.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -211,12 +211,10 @@
 
         <div class="image-full">
         <img src="assets/projects/codage1/codage1-05-formulaire.webp" alt="Formulaire technique structuré avant transfert" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel 05 : <code>codage1-05-formulaire.webp</code></p>
         </div>
 
         <div class="image-full">
         <img src="assets/projects/codage1/codage1-06-flux.svg" alt="Schéma du flux de traitement: validation, upload et classement Dropbox" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel 06 : <code>codage1-06-flux.svg</code></p>
         </div>
 
         <div class="content-section">
@@ -262,7 +260,6 @@
 
         <div class="image-full">
         <img src="assets/projects/codage1/codage1-07-transfert-reussi.webp" alt="Écran de confirmation après transfert Dropbox" loading="lazy" decoding="async">
-            <p class="image-slot-label">Slot visuel 07 : <code>codage1-07-transfert-reussi.webp</code></p>
         </div>
 
         <div class="content-section">
@@ -323,6 +320,8 @@
     </div>
 
     <!-- Footer -->
+    </main>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 William Tran. Tous droits réservés.</p>
