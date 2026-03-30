@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>About - William Tran, UI/UX Designer with a front-end profile</title>
+    <!-- SEO META -->
+    <meta name="description" content="Background, skills and approach of William Tran, UI/UX designer with a front-end profile, combining design, implementation and execution quality.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/about.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/about.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/about.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="About - William Tran, UI/UX Designer with a front-end profile">
+    <meta property="og:description" content="Background, skills and approach of William Tran, UI/UX designer with a front-end profile, combining design, implementation and execution quality.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/about.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/suivea-logo.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About - William Tran, UI/UX Designer with a front-end profile">
+    <meta name="twitter:description" content="Background, skills and approach of William Tran, UI/UX designer with a front-end profile, combining design, implementation and execution quality.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/suivea-logo.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="#top-about">Introduction</a>
+                        <a href="#competences">Skills</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#formation">Education</a>
+                        <a href="#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../about.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../about.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <!-- About Hero -->
+    <section class="about-hero" id="top-about">
+        <div class="container">
+            <h1 class="hero-title fade-in">About</h1>
+            <p class="hero-subtitle fade-in-delay">UI/UX designer with a front-end profile, I create interfaces that are readable, useful and carefully crafted, with particular attention to rhythm, structure and execution quality.</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <div class="about-content">
+        <!-- Intro Section -->
+        <div class="about-section">
+            <h2>Hello 👋</h2>
+            <p>
+                As a UI/UX designer with a front-end profile, I create interfaces that should be understood quickly,
+                work well in practice and hold up over time.
+            </p>
+            <p>
+                My background combines design, implementation and sound work. That mix has taught me to care as much
+                about visual hierarchy as about rhythm of use, transitions and finish.
+            </p>
+        </div>
+
+        <!-- Philosophy Section -->
+        <div class="about-section">
+            <h2>My approach</h2>
+            <p>
+                I design interfaces that should feel clear without being cold, structured without being rigid,
+                and pleasant to use without overloading the experience.
+            </p>
+            <p>
+                I like to extend design into implementation when it makes sense, to make sure an intention also works
+                in the real interface. My goal is to create experiences that are useful, coherent and well executed,
+                where every decision has a function.
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="about-section" id="competences">
+            <h2>Skills</h2>
+            <div class="skills-panels">
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-symbol panel-design" aria-hidden="true"><img src="../assets/icons/sf/paintpalette.svg" alt=""></span>
+                        <h3>Graphic design</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="../assets/icons/photoshop.webp" srcset="../assets/icons/photoshop@2x.webp 2x" alt=""></span><span class="skill-name">Photoshop</span></li>
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="../assets/icons/illustrator.webp" srcset="../assets/icons/illustrator@2x.webp 2x" alt=""></span><span class="skill-name">Illustrator</span></li>
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="../assets/icons/indesign.webp" srcset="../assets/icons/indesign@2x.webp 2x" alt=""></span><span class="skill-name">InDesign</span></li>
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="../assets/icons/figma.webp" srcset="../assets/icons/figma@2x.webp 2x" alt=""></span><span class="skill-name">Figma</span></li>
+                        <li><span class="skill-icon icon-design has-image" aria-hidden="true"><img src="../assets/icons/aseprite.webp" srcset="../assets/icons/aseprite@2x.webp 2x" alt=""></span><span class="skill-name">Aseprite</span></li>
+                    </ul>
+                </div>
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-symbol panel-audio" aria-hidden="true"><img src="../assets/icons/sf/waveform.svg" alt=""></span>
+                        <h3>Sound editing & mixing</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="../assets/icons/pro-tools.webp" srcset="../assets/icons/pro-tools@2x.webp 2x" alt=""></span><span class="skill-name">Pro Tools</span></li>
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="../assets/icons/logic-pro.webp" srcset="../assets/icons/logic-pro@2x.webp 2x" alt=""></span><span class="skill-name">Logic Pro</span></li>
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="../assets/icons/ableton-live.webp" srcset="../assets/icons/ableton-live@2x.webp 2x" alt=""></span><span class="skill-name">Ableton Live</span></li>
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="../assets/icons/wwise.webp" srcset="../assets/icons/wwise@2x.webp 2x" alt=""></span><span class="skill-name">Wwise</span></li>
+                        <li><span class="skill-icon icon-audio has-image" aria-hidden="true"><img src="../assets/icons/fmod.webp" srcset="../assets/icons/fmod@2x.webp 2x" alt=""></span><span class="skill-name">FMOD</span></li>
+                    </ul>
+                </div>
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-symbol panel-video" aria-hidden="true"><img src="../assets/icons/sf/film.svg" alt=""></span>
+                        <h3>Video editing</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-video has-image" aria-hidden="true"><img src="../assets/icons/after-effects.webp" srcset="../assets/icons/after-effects@2x.webp 2x" alt=""></span><span class="skill-name">After Effects</span></li>
+                        <li><span class="skill-icon icon-video has-image" aria-hidden="true"><img src="../assets/icons/final-cut-pro.webp" srcset="../assets/icons/final-cut-pro@2x.webp 2x" alt=""></span><span class="skill-name">Final Cut Pro</span></li>
+                        <li><span class="skill-icon icon-video has-image" aria-hidden="true"><img src="../assets/icons/davinci-resolve.webp" srcset="../assets/icons/davinci-resolve@2x.webp 2x" alt=""></span><span class="skill-name">DaVinci Resolve</span></li>
+                        <li><span class="skill-icon icon-video has-image" aria-hidden="true"><img src="../assets/icons/obs.webp" srcset="../assets/icons/obs@2x.webp 2x" alt=""></span><span class="skill-name">OBS</span></li>
+                        <li class="skills-spacer" aria-hidden="true"><span class="skill-icon"></span><span class="skill-name">Spacer</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skills-panels skills-panels-secondary">
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-symbol panel-code" aria-hidden="true"><img src="../assets/icons/sf/chevron.left.forwardslash.chevron.right.svg" alt=""></span>
+                        <h3>Coding languages</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-code has-image" aria-hidden="true"><img src="../assets/icons/html5.svg" alt=""></span><span class="skill-name">HTML</span></li>
+                        <li><span class="skill-icon icon-code has-image" aria-hidden="true"><img src="../assets/icons/css.svg" alt=""></span><span class="skill-name">CSS</span></li>
+                        <li><span class="skill-icon icon-code has-image" aria-hidden="true"><img src="../assets/icons/javascript.svg" alt=""></span><span class="skill-name">JavaScript</span></li>
+                        <li><span class="skill-icon icon-code has-image" aria-hidden="true"><img src="../assets/icons/python.svg" alt=""></span><span class="skill-name">Python</span></li>
+                        <li><span class="skill-icon icon-code has-image" aria-hidden="true"><img src="../assets/icons/swift.webp" alt=""></span><span class="skill-name">Swift</span></li>
+                    </ul>
+                </div>
+                <div class="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-symbol panel-general" aria-hidden="true"><img src="../assets/icons/sf/square.and.pencil.svg" alt=""></span>
+                        <h3>Workflow tools</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon icon-general has-image" aria-hidden="true"><img src="../assets/icons/microsoft-office.webp" srcset="../assets/icons/microsoft-office@2x.webp 2x" alt=""></span><span class="skill-name">Microsoft Office</span></li>
+                        <li><span class="skill-icon icon-general has-image" aria-hidden="true"><img src="../assets/icons/notion.webp" alt=""></span><span class="skill-name">Notion</span></li>
+                        <li><span class="skill-icon icon-general has-image" aria-hidden="true"><img src="../assets/icons/github.webp" alt=""></span><span class="skill-name">GitHub</span></li>
+                        <li><span class="skill-icon icon-general has-image" aria-hidden="true"><img src="../assets/icons/xcode.webp" alt=""></span><span class="skill-name">Xcode</span></li>
+                    </ul>
+                </div>
+                <div class="skills-panel" id="langues">
+                    <div class="panel-header">
+                        <span class="panel-symbol panel-lang" aria-hidden="true"><img src="../assets/icons/sf/globe.svg" alt=""></span>
+                        <h3>Languages</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon flag-icon has-image" aria-hidden="true"><img src="../assets/icons/flag-fr.svg" alt=""></span><span class="skill-name">French — Native</span></li>
+                        <li><span class="skill-icon flag-icon has-image" aria-hidden="true"><img src="../assets/icons/flag-gb.svg" alt=""></span><span class="skill-name">English — C1</span></li>
+                        <li><span class="skill-icon flag-icon has-image" aria-hidden="true"><img src="../assets/icons/flag-es.svg" alt=""></span><span class="skill-name">Spanish — B1</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="about-section" id="experience">
+            <h2>Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="experience-role">SOUND ENGINEER — Freelance</div>
+                    <div class="experience-meta">November 2023 - Present</div>
+                    <p class="experience-desc">Delivered around thirty sound editing and mixing projects for podcasts, animation and audiovisual formats, with strong attention to intelligibility, rhythm and finish.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">AUDIO ASSISTANT — PLAYBACK SOLUTIONS</div>
+                    <div class="experience-meta">January 2026 - March 2026</div>
+                    <p class="experience-desc">Supported mixing sessions and studio logistics while also designing and developing a web platform for audio deliverables to make file intake and organization more reliable.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">PIANO TEACHER — <span class="experience-company"><img class="experience-company-logo" src="../assets/company-logos/acadomia.webp" alt="">ACADOMIA</span></div>
+                    <div class="experience-meta">October 2024 - Present</div>
+                    <p class="experience-desc">Taught beginner to intermediate students through private lessons, using a progressive and structured teaching approach tailored to each profile.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">SOUND ENGINEER — <span class="experience-company"><img class="experience-company-logo" src="../assets/company-logos/cebije.webp" alt="">CEBIJE</span> (Internship)</div>
+                    <div class="experience-meta">October 2025 - December 2025</div>
+                    <p class="experience-desc">Welcomed and supported artists in the studio, took part in recording and mixing sessions, and helped maintain strong listening quality and smooth session flow.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">CIVIC SERVICE — <span class="experience-company"><img class="experience-company-logo" src="../assets/company-logos/zupdeco.webp" alt="">ZUPDECO</span></div>
+                    <div class="experience-meta">February 2025 - July 2025</div>
+                    <p class="experience-desc">Supported teenagers facing difficulties at Les Ormeaux middle school, led workshops and managed groups with a focus on pedagogy, listening and clear guidance.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">PODCAST EDITOR — <span class="experience-company"><img class="experience-company-logo" src="../assets/company-logos/cocoandco.webp" alt="">COCO & CO PROD</span> (Internships)</div>
+                    <div class="experience-meta">March 2024 - May 2024 and March 2023 - May 2023</div>
+                    <p class="experience-desc">Edited and mixed a podcast episode built around the testimony of a Columbine survivor, focusing on condensation, rhythm and intelligibility for a long-form story in English.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">HEALTH INSURANCE CASE MANAGER — <span class="experience-company"><img class="experience-company-logo" src="../assets/company-logos/chorum.webp" alt="">CHORUM</span></div>
+                    <div class="experience-meta">September 2021 - May 2022</div>
+                    <p class="experience-desc">Handled and tracked reimbursement requests, checked file compliance and resolved disputes in a context that required rigor, reliability and clear processing.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-role">UI/UX DESIGNER — <span class="experience-company"><img class="experience-company-logo" src="../assets/company-logos/docaposte.webp" alt="">DOCAPOSTE</span> (Internship)</div>
+                    <div class="experience-meta">May 2021 - July 2021</div>
+                    <p class="experience-desc">Designed web and mobile mockups for Suivea, with a focus on visual identity, interface clarity and coherence between logo, UI and future front-end development.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formation Section -->
+        <div class="about-section" id="formation">
+            <h2>Education</h2>
+            <ul class="timeline-list">
+                <li class="timeline-item">
+                    <span class="timeline-year">2024-2025</span>
+                    <span class="timeline-text">Bachelor's degree in Sound Engineering, EICAR Paris</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2024</span>
+                    <span class="timeline-text">Sound Design diploma, Studio M Paris</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2021</span>
+                    <span class="timeline-text">MMI degree, IUT de Velizy</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2019</span>
+                    <span class="timeline-text">Scientific baccalaureate, Lycée Lakanal in Sceaux</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2019</span>
+                    <span class="timeline-text">CEM, third cycle in piano and music theory at the Boulogne-Billancourt Conservatory, awarded with honors</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2011-2013</span>
+                    <span class="timeline-text">First and second cycle piano diploma at the Fontenay-aux-Roses Conservatory, awarded highest honors unanimously with jury congratulations</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="about-section" id="interets">
+            <h2>Interests</h2>
+            <ul class="interests-list">
+                <li><strong>Music</strong>: piano and composition, with a preference for classical and orchestral work.</li>
+                <li><strong>Product design and UI/UX innovation</strong>: active watch on the Apple ecosystem and broader interaction trends, from Liquid Glass to mobile interaction patterns.</li>
+                <li><strong>Video games</strong>: from indie pixel art to larger productions, including SNES classics and personal experiments around Super Metroid and Super Mario World.</li>
+                <li><strong>Sports</strong>: mountain biking, swimming, climbing and taekwondo.</li>
+            </ul>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="about-section" style="text-align: center; margin-top: 100px;">
+            <h2>Let's talk about your project</h2>
+            <p>I am always open to new opportunities and collaborations.</p>
+            <a href="index.html#contact" class="contact-btn" style="margin-top: 24px;">Contact me</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

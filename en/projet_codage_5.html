@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            window.__initThemeMedia = function (stack) {
+                if (!stack) {
+                    return;
+                }
+                const img = stack.querySelector('.theme-media');
+                if (!img) {
+                    return;
+                }
+                const lightSrc = stack.dataset.themeLightSrc || '';
+                const darkSrc = stack.dataset.themeDarkSrc || lightSrc;
+                const activeSrc = theme === 'dark' ? (darkSrc || lightSrc) : (lightSrc || darkSrc);
+                if (activeSrc) {
+                    img.src = activeSrc;
+                    img.dataset.currentSrc = activeSrc;
+                }
+            };
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>VeloTrack - iOS cycling tracking app - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="SwiftUI iOS app for cycling tracking, ride statistics, bike maintenance and selected eBike BLE integrations.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_5.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_5.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_5.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="VeloTrack - iOS cycling tracking app">
+    <meta property="og:description" content="SwiftUI iOS app for cycling tracking, ride statistics, bike maintenance and selected eBike BLE integrations.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_5.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/velotrack/velotrack-01-overview-light.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VeloTrack - iOS cycling tracking app">
+    <meta name="twitter:description" content="SwiftUI iOS app for cycling tracking, ride statistics, bike maintenance and selected eBike BLE integrations.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/velotrack/velotrack-01-overview-light.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_codage_5.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_codage_5.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">VeloTrack - iOS cycling tracking app</h1>
+            <p class="hero-subtitle fade-in-delay">Native iOS app designed to automatically start bike tracking, centralize ride data and integrate selected eBikes through Bluetooth Low Energy.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Product design, iOS architecture and full app development</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">Personal project</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Year</div>
+                    <div class="meta-value">2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">iOS mobile app</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <div class="theme-media-stack" data-theme-light-src="../assets/projects/velotrack/velotrack-01-overview-light.webp" data-theme-dark-src="../assets/projects/velotrack/velotrack-01-overview-dark.webp" aria-label="Overview of the VeloTrack project with the app and its main strengths">
+            <img class="theme-media" alt="Overview of the VeloTrack project with the app and its main strengths" loading="eager" decoding="async" fetchpriority="high" width="2880" height="1800">
+        </div>
+        <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project origin</h2>
+            <p>
+                VeloTrack started from a concrete personal need: beginning a bike ride without friction.
+                Many existing apps still require a manual action before every ride
+                such as pulling out the phone, unlocking it and starting the recording, which breaks the experience.
+            </p>
+            <p>
+                The goal was therefore simple: get on the bike and let the app handle
+                the automatic start and stop of tracking.
+            </p>
+            <p>
+                The project started from a minimal foundation with a full-screen map and start/stop buttons,
+                then evolved through successive iterations: data persistence, automatic detection,
+                statistics, maintenance and eBike integration.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Overview</h2>
+            <p>
+                VeloTrack is a native iOS app built in Swift and SwiftUI, designed to track performance,
+                manage bike maintenance and control selected electric bikes directly from the iPhone.
+            </p>
+            <p>
+                The app already brings together the product's main building blocks: intelligent tracking,
+                statistics, maintenance and eBike integration. It is still evolving through
+                field validation and final product polish before broader release.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Main problems to solve</h2>
+            <ul>
+                <li>Automatically trigger a ride without false positives or manual action</li>
+                <li>Keep tracking reliable despite GPS, background execution and battery constraints</li>
+                <li>Integrate eBike motors over BLE without usable manufacturer documentation</li>
+                <li>Keep the experience simple while the internal logic becomes quickly complex</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Technical stack</h2>
+            <ul>
+                <li><strong>Swift / SwiftUI</strong> : declarative UI with portrait and landscape support</li>
+                <li><strong>SwiftData</strong> : local persistence for rides, bikes and maintenance data</li>
+                <li><strong>CoreLocation</strong> : high-accuracy GPS tracking and battery-aware behavior</li>
+                <li><strong>CoreMotion</strong> : automatic activity detection for cycling, walking and driving</li>
+                <li><strong>CoreBluetooth</strong> : BLE integration with electric motors</li>
+                <li><strong>MapKit</strong> : mapping and real-time route rendering</li>
+                <li><strong>HealthKit</strong> : automatic export to Apple Health</li>
+                <li><strong>Combine</strong> : reactive synchronization of real-time data</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Feature 1 - Intelligent tracking</h2>
+            <p>
+                The core of the app is a GPS tracking system with automatic start and stop,
+                based on the combination of CoreLocation and CoreMotion.
+            </p>
+            <ul>
+                <li>Automatic detection of ride start without user action</li>
+                <li>Bike / walking / car distinction to avoid false positives</li>
+                <li>Automatic stop when the ride ends or the user becomes stationary</li>
+                <li>Filtering and smoothing pipeline to remove GPS jumps</li>
+                <li>Tracking continuity between background and foreground</li>
+            </ul>
+            <p>
+                The challenge was not just detecting movement, but detecting the right context:
+                starting at the right moment, avoiding trips by car or on foot, and keeping the tracking usable
+                even when sensor data becomes noisy.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/velotrack/velotrack-02-tracking-pipeline.webp" alt="VeloTrack tracking pipeline diagram with CoreLocation, CoreMotion, GPS filtering and saved ride" loading="lazy" decoding="async">
+            <p class="image-caption">iOS tracking pipeline, from CoreLocation and CoreMotion sensors to the saved ride.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Feature 2 - eBike integration (BLE)</h2>
+            <p>
+                VeloTrack integrates electric motors through Bluetooth Low Energy using a protocol-oriented architecture,
+                so that multiple manufacturers can be connected without rewriting the interface.
+            </p>
+            <ul>
+                <li>Extensible architecture by manufacturer (Mahle, Bafang, Shimano, Bosch...)</li>
+                <li>Reverse engineering of the Mahle ebikemotion protocol</li>
+                <li>Real-time readout of battery, motor, odometer and range</li>
+                <li>Control of assistance level directly inside the app</li>
+            </ul>
+            <p>
+                The most complex point was reverse engineering the Mahle protocol:
+                identifying services, understanding the frame structure and transforming raw data into useful interface information,
+                all without usable official documentation.
+            </p>
+            <p>
+                The architecture also includes integrations for Bafang and Shimano Steps. They are already present
+                in the technical base, but their validation on real bikes still needs to be completed because I did not have access
+                to physical models from these brands.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/velotrack/velotrack-03-ebike-dashboard.webp" alt="VeloTrack view with connected electric bike home screen and BLE eBike dashboard" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Feature 3 - Statistics, mapping and maintenance</h2>
+            <ul>
+                <li>Ride history with distance, duration, speed, elevation, calories and weather</li>
+                <li>Real-time route rendering and full post-ride visualization</li>
+                <li>Map thumbnail generation with start and finish points</li>
+                <li>Component wear tracking for chain, brakes and tires based on mileage</li>
+                <li>Automatic bike attribution to rides and maintenance alerts</li>
+            </ul>
+            <p>
+                These blocks extend the original promise: not just recording a ride,
+                but turning collected data into something genuinely useful day to day.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/velotrack/velotrack-04-stats-overview.webp" alt="VeloTrack view with ride grid, ride list, ride details and global statistics" loading="lazy" decoding="async">
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/velotrack/velotrack-05-maintenance.webp" alt="VeloTrack view with per-bike maintenance page and detailed maintenance items" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Notable architecture decisions</h2>
+            <ul>
+                <li><strong>MotorProvider protocol</strong> : BLE abstraction with a single interface for all manufacturers</li>
+                <li><strong>BLE reverse engineering</strong> : decoding Mahle binary frames without official documentation</li>
+                <li><strong>Tracking architecture</strong> : precision filtering, jump detection, speed smoothing and energy management</li>
+                <li><strong>Mock system</strong> : full simulation layer to evolve UI and logic without physical hardware</li>
+            </ul>
+            <p>
+                This architecture let me keep growing the app without rewriting it for every new feature:
+                one interface for multiple motors, isolated tracking logic, and simulation tools to keep moving
+                without always depending on hardware or real-world ride conditions.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/velotrack/velotrack-06-architecture-ble.webp" alt="VeloTrack architecture diagram with SwiftUI views, central logic, BLE providers and simulation layer" loading="lazy" decoding="async">
+            <p class="image-caption">Layered SwiftUI architecture with views, central logic, BLE providers and persistence.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>Ability to design a mobile product from a precise user need</li>
+                <li>Ability to handle advanced native iOS topics such as tracking, sensors, BLE and background execution</li>
+                <li>Architectural reflexes that support growth without piling up fragile code</li>
+                <li>Balance between real technical complexity and a simple user experience</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What comes next</h2>
+            <p>
+                The next step is a real-world validation phase, probably through TestFlight,
+                to measure tracking stability, background behavior, data readability
+                and the actual day-to-day value of the eBike features.
+            </p>
+            <p>
+                If that phase confirms the app's solidity, the goal is to move toward an
+                App Store release with the associated work: product polish, reliability fixes, listing preparation,
+                visuals, clear positioning and launch communication aimed at first users interested in bike tracking and eBikes.
+            </p>
+            <p>
+                Over the longer term, an Android version would make sense if the app finds its audience
+                and the usage confirms the value of expanding beyond the iPhone ecosystem.
+            </p>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_codage_4.html" class="next-project-link prev">Portfolio design & development</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_audiovisuel_1.html" class="next-project-link next">Audio fiction - Olympics chaos in Paris</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

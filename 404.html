@@ -7,6 +7,8 @@
     <meta name="robots" content="noindex">
     <script>
         (function () {
+            const isEnglish404 = /\/en(\/|$)/.test(window.location.pathname);
+            document.documentElement.setAttribute('lang', isEnglish404 ? 'en' : 'fr');
             const savedTheme = localStorage.getItem('theme');
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = savedTheme || (prefersDark ? 'dark' : 'light');
@@ -23,22 +25,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <a class="skip-link" href="#main-content" id="notfound-skip-link">Aller au contenu</a>
     <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">William Tran</a>
+            <a href="index.html" class="nav-logo" id="notfound-nav-logo">William Tran</a>
             <div class="nav-links">
                 <div class="nav-item">
-                    <a href="projets.html" class="nav-link">Projets</a>
+                    <a href="projets.html" class="nav-link" id="notfound-nav-projects">Projets</a>
                 </div>
                 <div class="nav-item">
-                    <a href="about.html" class="nav-link">À propos</a>
+                    <a href="about.html" class="nav-link" id="notfound-nav-about">À propos</a>
                 </div>
                 <div class="nav-item">
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="index.html#contact" class="nav-link" id="notfound-nav-contact">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label" id="notfound-language-label">Langue</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <span class="lang-switch__option is-active" aria-current="true">FR</span>
+                        <a href="en/index.html" class="lang-switch__option">EN</a>
+                    </div>
                 </div>
             </div>
             <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Choix de langue">
+                    <span class="lang-switch__option is-active" aria-current="true">FR</span>
+                    <a href="en/index.html" class="lang-switch__option">EN</a>
+                </div>
                 <button class="theme-toggle" aria-label="Activer le thème sombre">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="4" fill="currentColor"/>
@@ -60,19 +73,19 @@
     <main id="main-content">
         <section class="project-hero">
             <div class="container">
-                <h1 class="hero-title fade-in">Page introuvable</h1>
-                <p class="hero-subtitle fade-in-delay">Le lien que vous avez suivi n'existe plus ou l'adresse est incorrecte.</p>
+                <h1 class="hero-title fade-in" id="notfound-title">Page introuvable</h1>
+                <p class="hero-subtitle fade-in-delay" id="notfound-subtitle">Le lien que vous avez suivi n'existe plus ou l'adresse est incorrecte.</p>
             </div>
         </section>
 
         <section class="contact">
             <div class="container">
-                <h2 class="section-title">Revenir au bon endroit</h2>
-                <p class="contact-text">Vous pouvez retourner à l’accueil ou parcourir les projets depuis la page dédiée.</p>
+                <h2 class="section-title" id="notfound-section-title">Revenir au bon endroit</h2>
+                <p class="contact-text" id="notfound-contact-text">Vous pouvez retourner à l’accueil ou parcourir les projets depuis la page dédiée.</p>
                 <div class="contact-links">
-                    <a href="index.html" class="contact-btn">Retour à l'accueil</a>
+                    <a href="index.html" class="contact-btn" id="notfound-home-link">Retour à l'accueil</a>
                     <div class="social-links">
-                        <a href="projets.html" class="social-link">Voir les projets</a>
+                        <a href="projets.html" class="social-link" id="notfound-projects-link">Voir les projets</a>
                     </div>
                 </div>
             </div>
@@ -81,10 +94,72 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 William Tran. Tous droits réservés.</p>
+            <p id="notfound-footer-text">&copy; 2026 William Tran. Tous droits réservés.</p>
         </div>
     </footer>
 
+    <script>
+        (function () {
+            const isEnglish404 = document.documentElement.getAttribute('lang') === 'en';
+            if (!isEnglish404) {
+                return;
+            }
+
+            document.title = 'Page not found - William Tran';
+            const description = document.querySelector('meta[name="description"]');
+            if (description) {
+                description.setAttribute('content', 'The requested page could not be found.');
+            }
+
+            const textById = {
+                'notfound-skip-link': 'Skip to content',
+                'notfound-nav-projects': 'Projects',
+                'notfound-nav-about': 'About',
+                'notfound-nav-contact': 'Contact',
+                'notfound-language-label': 'Language',
+                'notfound-title': 'Page not found',
+                'notfound-subtitle': 'The link you followed no longer exists or the address is incorrect.',
+                'notfound-section-title': 'Get back on track',
+                'notfound-contact-text': 'You can return to the home page or browse the projects from the dedicated page.',
+                'notfound-home-link': 'Back to home',
+                'notfound-projects-link': 'See projects',
+                'notfound-footer-text': '\u00a9 2026 William Tran. All rights reserved.',
+            };
+
+            Object.entries(textById).forEach(([id, value]) => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = value;
+                }
+            });
+
+            const hrefById = {
+                'notfound-nav-logo': 'en/index.html',
+                'notfound-nav-projects': 'en/projets.html',
+                'notfound-nav-about': 'en/about.html',
+                'notfound-nav-contact': 'en/index.html#contact',
+                'notfound-home-link': 'en/index.html',
+                'notfound-projects-link': 'en/projets.html',
+            };
+
+            Object.entries(hrefById).forEach(([id, href]) => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.setAttribute('href', href);
+                }
+            });
+
+            const mobileSwitch = document.querySelector('.lang-switch--mobile');
+            const desktopSwitch = document.querySelector('.lang-switch--desktop');
+            if (mobileSwitch) {
+                mobileSwitch.innerHTML = '<a href=\"index.html\" class=\"lang-switch__option\">FR</a><span class=\"lang-switch__option is-active\" aria-current=\"true\">EN</span>';
+            }
+            if (desktopSwitch) {
+                desktopSwitch.setAttribute('aria-label', 'Language switcher');
+                desktopSwitch.innerHTML = '<a href=\"index.html\" class=\"lang-switch__option\">FR</a><span class=\"lang-switch__option is-active\" aria-current=\"true\">EN</span>';
+            }
+        })();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

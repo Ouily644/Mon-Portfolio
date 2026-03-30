@@ -2,9 +2,38 @@
 const themeToggle = document.querySelector('.theme-toggle');
 const htmlElement = document.documentElement;
 const THEME_KEY = 'theme';
+const LANGUAGE_PREFERENCE_KEY = 'preferredLanguage';
+const pageLang = (htmlElement.getAttribute('lang') || 'fr').toLowerCase();
+const isEnglishUI = pageLang.startsWith('en');
+const uiLabels = isEnglishUI
+    ? {
+        themeDark: 'Enable dark mode',
+        themeLight: 'Enable light mode',
+        menuOpen: 'Open menu',
+        menuClose: 'Close menu',
+    }
+    : {
+        themeDark: 'Activer le thème sombre',
+        themeLight: 'Activer le thème clair',
+        menuOpen: 'Ouvrir le menu',
+        menuClose: 'Fermer le menu',
+    };
 
 const getSystemTheme = () =>
     window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+const getLanguageFromHref = (href) => {
+    if (!href) {
+        return null;
+    }
+
+    try {
+        const targetUrl = new URL(href, document.baseURI);
+        return /\/en(\/|$)/.test(targetUrl.pathname.toLowerCase()) ? 'en' : 'fr';
+    } catch (error) {
+        return href.includes('en/') ? 'en' : 'fr';
+    }
+};
 
 // Charger le thème sauvegardé, sinon conserver celui injecté dans le <head>, sinon fallback système.
 const savedTheme = localStorage.getItem(THEME_KEY);
@@ -134,7 +163,7 @@ const syncThemeToggleA11y = () => {
     }
     const isDark = htmlElement.getAttribute('data-theme') === 'dark';
     themeToggle.setAttribute('aria-pressed', String(isDark));
-    themeToggle.setAttribute('aria-label', isDark ? 'Activer le thème clair' : 'Activer le thème sombre');
+    themeToggle.setAttribute('aria-label', isDark ? uiLabels.themeLight : uiLabels.themeDark);
 };
 
 const setTheme = (theme, shouldPersist = true) => {
@@ -156,6 +185,17 @@ const setTheme = (theme, shouldPersist = true) => {
 
 syncThemeMedia(initialTheme, { initial: true });
 syncThemeToggleA11y();
+
+document.querySelectorAll('.lang-switch__option[href]').forEach((link) => {
+    link.addEventListener('click', () => {
+        const targetLanguage = getLanguageFromHref(link.getAttribute('href'));
+        if (!targetLanguage) {
+            return;
+        }
+
+        localStorage.setItem(LANGUAGE_PREFERENCE_KEY, targetLanguage);
+    });
+});
 
 // Toggle du thème
 if (themeToggle) {
@@ -185,7 +225,7 @@ const syncMenuToggleA11y = (isOpen) => {
         return;
     }
     menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+    menuToggle.setAttribute('aria-label', isOpen ? uiLabels.menuClose : uiLabels.menuOpen);
 };
 
 syncMenuToggleA11y(false);
@@ -335,6 +375,34 @@ function setupProjectFilters() {
     const projectCards = Array.from(projectGrid.querySelectorAll('.project-card'));
     const emptyState = document.querySelector('#work .project-filter-empty');
     const activeFilters = new Set();
+    const filterAliases = new Map([
+        ['graphisme', 'graphisme'],
+        ['graphic-design', 'graphisme'],
+        ['identite-visuelle-ui', 'graphisme'],
+        ['identite-visuelle', 'graphisme'],
+        ['visual-identity-ui', 'graphisme'],
+        ['visual-identity', 'graphisme'],
+        ['visual-ui', 'graphisme'],
+        ['codage', 'codage'],
+        ['code', 'codage'],
+        ['produits-interfaces', 'codage'],
+        ['produits', 'codage'],
+        ['development', 'codage'],
+        ['products-interfaces', 'codage'],
+        ['products', 'codage'],
+        ['interfaces', 'codage'],
+        ['audiovisuel', 'audiovisuel'],
+        ['audiovisual', 'audiovisuel'],
+        ['ux', 'ux'],
+        ['audio', 'audio'],
+        ['video', 'video'],
+        ['jeu', 'jeu'],
+        ['game', 'jeu'],
+        ['games', 'jeu'],
+        ['ecriture', 'ecriture'],
+        ['writing', 'ecriture'],
+        ['all', 'all'],
+    ]);
 
     const buttonByFilter = new Map(
         filterButtons.map((button) => [(button.dataset.filter || '').toLowerCase(), button])
@@ -349,6 +417,8 @@ function setupProjectFilters() {
             .split(',')
             .map((tag) => tag.trim().toLowerCase())
             .filter(Boolean);
+
+    const normalizeFilterTag = (tag) => filterAliases.get(tag) || tag;
 
     const countMatches = (tags) =>
         tags.reduce((count, tag) => (activeFilters.has(tag) ? count + 1 : count), 0);
@@ -424,7 +494,7 @@ function setupProjectFilters() {
 
     const params = new URLSearchParams(window.location.search);
     const initial = params.get('tags') || params.get('tag') || '';
-    readTags(initial).forEach((tag) => {
+    readTags(initial).map(normalizeFilterTag).forEach((tag) => {
         if (buttonByFilter.has(tag) && tag !== 'all') {
             activeFilters.add(tag);
         }

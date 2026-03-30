@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Audio fiction - Olympics chaos in Paris - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Audio fiction project combining writing, sound design and editing around an immersive scenario set in Paris.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_audiovisuel_1.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_audiovisuel_1.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_audiovisuel_1.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Audio fiction - Olympics chaos in Paris">
+    <meta property="og:description" content="Audio fiction project combining writing, sound design and editing around an immersive scenario set in Paris.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_audiovisuel_1.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/audiovisuel1-chaos-paris-social.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Audio fiction - Olympics chaos in Paris">
+    <meta name="twitter:description" content="Audio fiction project combining writing, sound design and editing around an immersive scenario set in Paris.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/audiovisuel1-chaos-paris-social.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_audiovisuel_1.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_audiovisuel_1.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Audio fiction - Olympics chaos in Paris</h1>
+            <p class="hero-subtitle fade-in-delay">A short-form narrative audio fiction piece, written and produced in the spirit of Arte Radio around a tense Paris during the 2024 Olympics.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Writing, voice recording, editing, mixing, sound design</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">Studio M training - SD2</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Year</div>
+                    <div class="meta-value">2024</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Podcast / audio fiction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <img src="../assets/projects/covers/audiovisuel1-chaos-paris-hero.webp" alt="Main visual of the audio fiction project Olympics chaos in Paris" loading="eager" decoding="async" fetchpriority="high" width="1600" height="900">
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project summary</h2>
+            <p>
+                This audio fiction project was produced as part of the Studio M program.
+                The subject explores the atmosphere of the Paris 2024 Olympic Games through a narrative point of view:
+                a journalist moves through the city and captures the tensions of daily life.
+            </p>
+            <p>
+                The final result was presented orally with a justification of the narrative,
+                technical and aesthetic choices. The goal was to create a clear and immersive listening experience
+                for any listener without relying on visual support.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Full listening</h2>
+            <p>
+                The final version of the project is available below.
+            </p>
+            <p>
+                <strong>Note:</strong> The audio below is in French. No English transcript yet.
+            </p>
+            <div class="audio-player-stack">
+                <div class="audio-player-card">
+                    <p class="audio-player-title">Full version · 4 min 50</p>
+                    <p class="audio-player-description">Narrative audio fiction produced as part of the project. Audio in French.</p>
+                    <audio controls preload="none">
+                        <source src="../assets/audio/audiovisuel1-chaos-jo.mp3" type="audio/mpeg">
+                        Your browser does not support audio playback.
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Educational brief</h2>
+            <p>The brief required producing a podcast aligned with Arte Radio’s editorial line, with the following constraints:</p>
+            <ul>
+                <li>Length between 2 and 5 minutes</li>
+                <li>Voice presence required, whether interview, voice-over or dialogue</li>
+                <li>Balance between voice, music and sound design</li>
+                <li>A project that could not rely on music alone</li>
+                <li>Traceability of archive sounds in a dedicated document</li>
+                <li>Flexible final format, mono, stereo, binaural and so on</li>
+            </ul>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/covers/audiovisuel1-02-script-structure.webp" alt="Narrative structure visual for the audio fiction project with script excerpt and scene breakdown" loading="lazy" decoding="async">
+            <p class="image-caption">From pitch to structure: narrative flow, atmospheres and a gradual rise in chaos.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Intentions & writing</h2>
+            <p>
+                The pitch is built on a fiction anchored in urban reality: crowds, transport, social tension
+                and saturation of public space. The narration follows a journalist moving through Paris,
+                with a sequence of short scenes to keep the rhythm clear and immersive.
+            </p>
+            <p>
+                The goal was to make the chaos felt through sound staging,
+                without overloading the text and while keeping the narration understandable.
+                Some more burlesque scenes also contribute to the identity of the piece
+                and to the way this urban tension is told.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Listening structure</h2>
+            <p>
+                The narration was designed as short micro-sequences, alternating between voice,
+                ambience and breathing space to maintain attention without losing the clarity of the main thread.
+                Each scene had to deepen the sense of chaos without drowning the listener in information.
+            </p>
+            <ul>
+                <li>Quick introduction to place the scene immediately</li>
+                <li>Alternation between voice and atmosphere to relaunch attention</li>
+                <li>Progression through short sequences to preserve a clear rhythm</li>
+                <li>Scene exits designed to conclude without abrupt breaks</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Voice production</h2>
+            <p>
+                I handled the recording of every voice involved in the project,
+                then edited the takes to preserve natural diction, consistent levels
+                and strong intelligibility in the final mix.
+            </p>
+            <ul>
+                <li>Scheduling recording sessions with amateur voice performers</li>
+                <li>Directing performance intentions according to each scene</li>
+                <li>Selecting and cleaning the strongest takes</li>
+            </ul>
+            <p>
+                One major challenge of the project was working with several non-professional voices in a coherent way.
+                I had to organize availability, explain the expected intention precisely,
+                guide performances during recording and redo some lines until the tone felt accurate
+                and usable in the edit.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/covers/audiovisuel1-03-timeline-organisation.webp" alt="Full timeline organization of the audio fiction project with voices, ambiences and effects" loading="lazy" decoding="async">
+            <p class="image-caption">An edit organized by atmospheres, effects and voices to keep the fiction easy to follow.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Editing, mix & sound design</h2>
+            <p>
+                The edit was built to clearly articulate narration, crowd ambiences,
+                transport sounds and breathing moments between sequences.
+                The mix prioritized voice intelligibility while keeping a realistic atmosphere.
+            </p>
+            <ul>
+                <li>Timeline structuring by scenes</li>
+                <li>Voice treatment with levels, balance and clarity</li>
+                <li>Integration of ambiences and transition effects</li>
+                <li>Balance between sonic realism and listening comfort</li>
+                <li>Final mastering for clean web playback</li>
+            </ul>
+            <p>
+                The sound design was not there just to decorate the project: it carried part of the narrative.
+                Transport, crowds and urban tensions had to let the situation be felt even before
+                everything was explicitly stated by the text.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Archive sources & compliance</h2>
+            <p>
+                In line with the brief, every archive sound used in the project was documented in a source file.
+            </p>
+            <ul>
+                <li>RATP jingle</li>
+                <li>Tension between passengers and staff: <a href="https://www.youtube.com/watch?v=wchxazxtgQ" target="_blank" rel="noopener noreferrer">source</a></li>
+                <li>Warning sound and door closing: <a href="https://www.youtube.com/watch?v=6vK_oVKVJUg" target="_blank" rel="noopener noreferrer">source</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Difficulties & tradeoffs</h2>
+            <ul>
+                <li>Keep the narration clear despite a high density of sound</li>
+                <li>Balance voice, music and sound design without masking information</li>
+                <li>Make the world feel credible with properly integrated ambience and archive sounds</li>
+                <li>Get coherent takes with amateur voice actors despite uneven performance levels</li>
+            </ul>
+            <p>
+                The main tradeoff was making the tension felt without saturating the listening experience.
+                The chaos had to read as a staging choice, not as confusion in the edit.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Result & learnings</h2>
+            <ul>
+                <li>Audio fiction finalized within the expected duration range</li>
+                <li>Understandable narration with continuous voice presence</li>
+                <li>Stronger skills in voice direction and narrative editing</li>
+                <li>A full working method covering pitch, production, documentation and oral presentation</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>Ability to write and stage a short but structured sound narrative</li>
+                <li>Ability to direct voices and build intelligible listening without visual support</li>
+                <li>Control of the link between narration, sound design and mix readability</li>
+                <li>Ability to defend aesthetic and technical choices in a presentation context</li>
+            </ul>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_codage_4.html" class="next-project-link prev">Portfolio design & development</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_audiovisuel_2.html" class="next-project-link next">Feuille Blanche - Video editing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

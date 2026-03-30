@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio PDF - William Tran</title>
+    <meta name="description" content="Version PDF courte du portfolio de William Tran, designer UI/UX avec profil front-end.">
+    <style>
+        :root {
+            --paper: #ffffff;
+            --ink: #171717;
+            --muted: #5c5c5c;
+            --line: #d7d1c5;
+            --line-strong: #b8b0a2;
+            --accent: #ff922e;
+            --card-bg: #FFF4EA;
+            --shadow: 0 24px 60px rgba(53, 41, 24, 0.14);
+            --radius: 16px;
+            --radius-large: 20px;
+            --sans: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+            --sheet-width: 210mm;
+            --sheet-height: 297mm;
+            --page-padding: 14mm;
+            --page-inner-height: calc(var(--sheet-height) - (var(--page-padding) * 2));
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--sans);
+            color: var(--ink);
+            background: #FFF4EA;
+            line-height: 1.45;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .doc-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .doc-link--inline {
+            border-bottom: 1px solid rgba(255, 146, 46, 0.4);
+        }
+
+        .print-toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            padding: 18px 16px;
+            background: rgba(243, 237, 228, 0.88);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(126, 108, 75, 0.16);
+        }
+
+        .toolbar-btn,
+        .toolbar-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 18px;
+            border-radius: var(--radius);
+            border: 1px solid var(--line-strong);
+            background: rgba(251, 250, 247, 0.9);
+            color: var(--ink);
+            font-size: 0.96rem;
+            text-decoration: none;
+        }
+
+        .toolbar-btn {
+            cursor: pointer;
+            font: inherit;
+        }
+
+        .toolbar-btn--primary {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink);
+        }
+
+        .document {
+            padding: 28px 18px 54px;
+        }
+
+        .sheet {
+            width: var(--sheet-width);
+            height: var(--sheet-height);
+            min-height: var(--sheet-height);
+            margin: 0 auto 26px;
+            padding: var(--page-padding);
+            background: var(--paper);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-large);
+        }
+
+        .sheet:last-child {
+            margin-bottom: 0;
+        }
+
+        .sheet::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(117, 100, 70, 0.1);
+            pointer-events: none;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 6px 12px;
+            border-radius: var(--radius);
+            background: var(--accent);
+            border: 1px solid var(--accent);
+            color: #fff;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .cover {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-height: var(--page-inner-height);
+        }
+
+        .cover-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            align-items: flex-start;
+        }
+
+        .identity {
+            max-width: 64%;
+        }
+
+        .identity h1 {
+            margin: 0;
+            font-family: var(--sans);
+            font-size: 2.54rem;
+            line-height: 0.92;
+            letter-spacing: -0.05em;
+            font-weight: 800;
+        }
+
+        .identity p {
+            margin: 10px 0 0;
+            max-width: 38ch;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .contact-card {
+            min-width: 248px;
+            padding: 11px 12px;
+            border: none;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+        }
+
+        .contact-card h2,
+        .summary-card h2,
+        .mini-section h2,
+        .project-card h2,
+        .closing-card h2 {
+            margin: 0 0 10px;
+            font-size: 0.88rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .contact-list,
+        .bullet-list,
+        .tag-list,
+        .detail-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .contact-list li + li,
+        .bullet-list li + li,
+        .detail-list li + li {
+            margin-top: 6px;
+        }
+
+        .contact-label,
+        .detail-label {
+            display: block;
+            font-size: 0.68rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 2px;
+        }
+
+        .contact-value,
+        .detail-value {
+            font-size: 0.88rem;
+            word-break: break-word;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 8px;
+            align-items: stretch;
+        }
+
+        .summary-card,
+        .mini-section,
+        .project-card,
+        .closing-card {
+            border: none;
+            background: var(--card-bg);
+            padding: 11px 12px;
+            border-radius: var(--radius);
+        }
+
+        .summary-grid > .summary-card,
+        .summary-grid > .mini-section {
+            height: 100%;
+        }
+
+        .summary-card p,
+        .mini-section p,
+        .project-body p,
+        .closing-card p {
+            margin: 0;
+            color: #2a2a2a;
+        }
+
+        .summary-card p + p,
+        .mini-section p + p,
+        .project-body p + p,
+        .closing-card p + p {
+            margin-top: 7px;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 14px;
+            color: #232323;
+            font-size: 0.94rem;
+        }
+
+        .bullet-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.63em;
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .tag-list li {
+            padding: 5px 8px;
+            border-radius: var(--radius);
+            background: var(--paper);
+            border: 1px solid var(--line);
+            font-size: 0.78rem;
+        }
+
+        .project-preview {
+            border: none;
+            background: var(--card-bg);
+            overflow: hidden;
+            padding: 10px;
+            border-radius: var(--radius-large);
+        }
+
+        .project-preview--cover {
+            width: 100%;
+            align-self: start;
+        }
+
+        .project-preview img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 40 / 21;
+            object-fit: contain;
+            object-position: center;
+            background: transparent;
+            border: none;
+            border-radius: var(--radius);
+        }
+
+        .preview-caption {
+            padding: 7px 10px;
+            border-top: 1px solid var(--line);
+            font-size: 0.72rem;
+            color: var(--muted);
+        }
+
+        .cover-bottom {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 8px;
+            align-items: start;
+        }
+
+        .overview-card {
+            display: block;
+        }
+
+        .overview-block + .overview-block {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--line);
+        }
+
+        .footer-note {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: flex-end;
+            font-size: 0.74rem;
+            color: var(--muted);
+            margin-top: auto;
+            padding-top: 6px;
+        }
+
+        .footer-note strong {
+            color: var(--ink);
+        }
+
+        .project-page {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-height: var(--page-inner-height);
+        }
+
+        .project-head {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 12px;
+            align-items: start;
+        }
+
+        .project-title h1 {
+            margin: 0;
+            font-family: var(--sans);
+            font-size: 1.9rem;
+            line-height: 0.95;
+            letter-spacing: -0.035em;
+            font-weight: 800;
+        }
+
+        .project-title p {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .detail-item {
+            padding: 9px 10px;
+            border: none;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+        }
+
+        .project-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            align-items: start;
+        }
+
+        .project-visual {
+            border: none;
+            background: var(--card-bg);
+            overflow: hidden;
+            padding: 10px;
+            border-radius: var(--radius-large);
+        }
+
+        .project-visual img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9.6;
+            object-fit: contain;
+            object-position: center;
+            background: transparent;
+            border: none;
+            border-radius: var(--radius);
+        }
+
+        .project-visual--feature img {
+            aspect-ratio: 16 / 10;
+        }
+
+        .project-visual--feature {
+            max-width: 74%;
+            margin: 0 auto;
+        }
+
+        .project-visual--feature-large {
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .project-visual--feature-large img {
+            aspect-ratio: 16 / 8.2;
+        }
+
+        .project-visual-stack {
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-visual--secondary img {
+            aspect-ratio: 16 / 11;
+        }
+
+        .project-body {
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-body-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .project-card--accent,
+        .project-card--warm {
+            background: var(--card-bg);
+        }
+
+        .quote {
+            margin: 0;
+            padding: 10px 12px;
+            border-left: 4px solid var(--accent);
+            background: var(--card-bg);
+            font-family: var(--sans);
+            font-size: 0.94rem;
+            line-height: 1.3;
+            border-radius: var(--radius);
+        }
+
+        .closing-page {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-height: var(--page-inner-height);
+        }
+
+        .closing-layout {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 12px;
+            align-items: start;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        .closing-card--hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100%;
+            background: var(--card-bg);
+        }
+
+        .closing-card--hero h1 {
+            margin: 0 0 10px;
+            font-family: var(--sans);
+            font-size: 2.25rem;
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+            font-weight: 800;
+        }
+
+        .closing-card--hero .big-link {
+            margin-top: 18px;
+            font-size: 1.02rem;
+            word-break: break-word;
+        }
+
+        @media screen and (max-width: 900px) {
+            .print-toolbar {
+                position: static;
+                flex-wrap: wrap;
+            }
+
+            .document {
+                padding: 16px 10px 40px;
+            }
+
+            .sheet {
+                width: 100%;
+                height: auto;
+                min-height: auto;
+                padding: 20px;
+                border-radius: var(--radius-large);
+            }
+
+            .cover-top,
+            .summary-grid,
+            .cover-bottom,
+            .overview-card,
+            .project-head,
+            .project-layout,
+            .project-body-split,
+            .closing-page,
+            .closing-layout,
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .identity,
+            .contact-card {
+                max-width: none;
+                min-width: 0;
+            }
+
+            .project-meta {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .print-toolbar {
+                display: none;
+            }
+
+            .document {
+                padding: 0;
+            }
+
+            .sheet {
+                width: var(--sheet-width);
+                height: var(--sheet-height);
+                min-height: var(--sheet-height);
+                margin: 0;
+                padding: var(--page-padding);
+                box-shadow: none;
+                break-after: page;
+                page-break-after: always;
+            }
+
+            .cover,
+            .project-page,
+            .closing-page {
+                height: var(--page-inner-height);
+                min-height: var(--page-inner-height);
+            }
+
+            .sheet:last-child {
+                break-after: auto;
+                page-break-after: auto;
+            }
+
+            .sheet::before {
+                border: 0;
+            }
+
+            .summary-card,
+            .mini-section,
+            .project-card,
+            .closing-card,
+            .detail-item,
+            .project-visual,
+            .project-preview,
+            .contact-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .cover-top,
+            .summary-grid,
+            .cover-bottom,
+            .overview-card,
+            .project-head,
+            .project-layout,
+            .project-body-split,
+            .closing-layout,
+            .mini-grid {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-toolbar">
+        <button class="toolbar-btn toolbar-btn--primary" type="button" onclick="window.print()">Exporter en PDF</button>
+        <a class="toolbar-link" href="index.html" target="_blank" rel="noopener">Voir le site complet</a>
+    </div>
+
+    <main class="document">
+        <section class="sheet">
+            <div class="cover">
+                <div class="cover-top">
+                    <div class="identity">
+                        <span class="eyebrow">Portfolio PDF</span>
+                        <h1>William Tran</h1>
+                        <p>Designer UI/UX avec profil front-end. Je conçois des interfaces utiles, pensées pour un usage réel, avec une attention forte à la hiérarchie, au rythme et à la qualité d'exécution.</p>
+                    </div>
+
+                    <aside class="contact-card">
+                        <h2>Contact</h2>
+                        <ul class="contact-list">
+                            <li>
+                                <span class="contact-label">E-mail</span>
+                                <span class="contact-value"><a class="doc-link doc-link--inline" href="mailto:williamtran.far@gmail.com">williamtran.far@gmail.com</a></span>
+                            </li>
+                            <li>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value"><a class="doc-link doc-link--inline" href="https://www.linkedin.com/in/william-tran1/">linkedin.com/in/william-tran1</a></span>
+                            </li>
+                            <li>
+                                <span class="contact-label">Portfolio complet</span>
+                                <span class="contact-value"><a class="doc-link doc-link--inline" href="https://ouily644.github.io/Mon-Portfolio/">ouily644.github.io/Mon-Portfolio</a></span>
+                            </li>
+                            <li>
+                                <span class="contact-label">Disponibilité</span>
+                                <span class="contact-value">Opportunités en UI/UX, conception d'interfaces et front-end</span>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div class="summary-grid">
+                    <section class="summary-card project-card--warm">
+                        <h2>Positionnement</h2>
+                        <p>Mon approche relie conception d'interface, cohérence visuelle et réalisation concrète. Je travaille sur des produits où lisibilité, utilité et finition comptent autant que l'idée de départ.</p>
+                        <p>Le front-end fait partie de ma pratique pour vérifier les choix de design dans l'expérience réelle. Mon parcours dans le son nourrit aussi mon attention au rythme et à la précision.</p>
+                    </section>
+
+                    <section class="mini-section">
+                        <h2>Compétences clés</h2>
+                        <ul class="tag-list">
+                            <li>UI/UX design</li>
+                            <li>Logique produit</li>
+                            <li>Prototypage</li>
+                            <li>Front-end</li>
+                            <li>HTML / CSS / JavaScript</li>
+                            <li>Figma</li>
+                            <li>Photoshop</li>
+                            <li>SwiftUI</li>
+                            <li>Identité visuelle</li>
+                            <li>Qualité d'exécution</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="cover-bottom">
+                    <div class="project-preview project-preview--cover">
+                        <img src="assets/projects/covers/portfolio-home-social.webp" alt="Aperçu du portfolio en ligne de William Tran">
+                        <div class="preview-caption">Le portfolio complet contient davantage de projets, de visuels et de détails de process.</div>
+                    </div>
+
+                    <section class="mini-section overview-card">
+                        <div class="overview-block">
+                            <h2>Ce document</h2>
+                            <ul class="bullet-list">
+                                <li>Version courte pensée pour une lecture rapide en candidature</li>
+                                <li>Trois projets représentatifs de mon profil</li>
+                                <li>Le site complète ce PDF avec davantage de détails</li>
+                            </ul>
+                        </div>
+
+                        <div class="overview-block">
+                            <h2>Projets sélectionnés</h2>
+                            <ul class="bullet-list">
+                                <li>VeloTrack, application iOS de suivi cycliste</li>
+                                <li>Guide studio mobile first</li>
+                                <li>Refonte Suivea</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="footer-note">
+                    <span>Portfolio complet : <a class="doc-link doc-link--inline" href="https://ouily644.github.io/Mon-Portfolio/">ouily644.github.io/Mon-Portfolio</a></span>
+                    <span>Page 1</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="sheet">
+            <div class="project-page">
+                <div class="project-head">
+                    <div class="project-title">
+                        <span class="eyebrow">Projet 1</span>
+                        <h1>VeloTrack</h1>
+                        <p>Application iOS native conçue pour lancer automatiquement le tracking vélo, centraliser les données de sortie et intégrer certains eBikes en Bluetooth Low Energy.</p>
+                    </div>
+
+                    <div class="project-meta">
+                        <div class="detail-item">
+                            <span class="detail-label">Rôle</span>
+                            <span class="detail-value">Conception produit, architecture iOS et développement complet</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Contexte</span>
+                            <span class="detail-value">Projet personnel</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Année</span>
+                            <span class="detail-value">2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Application mobile iOS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <blockquote class="quote">Concevoir une expérience capable de démarrer un trajet sans friction, sans faux positifs et sans action manuelle.</blockquote>
+                
+
+                <section class="project-card project-card--accent">
+                    <h2>Enjeu</h2>
+                    <p>Les applications vélo classiques imposent souvent une manipulation avant chaque sortie. Le projet part d'un besoin simple : enfourcher le vélo et laisser l'application gérer le reste de manière fiable.</p>
+                </section>
+
+                <div class="project-visual project-visual--feature">
+                    <img src="assets/projects/velotrack/velotrack-01-overview-light.webp" alt="Vue d'ensemble du projet VeloTrack">
+                </div>
+
+                <div class="project-body-split">
+                    <section class="project-card">
+                        <h2>Ce que j'ai conçu</h2>
+                        <ul class="bullet-list">
+                            <li>Tracking intelligent avec démarrage et arrêt automatiques</li>
+                            <li>Filtrage GPS pour limiter le bruit et les sauts</li>
+                            <li>Statistiques et gestion de maintenance</li>
+                            <li>Architecture BLE extensible pour l'eBike</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-card project-card--warm">
+                        <h2>Points forts</h2>
+                        <ul class="bullet-list">
+                            <li>Fusion CoreLocation/CoreMotion pour détecter le bon contexte</li>
+                            <li>Reverse engineering du protocole Mahle sans documentation exploitable</li>
+                            <li>Interface simple malgré une logique interne complexe</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="footer-note">
+                    <span>Portfolio complet : <a class="doc-link doc-link--inline" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_5.html">ouily644.github.io/Mon-Portfolio/projet_codage_5.html</a></span>
+                    <span>Page 2</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="sheet">
+            <div class="project-page">
+                <div class="project-head">
+                    <div class="project-title">
+                        <span class="eyebrow">Projet 2</span>
+                        <h1>Guide studio mobile first</h1>
+                        <p>Une web app très courte pensée pour répondre en quelques secondes aux besoins concrets des artistes et invités sur place.</p>
+                    </div>
+
+                    <div class="project-meta">
+                        <div class="detail-item">
+                            <span class="detail-label">Rôle</span>
+                            <span class="detail-value">Assistant son et développement web</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Contexte</span>
+                            <span class="detail-value">Stage chez Playback Solutions</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Année</span>
+                            <span class="detail-value">2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Web app mobile first</span>
+                        </div>
+                    </div>
+                </div>
+
+                <blockquote class="quote">1 scan, toutes les infos évidentes, zéro question inutile à l'équipe.</blockquote>
+
+                <section class="project-card project-card--accent">
+                    <h2>Problème</h2>
+                    <p>Sur place, les mêmes questions reviennent vite : Wi-Fi, livraison, restaurants, infos pratiques. L'objectif était de rendre ces réponses autonomes dans une interface très rapide à comprendre sur téléphone.</p>
+                </section>
+
+                <div class="project-visual project-visual--feature-large">
+                    <img src="assets/projects/codage2/codage2-01-vue-mobile-studio.webp" alt="Vue mobile du guide studio">
+                </div>
+
+                <div class="project-body-split">
+                    <section class="project-card">
+                        <h2>Réponse design</h2>
+                        <ul class="bullet-list">
+                            <li>Hiérarchie de contenu calée sur l'ordre d'usage réel</li>
+                            <li>Premier écran dédié au Wi-Fi invité avec copie immédiate du mot de passe</li>
+                            <li>Structure courte, lisible et orientée action</li>
+                            <li>Interface sans éléments décoratifs ni détours inutiles</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-card project-card--warm">
+                        <h2>Valeur ajoutée</h2>
+                        <ul class="bullet-list">
+                            <li>Réduction des demandes répétitives adressées à l'équipe studio</li>
+                            <li>Expérience pensée pour un contexte réel, pas pour une simple vitrine</li>
+                            <li>Tri client des restaurants selon l'heure pour proposer les options les plus pertinentes</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="footer-note">
+                    <span>Portfolio complet : <a class="doc-link doc-link--inline" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_2.html">ouily644.github.io/Mon-Portfolio/projet_codage_2.html</a></span>
+                    <span>Page 3</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="sheet">
+            <div class="project-page">
+                <div class="project-head">
+                    <div class="project-title">
+                        <span class="eyebrow">Projet 3</span>
+                        <h1>Refonte Suivea</h1>
+                        <p>Travail conjoint sur l'identité visuelle et les maquettes mobiles pour clarifier l'interface, renforcer la cohérence du produit et préparer une intégration front-end plus propre.</p>
+                    </div>
+
+                    <div class="project-meta">
+                        <div class="detail-item">
+                            <span class="detail-label">Rôle</span>
+                            <span class="detail-value">Graphisme, UI/UX mobile, prototypage</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Contexte</span>
+                            <span class="detail-value">Stage MMI2 chez Docaposte</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Période</span>
+                            <span class="detail-value">Mai 2021 - Juillet 2021</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Identité visuelle et interface mobile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <blockquote class="quote">Moderniser l'existant sans casser les repères d'usage d'un outil métier déjà installé.</blockquote>
+
+                <div class="project-layout">
+                    <div class="project-visual-stack">
+                        <div class="project-visual">
+                            <img src="assets/projects/suivea/suivea-refonte-00-miniature-light.webp" alt="Vue globale de l'interface Suivea">
+                        </div>
+
+                        <div class="project-visual project-visual--secondary">
+                            <img src="assets/projects/suivea/suivea-03-mobile-refonte.webp" alt="Comparatif des écrans mobiles Suivea après refonte">
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <section class="project-card project-card--accent">
+                            <h2>Contexte</h2>
+                            <p>Suivea est un outil de traçabilité utilisé dans un environnement métier et terrain. La mission consistait à corriger une interface dense et une identité visuelle vieillissante, tout en conservant les repères utiles aux utilisateurs.</p>
+                        </section>
+
+                        <section class="project-card">
+                            <h2>Travail réalisé</h2>
+                            <ul class="bullet-list">
+                                <li>Refonte du logo avec plusieurs itérations pour gagner en lisibilité et stabilité</li>
+                                <li>Reprise des maquettes mobiles pour clarifier la hiérarchie visuelle</li>
+                                <li>Réorganisation des écrans de saisie et de distribution</li>
+                                <li>Uniformisation des composants, des espacements et de la navigation</li>
+                            </ul>
+                        </section>
+
+                        <section class="project-card project-card--warm">
+                            <h2>Résultat recherché</h2>
+                            <ul class="bullet-list">
+                                <li>Rendre les écrans plus clairs en usage rapide</li>
+                                <li>Créer une cohérence entre identité visuelle et interface produit</li>
+                                <li>Produire des maquettes suffisamment précises pour l'intégration</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="footer-note">
+                    <span>Portfolio complet : <a class="doc-link doc-link--inline" href="https://ouily644.github.io/Mon-Portfolio/projet_graphique_2.html">ouily644.github.io/Mon-Portfolio/projet_graphique_2.html</a></span>
+                    <span>Page 4</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="sheet">
+            <div class="closing-page">
+                <div class="closing-layout">
+                    <section class="closing-card closing-card--hero">
+                        <div>
+                            <span class="eyebrow">Pour aller plus loin</span>
+                            <h1>Le site complète ce PDF</h1>
+                            <p>Cette version a été pensée pour une lecture rapide en candidature. Le portfolio en ligne contient davantage de projets, de détails sur les process, ainsi que des contenus qui se prêtent moins bien au format PDF, comme les parcours complets, les visuels supplémentaires, l'audio ou la vidéo.</p>
+                            <p class="big-link"><a class="doc-link doc-link--inline" href="https://ouily644.github.io/Mon-Portfolio/">ouily644.github.io/Mon-Portfolio</a></p>
+                        </div>
+                    </section>
+
+                    <div>
+                        <section class="closing-card">
+                            <h2>Autres expériences</h2>
+                            <ul class="bullet-list">
+                                <li>Montage et mixage son en freelance sur podcasts, animation et formats audiovisuels</li>
+                                <li>Conception d'une plateforme web de dépôt de livrables audio en contexte studio</li>
+                                <li>Expériences de terrain ayant renforcé rigueur, pédagogie et clarté d'exécution</li>
+                            </ul>
+                        </section>
+
+                        <div class="mini-grid">
+                            <section class="closing-card">
+                                <h2>Langues</h2>
+                                <ul class="bullet-list">
+                                    <li>Français courant</li>
+                                    <li>Anglais C1</li>
+                                    <li>Espagnol B1</li>
+                                </ul>
+                            </section>
+
+                            <section class="closing-card">
+                                <h2>Outils & environnements</h2>
+                                <ul class="bullet-list">
+                                    <li>Figma</li>
+                                    <li>Notion</li>
+                                    <li>GitHub</li>
+                                    <li>Xcode</li>
+                                </ul>
+                            </section>
+                        </div>
+
+                        <section class="closing-card" style="margin-top: 14px;">
+                            <h2>En bref</h2>
+                            <ul class="bullet-list">
+                                <li>Profil UI/UX avec capacité d’intégration front-end et attention forte portée à la finition</li>
+                                <li>Travail sur des produits, interfaces, identité visuelle et projets audiovisuels</li>
+                                <li>Version détaillée disponible sur le portfolio en ligne</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="footer-note">
+                    <span>Portfolio complet : <a class="doc-link doc-link--inline" href="https://ouily644.github.io/Mon-Portfolio/">ouily644.github.io/Mon-Portfolio</a></span>
+                    <span>Page 5</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

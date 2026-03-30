@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Portfolio design & development - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Case study on the UX/UI design, design system and front-end development of this portfolio website.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_4.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_4.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_4.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Portfolio design and development">
+    <meta property="og:description" content="Case study on the UX/UI design, design system and front-end development of this portfolio website.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_4.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage4/codage4-01-home-overview.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio design and development">
+    <meta name="twitter:description" content="Case study on the UX/UI design, design system and front-end development of this portfolio website.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage4/codage4-01-home-overview.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_codage_4.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_codage_4.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Portfolio design & development</h1>
+            <p class="hero-subtitle fade-in-delay">A portfolio designed like a product: clear navigation, strong hierarchy and a front-end foundation that stays easy to evolve.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">UI/UX design, front-end development, visual QA</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">Personal project · GitHub Pages</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Year</div>
+                    <div class="meta-value">2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Web design & development</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <img src="../assets/projects/codage4/codage4-01-home-overview.webp" alt="Overview of the portfolio home page" loading="eager" decoding="async" fetchpriority="high" width="2400" height="1500">
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project summary</h2>
+            <p>
+                This portfolio was designed as a reading tool for my work. The goal was not simply
+                to line up projects, but to help people quickly understand my profile and then move into
+                the right level of detail without getting lost in pages that are too long or poorly structured.
+            </p>
+            <p>
+                I focused mainly on information order, page structure and visual continuity
+                across sections, with particular attention to reading comfort.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Main challenge</h2>
+            <p>
+                The real issue was not just to "make a personal website", but to organize information
+                so that people can quickly understand my profile, filter according to their needs,
+                and then reach the right level of detail without losing their way.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Goals</h2>
+            <ul>
+                <li>Structure projects by categories such as graphic design, development and audiovisual work</li>
+                <li>Allow fast filtering by tags on a dedicated page</li>
+                <li>Keep visual consistency in both light and dark mode</li>
+                <li>Ensure a smooth experience on desktop and mobile</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Architecture & interface</h2>
+            <p>
+                The site relies on a lightweight multi-page structure built with plain HTML, CSS and JavaScript,
+                with hierarchical navigation, submenus and consistent project pages. The architecture was designed
+                to reduce friction: direct access to key content, stable visual landmarks, and a readable flow on desktop and mobile.
+            </p>
+            <ul>
+                <li>Home page: selected projects and quick access to contact</li>
+                <li>"All projects" page: full view with multi-tag filters for quick sorting</li>
+                <li>"About" page: structured profile summary including background, skills, experience, education and interests</li>
+                <li>Standardized project pages: context, role, challenges, results, then previous/next navigation</li>
+            </ul>
+            <p>
+                Most of the work went into reading hierarchy: what to show first, what to summarize,
+                what to detail, and how to keep visual continuity from one page to the next.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage4/codage4-02-filters-projects.webp" alt="All projects page with active multi-tag filters" loading="lazy" decoding="async">
+            <p class="image-caption">Multi-tag filtering with instant updates to the project grid.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>UI/UX issues and fixes</h2>
+            <p>
+                Part of the work consisted of fixing visual and interaction problems that appeared during iterations.
+            </p>
+            <ul>
+                <li>Theme or page flash: theme pre-applied before initial render</li>
+                <li>Dark mode navbar contrast: fine tuning of shadows, backgrounds and borders</li>
+                <li>Cross-browser rendering differences: radius calibration between Chromium and Firefox/Safari fallbacks</li>
+                <li>Desktop and mobile submenus: spacing and hover state corrections</li>
+            </ul>
+            <p>
+                This project mostly taught me that an effective portfolio depends less on visible effects
+                than on a series of discreet adjustments that make navigation more stable, more readable
+                and more pleasant.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage4/codage4-03-mobile-nav-theme.webp" alt="Mobile comparison of the portfolio with open menu in light mode and dark mode" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Performance & maintainability</h2>
+            <ul>
+                <li>Optimized assets using SVG and WebP, with a media structure that can easily absorb new visuals</li>
+                <li>Factorized styles to keep the codebase readable and editable</li>
+                <li>Clear file naming to make future project additions easier</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Results</h2>
+            <ul>
+                <li>Portfolio published online and fully navigable without dead links</li>
+                <li>Faster project filtering depending on what the visitor is looking for, such as UI/UX, audio or video</li>
+                <li>A base that is ready to grow with new projects and media</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>How to structure portfolio content for fast and clear reading</li>
+                <li>A UI/UX approach centered on information hierarchy</li>
+                <li>Finishing rigor across navigation, theming and visual consistency details</li>
+                <li>A front-end base that stays simple to maintain and expand over time</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://ouily644.github.io/Mon-Portfolio/index.html" class="text-link" target="_blank" rel="noopener">Live version (GitHub Pages)</a></li>
+                <li><a href="https://github.com/Ouily644/Mon-Portfolio" class="text-link" target="_blank" rel="noopener">GitHub repository</a></li>
+            </ul>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_codage_2.html" class="next-project-link prev">Mobile-first studio guide</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_codage_5.html" class="next-project-link next">VeloTrack</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+            <a href="https://www.linkedin.com/in/william-tran1/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

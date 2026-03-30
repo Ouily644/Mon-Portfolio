@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            window.__initThemeMedia = function (stack) {
+                if (!stack) {
+                    return;
+                }
+                const img = stack.querySelector('.theme-media');
+                if (!img) {
+                    return;
+                }
+                const lightSrc = stack.dataset.themeLightSrc || '';
+                const darkSrc = stack.dataset.themeDarkSrc || lightSrc;
+                const activeSrc = theme === 'dark' ? (darkSrc || lightSrc) : (lightSrc || darkSrc);
+                if (activeSrc) {
+                    img.src = activeSrc;
+                    img.dataset.currentSrc = activeSrc;
+                }
+            };
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Suivea redesign - Logo & mobile interface - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Redesign of Suivea's visual identity with a refined logo direction and clearer mobile UI.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_graphique_2.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_graphique_2.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_graphique_2.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Suivea redesign - logo and mobile interface">
+    <meta property="og:description" content="Redesign of Suivea's visual identity with a refined logo direction and clearer mobile UI.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_graphique_2.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/suivea/suivea-refonte-00-miniature-light.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Suivea redesign - logo and mobile interface">
+    <meta name="twitter:description" content="Redesign of Suivea's visual identity with a refined logo direction and clearer mobile UI.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/suivea/suivea-refonte-00-miniature-light.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_graphique_2.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_graphique_2.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Suivea redesign - logo & mobile interface</h1>
+            <p class="hero-subtitle fade-in-delay">Redesign of the Suivea logo and mobile mockups to improve interface clarity, visual coherence and future front-end integration quality.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Graphic design, mobile UI/UX, prototyping</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">MMI second-year internship · Docaposte · Suivea</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Period</div>
+                    <div class="meta-value">May 2021 - July 2021</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Visual identity & mobile interface</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <div class="theme-media-stack" data-theme-light-src="../assets/projects/suivea/suivea-refonte-00-miniature-light.webp" data-theme-dark-src="../assets/projects/suivea/suivea-refonte-00-miniature-dark.webp" aria-label="Overview of the Suivea interface">
+            <img class="theme-media" alt="Overview of the Suivea interface" loading="eager" decoding="async" fetchpriority="high" width="1920" height="1080">
+        </div>
+        <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
+        <p class="image-caption">Mockups shown in French. No English UI version yet.</p>
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project summary</h2>
+            <p>
+                During my second-year MMI internship at Docaposte, I worked on Suivea,
+                a tracking tool used for mail and parcel flows. The mission covered two
+                complementary parts: redesigning the visual identity through the logo, and modernizing the mobile interface.
+            </p>
+            <p>
+                The goal was not to modernize for its own sake, but to improve a dense interface
+                and an aging visual identity while keeping the landmarks needed by people already familiar with the product.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Product context</h2>
+            <p>
+                Suivea is used in a business environment with field usage across several devices:
+                desktop, mobile, tablet and Android smartphones. The redesign had to stay clear,
+                robust and aligned with the company’s internal guidelines.
+            </p>
+            <ul>
+                <li>Keep strong readability in fast-paced real-world contexts</li>
+                <li>Reinforce coherence between visual identity and product interface</li>
+                <li>Produce mockups that could be used directly for front-end integration</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Initial diagnosis</h2>
+            <p>
+                The existing product worked functionally, but the whole system lacked unity.
+                The interface felt more dated and denser than necessary, with inconsistencies in hierarchy,
+                spacing and coherence from one screen to another.
+            </p>
+            <p>
+                The redesign therefore had to improve readability without breaking familiar usage patterns,
+                which called for precision more than disruption.
+            </p>
+        </div>
+
+        <div class="image-full image-full--contain">
+            <img src="../assets/projects/suivea/suivea-05-interface-ancienne.webp" alt="Suivea interface before the redesign" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Mission 1 - Logo redesign</h2>
+            <p>
+                I reworked the existing logo toward a direction that was cleaner, more legible and more stable at small sizes,
+                while preserving the product’s existing visual cues: simple shapes, immediate readability and a blue color system.
+                The aim was not to change the identity, but to make it more coherent and better aligned with the UI redesign.
+            </p>
+            <ul>
+                <li>Exploration of several directions to test balance, simplicity and readability</li>
+                <li>Checks on how the logo held up at small sizes and in different use cases</li>
+                <li>Preservation of useful brand landmarks to avoid an unnecessarily abrupt break</li>
+                <li>Final version selected after iterations and team feedback</li>
+            </ul>
+        </div>
+
+        <div class="image-full image-full--contain">
+            <img src="../assets/projects/suivea/suivea-02-logo-iterations.webp" alt="Suivea logo explorations and iterations" loading="lazy" decoding="async">
+        </div>
+
+        <div class="image-full image-full--contain">
+            <img src="../assets/projects/suivea/suivea-01-logo-ancien.svg" alt="Previous version of the Suivea logo" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Mission 2 - Mobile interface redesign</h2>
+            <p>
+                I then redesigned the Android mobile mockups,
+                reworking visual hierarchy, spacing and consistency across screens.
+                The main data-entry page served as a reference base to harmonize the rest of the user flow.
+            </p>
+            <ul>
+                <li>Redesign of navigation such as navbar and footbar to clarify priority actions</li>
+                <li>Reorganization of entry and distribution screens to reduce visual load</li>
+                <li>Standardization of components, icons, spacing and labels</li>
+                <li>Production of mockups that were more directly usable for implementation</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Design criteria</h2>
+            <ul>
+                <li>Highlight main actions without overloading the screen</li>
+                <li>Improve quick reading in a field-work context</li>
+                <li>Create screens coherent enough to form a real system, not a series of isolated pages</li>
+                <li>Reach a level of precision compatible with faithful front-end integration</li>
+            </ul>
+        </div>
+
+        <div class="image-full image-full--contain">
+            <img src="../assets/projects/suivea/suivea-03-mobile-refonte.webp" alt="Comparison of Suivea mobile screens before and after the redesign" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Working method</h2>
+            <p>
+                The project moved forward through short iterations with regular feedback from my internship supervisor
+                and the product team. This feedback loop made it possible to adjust graphic choices quickly,
+                reinforce consistency between screens and align the design with business needs.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Difficulties & tradeoffs</h2>
+            <ul>
+                <li>Finding the right balance between modernization and visual continuity</li>
+                <li>Maintaining strong readability on mobile screens that could become very dense</li>
+                <li>Making multiple stakeholders’ feedback converge without losing overall coherence</li>
+            </ul>
+            <p>
+                The main tradeoff was to simplify and clarify without designing against actual usage.
+                In a business tool, a cleaner interface is only valuable if it remains immediately understandable
+                for the people who rely on it every day.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Results</h2>
+            <ul>
+                <li>Final logo selected as the basis of Suivea’s project identity</li>
+                <li>Mobile mockups validated and usable for integration</li>
+                <li>A more coherent visual system for the next product iterations</li>
+                <li>A clearer base to move into the front-end implementation phase</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>Ability to redesign an existing product without breaking useful landmarks</li>
+                <li>Attention to readability and hierarchy in a dense business context</li>
+                <li>Ability to produce mockups that already anticipate future implementation</li>
+                <li>Understanding of the relationship between visual identity, interface and real-world usage</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Related project (development)</h2>
+            <p>
+                For the front-end implementation carried out in parallel during the same internship:
+            </p>
+            <a href="projet_codage_3.html" class="text-link">See the Suivea v3 development project</a>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_graphique_1.html" class="next-project-link prev">Custom sprite creation - Super Metroid</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_codage_3.html" class="next-project-link next">Suivea v3 development</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

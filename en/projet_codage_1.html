@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Secure audio delivery platform - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Design and development of a secure web platform for uploading and routing audio deliverables.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_1.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_1.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_1.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Secure audio delivery platform">
+    <meta property="og:description" content="Design and development of a secure web platform for uploading and routing audio deliverables.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_1.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage1/codage1-00-miniature.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Secure audio delivery platform">
+    <meta name="twitter:description" content="Design and development of a secure web platform for uploading and routing audio deliverables.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage1/codage1-00-miniature.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_codage_1.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_codage_1.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Secure audio delivery platform</h1>
+            <p class="hero-subtitle fade-in-delay">A web platform designed to make the reception, validation and routing of large audio stems more reliable.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Audio assistant & web development</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">Internship · Playback Solutions</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Year</div>
+                    <div class="meta-value">2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Web platform</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <img src="../assets/projects/codage1/codage1-01-page-principale.webp" alt="Overview of the audio delivery platform" loading="eager" decoding="async" fetchpriority="high" width="1800" height="1132">
+        <p class="image-caption">Platform screens shown in French. No English UI version yet.</p>
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project summary</h2>
+            <p>
+                During my internship at Playback Solutions, I designed and developed a web platform
+                to automate the reception, validation and classification of large audio deliverables
+                such as stems before routing them into Dropbox.
+            </p>
+            <p>
+                <strong>Goal:</strong> replace a long, error-prone and loosely structured manual process
+                with a system that was reliable, secure and aligned with a strict technical delivery guide.
+                The project had to simplify the experience for artists while also reducing manual handling on the production side.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage1/codage1-02-auth-password.webp" alt="Secure login screen of the platform" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Context</h2>
+            <p>Artists used to send stems via WeTransfer. The team then had to:</p>
+            <ul>
+                <li>Check the email, find the WeTransfer link, open the page, click download and wait for the transfer to finish</li>
+                <li>Verify compliance with the technical guide</li>
+                <li>Fix naming issues</li>
+                <li>Manually organize the files inside Dropbox</li>
+            </ul>
+            <p>Each delivery usually represented around 2 to 3 GB of data.</p>
+            <p>This workflow created several recurring issues:</p>
+            <ul>
+                <li>Time lost on repetitive tasks</li>
+                <li>Human errors during sorting and routing</li>
+                <li>Misnamed or incomplete files</li>
+                <li>Frequent delivery issues against technical requirements</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Integrating the mandatory delivery guide</h2>
+            <p>The company works with a detailed audio delivery guide covering:</p>
+            <ul>
+                <li>Required audio format</li>
+                <li>Tempo and time structure</li>
+                <li>Stem separation rules</li>
+                <li>Strict naming conventions</li>
+                <li>Mandatory metadata</li>
+            </ul>
+            <p>I integrated this guide directly into the platform so that part of the quality control would happen before the upload itself. The user has to:</p>
+            <ol>
+                <li>Open every section</li>
+                <li>Read them</li>
+                <li>Check a mandatory validation box</li>
+            </ol>
+            <p>Without that step, access to the upload form stays blocked.</p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage1/codage1-03-charte-details.webp" alt="Audio delivery guide integrated into the platform" loading="lazy" decoding="async">
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage1/codage1-04-charte-validation.webp" alt="Upload blocked until the guide is validated" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Developed solution</h2>
+            <p>I designed the platform around a simple but strict flow, with checks from the first step and automated Dropbox routing.</p>
+            <ul>
+                <li>Password-based access by group such as artist or production</li>
+                <li>Mandatory guide validation before the upload becomes available</li>
+                <li>Structured upload form with required fields to reduce delivery mistakes</li>
+                <li>Automatic routing to a specific Dropbox folder according to the user group</li>
+                <li>Dropbox API integration with secure token handling</li>
+                <li>Regular token regeneration to avoid losing access</li>
+                <li>Automatic file organization to remove most of the manual sorting</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Flow organization</h2>
+            <ol>
+                <li>The user validates the guide and accesses the form</li>
+                <li>The system applies checks and required fields</li>
+                <li>The files are sent to the correct Dropbox space according to the user group</li>
+                <li>The final organization is automated to avoid manual sorting</li>
+            </ol>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage1/codage1-05-formulaire.webp" alt="Structured technical form before transfer" loading="lazy" decoding="async">
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage1/codage1-06-flux.svg" alt="Processing flow diagram for validation, upload and Dropbox routing" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Technical challenges</h2>
+            <p><strong>Handling large files at around 3 GB</strong></p>
+            <p>Stems often exceeded 300 MB per file, with several files per delivery. I had to adapt the upload logic to guarantee:</p>
+            <ul>
+                <li>Stable transfers on large volumes</li>
+                <li>Reliable request handling against the Dropbox API</li>
+                <li>Behavior robust enough to avoid failures on heavy deliveries</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Dropbox root vs shared folders</h2>
+            <p>
+                One critical issue was that the Dropbox root differs depending on whether the target is a shared folder.
+                Early tests were sending files to the wrong place.
+            </p>
+            <p>To fix that, I had to:</p>
+            <ul>
+                <li>Understand Dropbox namespace logic</li>
+                <li>Adapt path management</li>
+                <li>Correct the mapping between groups and shared folders</li>
+            </ul>
+            <p>
+                This was decisive: without that fix, the automation seemed to work
+                while still placing the files in the wrong space. It was the most formative technical problem of the project.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Reliability & security</h2>
+            <ul>
+                <li>Regular API token regeneration to avoid access interruptions</li>
+                <li>Upfront validation to reduce non-compliant files</li>
+                <li>Group-based routing to reduce destination errors</li>
+                <li>Structured upload process for better traceability</li>
+            </ul>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage1/codage1-07-transfert-reussi.webp" alt="Confirmation screen after successful Dropbox transfer" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Results</h2>
+            <ul>
+                <li>Processing time divided by four</li>
+                <li>Manual sorting removed for most deliveries</li>
+                <li>Reduction in naming and routing mistakes</li>
+                <li>More professional, documented and structured workflow</li>
+                <li>Better artist accountability before upload</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Technologies & approach</h2>
+            <ul>
+                <li>Web stack: HTML, CSS and JavaScript</li>
+                <li>Dropbox API</li>
+                <li>Token-based authentication with regular regeneration</li>
+                <li>Guide validation and conditional access logic</li>
+                <li>Large file upload handling</li>
+                <li>Use of AI as a development assistant for exploration, base code generation and debugging, with manual adaptation and validation</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>Understanding of a real operational need</li>
+                <li>Ability to turn production constraints into a technical solution</li>
+                <li>Integration of an external API</li>
+                <li>Handling large volumes of data</li>
+                <li>Problem-solving in a real production environment</li>
+            </ul>
+            <p>
+                This project shows my ability to connect technical rigor, operational reliability
+                and ease of use in a professional context.
+            </p>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_codage_3.html" class="next-project-link prev">Suivea v3 development</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_codage_2.html" class="next-project-link next">Mobile-first studio guide</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

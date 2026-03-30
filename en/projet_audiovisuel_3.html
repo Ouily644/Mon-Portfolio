@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Long-form podcast interview editing - Coco & Co Prod - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Audio editing of a long-form interview podcast in English, focused on cleanup, rhythm and vocal intelligibility.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_audiovisuel_3.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_audiovisuel_3.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_audiovisuel_3.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Long-form podcast interview editing">
+    <meta property="og:description" content="Audio editing of a long-form interview podcast in English, focused on cleanup, rhythm and vocal intelligibility.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_audiovisuel_3.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/audiovisuel3-columbine-social.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Long-form podcast interview editing">
+    <meta name="twitter:description" content="Audio editing of a long-form interview podcast in English, focused on cleanup, rhythm and vocal intelligibility.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/audiovisuel3-columbine-social.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_audiovisuel_3.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_audiovisuel_3.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Long-form podcast interview editing - Coco & Co Prod</h1>
+            <p class="hero-subtitle fade-in-delay">Editorial condensation and audio editing of a nearly three-hour English-language interview into a final episode of around 40 minutes.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Audio editing, editorial condensation, cleanup and balancing</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">Internship at Coco & Co Prod</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Year</div>
+                    <div class="meta-value">2024</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Format</div>
+                    <div class="meta-value">Podcast interview in English</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <img src="../assets/projects/covers/audiovisuel3-columbine-hero.webp" alt="Main visual of the Columbine - Them You Me Everybody podcast" loading="eager" decoding="async" fetchpriority="high" width="1600" height="900">
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project summary</h2>
+            <p>
+                During my internship at Coco & Co Prod, I handled the audio editing of a long interview in English.
+                The main task was to go from roughly three hours of raw material to a published 40-minute version
+                without losing the key information or the coherence of the story.
+            </p>
+            <p>
+                The project therefore combined two strong demands: rigorous editorial condensation and
+                audio quality clean enough for public release.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Context & challenge</h2>
+            <ul>
+                <li>Very large source duration, around 3 hours</li>
+                <li>Content in English with a high volume of information</li>
+                <li>Need to preserve the meaning and intent of the speaker</li>
+                <li>Short delivery timeline, which meant moving fast without losing quality</li>
+                <li>Regular feedback from my internship supervisor at each key stage of the edit</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Editorial challenge</h2>
+            <p>
+                The real work was not just to shorten the interview, but to rebuild a genuinely listenable episode
+                from material that was long, dense and sometimes repetitive. I had to preserve meaning,
+                the progression of the ideas and the personality of the speaker while removing what slowed down the listening experience.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Editing approach</h2>
+            <ol>
+                <li>Complete review of the raw material and identification of the strongest sequences</li>
+                <li>Thematic selection and removal of redundancies</li>
+                <li>Narrative restructuring to make the listening flow more fluid</li>
+                <li>Pre-mix to validate readability before final delivery</li>
+            </ol>
+            <p>
+                The cutting logic was guided by useful information: keep the passages that brought
+                clear narrative value, and remove what slowed the listening without enriching the substance.
+            </p>
+            <p>
+                In practice, I kept the passages that moved the story forward, brought a strong angle
+                or clarified an important idea, and removed digressions, repetitions or weak transitions
+                that weighed the whole episode down.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Workflow & organization</h2>
+            <p>
+                The project progressed through short iterations with regular validation points with my internship supervisor.
+                To stay on schedule, I worked from a precise editing plan, selection, assembly, cleanup, mix and export,
+                with intermediate exports to secure the editorial decisions.
+            </p>
+            <ul>
+                <li>Breaking the work into daily blocks to avoid tunnel vision</li>
+                <li>Regular checkpoints before the mix and finalization stages</li>
+                <li>Verification exports to validate the editorial substance before the final sonic polish</li>
+            </ul>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/covers/audiovisuel3-02-avant-apres-3h-40min.webp" alt="Before-and-after comparison of the audio edit from 3 hours of raw material to a polished 40-minute episode" loading="lazy" decoding="async">
+            <p class="image-caption">Three hours of raw material condensed into 40 minutes after review, editing and editorial tightening.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Difficulties & editorial decisions</h2>
+            <ul>
+                <li>Condense heavily without weakening the main message</li>
+                <li>Remove repetitions while preserving the progression of the story</li>
+                <li>Maintain natural listening despite the amount of cuts</li>
+            </ul>
+            <p>
+                The main difficulty was making the cutting work disappear at the listening stage. A strong result
+                should not feel like a brutal assembly, but like fluid, structured and coherent speech
+                from beginning to end.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Mixing & mastering</h2>
+            <p>
+                The audio post-production phase aimed for a clean, natural and consistent result across the full episode.
+            </p>
+            <ul>
+                <li>Voice cleanup with removal of mouth noises, clicks and overly marked breaths</li>
+                <li>Tonal balancing through correction of problematic frequencies to improve intelligibility</li>
+                <li>Dynamic control with light compression to stabilize speech levels</li>
+                <li>Consistent final loudness for comfortable listening on headphones, speakers and mobile</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Results</h2>
+            <ul>
+                <li>Duration reduced from roughly 3 hours to roughly 40 minutes</li>
+                <li>A final episode that is clearer, better paced and ready for distribution</li>
+                <li>Main message preserved despite the heavy condensation</li>
+                <li>Publication on the podcast’s platforms</li>
+                <li>Stronger ability to deliver under tight deadlines</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>Ability to do genuine editorial work on long and dense material</li>
+                <li>Ability to prioritize information without losing either the meaning or the speaker’s voice</li>
+                <li>Ability to deliver a publishable result within a constrained timeline</li>
+                <li>Combined control of narrative editing and sonic finishing</li>
+            </ul>
+        </div>
+
+        <div class="content-section diffusion-links">
+            <h2>Distribution links</h2>
+            <ul>
+                <li><a href="https://podcasts.apple.com/fr/podcast/columbine-them-you-me-everybody/id1710272998" target="_blank" rel="noopener noreferrer">Apple Podcasts</a></li>
+                <li><a href="https://open.spotify.com/show/3wjEPYht9yicpBhrr184aN" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+                <li><a href="https://www.youtube.com/@ColumbineThemYouMeEverybody" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_audiovisuel_2.html" class="next-project-link prev">Feuille Blanche - Video editing</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next is-empty" aria-hidden="true"></div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

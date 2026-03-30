@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Feuille Blanche - Video editing - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Video editing case study focused on rhythm, visual storytelling and multi-format delivery for Feuille Blanche.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_audiovisuel_2.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_audiovisuel_2.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_audiovisuel_2.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Feuille Blanche - Video editing">
+    <meta property="og:description" content="Video editing case study focused on rhythm, visual storytelling and multi-format delivery for Feuille Blanche.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_audiovisuel_2.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/audiovisuel2-feuille-blanche.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Feuille Blanche - Video editing">
+    <meta name="twitter:description" content="Video editing case study focused on rhythm, visual storytelling and multi-format delivery for Feuille Blanche.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/audiovisuel2-feuille-blanche.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_audiovisuel_2.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_audiovisuel_2.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Feuille Blanche - Video editing</h1>
+            <p class="hero-subtitle fade-in-delay">Production of a complete editorial package for web distribution, including thumbnail, main edit and a vertical cut designed for mobile-first platforms.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Web video editor, thumbnail creation, final audio mix</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">Work-study selection project · Feuille Blanche</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Year</div>
+                    <div class="meta-value">2025</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Tools</div>
+                    <div class="meta-value">Final Cut, Pixelmator, Photoshop, Logic Pro</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <img src="../assets/projects/audiovisuel2/audiovisuel2-01-visuel-principal.webp" alt="Main visual of the Feuille Blanche project" loading="eager" decoding="async" fetchpriority="high" width="1800" height="1013">
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project summary</h2>
+            <p>
+                This project was produced for Feuille Blanche in the context of a work-study selection.
+                The goal was to deliver a video package that could realistically be published,
+                with both a long-form version and a shorter cut optimized for vertical platforms.
+            </p>
+            <p>
+                Beyond editing itself, the work called for a broader editorial approach:
+                visual hook, reading rhythm, format adaptation and consistency with the channel’s identity.
+            </p>
+            <p>
+                <strong>Note:</strong> The video material shown on this page is in French. No English subtitles yet.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Main challenge</h2>
+            <p>
+                The challenge was not only the quality of an isolated edit, but the ability
+                to think about one piece of content through multiple entry points: the thumbnail to attract attention,
+                the long-form version to sustain the conversation, and the short version to capture attention quickly on mobile.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Project goal</h2>
+            <p>
+                The brief was to edit a filmed podcast episode, with an image treatment centered on the people speaking.
+                The challenge was to keep visual continuity clean, rhythm fluid and narration clear,
+                while respecting the visual identity of the Cash Out channel.
+            </p>
+            <ul>
+                <li>Make the episode readable from start to finish without rhythm breaks</li>
+                <li>Preserve clear hierarchy between speakers, shots and visual information</li>
+                <li>Produce a standalone 9:16 short format that remains understandable without extra context</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Delivered assets</h2>
+            <ul>
+                <li><strong>Main thumbnail:</strong> aligned with the Cash Out identity, built on existing visual codes and optimized for contrast and click-through clarity.</li>
+                <li><strong>Main edit:</strong> filmed podcast episode structured around speaking turns, with camera choices focused on the people talking.</li>
+                <li><strong>Vertical short edit:</strong> a roughly one-minute 9:16 cut designed for Instagram Reels, TikTok and Shorts.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Production constraints</h2>
+            <ul>
+                <li>Respect a restrained style without overusing effects, so the show remains central</li>
+                <li>Preserve readable exchanges within a conversation involving several speakers</li>
+                <li>Condense a strong moment for the vertical format without losing meaning</li>
+                <li>Deliver a result ready to publish across platforms with different usage patterns</li>
+            </ul>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/audiovisuel2/audiovisuel2-02-miniature-main-vertical.webp" alt="Thumbnail of the Feuille Blanche episode" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Editing approach</h2>
+            <p>
+                The main edit was built around spoken interventions: clean transitions between camera angles,
+                control of speech rhythm and strong readability throughout the conversation.
+                The short format was then rebuilt vertically so the selected passage would keep its impact on mobile.
+            </p>
+            <ul>
+                <li>Shot selection based on speaker clarity and what the moment was trying to communicate</li>
+                <li>Transition cleanup to avoid harsh cuts and keep listening fluid</li>
+                <li>Rhythm balancing between explanation moments and stronger hook moments</li>
+                <li>Reframing and timing adjustments for 9:16 to maintain attention on mobile</li>
+            </ul>
+            <p>
+                The vertical version was not just a crop of the main episode: it had to function
+                as a self-contained piece of content, understandable quickly and strong enough to encourage deeper viewing.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Technical pipeline</h2>
+            <ul>
+                <li><strong>Final Cut:</strong> footage sorting, main edit, vertical version and final exports</li>
+                <li><strong>Pixelmator & Photoshop:</strong> thumbnail creation with contrast work, visual hierarchy and mobile readability</li>
+                <li><strong>Logic Pro:</strong> final mix with voice balance, level correction and global audio consistency</li>
+            </ul>
+        </div>
+
+        <div class="image-full image-full--video-vertical">
+            <video controls playsinline preload="none" poster="../assets/projects/audiovisuel2/audiovisuel2-03-extrait-vertical-poster.jpg" aria-label="Vertical excerpt from the Feuille Blanche project">
+                <source src="../assets/projects/audiovisuel2/audiovisuel2-03-extrait-vertical.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p class="image-caption">Video excerpt in French. No English subtitles yet.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Difficulties & tradeoffs</h2>
+            <ul>
+                <li>Maintain the energy expected from a web format without distorting the tone of the show</li>
+                <li>Find the right density in the short version so it stays understandable</li>
+                <li>Keep visual continuity between thumbnail, long version and vertical version</li>
+            </ul>
+            <p>
+                The main tradeoff was keeping a coherent identity between the deliverables while accepting
+                that each format has its own rhythm, its own hierarchy and its own attention logic.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Result & learnings</h2>
+            <p>
+                This project helped me consolidate a video editing workflow oriented toward web distribution,
+                from the hook visual all the way to the final mix and multi-platform adaptation.
+            </p>
+            <ul>
+                <li>Confirmed my ability to deliver multiple coherent formats from the same source content</li>
+                <li>Strengthened an editing method grounded in real platform usage</li>
+                <li>Improved image and sound sequencing precision in a professional selection context</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>Ability to think of content as a coherent editorial package, not as a single export</li>
+                <li>Ability to adapt rhythm and framing to platforms with different viewing habits</li>
+                <li>Control of a complete workflow across image, sound and visual hook creation</li>
+                <li>Concrete understanding of web and social media distribution constraints</li>
+            </ul>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_audiovisuel_1.html" class="next-project-link prev">Audio fiction - Olympics chaos in Paris</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_audiovisuel_3.html" class="next-project-link next">Long-form podcast interview editing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

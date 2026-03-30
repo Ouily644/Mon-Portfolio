@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            window.__initThemeMedia = function (stack) {
+                if (!stack) {
+                    return;
+                }
+                const img = stack.querySelector('.theme-media');
+                if (!img) {
+                    return;
+                }
+                const lightSrc = stack.dataset.themeLightSrc || '';
+                const darkSrc = stack.dataset.themeDarkSrc || lightSrc;
+                const activeSrc = theme === 'dark' ? (darkSrc || lightSrc) : (lightSrc || darkSrc);
+                if (activeSrc) {
+                    img.src = activeSrc;
+                    img.dataset.currentSrc = activeSrc;
+                }
+            };
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Suivea v3 development - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Front-end development for Suivea v3, turning validated UI directions into reusable web components for a business product.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_3.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_3.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_3.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Suivea v3 development">
+    <meta property="og:description" content="Front-end development for Suivea v3, turning validated UI directions into reusable web components for a business product.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_3.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/suivea/suivea-dev-00-miniature-light.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Suivea v3 development">
+    <meta name="twitter:description" content="Front-end development for Suivea v3, turning validated UI directions into reusable web components for a business product.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/suivea/suivea-dev-00-miniature-light.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_codage_3.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_codage_3.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Suivea v3 development</h1>
+            <p class="hero-subtitle fade-in-delay">Turning validated Suivea v3 mockups into integrated web screens, with a reusable component base meant to support future product iterations.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Front-end implementation in pair work</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">MMI second-year internship · Docaposte · Suivea</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Period</div>
+                    <div class="meta-value">May 2021 - July 2021</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Web development</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <div class="theme-media-stack" data-theme-light-src="../assets/projects/suivea/suivea-dev-00-miniature-light.webp" data-theme-dark-src="../assets/projects/suivea/suivea-dev-00-miniature-dark.webp" aria-label="Overview of Suivea v3">
+            <img class="theme-media" alt="Overview of Suivea v3" loading="eager" decoding="async" fetchpriority="high" width="1920" height="1080">
+        </div>
+        <script>window.__initThemeMedia(document.currentScript.previousElementSibling);</script>
+        <p class="image-caption">Integrated screens shown in French. No English UI version yet.</p>
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project summary</h2>
+            <p>
+                Following the visual redesign of Suivea, I took part in the front-end integration
+                of a new version of the product during my internship at Docaposte. The work was not just
+                about reproducing a mockup, but about turning a validated UI direction into web screens
+                that were coherent, usable and maintainable.
+            </p>
+            <p>
+                The challenge was twofold: deliver screens that were faithful to the approved mockups,
+                while also building a reusable base of components and UI rules for the next development steps.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Problem to solve</h2>
+            <p>
+                The team had more mature visual mockups, but they still had to be translated into
+                web screens that were truly integration-ready, with components stable enough to be reused afterward.
+                Without a shared base, every new screen risked introducing spacing, hierarchy
+                or behavior inconsistencies.
+            </p>
+            <p>
+                The project therefore came down to solving a concrete problem: integrate a first screen faithfully,
+                then reuse that base on the following ones without having to re-tune every component by hand.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Technical goal</h2>
+            <ul>
+                <li>Create a reference base for recurrent styles and components</li>
+                <li>Integrate a Suivea v3 screen faithful to the approved mockups</li>
+                <li>Reduce visual drift between screens and interface states</li>
+                <li>Prepare a more reusable structure for future integrations</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What I built</h2>
+            <p>
+                I first contributed to a foundation page gathering the styles and components useful
+                to the project, and then we integrated Suivea v3 screens in pair work on top of that base.
+            </p>
+            <ul>
+                <li>HTML structuring of business-oriented blocks with clear reading and maintenance hierarchy</li>
+                <li>Reusable styles for buttons, inputs, cards, spacing and grids</li>
+                <li>Fine adjustments of typography, margins, alignment and visual density to match the mockups</li>
+                <li>Consistency checks across screens, variants and interface states before validation</li>
+            </ul>
+        </div>
+
+        <div class="image-full image-full--contain">
+            <img src="../assets/projects/suivea/suivea-04-ui-v3.webp" alt="Integrated Suivea v3 screen with product components" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Pair-work organization</h2>
+            <p>
+                The work was split into clear batches such as structure, components, integration and feedback,
+                with regular check-ins to align the final result. This helped avoid style divergence,
+                distribute the work cleanly and fix inconsistencies quickly.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Integration difficulties</h2>
+            <ul>
+                <li>Translate the mockup precisely into code without losing its intended visual hierarchy</li>
+                <li>Avoid variation from one screen to another on recurring components</li>
+                <li>Balance visual fidelity, time constraints and the level of finish that could realistically be reached</li>
+            </ul>
+            <p>
+                A substantial part of the work consisted of correcting differences that look minor in isolation
+                but quickly damage the overall perception of an interface: inconsistent margins, imperfect alignment,
+                text sizes that are too close, or components that feel almost identical but not quite.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Results</h2>
+            <ul>
+                <li>Component base structured enough to support the following screens</li>
+                <li>Suivea v3 screen integrated faithfully and validated internally</li>
+                <li>Better visual consistency across product blocks and interface states</li>
+                <li>Stronger rigor in UI integration within a professional and collaborative environment</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>Ability to turn a graphic intention into a usable web interface</li>
+                <li>Real attention to the implementation details that shape perceived product quality</li>
+                <li>Pair work with continuous alignment on a shared result</li>
+                <li>A structuring mindset that avoids producing throwaway code screen by screen</li>
+            </ul>
+        </div>
+
+        <div class="image-full image-full--contain">
+            <img src="../assets/projects/covers/codage3-03-ui-detail.webp" alt="UI detail of a Suivea v3 screen" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Related project (design)</h2>
+            <a href="projet_graphique_2.html" class="text-link">See the Suivea logo and mobile interface redesign</a>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_graphique_2.html" class="next-project-link prev">Suivea redesign - logo & mobile interface</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_codage_1.html" class="next-project-link next">Secure audio delivery platform</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

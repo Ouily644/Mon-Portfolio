@@ -6,6 +6,31 @@
     <meta name="color-scheme" content="dark light">
     <script>
         (function () {
+            const LANGUAGE_PREFERENCE_KEY = 'preferredLanguage';
+            const savedLanguage = localStorage.getItem(LANGUAGE_PREFERENCE_KEY);
+
+            if (savedLanguage === 'fr') {
+                return;
+            }
+
+            if (savedLanguage === 'en') {
+                window.location.replace('en/index.html');
+                return;
+            }
+
+            const preferredBrowserLanguage = (
+                (Array.isArray(navigator.languages) && navigator.languages.length > 0 && navigator.languages[0]) ||
+                navigator.language ||
+                'fr'
+            ).toLowerCase();
+
+            if (!preferredBrowserLanguage.startsWith('fr')) {
+                window.location.replace('en/index.html');
+            }
+        })();
+    </script>
+    <script>
+        (function () {
             const savedTheme = localStorage.getItem('theme');
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = savedTheme || (prefersDark ? 'dark' : 'light');
@@ -32,21 +57,22 @@
         html[data-theme="dark"] { background-color: #0b0d12; }
         html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
     </style>
-    <title>William Tran - Designer UI/UX hybride</title>
+    <title>William Tran - Designer UI/UX avec profil front-end</title>
     <!-- SEO META -->
-    <meta name="description" content="Portfolio de William Tran, designer UI/UX hybride : interfaces claires, front-end soigné et projets digitaux à forte exigence de finition.">
+    <meta name="description" content="Portfolio de William Tran, designer UI/UX avec profil front-end : interfaces utiles, usage réel et qualité d’exécution soignée.">
     <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/index.html">
     <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/index.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/index.html">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="William Tran - Portfolio">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="William Tran - Designer UI/UX hybride">
-    <meta property="og:description" content="Portfolio de William Tran, designer UI/UX hybride : interfaces claires, front-end soigné et projets digitaux à forte exigence de finition.">
+    <meta property="og:title" content="William Tran - Designer UI/UX avec profil front-end">
+    <meta property="og:description" content="Portfolio de William Tran, designer UI/UX avec profil front-end : interfaces utiles, usage réel et qualité d’exécution soignée.">
     <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/index.html">
     <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/portfolio-home-social.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="William Tran - Designer UI/UX hybride">
-    <meta name="twitter:description" content="Portfolio de William Tran, designer UI/UX hybride : interfaces claires, front-end soigné et projets digitaux à forte exigence de finition.">
+    <meta name="twitter:title" content="William Tran - Designer UI/UX avec profil front-end">
+    <meta name="twitter:description" content="Portfolio de William Tran, designer UI/UX avec profil front-end : interfaces utiles, usage réel et qualité d’exécution soignée.">
     <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/portfolio-home-social.webp">
     <!-- /SEO META -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -63,9 +89,9 @@
                     <a href="projets.html" class="nav-link">Projets</a>
                     <div class="nav-dropdown">
                         <a href="projets.html">Tous les projets</a>
-                        <a href="projets.html?tag=graphisme">Projets graphiques</a>
-                        <a href="projets.html?tag=codage">Projets codage</a>
-                        <a href="projets.html?tag=audiovisuel">Projets audiovisuels</a>
+                        <a href="projets.html?tag=produits-interfaces">Produits & interfaces</a>
+                        <a href="projets.html?tag=identite-visuelle-ui">Identité visuelle & UI</a>
+                        <a href="projets.html?tag=audiovisuel">Audiovisuel</a>
                     </div>
                 </div>
                 <div class="nav-item">
@@ -81,8 +107,19 @@
                 <div class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Langue</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <span class="lang-switch__option is-active" aria-current="true">FR</span>
+                        <a href="en/index.html" class="lang-switch__option">EN</a>
+                    </div>
+                </div>
             </div>
             <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Choix de langue">
+                    <span class="lang-switch__option is-active" aria-current="true">FR</span>
+                    <a href="en/index.html" class="lang-switch__option">EN</a>
+                </div>
                 <button class="theme-toggle" aria-label="Activer le thème sombre">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="4" fill="currentColor"/>
@@ -105,8 +142,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title fade-in">Designer UI/UX hybride</h1>
-            <p class="hero-subtitle fade-in-delay">Je conçois des interfaces claires et des expériences soignées, du design à la réalisation front-end, avec une attention particulière portée aux détails.</p>
+            <h1 class="hero-title fade-in">Designer UI/UX avec profil front-end</h1>
+            <p class="hero-subtitle fade-in-delay">Je conçois des interfaces et des outils utiles, pensés pour un usage réel, du design à la réalisation, avec une attention forte portée au rythme, à la lisibilité et à la qualité d’exécution.</p>
         </div>
     </section>
 
@@ -132,7 +169,7 @@
                             <h3 class="project-title">Guide studio - Web app mobile first</h3>
                             <p class="project-description">Playback Solutions · Web app mobile first · 2026</p>
                             <div class="project-tags">
-                                <span class="project-tag project-tag-primary">Codage</span>
+                                <span class="project-tag project-tag-primary">Produits & interfaces</span>
                                 <span class="project-tag">UI/UX</span>
                             </div>
                         </div>
@@ -146,7 +183,7 @@
                             <h3 class="project-title">Portfolio - Conception & développement</h3>
                             <p class="project-description">Projet personnel · Web design & développement · 2026</p>
                             <div class="project-tags">
-                                <span class="project-tag project-tag-primary">Codage</span>
+                                <span class="project-tag project-tag-primary">Produits & interfaces</span>
                                 <span class="project-tag">UI/UX</span>
                             </div>
                         </div>
@@ -165,7 +202,7 @@
                             <h3 class="project-title">VeloTrack - Application iOS de suivi cycliste</h3>
                             <p class="project-description">Projet personnel · Application mobile iOS · 2026</p>
                             <div class="project-tags">
-                                <span class="project-tag project-tag-primary">Codage</span>
+                                <span class="project-tag project-tag-primary">Produits & interfaces</span>
                                 <span class="project-tag">UI/UX</span>
                             </div>
                         </div>
@@ -190,7 +227,7 @@
                             <h3 class="project-title">Refonte Suivea - Logo & interface mobile</h3>
                             <p class="project-description">Docaposte · Identité visuelle & interface mobile · 2021</p>
                             <div class="project-tags">
-                                <span class="project-tag project-tag-primary">Graphisme</span>
+                                <span class="project-tag project-tag-primary">Identité visuelle & UI</span>
                                 <span class="project-tag">UI/UX</span>
                             </div>
                         </div>
@@ -207,7 +244,7 @@
                             <h3 class="project-title">Suivea v3 - Développement front-end</h3>
                             <p class="project-description">Docaposte · Développement web · 2021</p>
                             <div class="project-tags">
-                                <span class="project-tag project-tag-primary">Codage</span>
+                                <span class="project-tag project-tag-primary">Produits & interfaces</span>
                                 <span class="project-tag">UI/UX</span>
                                 <span class="project-tag">Graphisme</span>
                             </div>
@@ -260,6 +297,7 @@
                             <p class="project-description">Studio M · Fiction sonore · 2024</p>
                             <div class="project-tags">
                                 <span class="project-tag project-tag-primary">Audiovisuel</span>
+                                <span class="project-tag">Audio</span>
                                 <span class="project-tag">Écriture</span>
                             </div>
                         </div>
@@ -286,7 +324,7 @@
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Travaillons ensemble</h2>
-            <p class="contact-text">Je suis disponible pour des missions et opportunités en design UI/UX, front-end et projets digitaux à forte exigence de finition.</p>
+            <p class="contact-text">Je suis ouvert aux opportunités en design UI/UX, conception d’interfaces et front-end, sur des projets utiles, exigeants et bien menés de bout en bout.</p>
             <div class="contact-links">
                 <a href="mailto:williamtran.far@gmail.com" class="contact-btn">Me contacter</a>
                 <div class="social-links">

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Mobile-first studio guide - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Mobile-first studio guide for guest artists, designed to provide immediate access to practical information, Wi-Fi and logistics.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_2.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_2.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_2.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mobile-first studio guide">
+    <meta property="og:description" content="Mobile-first studio guide for guest artists, designed to provide immediate access to practical information, Wi-Fi and logistics.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_2.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage2/codage2-00-miniature.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mobile-first studio guide">
+    <meta name="twitter:description" content="Mobile-first studio guide for guest artists, designed to provide immediate access to practical information, Wi-Fi and logistics.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/codage2/codage2-00-miniature.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_codage_2.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_codage_2.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Mobile-first studio guide for guest artists</h1>
+            <p class="hero-subtitle fade-in-delay">A mobile guide designed to answer the concrete needs of artists and guests on site within a few seconds.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Audio assistant & web development</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">Internship · Playback Solutions</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Year</div>
+                    <div class="meta-value">2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Mobile-first web app</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <img src="../assets/projects/codage2/codage2-01-vue-mobile-studio.webp" alt="Mobile view of the studio guide" loading="eager" decoding="async" fetchpriority="high" width="2400" height="1400">
+        <p class="image-caption">Guide interface shown in French. No English UI version yet.</p>
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project summary</h2>
+            <p>
+                During the same internship, I designed a mobile-first studio page for artists and guests
+                who were physically on site. The goal was to centralize the most frequently requested practical information
+                while reducing repeated interruptions for the team as much as possible.
+            </p>
+            <p>
+                This format responded to a simple reality: on site, nobody wants to search for long.
+                The answer has to be immediate, visible at the right moment, on a phone, without going through
+                a long showcase page or a chain of repeated questions to the team.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Product goal</h2>
+            <p><strong>1 scan → all the obvious information → zero questions for the team.</strong></p>
+            <p>
+                The page had to load quickly, be immediately readable and useful from the first screen,
+                without decorative design or unnecessary text.
+            </p>
+            <ul>
+                <li>Reduce the time needed to find information on site</li>
+                <li>Make the experience autonomous for guests</li>
+                <li>Standardize answers to the most common requests</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Problem to solve</h2>
+            <p>
+                In a studio, the same questions come back quickly: how to connect to Wi-Fi, where to order food,
+                what address to use for delivery, and which practical information matters on site. Answering every time
+                pulls the team into repetitive support even though this information can be made self-service.
+            </p>
+            <p>
+                The project was therefore about condensing these needs into a very short interface built for real usage,
+                not for institutional presentation.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Design constraints</h2>
+            <ul>
+                <li>Mobile first</li>
+                <li>Fast loading</li>
+                <li>Sober, readable and reliable tone</li>
+                <li>Every block must answer a real question from an artist or guest</li>
+                <li>No gimmick features, only useful actions on site</li>
+            </ul>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage2/codage2-02-structure-globale-studio.webp" alt="Overall structure of the studio page" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Guest Wi-Fi as the top priority</h2>
+            <p>
+                The first screen directly shows the guest network, the password and an explicit
+                "guest network only" note. This came from a simple observation: it is often the first
+                thing people ask as soon as they arrive.
+            </p>
+            <ul>
+                <li>Network name: Guest</li>
+                <li>Password: bienvenue</li>
+                <li>Password copy button</li>
+            </ul>
+            <p>
+                The idea was not only to display the information, but to reduce effort all the way:
+                see it, copy it, act immediately.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage2/codage2-03-wifi-guest.webp" alt="Priority Guest Wi-Fi block" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Useful content, strictly prioritized</h2>
+            <p>
+                The content is ordered according to real on-site usage: Wi-Fi, short studio intro,
+                restaurants, delivery, practical information, then a team sign-off.
+            </p>
+            <ul>
+                <li>Three-line introduction to the place</li>
+                <li>Full delivery address and instructions</li>
+                <li>Opening hours, toilets, rules and internal contact</li>
+                <li>Short sign-off from the studio team</li>
+            </ul>
+            <p>
+                This hierarchy is intentionally strict: every block has to justify both its presence and its position.
+                If a piece of information does not concretely help someone on site, it should not take screen space.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Restaurants sorted by time of day</h2>
+            <p>
+                The list, capped at eight addresses, is sorted automatically client-side to propose the most relevant options
+                depending on the moment.
+            </p>
+            <ul>
+                <li>11am to 3pm: priority to quick options</li>
+                <li>6pm to 10pm: priority to delivery options</li>
+                <li>Direct Google Maps link for each restaurant</li>
+            </ul>
+            <p>
+                This time-based sorting reduces decision time and avoids unnecessary back-and-forth with the team.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/codage2/codage2-04-tri-restaurants.webp" alt="Dynamic restaurant sorting according to time of day" loading="lazy" decoding="async">
+        </div>
+
+        <div class="content-section">
+            <h2>Technical choices</h2>
+            <ul>
+                <li>Plain HTML, CSS and JavaScript for simple, fast maintenance</li>
+                <li>Section-based navigation with active anchor state for immediate orientation</li>
+                <li>Hiding non-active sections to keep the display focused</li>
+                <li>Restaurant sorting logic based on local time</li>
+                <li>Utility action: copy Wi-Fi password to clipboard</li>
+                <li>Modular structure to update opening hours, addresses and contacts quickly</li>
+            </ul>
+            <p>
+                The deliberately light stack matches the need: low complexity, few dependencies,
+                quick updates and efficient loading on mobile.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Difficulties & adjustments</h2>
+            <ul>
+                <li>Strongly prioritize information to avoid overload on small screens</li>
+                <li>Keep reading immediate in both dark and light mode</li>
+                <li>Maintain a balance between visual simplicity and genuinely useful actions</li>
+            </ul>
+            <p>
+                The main design choice was to remove more than to add. On a tool like this, design quality
+                depends largely on what you choose not to show, in order to preserve a clear and fast path.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Results</h2>
+            <ul>
+                <li>Immediate access to critical information as soon as guests arrive at the studio</li>
+                <li>Fewer interruptions for the team on repetitive questions</li>
+                <li>A more autonomous and smoother guest journey</li>
+                <li>A format that stays simple to maintain and update</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>Ability to turn a field need into an interface that is genuinely useful</li>
+                <li>Strict information prioritization based on real usage, not on the desire to show more</li>
+                <li>Light, readable and easy-to-maintain front-end implementation</li>
+                <li>A pragmatic design mindset: fewer effects, more user autonomy</li>
+            </ul>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_codage_1.html" class="next-project-link prev">Secure audio delivery platform</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_codage_4.html" class="next-project-link next">Portfolio design & development</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+            <a href="https://www.linkedin.com/in/william-tran1/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

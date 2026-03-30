@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Custom sprite creation in Super Metroid - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Personal graphic project focused on custom sprite creation for Super Metroid with a full ROM-modding pipeline.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_graphique_1.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_graphique_1.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_graphique_1.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Custom sprite creation - Super Metroid">
+    <meta property="og:description" content="Personal graphic project focused on custom sprite creation for Super Metroid with a full ROM-modding pipeline.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_graphique_1.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/graphique1-super-metroid.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom sprite creation - Super Metroid">
+    <meta name="twitter:description" content="Personal graphic project focused on custom sprite creation for Super Metroid with a full ROM-modding pipeline.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/covers/graphique1-super-metroid.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_graphique_1.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_graphique_1.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Custom sprite creation in Super Metroid</h1>
+            <p class="hero-subtitle fade-in-delay">Full recreation of Samus animation sets for Sans, Inkling Girl and Samus Maid, while respecting the visual and technical constraints of Super Metroid on SNES.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Pixel artist & ROM modder</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">Personal project</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Year</div>
+                    <div class="meta-value">2024</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Pixel art & game modding</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full">
+        <img src="../assets/projects/super-metroid/sm-custom-01-overview.webp" alt="Overview of the custom sprites in Super Metroid" loading="eager" decoding="async" fetchpriority="high" width="1800" height="1377">
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Starting point</h2>
+            <p>
+                <strong>Super Metroid</strong> (SNES, 1994) is a landmark of 2D exploration games, known for
+                the readability of its animation, the precision of its movement and the strength of its art direction
+                despite the technical limits of its era.
+            </p>
+            <p>
+                That exact framework is what interested me: fully replacing the main character’s visual identity
+                while preserving the readability and rhythm of the original game.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <video controls playsinline preload="metadata" muted aria-label="Gameplay capture of Super Metroid with a custom sprite in action">
+                <source src="../assets/projects/super-metroid/sm-custom-02-gameplay.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+        </div>
+
+        <div class="content-section">
+            <h2>Modding context</h2>
+            <p>
+                The project sits within the Super Metroid modding community, especially around
+                <strong>ROM hacks</strong>, <strong>VARIA Randomizer</strong> and <strong>Map Rando</strong>,
+                where routes are fast, unpredictable and replayed at a high level.
+            </p>
+            <p>
+                <strong>VARIA Randomizer</strong> mostly changes item placement and the organization of the main map areas,
+                while <strong>Map Rando</strong> rebuilds the map room by room. In both cases, routes become less predictable
+                and sprite readability becomes even more important.
+            </p>
+            <p>
+                In that context, a custom sprite must stay immediately readable in motion,
+                including during very fast sequences or frequent direction changes.
+            </p>
+            <p>
+                The project did not stay at the level of a personal exercise: some of my sprites were also
+                reused by players in the community during actual games and <strong>Map Rando</strong> runs,
+                including at times by <strong>OatsnGoats</strong>. That is a strong indicator of readability
+                and real in-game integration beyond how a sprite sheet looks in isolation.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/super-metroid/sm-custom-03-modding-context.webp" alt="Modding context visual showing VARIA Randomizer, Map Rando, a ROM hack and community use of the sprites" loading="lazy" decoding="async">
+            <p class="image-caption">Sprites designed for the Super Metroid modding ecosystem, all the way to real Map Rando runs.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>What I produced</h2>
+            <p>
+                I recreated the full sprite set of the base character (Samus) for three finalized variants:
+            </p>
+            <ul>
+                <li>Sans (Undertale)</li>
+                <li>Inkling Girl (Splatoon)</li>
+                <li>Samus Maid (stylized variant)</li>
+            </ul>
+            <p>
+                The work covers the main poses (idle, run, jump, aim, shots, morphball, shinespark and more),
+                with animation adaptations designed to preserve the rhythm of the original game.
+            </p>
+            <p>
+                The goal was not to modify only one part of the character: I replaced
+                <strong>the entire Samus animation set</strong> for each variant.
+            </p>
+            <p>
+                Each variant represents <strong>582 sprites</strong> replaced and adjusted on its own.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Project challenge</h2>
+            <p>
+                The challenge was not only graphic. I had to fit characters with very different proportions,
+                silhouettes and visual codes into an already defined animation system, without losing the immediate
+                readability that makes Super Metroid so strong in motion.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/super-metroid/sm-custom-04-spritesheet-view.webp" alt="Comparative view of the main animations for the three custom Super Metroid sprite variants" loading="lazy" decoding="async">
+            <p class="image-caption">One animation set, three characters: adaptation of poses, silhouettes and special actions.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>SNES technical constraints</h2>
+            <p>The design had to respect strict limits tied to the console:</p>
+            <ul>
+                <li>Sprite size and tile-based breakdown</li>
+                <li>A palette limited to 16 colors including 1 transparent color, so 15 visible colors</li>
+                <li>No added animation slots: I had to strictly respect the vanilla slots, such as 4 idle frames, 8 run frames and 1 shinespark frame</li>
+                <li>Immediate readability on short animation cycles</li>
+                <li>Visual coherence across every action frame</li>
+            </ul>
+            <p>
+                That framework forces precise simplification choices: silhouette, contrast and timing matter
+                more than decorative detail.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Suit palettes</h2>
+            <p>
+                Super Metroid applies color variations depending on the suit.
+                To remain coherent with the game, I worked with dedicated palettes for
+                <strong>Power</strong>, <strong>Varia</strong> and <strong>Gravity</strong>.
+            </p>
+            <p>
+                The palette below shows the colors used for the three suits, excluding the transparent pixel,
+                followed by a visual reference of the three original Samus versions.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/super-metroid/sm-custom-06-suit-palette.png" alt="Palette of the three Samus suits without the transparent pixel" loading="lazy">
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/super-metroid/sm-custom-07-vanilla-suits.png" alt="Visual comparison of the original Power, Varia and Gravity suits" loading="lazy">
+        </div>
+
+        <div class="content-section">
+            <h2>Creation pipeline (Aseprite)</h2>
+            <p>
+                I used <strong>Aseprite</strong> to build the sprites frame by frame,
+                relying on references from each universe so I could preserve the character identity
+                while respecting the visual grammar of Super Metroid.
+            </p>
+            <ul>
+                <li>Build of the key poses first, then in-betweens</li>
+                <li>Loop checks in the actual rhythm of the game</li>
+                <li>Custom palette and shading work for each suit: <strong>Power Suit</strong>, <strong>Varia Suit</strong>, <strong>Gravity Suit</strong></li>
+                <li>Scale adjustments to match Samus’s body template in Super Metroid, for example Sans is small in his original game, but his combat sprite is too large to be reused as-is</li>
+                <li>Palette adjustments to preserve readability in motion</li>
+                <li>In-game integration and testing with SpriteSomething to inject the sprites into Super Metroid</li>
+            </ul>
+            <p>
+                In-game testing was essential: a sprite that looks strong on a sheet or inside Aseprite can become unreadable
+                once it is pushed into the real rhythm of Super Metroid. Validation therefore had to happen through animation,
+                not only through still images.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <video controls playsinline preload="metadata" muted aria-label="Gameplay capture focused on custom animations including morph, run, aim up and shinespark">
+                <source src="../assets/projects/super-metroid/sm-custom-05-shinespark.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p class="image-caption">Example of a special action adapted in-game: run, aim, morph and shinespark.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Creative adaptation examples</h2>
+            <p>
+                Some animations forced me to adapt iconic movements or visual signs from each universe
+                into the existing slots of Super Metroid, a bit like how <strong>Super Smash Bros</strong>
+                reinterprets the emblematic gestures of a series within its own combat system.
+            </p>
+            <ul>
+                <li>For <strong>Inkling Girl</strong>, I used the human / squid transformation idea for the <strong>morphball</strong></li>
+                <li>For <strong>Inkling Girl</strong>’s <strong>shinespark</strong>, I adapted the <strong>Kraken</strong> special attack to the framework imposed by Super Metroid</li>
+                <li>For <strong>Sans</strong>, Samus’s arm cannon is replaced by a <strong>Gaster Blaster</strong>, and the <strong>shinespark</strong> is reinterpreted with bone visuals inspired by how he attacks in Undertale</li>
+                <li>On run, jump and aiming poses, I simplified some volumes to preserve instant readability despite the small display size</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <p>
+                This work taught me how to create within a highly constrained framework, validating every choice
+                directly in-game rather than from a static sprite sheet. It helped me improve on:
+            </p>
+            <ul>
+                <li>Analyzing and rebuilding existing animations without breaking their rhythm</li>
+                <li>Mastering retro technical constraints such as palette, size, contrast and readability</li>
+                <li>Maintaining visual coherence across very different universes inside one game</li>
+                <li>Frame-by-frame execution precision</li>
+            </ul>
+        </div>
+
+        <div class="content-section diffusion-links">
+            <h2>References</h2>
+            <ul>
+                <li><a href="https://varia.run/" target="_blank" rel="noopener noreferrer">VARIA Randomizer</a></li>
+                <li><a href="https://maprando.com/" target="_blank" rel="noopener noreferrer">Map Rando</a></li>
+                <li><a href="https://github.com/Artheau/SpriteSomething" target="_blank" rel="noopener noreferrer">SpriteSomething</a></li>
+            </ul>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev is-empty" aria-hidden="true"></div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_graphique_2.html" class="next-project-link next">Suivea redesign - logo & mobile interface</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
