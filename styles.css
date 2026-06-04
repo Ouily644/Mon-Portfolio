@@ -1772,18 +1772,23 @@ a {
 .image-placeholder {
     width: 100%;
     aspect-ratio: 16/9;
-    background: var(--color-card-bg);
+    border: 1px dashed var(--color-media-border);
+    border-radius: var(--media-radius);
+    background:
+        linear-gradient(135deg, rgba(var(--color-accent-rgb), 0.08), rgba(var(--color-accent-rgb), 0.02)),
+        var(--color-card-bg);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 28px;
+    overflow: hidden;
 }
 
 .image-placeholder span {
     max-width: 900px;
     text-align: center;
-    color: var(--color-text);
-    font-size: clamp(18px, 2.2vw, 32px);
+    color: var(--color-text-secondary);
+    font-size: clamp(17px, 2vw, 26px);
     line-height: 1.35;
     letter-spacing: -0.01em;
     font-weight: 550;

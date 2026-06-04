@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <style>
+        html[data-theme="dark"] { background-color: #0b0d12; }
+        html[data-theme="dark"] body { background-color: #0b0d12; color: #e5e7eb; }
+    </style>
+    <title>Sonumen - iOS music player for local libraries and personal servers - Portfolio</title>
+    <!-- SEO META -->
+    <meta name="description" content="Advanced iOS music player prototype with local library support, Jellyfin/Plex sources, mini player, now playing screen and audio playback architecture.">
+    <link rel="canonical" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_6.html">
+    <link rel="alternate" hreflang="fr" href="https://ouily644.github.io/Mon-Portfolio/projet_codage_6.html">
+    <link rel="alternate" hreflang="en" href="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_6.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="William Tran - Portfolio">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sonumen - iOS music player">
+    <meta property="og:description" content="Advanced iOS music player prototype for local libraries, Jellyfin/Plex sources and a polished mobile listening experience.">
+    <meta property="og:url" content="https://ouily644.github.io/Mon-Portfolio/en/projet_codage_6.html">
+    <meta property="og:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/sonumen/sonumen-01-overview.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sonumen - iOS music player">
+    <meta name="twitter:description" content="Advanced iOS music player prototype for local libraries, Jellyfin/Plex sources and a polished mobile listening experience.">
+    <meta name="twitter:image" content="https://ouily644.github.io/Mon-Portfolio/assets/projects/sonumen/sonumen-01-overview.webp">
+    <!-- /SEO META -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">William Tran</a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="projets.html" class="nav-link">Projects</a>
+                    <div class="nav-dropdown">
+                        <a href="projets.html">All projects</a>
+                        <a href="projets.html?tag=products-interfaces">Products & interfaces</a>
+                        <a href="projets.html?tag=visual-identity-ui">Visual identity & UI</a>
+                        <a href="projets.html?tag=audiovisual">Audiovisual</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html#top-about">Introduction</a>
+                        <a href="about.html#competences">Skills</a>
+                        <a href="about.html#experience">Experience</a>
+                        <a href="about.html#formation">Education</a>
+                        <a href="about.html#interets">Interests</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-language">
+                    <span class="nav-language-label">Language</span>
+                    <div class="lang-switch lang-switch--mobile">
+                        <a href="../projet_codage_6.html" class="lang-switch__option">FR</a>
+                        <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switch lang-switch--desktop" role="group" aria-label="Language switcher">
+                    <a href="../projet_codage_6.html" class="lang-switch__option">FR</a>
+                    <span class="lang-switch__option is-active" aria-current="true">EN</span>
+                </div>
+                <button class="theme-toggle" aria-label="Enable dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <path d="M10 1v2M10 17v2M19 10h-2M3 10H1M16.07 3.93l-1.41 1.41M5.34 14.66l-1.41 1.41M16.07 16.07l-1.41-1.41M5.34 5.34L3.93 3.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Sonumen - iOS music player for local libraries and personal servers</h1>
+            <p class="hero-subtitle fade-in-delay">An advanced iOS prototype designed to bring a premium music experience to personal sources: local files, Jellyfin and Plex.</p>
+
+            <div class="project-meta fade-in-delay">
+                <div class="meta-item">
+                    <div class="meta-label">Role</div>
+                    <div class="meta-value">Product design, iOS architecture, mobile UI and Swift development</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Context</div>
+                    <div class="meta-value">Personal project · Advanced prototype</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Year</div>
+                    <div class="meta-value">2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">iOS mobile app</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-full image-full--contain">
+        <img src="../assets/projects/sonumen/sonumen-01-overview.webp" alt="Presentation visual for Sonumen on iPhone and iPad, an iOS music player for personal libraries" loading="eager" decoding="async" fetchpriority="high">
+    </div>
+
+    <div class="project-content">
+        <div class="content-section">
+            <h2>Project summary</h2>
+            <p>
+                Sonumen is an iOS prototype for a personal music player. The idea is to recover the feeling
+                of a polished music app, but applied to a library the user actually controls:
+                locally imported tracks, a self-hosted Jellyfin server or a Plex server.
+            </p>
+            <p>
+                The project is not trying to reproduce a streaming service. It explores a more specific question:
+                how to offer a refined music interface while letting users decide where their files live.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Why this project</h2>
+            <p>
+                The need came from a simple frustration: personal music solutions often offer a lot of freedom,
+                but with a mobile experience that feels less fluid or less finished than mainstream music apps.
+                Sonumen starts from that tension between owning a library and keeping the experience enjoyable.
+            </p>
+            <p>
+                The goal is to build an iOS player that can handle multiple sources without making the interface
+                feel technical or scattered. Users should be able to listen, find, organize and resume music
+                without feeling the complexity behind the app.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Architecture & music sources</h2>
+            <p>
+                The app is built around a source-based architecture. Each source can load its own library
+                and expose tracks through a shared model, which keeps the interface unified.
+            </p>
+            <ul>
+                <li><strong>Local library</strong>: audio file import from iPhone or iPad</li>
+                <li><strong>Jellyfin</strong>: self-hosted server connection, library selection and synchronization</li>
+                <li><strong>Plex</strong>: personal server connection and music library retrieval</li>
+                <li><strong>Shared model</strong>: tracks, albums, artists, playlists, favorites and history handled through the same logic</li>
+            </ul>
+            <p>
+                This makes the project easier to evolve: the interface does not need to be rewritten for each source,
+                and playback behavior can remain coherent across local files and personal servers.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/sonumen/sonumen-03-settings-sources.webp" alt="Sonumen settings screens for local, Jellyfin and Plex music sources" loading="lazy" decoding="async">
+            <p class="image-caption">Settings dedicated to music sources: local library, Jellyfin server and Plex server.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Playback, library and persistence</h2>
+            <p>
+                The technical work goes beyond displaying tracks. Sonumen manages a real library layer
+                with import, metadata, artwork, favorites, user playlists, playback history and playback state.
+            </p>
+            <ul>
+                <li>Audio playback through AVFoundation</li>
+                <li>Compatible audio file import and duplicate detection</li>
+                <li>Track metadata extraction and editing</li>
+                <li>Embedded and custom artwork handling</li>
+                <li>Favorites, playlists and history persisted locally</li>
+                <li>Error handling for missing files, unavailable remote sources and playback failures</li>
+            </ul>
+            <p>
+                I paid particular attention to the less visible cases that matter in a music player:
+                keeping playback stable when a network source disappears, avoiding duplicate imports,
+                and preserving a coherent library over time.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/sonumen/sonumen-04-library-tracks-albums.webp" alt="Sonumen screens showing the music library, tracks and imported albums" loading="lazy" decoding="async">
+            <p class="image-caption">Music library with navigation across tracks, albums and imported content.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Interface & mobile experience</h2>
+            <p>
+                The interface combines UIKit for the main shell and custom transitions, with SwiftUI for several
+                content screens. This keeps the mobile foundation robust while allowing faster iteration on views.
+            </p>
+            <ul>
+                <li>Modern tab bar with persistent mini player</li>
+                <li>Custom transition from mini player to full now playing screen</li>
+                <li>Full-screen playback view with artwork, controls, favorites, queue and playback options</li>
+                <li>Search, album/artist navigation, playlists and recently played tracks</li>
+                <li>Advanced native iOS integrations: system playback controls, external player, widgets and Live Activity</li>
+                <li>Settings dedicated to local, Jellyfin and Plex sources</li>
+            </ul>
+            <p>
+                The UI work focuses on the feeling of use: making the app feel native, fluid and coherent,
+                without turning server features into an admin interface.
+                The next iterations are mostly about UX polish for these entry points and making them feel consistent
+                with the rest of the app.
+            </p>
+        </div>
+
+        <div class="image-full">
+            <img src="../assets/projects/sonumen/sonumen-02-mini-player-now-playing.webp" alt="Sonumen composition showing the mini player and full now playing screen" loading="lazy" decoding="async">
+            <p class="image-caption">Persistent mini player and transition to the full now playing screen.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Current state</h2>
+            <p>
+                Sonumen is currently an advanced, buildable prototype. The main building blocks are in place:
+                local library, playback, persistence, favorites, playlists, history, settings, Jellyfin and Plex.
+                It still needs product and technical validation before being treated as a finished app.
+            </p>
+            <ul>
+                <li>Native iOS app built with Swift, UIKit and SwiftUI</li>
+                <li>Around 90 Swift files in the project</li>
+                <li>Simulator build validated with Xcode</li>
+                <li>Unit tests covering library search and persistence behavior</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Next steps</h2>
+            <p>
+                My final goal is to bring Sonumen to the App Store. Before that, the project needs a stabilization phase:
+                testing with real libraries, validating Jellyfin/Plex connections, polishing the UI, making network playback reliable
+                and clarifying the product positioning.
+            </p>
+            <p>
+                The next logical step would be a TestFlight phase to gather feedback from real users,
+                followed by App Store preparation: product page, screenshots, privacy policy, clear wording
+                and launch communication.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>What this project helped me develop</h2>
+            <ul>
+                <li>An iOS architecture able to unify multiple music data sources</li>
+                <li>Stronger understanding of AVFoundation, local persistence and audio error cases</li>
+                <li>A product approach around a personal app designed with wider distribution in mind</li>
+                <li>A mobile interface workflow focused on fluidity, playback continuity and polish</li>
+            </ul>
+        </div>
+
+        <div class="next-project">
+            <div class="project-nav">
+                <div class="project-nav-side project-nav-prev">
+                    <p class="project-nav-label">Previous project</p>
+                    <a href="projet_codage_5.html" class="next-project-link prev">VeloTrack - iOS cycling tracking app</a>
+                </div>
+                <div class="project-nav-center">
+                    <a href="projets.html" class="next-project-secondary">See other projects</a>
+                </div>
+                <div class="project-nav-side project-nav-next">
+                    <p class="project-nav-label">Next project</p>
+                    <a href="projet_audiovisuel_1.html" class="next-project-link next">Audio fiction - Olympics chaos in Paris</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 William Tran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
