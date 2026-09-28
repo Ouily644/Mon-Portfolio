@@ -292,6 +292,9 @@ if (menuToggle && navLinks) {
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
+            if (navLinks.classList.contains('active') && navLinks.contains(document.activeElement)) {
+                menuToggle.focus();
+            }
             setMenuState(false);
             navItems.forEach(item => item.classList.remove('active'));
         }
@@ -329,19 +332,8 @@ window.addEventListener('resize', () => {
     wasMobile = isMobile;
 });
 
-// ==================== SMOOTH SCROLL ==================== 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
+// Les ancres conservent leur navigation native (URL, historique et focus).
+// Le défilement et la préférence de mouvement réduit sont gérés en CSS.
 
 // ==================== SCROLL ANIMATIONS ==================== 
 const observerOptions = {
@@ -371,7 +363,6 @@ function setupProjectFilters() {
     }
 
     const filterButtons = Array.from(filterBar.querySelectorAll('.project-filter-btn'));
-    const allButton = filterBar.querySelector('.project-filter-btn-all');
     const projectCards = Array.from(projectGrid.querySelectorAll('.project-card'));
     const emptyState = document.querySelector('#work .project-filter-empty');
     const activeFilters = new Set();
@@ -419,6 +410,32 @@ function setupProjectFilters() {
             .filter(Boolean);
 
     const normalizeFilterTag = (tag) => filterAliases.get(tag) || tag;
+
+    const readFiltersFromUrl = () => {
+        activeFilters.clear();
+        const params = new URLSearchParams(window.location.search);
+        readTags(params.get('tags') || params.get('tag') || '').map(normalizeFilterTag).forEach((tag) => {
+            if (buttonByFilter.has(tag) && tag !== 'all') {
+                activeFilters.add(tag);
+            }
+        });
+    };
+
+    const updateFilterParams = (url) => {
+        url.searchParams.delete('tag');
+        url.searchParams.delete('tags');
+        if (activeFilters.size > 0) {
+            url.searchParams.set('tags', Array.from(activeFilters).join(','));
+        }
+        return url;
+    };
+
+    const persistFilters = () => {
+        const url = updateFilterParams(new URL(window.location.href));
+        if (url.href !== window.location.href) {
+            window.history.pushState(null, '', url);
+        }
+    };
 
     const countMatches = (tags) =>
         tags.reduce((count, tag) => (activeFilters.has(tag) ? count + 1 : count), 0);
@@ -471,6 +488,9 @@ function setupProjectFilters() {
         }
 
         syncButtons();
+        document.querySelectorAll('.lang-switch__option[href]').forEach((link) => {
+            link.href = updateFilterParams(new URL(link.href)).href;
+        });
     };
 
     filterButtons.forEach((button) => {
@@ -478,6 +498,7 @@ function setupProjectFilters() {
             const key = (button.dataset.filter || '').toLowerCase();
             if (!key || key === 'all') {
                 activeFilters.clear();
+                persistFilters();
                 applyFilter();
                 return;
             }
@@ -488,23 +509,17 @@ function setupProjectFilters() {
                 activeFilters.add(key);
             }
 
+            persistFilters();
             applyFilter();
         });
     });
 
-    const params = new URLSearchParams(window.location.search);
-    const initial = params.get('tags') || params.get('tag') || '';
-    readTags(initial).map(normalizeFilterTag).forEach((tag) => {
-        if (buttonByFilter.has(tag) && tag !== 'all') {
-            activeFilters.add(tag);
-        }
+    window.addEventListener('popstate', () => {
+        readFiltersFromUrl();
+        applyFilter();
     });
 
-    if (allButton && activeFilters.size === 0) {
-        allButton.classList.add('active');
-        allButton.setAttribute('aria-pressed', 'true');
-    }
-
+    readFiltersFromUrl();
     applyFilter();
 }
 

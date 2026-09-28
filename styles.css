@@ -8,7 +8,7 @@
 :root {
     --color-bg: #F2F2F6;
     --color-text: #1d1d1f;
-    --color-text-secondary: #86868b;
+    --color-text-secondary: #68686e;
     --color-accent: #ff580f;
     --color-accent-rgb: 255, 88, 15;
     --color-accent-hover: #e14a00;
@@ -565,6 +565,10 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     .fade-in,
     .fade-in-delay {
         animation: none;
@@ -1952,6 +1956,7 @@ a {
 @media (max-width: 768px) {
     :root {
         --nav-inset: 8px;
+        --nav-menu-top: calc(var(--nav-inset) + var(--nav-inset) + 64px);
     }
 
     .nav {
@@ -1970,7 +1975,7 @@ a {
 
     .nav-links {
         position: fixed;
-        top: calc(var(--nav-inset) + var(--nav-inset) + 64px);
+        top: var(--nav-menu-top);
         left: var(--nav-inset);
         right: var(--nav-inset);
         background: var(--color-nav-panel-bg);
@@ -1981,7 +1986,12 @@ a {
         padding: 12px;
         border: 1px solid var(--glass-stroke);
         border-radius: var(--radius-md);
-        overflow: hidden;
+        max-height: calc(100vh - var(--nav-menu-top) - var(--nav-inset) - env(safe-area-inset-bottom, 0px));
+        max-height: calc(100dvh - var(--nav-menu-top) - var(--nav-inset) - env(safe-area-inset-bottom, 0px));
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+        justify-content: flex-start;
         transform: translateY(-8px);
         opacity: 0;
         visibility: hidden;
@@ -1997,6 +2007,10 @@ a {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
+    }
+
+    .nav-links > * {
+        flex-shrink: 0;
     }
 
     .nav-language {
@@ -2228,6 +2242,10 @@ a {
 }
 
 @media (max-width: 480px) {
+    :root {
+        --nav-menu-top: calc(var(--nav-inset) + var(--nav-inset) + 56px);
+    }
+
     .container,
     .nav-container {
         padding: 0 16px;
@@ -2243,7 +2261,7 @@ a {
     }
 
     .nav-links {
-        top: calc(var(--nav-inset) + var(--nav-inset) + 56px);
+        top: var(--nav-menu-top);
         left: var(--nav-inset);
         right: var(--nav-inset);
         border-radius: var(--radius-md);
