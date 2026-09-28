@@ -3,11 +3,11 @@
 
     // Réglages visuels de la navigation : modifier ici, puis recharger la page.
     const GLASS_SETTINGS = {
-        resolution: 1,
-        refraction: 0.008,
+        resolution: 4,
+        refraction: 0.015,
         bevelDepth: 0.04,
         bevelWidth: 0.12,
-        frost: 2,
+        frost: 1,
         specular: true,
         lightTint: 'rgba(255, 250, 245, 0.08)',
         darkTint: 'rgba(20, 22, 30, 0.18)',

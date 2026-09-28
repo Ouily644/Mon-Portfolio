@@ -250,13 +250,13 @@ a {
 
 .nav[data-glass="ready"]::before {
     z-index: 1;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
 }
 
 [data-theme="dark"] .nav[data-glass="ready"]::before {
-    background: rgba(20, 22, 28, 0.62);
+    background: rgba(20, 22, 28, 0.72);
 }
 
 .nav[data-glass="ready"]::after {
