@@ -233,6 +233,33 @@ a {
     justify-content: flex-start;
     width: 100%;
     position: relative;
+    z-index: 2;
+}
+
+/* liquidGL reste une couche décorative ; les contrôles gardent leur rendu HTML. */
+.nav-glass {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.nav:not([data-glass="ready"]) > canvas[data-liquid-ignore] {
+    visibility: hidden !important;
+}
+
+.nav[data-glass="ready"]::before {
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+[data-theme="dark"] .nav[data-glass="ready"]::before {
+    background: rgba(20, 22, 28, 0.62);
+}
+
+.nav[data-glass="ready"]::after {
     z-index: 1;
 }
 
