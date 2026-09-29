@@ -1,0 +1,54 @@
+/* Essai réversible des raccords Safari iOS 26 : ?edges=off désactive ces règles. */
+@media (max-width: 768px), (pointer: coarse) {
+    html[data-safari-edges],
+    html[data-safari-edges] body {
+        background-color: var(--color-bg);
+    }
+
+    html[data-safari-edges] body {
+        /* Le décor appartient à la page, sans couche position: fixed plein écran.
+           En bas du document, il rejoint la couleur unie de html et body. */
+        background-image:
+            radial-gradient(1200px 600px at 20% 0, rgba(255, 88, 15, 0.07), transparent 60%),
+            radial-gradient(1000px 500px at 80% 0, rgba(88, 86, 214, 0.05), transparent 55%);
+        background-repeat: no-repeat;
+    }
+
+    html[data-safari-edges][data-theme="dark"] body {
+        background-image:
+            radial-gradient(1000px 520px at 15% 0, rgba(225, 74, 0, 0.1), transparent 60%),
+            radial-gradient(900px 460px at 85% 0, rgba(88, 86, 214, 0.08), transparent 55%);
+    }
+
+    html[data-safari-edges] body::before {
+        content: none;
+    }
+}
+
+/* Variante facultative : laisser Safari étendre la page aux bords de l'écran,
+   tout en protégeant les liens de l'encoche et de l'indicateur d'accueil. */
+html[data-safari-edges="cover"] {
+    scroll-padding-top: calc(100px + env(safe-area-inset-top, 0px));
+}
+
+html[data-safari-edges="cover"] body {
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+        env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+
+html[data-safari-edges="cover"] .nav {
+    top: calc(var(--nav-inset) + env(safe-area-inset-top, 0px));
+    left: calc(var(--nav-inset) + env(safe-area-inset-left, 0px));
+    right: calc(var(--nav-inset) + env(safe-area-inset-right, 0px));
+}
+
+@media (max-width: 768px) {
+    html[data-safari-edges="cover"] {
+        --nav-menu-top: calc(var(--nav-inset) + var(--nav-inset) + 64px + env(safe-area-inset-top, 0px));
+    }
+
+    html[data-safari-edges="cover"] .nav-links {
+        left: calc(var(--nav-inset) + env(safe-area-inset-left, 0px));
+        right: calc(var(--nav-inset) + env(safe-area-inset-right, 0px));
+    }
+}
