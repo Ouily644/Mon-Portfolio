@@ -1,0 +1,239 @@
+{
+  "url": "http://localhost:8006/projets.html?specular=off&captures=after&trial=verification",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+  "dpr": 1,
+  "viewport": [
+    1280,
+    900
+  ],
+  "supported": [
+    "element",
+    "event",
+    "first-input",
+    "interaction-contentful-paint",
+    "largest-contentful-paint",
+    "layout-shift",
+    "long-animation-frame",
+    "longtask",
+    "mark",
+    "measure",
+    "navigation",
+    "paint",
+    "resource",
+    "soft-navigation",
+    "visibility-state"
+  ],
+  "visibility": [],
+  "phases": {
+    "startup": {
+      "draws": 14,
+      "captureCalls": 3,
+      "start": 0,
+      "duration": 3000,
+      "frames": 322,
+      "rafHz": 112.98,
+      "frameP95": 10,
+      "frameMax": 66.7,
+      "gapsOver33": 3,
+      "gapsOver50": 3,
+      "rafCallbackCount": 637,
+      "rafCallbackMs": 79.1,
+      "longTaskCount": 2,
+      "longTaskMs": 146
+    },
+    "idle": {
+      "draws": 0,
+      "captureCalls": 0,
+      "start": 3500,
+      "duration": 3000,
+      "frames": 359,
+      "rafHz": 119.99,
+      "frameP95": 10,
+      "frameMax": 10.4,
+      "gapsOver33": 0,
+      "gapsOver50": 0,
+      "rafCallbackCount": 720,
+      "rafCallbackMs": 83.8,
+      "longTaskCount": 0,
+      "longTaskMs": 0
+    },
+    "theme": {
+      "draws": 20,
+      "captureCalls": 1,
+      "start": 17736.9,
+      "duration": 4001,
+      "frames": 470,
+      "rafHz": 117.8,
+      "frameP95": 10,
+      "frameMax": 25.8,
+      "gapsOver33": 0,
+      "gapsOver50": 0,
+      "rafCallbackCount": 1234,
+      "rafCallbackMs": 178.9,
+      "longTaskCount": 0,
+      "longTaskMs": 0
+    },
+    "menu": {
+      "draws": 86,
+      "captureCalls": 3,
+      "start": 28518.2,
+      "duration": 4002.7,
+      "frames": 460,
+      "rafHz": 115.48,
+      "frameP95": 10,
+      "frameMax": 82.9,
+      "gapsOver33": 1,
+      "gapsOver50": 1,
+      "rafCallbackCount": 1422,
+      "rafCallbackMs": 126.6,
+      "longTaskCount": 1,
+      "longTaskMs": 91
+    }
+  },
+  "ready": {
+    "nav": 377.4,
+    "mobile": 28640.3,
+    "dropdown": 35741.7
+  },
+  "visibilityState": "visible",
+  "captures": [
+    {
+      "t": 212,
+      "anchor": "nav",
+      "eligible": true,
+      "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5598:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8854:20",
+      "ok": true,
+      "ms": 165.40000009536743
+    },
+    {
+      "t": 212.80000007152557,
+      "anchor": "nav",
+      "eligible": false,
+      "caller": "    at window.liquidGL.registerDynamic (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8893:16)     at start (http://localhost:8006/nav-glass.js:253:29)",
+      "ok": false,
+      "ms": 0.10000002384185791
+    },
+    {
+      "t": 490.2000000476837,
+      "anchor": "nav",
+      "eligible": true,
+      "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+      "ok": true,
+      "ms": 8.399999976158142
+    },
+    {
+      "t": 18057,
+      "anchor": "nav",
+      "eligible": true,
+      "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+      "ok": true,
+      "ms": 27.600000023841858
+    },
+    {
+      "t": 23230.300000071526,
+      "anchor": "nav",
+      "eligible": true,
+      "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+      "ok": true,
+      "ms": 9.199999928474426
+    },
+    {
+      "t": 23277.700000047684,
+      "anchor": "nav",
+      "eligible": true,
+      "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+      "ok": true,
+      "ms": 4.299999952316284
+    },
+    {
+      "t": 28617.800000071526,
+      "anchor": "nav-links active",
+      "eligible": true,
+      "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5598:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8854:20",
+      "ok": true,
+      "ms": 22.600000023841858
+    },
+    {
+      "t": 28907.600000023842,
+      "anchor": "nav",
+      "eligible": true,
+      "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+      "ok": true,
+      "ms": 5.700000047683716
+    },
+    {
+      "t": 28913.400000095367,
+      "anchor": "nav-links active",
+      "eligible": true,
+      "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+      "ok": true,
+      "ms": 8.199999928474426
+    }
+  ],
+  "draws": 239,
+  "nav": [
+    {
+      "dcl": 105.4,
+      "load": 105.8,
+      "response": 5.5
+    }
+  ],
+  "paints": [
+    {
+      "name": "first-paint",
+      "type": "paint",
+      "t": 256,
+      "ms": 0
+    },
+    {
+      "name": "first-contentful-paint",
+      "type": "paint",
+      "t": 256,
+      "ms": 0
+    },
+    {
+      "name": "",
+      "type": "largest-contentful-paint",
+      "t": 256,
+      "ms": 0
+    },
+    {
+      "name": "",
+      "type": "largest-contentful-paint",
+      "t": 264,
+      "ms": 0
+    }
+  ],
+  "resources": [
+    {
+      "name": "http://localhost:8006/nav-glass.js",
+      "transfer": 12592,
+      "encoded": 12292,
+      "duration": 66.1
+    },
+    {
+      "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+      "transfer": 298692,
+      "encoded": 298392,
+      "duration": 41.3
+    }
+  ],
+  "canvases": [
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "renderer": {
+    "backend": "WebGPUBackend",
+    "resolution": 1.5,
+    "texture": [
+      585,
+      3527
+    ]
+  }
+}

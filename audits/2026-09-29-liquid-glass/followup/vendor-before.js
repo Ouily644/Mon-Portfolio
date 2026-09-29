@@ -5556,21 +5556,7 @@ fn fs() -> @location(0) vec4<f32> {
       });
 
       if ("ResizeObserver" in window) {
-        // Portfolio: the initial ResizeObserver notification is not a resize.
-        // The constructor already captures the current snapshot dimensions.
-        const snapshotSize = () => [
-          this.snapshotTarget.clientWidth,
-          this.snapshotTarget.clientHeight,
-          this.snapshotTarget.scrollWidth,
-          this.snapshotTarget.scrollHeight,
-        ].join(":");
-        let previousSnapshotSize = snapshotSize();
-        const observer = new ResizeObserver(() => {
-          const nextSize = snapshotSize();
-          if (nextSize === previousSnapshotSize) return;
-          previousSnapshotSize = nextSize;
-          onResize();
-        });
+        const observer = new ResizeObserver(onResize);
         observer.observe(this.snapshotTarget);
         this._cleanups.push(() => observer.disconnect());
       }
@@ -5935,13 +5921,7 @@ fn fs() -> @location(0) vec4<f32> {
       if (!this.lenses.length) this.destroy();
       else this._updateZIndex();
       renderAll();
-      for (const renderer of renderers) {
-        // Portfolio: removing an ignored decorative lens changes compositing,
-        // already invalidated above, but does not change the captured page.
-        if (lens.options.content === false && renderer._isIgnored(lens.el))
-          continue;
-        renderer.captureSnapshot();
-      }
+      for (const renderer of renderers) renderer.captureSnapshot();
     }
 
     destroy() {

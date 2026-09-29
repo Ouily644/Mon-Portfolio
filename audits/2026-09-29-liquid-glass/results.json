@@ -1,0 +1,1529 @@
+[
+  {
+    "url": "http://localhost:8006/projets.html?glass=off&trial=desktop-1",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 348,
+        "rafHz": 119.69,
+        "frameP95": 9.2,
+        "frameMax": 17.2,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "scroll": {
+        "start": 16246.1,
+        "duration": 4002.1,
+        "frames": 455,
+        "rafHz": 114.22,
+        "frameP95": 9.2,
+        "frameMax": 83.1,
+        "gapsOver33": 3,
+        "gapsOver50": 2,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {},
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 62.6,
+        "load": 62.9,
+        "response": 9.9
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 136,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 136,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 136,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 220,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 30.4
+      }
+    ],
+    "canvases": [],
+    "renderer": null
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=on&trial=desktop-1",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 319,
+        "rafHz": 109.4,
+        "frameP95": 9.3,
+        "frameMax": 83.7,
+        "gapsOver33": 3,
+        "gapsOver50": 2,
+        "rafCallbackCount": 594,
+        "rafCallbackMs": 99.2,
+        "longTaskCount": 2,
+        "longTaskMs": 115
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120.03,
+        "frameP95": 9.3,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 103.8,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "scroll": {
+        "start": 15760.6,
+        "duration": 4000.6,
+        "frames": 463,
+        "rafHz": 115.97,
+        "frameP95": 9.3,
+        "frameMax": 42.4,
+        "gapsOver33": 2,
+        "gapsOver50": 0,
+        "rafCallbackCount": 945,
+        "rafCallbackMs": 150.5,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 572.7
+    },
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 53.5,
+        "load": 53.8,
+        "response": 12.9
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 132,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 132,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 132,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 304,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 21.3
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297329,
+        "encoded": 297029,
+        "duration": 183.2
+      }
+    ],
+    "canvases": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 3,
+      "texture": [
+        2746,
+        8192
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=on&trial=desktop-2",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 329,
+        "rafHz": 112.48,
+        "frameP95": 9.3,
+        "frameMax": 66.6,
+        "gapsOver33": 3,
+        "gapsOver50": 2,
+        "rafCallbackCount": 631,
+        "rafCallbackMs": 116,
+        "longTaskCount": 2,
+        "longTaskMs": 128
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120.03,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 117.1,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "scroll": {
+        "start": 24355.7,
+        "duration": 4001.5,
+        "frames": 452,
+        "rafHz": 113.26,
+        "frameP95": 9.3,
+        "frameMax": 91,
+        "gapsOver33": 3,
+        "gapsOver50": 3,
+        "rafCallbackCount": 924,
+        "rafCallbackMs": 156.1,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 391.9
+    },
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 50.5,
+        "load": 50.8,
+        "response": 4.3
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 108,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 108,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 108,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 160,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 27.7
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297329,
+        "encoded": 297029,
+        "duration": 64.5
+      }
+    ],
+    "canvases": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 3,
+      "texture": [
+        2746,
+        8192
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=off&trial=desktop-2",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 351,
+        "rafHz": 120.03,
+        "frameP95": 9.2,
+        "frameMax": 9.3,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.5,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "scroll": {
+        "start": 16062.1,
+        "duration": 4000.8,
+        "frames": 472,
+        "rafHz": 118.22,
+        "frameP95": 9.2,
+        "frameMax": 34.3,
+        "gapsOver33": 1,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {},
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 51.4,
+        "load": 51.8,
+        "response": 6.4
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 108,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 108,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 108,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 156,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 27.9
+      }
+    ],
+    "canvases": [],
+    "renderer": null
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=off&trial=desktop-3",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 349,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 119.97,
+        "frameP95": 9.2,
+        "frameMax": 9.5,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "scroll": {
+        "start": 13546.7,
+        "duration": 4000.6,
+        "frames": 468,
+        "rafHz": 117.26,
+        "frameP95": 9.2,
+        "frameMax": 57.9,
+        "gapsOver33": 1,
+        "gapsOver50": 1,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {},
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 49.8,
+        "load": 50.1,
+        "response": 3.2
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 124,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 124,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 124,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 300,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 29.5
+      }
+    ],
+    "canvases": [],
+    "renderer": null
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=on&trial=desktop-3",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 327,
+        "rafHz": 111.16,
+        "frameP95": 9.3,
+        "frameMax": 91.7,
+        "gapsOver33": 3,
+        "gapsOver50": 3,
+        "rafCallbackCount": 626,
+        "rafCallbackMs": 101.3,
+        "longTaskCount": 2,
+        "longTaskMs": 149
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 356,
+        "rafHz": 119.04,
+        "frameP95": 9.2,
+        "frameMax": 33.2,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 123.4,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "scroll": {
+        "start": 16038,
+        "duration": 4000.3,
+        "frames": 440,
+        "rafHz": 110.2,
+        "frameP95": 9.3,
+        "frameMax": 76.1,
+        "gapsOver33": 7,
+        "gapsOver50": 4,
+        "rafCallbackCount": 899,
+        "rafCallbackMs": 140.5,
+        "longTaskCount": 1,
+        "longTaskMs": 52
+      }
+    },
+    "ready": {
+      "nav": 408.7
+    },
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 36.2,
+        "load": 36.5,
+        "response": 3.7
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 92,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 92,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 92,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 148,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 17.5
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297329,
+        "encoded": 297029,
+        "duration": 68.8
+      }
+    ],
+    "canvases": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 3,
+      "texture": [
+        2746,
+        8192
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=off&trial=mobile-1",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      390,
+      844
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 328,
+        "rafHz": 113.45,
+        "frameP95": 9.2,
+        "frameMax": 100.7,
+        "gapsOver33": 2,
+        "gapsOver50": 1,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "menu": {
+        "start": 16118.9,
+        "duration": 4001.1,
+        "frames": 477,
+        "rafHz": 119.25,
+        "frameP95": 9.2,
+        "frameMax": 17.1,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {},
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 124.6,
+        "load": 128,
+        "response": 47.4
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 356,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 356,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 356,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 356,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 34.7
+      }
+    ],
+    "canvases": [],
+    "renderer": null
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=on&trial=mobile-1",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      390,
+      844
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 330,
+        "rafHz": 112.5,
+        "frameP95": 9.2,
+        "frameMax": 83.3,
+        "gapsOver33": 2,
+        "gapsOver50": 2,
+        "rafCallbackCount": 628,
+        "rafCallbackMs": 102.6,
+        "longTaskCount": 2,
+        "longTaskMs": 162
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 114.7,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "menu": {
+        "start": 14704,
+        "duration": 4000.9,
+        "frames": 477,
+        "rafHz": 119.49,
+        "frameP95": 9.3,
+        "frameMax": 25.6,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 1433,
+        "rafCallbackMs": 180.2,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 450.7,
+      "mobile": 14773.7
+    },
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 36,
+        "load": 36.2,
+        "response": 2.8
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 100,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 100,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 100,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 184,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 19.5
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297329,
+        "encoded": 297029,
+        "duration": 109.4
+      }
+    ],
+    "canvases": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 3,
+      "texture": [
+        583,
+        8192
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=on&trial=mobile-2",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      390,
+      844
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 327,
+        "rafHz": 112.11,
+        "frameP95": 9.3,
+        "frameMax": 67.6,
+        "gapsOver33": 4,
+        "gapsOver50": 2,
+        "rafCallbackCount": 645,
+        "rafCallbackMs": 110.5,
+        "longTaskCount": 2,
+        "longTaskMs": 154
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.3,
+        "frameMax": 9.3,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 127.1,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "menu": {
+        "start": 19690.6,
+        "duration": 4001.2,
+        "frames": 476,
+        "rafHz": 119.23,
+        "frameP95": 9.2,
+        "frameMax": 26,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 1430,
+        "rafCallbackMs": 183.4,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 375.1,
+      "mobile": 19721.8
+    },
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 43.7,
+        "load": 43.9,
+        "response": 3.4
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 116,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 116,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 116,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 160,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 22.2
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297329,
+        "encoded": 297029,
+        "duration": 26.7
+      }
+    ],
+    "canvases": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 3,
+      "texture": [
+        583,
+        8192
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=off&trial=mobile-2",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      390,
+      844
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 348,
+        "rafHz": 119.67,
+        "frameP95": 9.2,
+        "frameMax": 17,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 358,
+        "rafHz": 119.65,
+        "frameP95": 9.2,
+        "frameMax": 15.7,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "menu": {
+        "start": 14479.7,
+        "duration": 4001.4,
+        "frames": 479,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {},
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 60.9,
+        "load": 61.3,
+        "response": 5.6
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 124,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 124,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 124,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 256,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 36.2
+      }
+    ],
+    "canvases": [],
+    "renderer": null
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=off&trial=mobile-3",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      390,
+      844
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 352,
+        "rafHz": 120.04,
+        "frameP95": 9.1,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "menu": {
+        "start": 23346.8,
+        "duration": 4002.7,
+        "frames": 479,
+        "rafHz": 119.75,
+        "frameP95": 9.2,
+        "frameMax": 16.5,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 0,
+        "rafCallbackMs": 0,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {},
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 37.8,
+        "load": 38.2,
+        "response": 3.1
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 104,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 104,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 104,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 156,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 21.2
+      }
+    ],
+    "canvases": [],
+    "renderer": null
+  },
+  {
+    "url": "http://localhost:8006/projets.html?glass=on&trial=mobile-3",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      390,
+      844
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "start": 0,
+        "duration": 3000,
+        "frames": 324,
+        "rafHz": 112.08,
+        "frameP95": 9.2,
+        "frameMax": 91.7,
+        "gapsOver33": 2,
+        "gapsOver50": 2,
+        "rafCallbackCount": 600,
+        "rafCallbackMs": 113.7,
+        "longTaskCount": 2,
+        "longTaskMs": 158
+      },
+      "idle": {
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120.04,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 128.2,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "menu": {
+        "start": 17885.7,
+        "duration": 4000.3,
+        "frames": 478,
+        "rafHz": 119.73,
+        "frameP95": 9.2,
+        "frameMax": 16.9,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 1436,
+        "rafCallbackMs": 166.8,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 531,
+      "mobile": 17912.6
+    },
+    "visibilityState": "visible",
+    "nav": [
+      {
+        "dcl": 50.5,
+        "load": 51,
+        "response": 5.4
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 168,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 168,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 168,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 336,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12589,
+        "encoded": 12289,
+        "duration": 28.1
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297329,
+        "encoded": 297029,
+        "duration": 202.3
+      }
+    ],
+    "canvases": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 3,
+      "texture": [
+        583,
+        8192
+      ]
+    }
+  }
+]

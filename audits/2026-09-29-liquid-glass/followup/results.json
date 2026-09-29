@@ -1,0 +1,1368 @@
+[
+  {
+    "url": "http://localhost:8006/projets.html?specular=on&captures=before&trial=1",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "draws": 303,
+        "captureCalls": 4,
+        "start": 0,
+        "duration": 3000,
+        "frames": 323,
+        "rafHz": 111.02,
+        "frameP95": 9.4,
+        "frameMax": 100.2,
+        "gapsOver33": 3,
+        "gapsOver50": 2,
+        "rafCallbackCount": 623,
+        "rafCallbackMs": 71.2,
+        "longTaskCount": 2,
+        "longTaskMs": 178
+      },
+      "idle": {
+        "draws": 360,
+        "captureCalls": 0,
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.3,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 80,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 500.4
+    },
+    "visibilityState": "visible",
+    "captures": [
+      {
+        "t": 244,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5584:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8834:20",
+        "ok": true,
+        "ms": 256.5
+      },
+      {
+        "t": 246.60000002384186,
+        "anchor": "nav",
+        "eligible": false,
+        "caller": "    at window.liquidGL.registerDynamic (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8873:16)     at start (http://localhost:8006/nav-glass.js:253:29)",
+        "ok": false,
+        "ms": 0
+      },
+      {
+        "t": 501.5,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+        "ok": true,
+        "ms": 7.5
+      },
+      {
+        "t": 511,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+        "ok": true,
+        "ms": 7.900000095367432
+      }
+    ],
+    "draws": 755,
+    "nav": [
+      {
+        "dcl": 67.3,
+        "load": 67.7,
+        "response": 3.3
+      }
+    ],
+    "paints": [
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 172,
+        "ms": 0
+      },
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 272,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 272,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12591,
+        "encoded": 12291,
+        "duration": 41.5
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297809,
+        "encoded": 297509,
+        "duration": 104.8
+      }
+    ],
+    "canvases": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 1.5,
+      "texture": [
+        1920,
+        5729
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?specular=off&captures=before&trial=1",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "draws": 20,
+        "captureCalls": 4,
+        "start": 0,
+        "duration": 3000,
+        "frames": 337,
+        "rafHz": 114.56,
+        "frameP95": 9.2,
+        "frameMax": 66.7,
+        "gapsOver33": 2,
+        "gapsOver50": 2,
+        "rafCallbackCount": 647,
+        "rafCallbackMs": 52.5,
+        "longTaskCount": 2,
+        "longTaskMs": 146
+      },
+      "idle": {
+        "draws": 0,
+        "captureCalls": 0,
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.1,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 64,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 354.3
+    },
+    "visibilityState": "visible",
+    "captures": [
+      {
+        "t": 180,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5584:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8834:20",
+        "ok": true,
+        "ms": 174.29999995231628
+      },
+      {
+        "t": 181,
+        "anchor": "nav",
+        "eligible": false,
+        "caller": "    at window.liquidGL.registerDynamic (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8873:16)     at start (http://localhost:8006/nav-glass.js:253:29)",
+        "ok": false,
+        "ms": 0.10000002384185791
+      },
+      {
+        "t": 436.39999997615814,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+        "ok": true,
+        "ms": 7.700000047683716
+      },
+      {
+        "t": 450.89999997615814,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+        "ok": true,
+        "ms": 9.899999976158142
+      }
+    ],
+    "draws": 20,
+    "nav": [
+      {
+        "dcl": 36,
+        "load": 36.4,
+        "response": 3.8
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 92,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 92,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 92,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 144,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12592,
+        "encoded": 12292,
+        "duration": 17.3
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297809,
+        "encoded": 297509,
+        "duration": 92.8
+      }
+    ],
+    "canvases": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 1.5,
+      "texture": [
+        1920,
+        5729
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?specular=off&captures=before&trial=2",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "draws": 24,
+        "captureCalls": 4,
+        "start": 0,
+        "duration": 3000,
+        "frames": 333,
+        "rafHz": 114.17,
+        "frameP95": 9.3,
+        "frameMax": 66.6,
+        "gapsOver33": 2,
+        "gapsOver50": 2,
+        "rafCallbackCount": 639,
+        "rafCallbackMs": 71.9,
+        "longTaskCount": 2,
+        "longTaskMs": 144
+      },
+      "idle": {
+        "draws": 0,
+        "captureCalls": 0,
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 119.99,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 38.9,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 379.8
+    },
+    "visibilityState": "visible",
+    "captures": [
+      {
+        "t": 204.20000004768372,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5584:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8834:20",
+        "ok": true,
+        "ms": 175.60000002384186
+      },
+      {
+        "t": 205.40000009536743,
+        "anchor": "nav",
+        "eligible": false,
+        "caller": "    at window.liquidGL.registerDynamic (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8873:16)     at start (http://localhost:8006/nav-glass.js:253:29)",
+        "ok": false,
+        "ms": 0.09999990463256836
+      },
+      {
+        "t": 457.60000002384186,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+        "ok": true,
+        "ms": 8.399999976158142
+      },
+      {
+        "t": 467.3000000715256,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+        "ok": true,
+        "ms": 8.100000023841858
+      }
+    ],
+    "draws": 24,
+    "nav": [
+      {
+        "dcl": 36.1,
+        "load": 36.5,
+        "response": 3
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 116,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 116,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 116,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 160,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12592,
+        "encoded": 12292,
+        "duration": 17.6
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297809,
+        "encoded": 297509,
+        "duration": 86.1
+      }
+    ],
+    "canvases": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 1.5,
+      "texture": [
+        1920,
+        5729
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?specular=on&captures=before&trial=2",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "draws": 318,
+        "captureCalls": 4,
+        "start": 0,
+        "duration": 3000,
+        "frames": 334,
+        "rafHz": 113.86,
+        "frameP95": 9.3,
+        "frameMax": 75.1,
+        "gapsOver33": 2,
+        "gapsOver50": 2,
+        "rafCallbackCount": 643,
+        "rafCallbackMs": 91.4,
+        "longTaskCount": 2,
+        "longTaskMs": 146
+      },
+      "idle": {
+        "draws": 360,
+        "captureCalls": 0,
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120.04,
+        "frameP95": 9.3,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 91.4,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 391.9
+    },
+    "visibilityState": "visible",
+    "captures": [
+      {
+        "t": 190.79999995231628,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5584:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8834:20",
+        "ok": true,
+        "ms": 201.10000002384186
+      },
+      {
+        "t": 191.79999995231628,
+        "anchor": "nav",
+        "eligible": false,
+        "caller": "    at window.liquidGL.registerDynamic (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8873:16)     at start (http://localhost:8006/nav-glass.js:253:29)",
+        "ok": false,
+        "ms": 0.10000002384185791
+      },
+      {
+        "t": 400.10000002384186,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+        "ok": true,
+        "ms": 8.699999928474426
+      },
+      {
+        "t": 447.39999997615814,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+        "ok": true,
+        "ms": 7.700000047683716
+      }
+    ],
+    "draws": 765,
+    "nav": [
+      {
+        "dcl": 35.5,
+        "load": 35.8,
+        "response": 2.7
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 104,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 104,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 104,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 148,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12591,
+        "encoded": 12291,
+        "duration": 17.4
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297809,
+        "encoded": 297509,
+        "duration": 62.5
+      }
+    ],
+    "canvases": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 1.5,
+      "texture": [
+        1920,
+        5729
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?specular=on&captures=before&trial=3",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "draws": 315,
+        "captureCalls": 4,
+        "start": 0,
+        "duration": 3000,
+        "frames": 331,
+        "rafHz": 112.54,
+        "frameP95": 9.3,
+        "frameMax": 92.6,
+        "gapsOver33": 3,
+        "gapsOver50": 2,
+        "rafCallbackCount": 637,
+        "rafCallbackMs": 77.6,
+        "longTaskCount": 2,
+        "longTaskMs": 165
+      },
+      "idle": {
+        "draws": 360,
+        "captureCalls": 0,
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.3,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 80.5,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 397.5
+    },
+    "visibilityState": "visible",
+    "captures": [
+      {
+        "t": 183,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5584:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8834:20",
+        "ok": true,
+        "ms": 214.59999990463257
+      },
+      {
+        "t": 183.79999995231628,
+        "anchor": "nav",
+        "eligible": false,
+        "caller": "    at window.liquidGL.registerDynamic (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8873:16)     at start (http://localhost:8006/nav-glass.js:253:29)",
+        "ok": false,
+        "ms": 0.10000002384185791
+      },
+      {
+        "t": 399.59999990463257,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+        "ok": true,
+        "ms": 8.700000047683716
+      },
+      {
+        "t": 435.09999990463257,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+        "ok": true,
+        "ms": 9.5
+      }
+    ],
+    "draws": 762,
+    "nav": [
+      {
+        "dcl": 34.1,
+        "load": 34.4,
+        "response": 2.6
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 96,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 96,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 96,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 136,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12591,
+        "encoded": 12291,
+        "duration": 17.6
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297809,
+        "encoded": 297509,
+        "duration": 68
+      }
+    ],
+    "canvases": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 1.5,
+      "texture": [
+        1920,
+        5729
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?specular=off&captures=before&trial=3",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      1280,
+      900
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "draws": 21,
+        "captureCalls": 4,
+        "start": 0,
+        "duration": 3000,
+        "frames": 335,
+        "rafHz": 114.2,
+        "frameP95": 9.3,
+        "frameMax": 84.3,
+        "gapsOver33": 2,
+        "gapsOver50": 2,
+        "rafCallbackCount": 647,
+        "rafCallbackMs": 58.7,
+        "longTaskCount": 2,
+        "longTaskMs": 148
+      },
+      "idle": {
+        "draws": 0,
+        "captureCalls": 0,
+        "start": 3500,
+        "duration": 3000,
+        "frames": 358,
+        "rafHz": 119.65,
+        "frameP95": 9.2,
+        "frameMax": 16.6,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 718,
+        "rafCallbackMs": 72.9,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 388.9
+    },
+    "visibilityState": "visible",
+    "captures": [
+      {
+        "t": 187.89999997615814,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5584:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8834:20",
+        "ok": true,
+        "ms": 201.10000002384186
+      },
+      {
+        "t": 189.09999990463257,
+        "anchor": "nav",
+        "eligible": false,
+        "caller": "    at window.liquidGL.registerDynamic (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8873:16)     at start (http://localhost:8006/nav-glass.js:253:29)",
+        "ok": false,
+        "ms": 0
+      },
+      {
+        "t": 395.7999999523163,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+        "ok": true,
+        "ms": 8.100000023841858
+      },
+      {
+        "t": 444.39999997615814,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+        "ok": true,
+        "ms": 7.799999952316284
+      }
+    ],
+    "draws": 21,
+    "nav": [
+      {
+        "dcl": 42.9,
+        "load": 43.2,
+        "response": 4.4
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 128,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 128,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 128,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 152,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12592,
+        "encoded": 12292,
+        "duration": 17.4
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297809,
+        "encoded": 297509,
+        "duration": 51.2
+      }
+    ],
+    "canvases": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 1.5,
+      "texture": [
+        1920,
+        5729
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?specular=off&captures=before&trial=mobile-captures",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      390,
+      844
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "draws": 18,
+        "captureCalls": 4,
+        "start": 0,
+        "duration": 3000,
+        "frames": 331,
+        "rafHz": 112.84,
+        "frameP95": 9.2,
+        "frameMax": 66.7,
+        "gapsOver33": 3,
+        "gapsOver50": 2,
+        "rafCallbackCount": 639,
+        "rafCallbackMs": 65.1,
+        "longTaskCount": 2,
+        "longTaskMs": 148
+      },
+      "idle": {
+        "draws": 0,
+        "captureCalls": 0,
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 52.6,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "menu": {
+        "draws": 83,
+        "captureCalls": 2,
+        "start": 23962.2,
+        "duration": 4002.3,
+        "frames": 479,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 1439,
+        "rafCallbackMs": 117.5,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "close": {
+        "draws": 2,
+        "captureCalls": 1,
+        "start": 35535.1,
+        "duration": 4001.5,
+        "frames": 479,
+        "rafHz": 120,
+        "frameP95": 9.2,
+        "frameMax": 9.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 960,
+        "rafCallbackMs": 104.5,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 417.4,
+      "mobile": 24016.7
+    },
+    "visibilityState": "visible",
+    "captures": [
+      {
+        "t": 221.39999997615814,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5584:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8834:20",
+        "ok": true,
+        "ms": 196.10000002384186
+      },
+      {
+        "t": 229.30000007152557,
+        "anchor": "nav",
+        "eligible": false,
+        "caller": "    at window.liquidGL.registerDynamic (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8873:16)     at start (http://localhost:8006/nav-glass.js:253:29)",
+        "ok": false,
+        "ms": 0.09999990463256836
+      },
+      {
+        "t": 420.39999997615814,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+        "ok": true,
+        "ms": 10.100000023841858
+      },
+      {
+        "t": 481.39999997615814,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+        "ok": true,
+        "ms": 7.900000095367432
+      },
+      {
+        "t": 23979.200000047684,
+        "anchor": "nav-links active",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5584:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8834:20",
+        "ok": true,
+        "ms": 37.5
+      },
+      {
+        "t": 24232.800000071526,
+        "anchor": "nav-links active",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5540:14     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:212:31",
+        "ok": true,
+        "ms": 9.099999904632568
+      },
+      {
+        "t": 35536.60000002384,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at liquidGLRenderer.removeLens (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5930:50)     at liquidGLLens.destroy (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:7887:18)",
+        "ok": true,
+        "ms": 9.700000047683716
+      }
+    ],
+    "draws": 103,
+    "nav": [
+      {
+        "dcl": 58.2,
+        "load": 58.5,
+        "response": 3.5
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 120,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 120,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 120,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12592,
+        "encoded": 12292,
+        "duration": 21.6
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 297809,
+        "encoded": 297509,
+        "duration": 58.2
+      }
+    ],
+    "canvases": [
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 1.5,
+      "texture": [
+        583,
+        8192
+      ]
+    }
+  },
+  {
+    "url": "http://localhost:8006/projets.html?specular=off&captures=after&trial=mobile-captures",
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "dpr": 1,
+    "viewport": [
+      390,
+      844
+    ],
+    "supported": [
+      "element",
+      "event",
+      "first-input",
+      "interaction-contentful-paint",
+      "largest-contentful-paint",
+      "layout-shift",
+      "long-animation-frame",
+      "longtask",
+      "mark",
+      "measure",
+      "navigation",
+      "paint",
+      "resource",
+      "soft-navigation",
+      "visibility-state"
+    ],
+    "visibility": [],
+    "phases": {
+      "startup": {
+        "draws": 15,
+        "captureCalls": 3,
+        "start": 0,
+        "duration": 3000,
+        "frames": 322,
+        "rafHz": 112.39,
+        "frameP95": 10.3,
+        "frameMax": 91.6,
+        "gapsOver33": 2,
+        "gapsOver50": 2,
+        "rafCallbackCount": 635,
+        "rafCallbackMs": 82.8,
+        "longTaskCount": 1,
+        "longTaskMs": 80
+      },
+      "idle": {
+        "draws": 0,
+        "captureCalls": 0,
+        "start": 3500,
+        "duration": 3000,
+        "frames": 359,
+        "rafHz": 119.97,
+        "frameP95": 9.9,
+        "frameMax": 10.5,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 720,
+        "rafCallbackMs": 70.9,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "menu": {
+        "draws": 63,
+        "captureCalls": 1,
+        "start": 14947.8,
+        "duration": 4001.7,
+        "frames": 470,
+        "rafHz": 117.74,
+        "frameP95": 10.3,
+        "frameMax": 39.7,
+        "gapsOver33": 1,
+        "gapsOver50": 0,
+        "rafCallbackCount": 1412,
+        "rafCallbackMs": 174.6,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      },
+      "close": {
+        "draws": 1,
+        "captureCalls": 0,
+        "start": 27120,
+        "duration": 4001.7,
+        "frames": 479,
+        "rafHz": 119.95,
+        "frameP95": 10,
+        "frameMax": 10.4,
+        "gapsOver33": 0,
+        "gapsOver50": 0,
+        "rafCallbackCount": 960,
+        "rafCallbackMs": 108.2,
+        "longTaskCount": 0,
+        "longTaskMs": 0
+      }
+    },
+    "ready": {
+      "nav": 502.7,
+      "mobile": 15056.6
+    },
+    "visibilityState": "visible",
+    "captures": [
+      {
+        "t": 216.90000009536743,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5598:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8854:20",
+        "ok": true,
+        "ms": 286
+      },
+      {
+        "t": 220.40000009536743,
+        "anchor": "nav",
+        "eligible": false,
+        "caller": "    at window.liquidGL.registerDynamic (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8893:16)     at start (http://localhost:8006/nav-glass.js:253:29)",
+        "ok": false,
+        "ms": 0.09999990463256836
+      },
+      {
+        "t": 504.10000002384186,
+        "anchor": "nav",
+        "eligible": true,
+        "caller": "    at http://localhost:8006/nav-glass.js:208:76     at Array.from (<anonymous>)",
+        "ok": true,
+        "ms": 9.399999976158142
+      },
+      {
+        "t": 14968.200000047684,
+        "anchor": "nav-links active",
+        "eligible": true,
+        "caller": "    at new liquidGLRenderer (http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:5598:12)     at http://localhost:8006/assets/vendor/liquidgl/liquidGL.js:8854:20",
+        "ok": true,
+        "ms": 88.79999995231628
+      }
+    ],
+    "draws": 79,
+    "nav": [
+      {
+        "dcl": 38.5,
+        "load": 38.7,
+        "response": 3.4
+      }
+    ],
+    "paints": [
+      {
+        "name": "first-paint",
+        "type": "paint",
+        "t": 240,
+        "ms": 0
+      },
+      {
+        "name": "first-contentful-paint",
+        "type": "paint",
+        "t": 240,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 240,
+        "ms": 0
+      },
+      {
+        "name": "",
+        "type": "largest-contentful-paint",
+        "t": 264,
+        "ms": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://localhost:8006/nav-glass.js",
+        "transfer": 12592,
+        "encoded": 12292,
+        "duration": 19.3
+      },
+      {
+        "name": "http://localhost:8006/assets/vendor/liquidgl/liquidGL.js",
+        "transfer": 298692,
+        "encoded": 298392,
+        "duration": 45.4
+      }
+    ],
+    "canvases": [
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "renderer": {
+      "backend": "WebGPUBackend",
+      "resolution": 1.5,
+      "texture": [
+        583,
+        8192
+      ]
+    }
+  }
+]
