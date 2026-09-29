@@ -367,6 +367,28 @@ a {
     color: var(--color-accent);
 }
 
+/* Essai Liquid Glass des sous-menus ; le fond teinté conserve le contraste. */
+.dropdown-glass {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.mobile-menu-glass {
+    display: none;
+}
+
+.nav .nav-dropdown[data-glass="ready"] {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+[data-theme="dark"] .nav .nav-dropdown[data-glass="ready"] {
+    background: rgba(28, 30, 36, 0.82);
+}
+
 /* Hamburger Menu */
 .menu-toggle {
     display: none;
@@ -2034,6 +2056,50 @@ a {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
+    }
+
+    .nav-links[data-glass="ready"] {
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .mobile-menu-glass {
+        display: block;
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        transform: translateY(var(--mobile-menu-scroll, 0px));
+        z-index: 1;
+    }
+
+    .nav-links[data-glass="ready"] > .mobile-menu-glass::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    [data-theme="dark"] .nav-links[data-glass="ready"] > .mobile-menu-glass::before {
+        background: rgba(28, 30, 36, 0.82);
+    }
+
+    .mobile-glass-viewport {
+        position: absolute;
+        inset: 0;
+        contain: strict;
+        overflow: hidden;
+        pointer-events: none;
+        transform: translateY(var(--mobile-menu-scroll, 0px));
+        z-index: 0;
+    }
+
+    .nav-links > .nav-item,
+    .nav-links > .nav-language {
+        position: relative;
+        z-index: 2;
     }
 
     .nav-links > * {
